@@ -111,10 +111,10 @@ Mention Michael Bachmann, Steven Lewis, Heinz Schuttler, D.P. Landau, Jeff Mike 
 Kickass Intro...
 
 \chapter{Elements of Statistical Mechanics}
-Statistical mechanics explains the microscopic origins of macroscopic properties of systems with large numbers of degrees of freedom. The exact solution for a phase space trajectory of a complex system requires enormous computational efforts and contains little useful information. On the other hand, collective properties such as entropy, pressure, or temperature often display relatively simple behavior. The formalism of statistical mechanics allows us to study these properties by considering the average behavior of a large number of identically prepared systems; the statistical ensemble. It is well established that in the thermodynamic limit all ensembles are equivalent. However this is emphatically not true for intrinsically finite systems for which the choice of an ensemble is non-trivial. Therefore, I shall first discuss several prominent statistical ensembles starting with the most fundamental one; the \textit{microcanonical ensemble}.
+Statistical mechanics explains the microscopic origins of macroscopic properties of systems with large number of degrees of freedom. The exact solution for a phase space trajectory of a complex system requires enormous computational efforts and contains little useful information. On the other hand, collective properties such as entropy, pressure, or temperature often display relatively simple behavior. The formalism of statistical mechanics allows us to study these properties by considering the average behavior of a large number of identically prepared systems; the statistical ensemble. It is well established that in the thermodynamic limit all ensembles are equivalent. However this is emphatically not true for intrinsically finite systems for which the choice of an ensemble is non-trivial. Therefore, I shall first discuss several prominent statistical ensembles starting with the most fundamental one; the \textit{microcanonical ensemble}.
 
 \section{The microcanonical ensemble}
-As a starting point, let us consider a mechanically and adiabatically isolated system with a constant number of particles $(N)$, volume $(V)$, and energy $(E)$. At any given moment, the system is to be found in one of the accessible microstates $\mu$ which are represented by points in the $6N$ dimensional phase-space. At a fixed energy $E$, the allowed microstates are constrained to the surface of constant energy $H(\mu) = E$, where $H(\mu)$ is the Hamiltonian of the system. The total number of microstates corresponding to a macrostate with a fixed energy $E$ is given by the density of states
+As a starting point, let us consider a mechanically and adiabatically isolated system with a constant number of particles $(N)$, volume $(V)$, and energy $(E)$. At any given moment, the system is to be found in one of the accessible microstates $\mu$ which are represented by points in the $6N$ dimensional phase-space. At a fixed energy $E$, the allowed microstates are constrained to the surface of constant energy $H(\mu) = E$, where $H(\mu)$ is the Hamiltonian of the system. The total number of microstates corresponding to a macrostate with a fixed energy $E$ corresponds to the density of states
 \begin{equation}
 g(E) = \int dPdQ \delta(E - H(P,Q)).
 \end{equation} 
@@ -128,7 +128,60 @@ The expectation value of an observable in the microcanonical ensemble is then fo
 \end{equation}
 
 
- This is one of the fundamental postulates of statistical mechanics.
+In the context of computer simulations, the energy space becomes by necessity discretized and the density of states is measured by counting the number of microstates within some finite energy range $(E,E+\Delta E)$.  
+
+\subsection{Microcanonical temperature}
+The concept of temperature is fundamental to statistical mechanics and has been traditionally understood in the context of average kinetic energies of particles in a system. Here we motivate the emergence of temperature as an intrinsic system property which can be directly determined from the microcanonical density of states $g(E)$. For this purpose, let us consider two weakly interacting isolated systems. The total energy of the combined system is fixed and equals to the sum of the energies of the two systems $E = E_{1} + E_{2}$. The probability density for a given pair of energies $(E_{1},E_{2})$ is given by 
+\begin{equation}
+\rho(E_{1},E_{2}) = \frac{g_{1}(E_{1})g_{2}(E-E_{1})}{g(E)},
+\end{equation}
+where the density of states of the combined system is expressed as a convolution
+\begin{equation}
+g(E) = \int dE_{1}g_{1}(E_{1})g_{2}(E-E_{1}).
+\end{equation}
+In a system with a large number of degrees of freedom, the probability density $\rho(E_{1},E_{2})$ is sharply peaked around $(E^{'}_{1},E^{'}_{2})$. Therefore the equilibrium energies of the two subsystems can be found by setting the energy derivative of the probability density to zero in which case 
+\begin{equation}
+\frac{1}{g_{1}}\frac{dg_{1}}{dE_{1}}\bigg|_{E^{'}_{1}} = \frac{1}{g_{2}}\frac{dg_{2}}{dE_{2}}\bigg|_{E - E^{'}_{1}},
+\end{equation}
+or in terms of the microcanonical entropy
+\begin{equation}
+\frac{dS_{1}}{dE_1}\bigg|_{E^{'}_{1}} = \frac{dS_{2}}{dE_{2}}\bigg|_{E - E^{'}_{1}}.
+\end{equation}
+Motivated by the fact that in thermal equilibrium, interacting systems have equal temperatures, we define the microcanonical temperature as 
+\begin{equation}
+T(E) = \left(\frac{dS(E)}{dE}\right)^{-1}.
+\end{equation}
+In many contexts it is convenient to instead work with the inverse microcanonical temperature, defined as 
+\begin{equation}
+\beta(E) = \frac{dS(E)}{dE}.
+\end{equation}
+Next we discuss the central role of the inverse microcanonical temperature and its energy derivatives in the identification and classification of structural phase transitions.
+
+\subsection{Microcanonical inflection-point analysis}
+Unlike its canonical counterpart~-- the heat-bath temperature~-- the
+microcanonical temperature is an
+inherent property of the system. As such, it contains all the information
+about the interplay of entropy and energy, and can be used to locate and
+classify all structural transitions of the system. In fact a transition
+occurs when $\beta(E)$ responds least sensitively to changes in $E$.
+This is embodied by the inflection-point analysis
+method~\cite{Bachmann2014,Schnabel2011}. In this scheme, the
+convex-to-concave inflection points of $\beta(E)$ locate an energetic
+transition point between ensembles of macrostates that can be crossed by a
+change in energy. We call these ensembles ``phases'' (sometimes referred
+to as pseudophases or structural phases), because this microcanonical
+behavior remains also valid in the thermodynamic limit. If we introduce
+$\gamma(E)=d\beta(E)/dE$, a transition is defined to
+be of \textit{first order} if $\gamma(E)$ has a positive peak value
+at the inflection point. In case the peak value is negative, the
+transition is
+classified as of \textit{second order}. This is schematically depicted in
+Fig.~\ref{fig:Fig_3}. Based on the principle of minimal
+sensitivity and Ehrenfest's original idea of characterizing the order of a
+transition by the free-energy derivative at which a discontinuity occurs,
+one can likewise introduce a hierarchy of higher-order transitions
+microcanonically.
+
 \section{The canonical ensemble}
 \section{Generalized ensembles}
 
