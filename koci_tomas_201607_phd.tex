@@ -111,8 +111,24 @@ Mention Michael Bachmann, Steven Lewis, Heinz Schuttler, D.P. Landau, Jeff Mike 
 Kickass Intro...
 
 \chapter{Elements of Statistical Mechanics}
-Statistical mechanics explains microscopic origins of the macroscopic properties of systems with large numbers of degrees of freedom. The exact solution for a phase space trajectory of a complex system requires enormous computational efforts and contains little useful informatiom. On the other hand, the collective properties such as the entropy, pressure, or temperature often display relatively simple behavior. The formalism of statistical mechanics allows us to study these properties by considering the average behavior of a large number of identically prepared systems; the statistical ensemble. It is well established that in the thermodynamic limit all ensembles are equivalent. However this is emphatically not true for intrinsically finite systems for which the choice of an ensemble is non-trivial. Therefore, I shall first discuss several prominent statistical ensembles starting with the most fundamental one; the \textit{microcanonical ensemble}.
+Statistical mechanics explains the microscopic origins of macroscopic properties of systems with large numbers of degrees of freedom. The exact solution for a phase space trajectory of a complex system requires enormous computational efforts and contains little useful information. On the other hand, collective properties such as entropy, pressure, or temperature often display relatively simple behavior. The formalism of statistical mechanics allows us to study these properties by considering the average behavior of a large number of identically prepared systems; the statistical ensemble. It is well established that in the thermodynamic limit all ensembles are equivalent. However this is emphatically not true for intrinsically finite systems for which the choice of an ensemble is non-trivial. Therefore, I shall first discuss several prominent statistical ensembles starting with the most fundamental one; the \textit{microcanonical ensemble}.
+
 \section{The microcanonical ensemble}
+As a starting point, let us consider a mechanically and adiabatically isolated system with a constant number of particles $(N)$, volume $(V)$, and energy $(E)$. At any given moment, the system is to be found in one of the accessible microstates $\mu$ which are represented by points in the $6N$ dimensional phase-space. At a fixed energy $E$, the allowed microstates are constrained to the surface of constant energy $H(\mu) = E$, where $H(\mu)$ is the Hamiltonian of the system. The total number of microstates corresponding to a macrostate with a fixed energy $E$ is given by the density of states
+\begin{equation}
+g(E) = \int dPdQ \delta(E - H(P,Q)).
+\end{equation} 
+Assuming that there are no other conserved quantities, so that that the system is ergodic, all the microstates have equal a priori probabilities. Therefore the microcanonical probability distribution can be written as 
+\begin{equation}
+p(\mu)_{E} = 1/g(E) or 0
+\end{equation}
+The expectation value of an observable in the microcanonical ensemble is then found by evaluating
+\begin{equation}
+<O>_{E} = 1/g(E)\int dPdQ  O(P,Q)\delta(E - H(P,Q))
+\end{equation}
+
+
+ This is one of the fundamental postulates of statistical mechanics.
 \section{The canonical ensemble}
 \section{Generalized ensembles}
 
