@@ -1,7 +1,7 @@
 \contentsline {chapter}{\numberline {1}Introduction}{6}
 \contentsline {chapter}{\numberline {2}Elements of Statistical Mechanics}{7}
 \contentsline {section}{\numberline {2.1}The microcanonical ensemble}{8}
-\contentsline {subsection}{\numberline {2.1.1}Microcanonical temperature}{8}
+\contentsline {subsection}{\numberline {2.1.1}Microcanonical temperature}{9}
 \contentsline {subsection}{\numberline {2.1.2}Microcanonical inflection-point analysis}{10}
 \contentsline {section}{\numberline {2.2}The canonical ensemble}{11}
 \contentsline {section}{\numberline {2.3}Generalized ensembles}{11}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.3.27)  30 APR 2016 13:35
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.3.27)  30 APR 2016 15:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -101,13 +101,13 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 ] [8] [9]
 
-LaTeX Warning: Citation `Bachmann2014' on page 10 undefined on input line 168.
+LaTeX Warning: Citation `Bachmann2014' on page 10 undefined on input line 182.
 
 
-LaTeX Warning: Citation `Schnabel2011' on page 10 undefined on input line 168.
+LaTeX Warning: Citation `Schnabel2011' on page 10 undefined on input line 182.
 
 
-LaTeX Warning: Reference `fig:Fig_3' on page 10 undefined on input line 179.
+LaTeX Warning: Reference `fig:Fig_3' on page 10 undefined on input line 193.
 
 [10] [11]
 Chapter 3.
@@ -141,7 +141,7 @@ LaTeX Warning: There were undefined references.
 Here is how much of TeX's memory you used:
  347 strings out of 494985
  4457 string characters out of 6180356
- 51555 words of memory out of 5000000
+ 52555 words of memory out of 5000000
  3617 multiletter control sequences out of 15000+600000
  10369 words of font info for 36 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
@@ -160,7 +160,7 @@ r8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on koci_tomas_201607_phd.pdf (23 pages, 170752 bytes).
+Output written on koci_tomas_201607_phd.pdf (23 pages, 178613 bytes).
 PDF statistics:
  138 PDF objects out of 1000 (max. 8388607)
  97 compressed objects within 1 object stream

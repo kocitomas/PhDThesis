@@ -114,24 +114,38 @@ Kickass Intro...
 Statistical mechanics aims at explaining the microscopic origins of macroscopic properties of systems with a large number of degrees of freedom. The exact solution for a single phase space trajectory of a complex system requires enormous computational efforts and in most cases provides only a limited insight. In contrast to the chaotic motion of most phase space trajectories, collective system properties such as entropy, pressure, or temperature often exhibit relatively simple behavior. The formalism of statistical mechanics allows us to study these properties by considering the average behavior of a large number of identically prepared systems, i.e. the statistical ensemble. It is well established that in the thermodynamic limit all ensembles become equivalent. However this is emphatically not true in the case of intrinsically finite systems for which the choice of an ensemble is non-trivial. Therefore, I shall first discuss several prominent statistical ensembles starting with the most fundamental one, the \textit{microcanonical ensemble}.
 
 \section{The microcanonical ensemble}
-Let us consider a mechanically and adiabatically isolated system with a constant number of particles $(N)$, volume $(V)$, and energy $(E)$\footnote{Additional quantities such as the total linear $\vec{P}$ or angular momenta $\vec{J}$ may be conserved.}. At any given moment, the system is to be found in one of the accessible microstates $\mu$, which are represented by points in a $6N$ dimensional phase-space. At a fixed energy $E$, the allowed microstates are constrained to the surface of constant energy $H(\mu) = E$, where $H(\mu)$ is the Hamiltonian of the system. The total number of microstates corresponding to a macrostate with a fixed energy $E$ corresponds to the density of states
+Let us consider a mechanically and adiabatically isolated system with a constant number of particles $(N)$, volume $(V)$, and energy $(E)$\footnote{Additional quantities such as the total linear momentum $\vec{P}$, or angular momentum $\vec{J}$, may be conserved.}. At any given moment, the system is to be found in a particular microstate $\mu$, which is represented by a point in a $6N$ dimensional phase-space. At a fixed energy $E$, the accessible microstates are constrained to the surface of constant energy $\mathcal{H}(\mu) = E$, where $\mathcal{H}$ is the Hamiltonian of the system. The total number of microstates corresponding to a macrostate with a fixed energy $E$ is obtained by calculating the density of states\footnote{In the context of computer simulations, the energy space becomes by necessity discretized and the density of states is measured by counting the number of microstates within some finite energy range $[E,E+\Delta E]$.}
 \begin{equation}
-g(E) = \int dPdQ \delta(E - H(P,Q)).
+g(E) = \int \mathcal{DP}\mathcal{DQ} \:\: \delta(E - \mathcal{H}(\mathcal{P},\mathcal{Q})),
 \end{equation} 
-Assuming that there are no other conserved quantities, so that that the system is ergodic, all the microstates have equal a priori probabilities. Therefore the microcanonical probability distribution can be written as 
+where 
 \begin{equation}
-p(\mu)_{E} = 1/g(E) or 0
+\mathcal{DP}\mathcal{DX} = \prod_{n = 1}^{N} \frac{d^{3}p_{n}d^{3}x_{n}}{(2 \pi \hbar)^{3}}
 \end{equation}
-The expectation value of an observable in the microcanonical ensemble is then found by evaluating
+is the Lebesgue measure over the phase space.
+Assuming that no additional quantities are conserved, i.e. the system is ergodic, all accessible microstates have equal a priori probabilities. The microcanonical equilibrium probability distribution is given by 
 \begin{equation}
-<O>_{E} = 1/g(E)\int dPdQ  O(P,Q)\delta(E - H(P,Q))
+p(\mu)_{E} = \left\{
+\begin{array}{lr}
+1/g(E), & \quad
+\mathrm{if} \: \mathcal{H(\mu)} = E\\
+0, & \quad \mathrm{if} \: \mathcal{H(\mu)} \neq E.
+\end{array}
+\right.
 \end{equation}
+The expectation value of an observable $O$ at a fixed energy $E$ is then found by averaging over the surface of constant energy
+\begin{equation}
+\left< O \right>_{E} = \int \mathcal{DP}\mathcal{DQ} \:\: O(\mathcal{P},\mathcal{Q}) \:\: \delta(E - \mathcal{H}(\mathcal{P},\mathcal{Q})).
+\end{equation}
+The density of states of a typical mesoscopic system can easily span several thousands of orders of magnitude. It is therefore convenient to define the microcanonical equilibrium entropy
+\begin{equation}
+S(E) = k_\mathrm{B}\, \mathrm{ln}\, g(E),
+\end{equation}
+an \textit{extensive} quantity with dimensions of energy over temperature.\footnote{Entropy would be a unitless quantity if temperature would be measured in the more natural units of energy.}
 
-
-In the context of computer simulations, the energy space becomes by necessity discretized and the density of states is measured by counting the number of microstates within some finite energy range $(E,E+\Delta E)$.  
 
 \subsection{Microcanonical temperature}
-The concept of temperature is fundamental to statistical mechanics and has been traditionally understood in the context of average kinetic energies of particles in a system. Here we motivate the emergence of temperature as an intrinsic system property which can be directly determined from the microcanonical density of states $g(E)$. For this purpose, let us consider two weakly interacting isolated systems. The total energy of the combined system is fixed and equals to the sum of the energies of the two systems $E = E_{1} + E_{2}$. The probability density for a given pair of energies $(E_{1},E_{2})$ is given by 
+Temperature is a fundamental concept in statistical mechanics and has been traditionally defined in terms of the average kinetic energies of particles in a system. Here we motivate a more fundamental definition of temperature as an intrinsic system property which can be obtained directly from the microcanonical density of states $g(E)$. For this purpose, let us consider two weakly interacting isolated systems, $S_{1}$ and $S_{2}$. The total energy of the combined system is fixed and equals to the sum of energies of the two systems $E = E_{1} + E_{2}$. The probability density for a given pair of energies $(E_{1},E_{2})$ is given by 
 \begin{equation}
 \rho(E_{1},E_{2}) = \frac{g_{1}(E_{1})g_{2}(E-E_{1})}{g(E)},
 \end{equation}
