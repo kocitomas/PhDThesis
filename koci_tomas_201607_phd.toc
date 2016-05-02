@@ -4,7 +4,8 @@
 \contentsline {subsection}{\numberline {2.1.1}Microcanonical temperature}{9}
 \contentsline {subsection}{\numberline {2.1.2}Microcanonical inflection-point analysis}{10}
 \contentsline {section}{\numberline {2.2}The canonical ensemble}{11}
-\contentsline {section}{\numberline {2.3}Generalized ensembles}{11}
+\contentsline {section}{\numberline {2.3}Configurational density of states}{11}
+\contentsline {section}{\numberline {2.4}Generalized ensembles}{11}
 \contentsline {chapter}{\numberline {3}Computational Methods}{12}
 \contentsline {section}{\numberline {3.1}Markov chain Monte Carlo}{12}
 \contentsline {subsection}{\numberline {3.1.1}Master equation and detailed balance}{12}

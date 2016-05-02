@@ -114,7 +114,7 @@ Kickass Intro...
 Statistical mechanics aims at explaining the microscopic origins of macroscopic properties of systems with a large number of degrees of freedom. The exact solution for a single phase space trajectory of a complex system requires enormous computational efforts and in most cases provides only a limited insight. In contrast to the chaotic motion of most phase space trajectories, collective system properties such as entropy, pressure, or temperature often exhibit relatively simple behavior. The formalism of statistical mechanics allows us to study these properties by considering the average behavior of a large number of identically prepared systems, i.e. the statistical ensemble. It is well established that in the thermodynamic limit all ensembles become equivalent. However this is emphatically not true in the case of intrinsically finite systems for which the choice of an ensemble is non-trivial. Therefore, I shall first discuss several prominent statistical ensembles starting with the most fundamental one, the \textit{microcanonical ensemble}.
 
 \section{The microcanonical ensemble}
-Let us consider a mechanically and adiabatically isolated system with a constant number of particles $(N)$, volume $(V)$, and energy $(E)$\footnote{Additional quantities such as the total linear momentum $\vec{P}$, or angular momentum $\vec{J}$, may be conserved.}. At any given moment, the system is to be found in a particular microstate $\mu$, which is represented by a point in a $6N$ dimensional phase-space. At a fixed energy $E$, the accessible microstates are constrained to the surface of constant energy $\mathcal{H}(\mu) = E$, where $\mathcal{H}$ is the Hamiltonian of the system. The total number of microstates corresponding to a macrostate with a fixed energy $E$ is obtained by calculating the density of states\footnote{In the context of computer simulations, the energy space becomes by necessity discretized and the density of states is measured by counting the number of microstates within some finite energy range $[E,E+\Delta E]$.}
+Let us consider a mechanically and adiabatically isolated system with a constant number of particles $(N)$, volume $(V)$, and energy $(E)$. At any given moment, the system is to be found in a particular microstate $\mu$, which is represented by a point in a $6N$ dimensional phase-space. At a fixed energy $E$, the accessible microstates are constrained to the surface of constant energy $\mathcal{H}(\mu) = E$, where $\mathcal{H}$ is the Hamiltonian of the system. The total number of microstates corresponding to a macrostate with a fixed energy $E$ is obtained by calculating the density of states\footnote{In the context of computer simulations, the energy space becomes by necessity discretized and the density of states is determined by counting the number of microstates within some finite energy range $[E,E+\Delta E]$.}\textsuperscript{,}\footnote{Alternative definitions of the density of states are more convenient in certain contexts. Please see section 2.3 for detailed discussion.}
 \begin{equation}
 g(E) = \int \mathcal{DP}\mathcal{DQ} \:\: \delta(E - \mathcal{H}(\mathcal{P},\mathcal{Q})),
 \end{equation} 
@@ -141,11 +141,11 @@ The density of states of a typical mesoscopic system can easily span several tho
 \begin{equation}
 S(E) = k_\mathrm{B}\, \mathrm{ln}\, g(E),
 \end{equation}
-an \textit{extensive} quantity with dimensions of energy over temperature.\footnote{Entropy would be a unitless quantity if temperature would be measured in the more natural units of energy.}
+as an \textit{extensive} quantity with dimensions of energy over temperature.\footnote{Entropy would be a unitless quantity if temperature was measured in the more natural units of energy.}
 
 
 \subsection{Microcanonical temperature}
-Temperature is a fundamental concept in statistical mechanics and has been traditionally defined in terms of the average kinetic energies of particles in a system. Here we motivate a more fundamental definition of temperature as an intrinsic system property which can be obtained directly from the microcanonical density of states $g(E)$. For this purpose, let us consider two weakly interacting isolated systems, $S_{1}$ and $S_{2}$. The total energy of the combined system is fixed and equals to the sum of energies of the two systems $E = E_{1} + E_{2}$. The probability density for a given pair of energies $(E_{1},E_{2})$ is given by 
+Temperature is one of the fundamental concepts of statistical mechanics and has been traditionally defined in terms of the average kinetic energies of particles in a system. Here we motivate a more fundamental definition of temperature as an intrinsic system property, which can be obtained directly from the microcanonical density of states $g(E)$. For this purpose, let us consider an adiabatically isolated system composed of two weakly interacting subsystems, $S_{1}$ and $S_{2}$. The energy of the combined system is fixed and can be written as the sum of the energies of the two subsystems $E = E_{1} + E_{2}$. The probability density for a given pair of subsystem energies $(E_{1},E_{2})$ is  
 \begin{equation}
 \rho(E_{1},E_{2}) = \frac{g_{1}(E_{1})g_{2}(E-E_{1})}{g(E)},
 \end{equation}
@@ -153,23 +153,23 @@ where the density of states of the combined system is expressed as a convolution
 \begin{equation}
 g(E) = \int dE_{1}g_{1}(E_{1})g_{2}(E-E_{1}).
 \end{equation}
-In a system with a large number of degrees of freedom, the probability density $\rho(E_{1},E_{2})$ is sharply peaked around $(E^{'}_{1},E^{'}_{2})$. Therefore the equilibrium energies of the two subsystems can be found by setting the energy derivative of the probability density to zero in which case 
+In systems with many degrees of freedom, the probability density $\rho(E_{1},E_{2})$ is a sharply peaked distribution around the equilibrium energies $(\bar{E}_{1},\bar{E}_{2})$. These can be found by setting the energy derivative of the probability density to zero, from which we obtain
 \begin{equation}
-\frac{1}{g_{1}}\frac{dg_{1}}{dE_{1}}\bigg|_{E^{'}_{1}} = \frac{1}{g_{2}}\frac{dg_{2}}{dE_{2}}\bigg|_{E - E^{'}_{1}},
+\frac{1}{g_{1}}\frac{dg_{1}}{dE_{1}}\bigg|_{\bar{E}_{1}} = \frac{1}{g_{2}}\frac{dg_{2}}{dE_{2}}\bigg|_{E - \bar{E}_{1}},
 \end{equation}
-or in terms of the microcanonical entropy
+or alternatively in terms of the microcanonical entropy
 \begin{equation}
 \frac{dS_{1}}{dE_1}\bigg|_{E^{'}_{1}} = \frac{dS_{2}}{dE_{2}}\bigg|_{E - E^{'}_{1}}.
 \end{equation}
-Motivated by the fact that in thermal equilibrium, interacting systems have equal temperatures, we define the microcanonical temperature as 
+Motivated by the familiar observation that interacting systems at thermal equilibrium have equal temperatures, we define the microcanonical temperature as 
 \begin{equation}
 T(E) = \left(\frac{dS(E)}{dE}\right)^{-1}.
 \end{equation}
-In many contexts it is convenient to instead work with the inverse microcanonical temperature, defined as 
+Frequently, it is more convenient to consider the inverse microcanonical temperature defined as 
 \begin{equation}
 \beta(E) = \frac{dS(E)}{dE}.
 \end{equation}
-Next we discuss the central role of the inverse microcanonical temperature and its energy derivatives in the identification and classification of structural phase transitions.
+In the following section, we discuss the central role of inverse microcanonical temperature and its energy derivatives in the classification of structural phase transitions.
 
 \subsection{Microcanonical inflection-point analysis}
 Unlike its canonical counterpart~-- the heat-bath temperature~-- the
@@ -197,6 +197,7 @@ one can likewise introduce a hierarchy of higher-order transitions
 microcanonically.
 
 \section{The canonical ensemble}
+\section{Configurational density of states}
 \section{Generalized ensembles}
 
 \chapter{Computational Methods}
