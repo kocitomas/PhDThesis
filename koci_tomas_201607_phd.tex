@@ -7,6 +7,8 @@
 \usepackage{setspace}\doublespacing    % important!
 \textfloatsep 0.75in                   % important with double spacing
 
+\usepackage{graphicx}
+
 \begin{document}
 
 % Make the official abstract page
@@ -172,38 +174,25 @@ Frequently, it is more convenient to consider the inverse microcanonical tempera
 In the following section, we discuss the central role of inverse microcanonical temperature and its energy derivatives in the classification of structural phase transitions.
 
 \subsection{Microcanonical analysis of phase transitions}
-A macrostate of a system is specified by a set of macroscopic variables and possesses the characteristics of the predominant microstates. Macrostates are said to belong to the same thermodynamic phase, if over a range of values of some external control parameter\footnote{Some common examples of external control parameters are the canonical temperature, pressure, or system energy.} all of the system's thermodynamic observables are analytic, i.e. have convergent Taylor expansions. Singularities in the observables signify the presence of phase transitions, typically marked by abrupt changes in macrosopic properties in response to a minute change in an external control parameter. Phase transitions can be roughly divided into two categories. \textit{Abrupt} transitions are characterized by the coexistence of two distinct phases and discontinuities in most physical properties. \textit{Continuous} transitions, although less common in nature, have been the object of most intense research. They are marked by diverging correlation lenghts, large fluctuations, and scale invariance. 
+A macrostate of a system is specified by a set of macroscopic variables and possesses the characteristics of the predominant microstates. Macrostates are said to belong to the same thermodynamic phase, if in a given range of some external control parameters\footnote{Some common examples of external control parameters are the canonical temperature, pressure, or the chemical potential.} all of the system's thermodynamic observables are analytic, i.e. have convergent Taylor expansions. Singularities in the observables signify the presence of phase transitions between distinct phases, typically marked by abrupt changes in macrosopic properties in response to minute variations of external control parameters. Phase transitions can be roughly divided into two categories. \textit{Abrupt} transitions are characterized by the coexistence of two distinct phases and discontinuities in most physical properties. \textit{Continuous} transitions, although less common in nature, have been the object of most intense research. They are marked by diverging correlation lenghts, large fluctuations, and scale invariance. 
 
-Divergences and singularities in the thermodynamic observables and their derivatives are found only in systems which satisfy the thermodynamic limit. In mesoscopic and microscopic systems, due to finite size effects, divergences are replaced by peaks and discontinuities become smoothed over. For clarity, we designate the term \textit{pseudophase transition} to represent significant conformational changes in finite systems. Likewise, a thermodynamic phase in a finite system shall be referred to as a \textit{pseudophase}. In the following, we present a powerful formalism for the analysis of pseudophase transitions in the microcanonical ensemble; the microcanonical inflection point analysis.
+Divergences and singularities in the thermodynamic observables and their derivatives are only found in systems which satisfy the thermodynamic limit. In mesoscopic systems\footnote{Typical length scales in a mesoscopic system are of the order of $\sim 10$ nanometers. In this regime, exact quantum many-body interactions can be replaced by effective classical potentials, and cooperative effects dominate structure formation processes. Mesoscopic systems are distinct from macroscopic systems due to the presence of significant finite size effects which disallow the simplifying assumptions of the thermodynamic limit.}, due to finite size effects, divergences are replaced by peaks and discontinuities are smoothed over. For clarity, we designate the term \textit{pseudophase transition} to represent significant conformational changes in finite systems. Likewise, a thermodynamic phase in a finite system shall be referred to as \textit{pseudophase}. In the following, we present a powerful formalism for the analysis of pseudophase transitions in the microcanonical ensemble; the microcanonical inflection point analysis.
 
 \subsubsection{Microcanonical inflection point analysis}
-
-
-
-
 Unlike its canonical counterpart~-- the heat-bath temperature~-- the
-microcanonical temperature is an
-inherent property of the system. As such, it contains all the information
-about the interplay of entropy and energy, and can be used to locate and
-classify all structural transitions of the system. In fact a transition
-occurs when $\beta(E)$ responds least sensitively to changes in $E$.
-This is embodied by the inflection-point analysis
-method~\cite{Bachmann2014,Schnabel2011}. In this scheme, the
-convex-to-concave inflection points of $\beta(E)$ locate an energetic
-transition point between ensembles of macrostates that can be crossed by a
-change in energy. We call these ensembles ``phases'' (sometimes referred
-to as pseudophases or structural phases), because this microcanonical
-behavior remains also valid in the thermodynamic limit. If we introduce
-$\gamma(E)=d\beta(E)/dE$, a transition is defined to
-be of \textit{first order} if $\gamma(E)$ has a positive peak value
-at the inflection point. In case the peak value is negative, the
-transition is
-classified as of \textit{second order}. This is schematically depicted in
-Fig.~\ref{fig:Fig_3}. Based on the principle of minimal
-sensitivity and Ehrenfest's original idea of characterizing the order of a
-transition by the free-energy derivative at which a discontinuity occurs,
-one can likewise introduce a hierarchy of higher-order transitions
-microcanonically.
+microcanonical inverse temperature is an inherent property of the system, derived directly from the fundamental microcanonical quantities $S(E)$ and $E$. We assert that all essential information about energetically and entropically driven thermodynamic processes, is contained in its curvature. Hence the microcanonical inverse temperature is an ideal starting point for a comprehensive analysis of pseudophase transitions.  
+
+In analogy to the principle of minimal sensitivity~\cite{Stevenson}, structural transitions between pseudophases occur if $\beta (E)$, or one of its energy
+derivatives, responds least sensitively to variations in energy. In particular, \textit{first-order} transitions are associated with inflection points in $\beta (E)$ that have a positive slope. Therefore, it can easily be identified by a positive-valued peak in the energy derivative $\gamma(E)=d\beta(E)/dE$. 
+
+Similarly, a \textit{second-order} transition occurs if $\gamma(E)$ attains a negative-valued peak. Examples of microcanonical \textit{first-} and \textit{second-order} transition signals are shown in Fig.~\ref{fig:Fig_1}.
+Based on the principle of minimal sensitivity and Ehrenfest's original idea of characterizing the order of a transition by the free-energy derivative at which a discontinuity occurs, one can likewise introduce a hierarchy of higher-order transitions microcanonically.
+
+\begin{figure}
+\includegraphics[width = 0.5\textwidth]{MicroAnalysisExample.eps}
+\caption{\label{fig:Fig_1}%
+Microcanonical inflection-point analysis of the inverse microcanonical temperature $\beta(E)$. The prominent back-bending region in $\beta(E)$, together with the positive-valued peak in its energy derivative $\gamma(E)$ at $E \approx -15$, indicates a \textit{first-order} transition. The negative-valued peak at $E\approx -24$ corresponds to a \textit{second-order} transition.}
+\end{figure}
 
 \section{The canonical ensemble}
 \section{Configurational density of states}
