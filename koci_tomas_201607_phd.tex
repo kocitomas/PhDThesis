@@ -5,9 +5,10 @@
 \documentclass[12pt]{report}
 \usepackage{fullpage}
 \usepackage{setspace}\doublespacing    % important!
-\textfloatsep 0.75in                   % important with double spacing
-
 \usepackage{graphicx}
+\usepackage{cite}
+\usepackage{adjustbox}
+\textfloatsep 0.75in                   % important with double spacing
 
 \begin{document}
 
@@ -28,12 +29,16 @@ This is going to be the best abstract ever :)
 \begin{list}{\sc Index words:\hfill}{\labelwidth 1.2in\leftmargin 1.4in\labelsep 0.2in}
 \item 
 \begin{flushleft}\singlespacing
-Index word or phrase,
-Index word or phrase,
-Index word or phrase,
-Index word, 
-Index word,
-Index word
+Polymer Aggregation,
+Monte Carlo Simulations,
+Parallel Tempering,
+Multicanonical Sampling,
+Canonical Analysis, 
+Microcanonical Inflection-Point Analysis,
+Flexible Polymer,
+Structural Transitions,
+Finite Systems,
+Finite-Size Effects
 \end{flushleft}
 \end{list}
 
@@ -64,7 +69,8 @@ Requirements for the Degree \\[10pt]
 \vspace*{5.5in}
 \begin{center}
 \copyright 2016 \\
-Tomas Koci
+Tomas Koci \\
+All Rights Reserved
 \end{center}
 
 % Make the approval page
@@ -98,19 +104,21 @@ July 2016
 
 % Now we begin the regular LaTeX document.
 % You may want to have a regular LaTeX title page here...
-\title{\bf Structure Forming Processes in\\Mesoscopic Polymer Systems}
-\author{Tomas Koci}
-\maketitle 
 
 \chapter*{Acknowledgments}
-Mention Michael Bachmann, Steven Lewis, Heinz Schuttler, D.P. Landau, Jeff Mike and Shan-Ho, finally all the Links and my family
+\pagenumbering{roman}
+\setcounter{page}{4}
 
+\setcounter{tocdepth}{1}
 \tableofcontents
 \listoffigures  % if any
 \listoftables % if any
 
 \chapter{Introduction}
-Kickass Intro...
+\pagenumbering{arabic}
+\setcounter{page}{1}
+Kickass intro...
+
 
 \chapter{Elements of Statistical Mechanics}
 Statistical mechanics aims at explaining the microscopic origins of macroscopic properties of systems with large numbers of degrees of freedom. The exact solution for a single phase space trajectory of a complex system requires enormous computational efforts and in most cases provides only a limited insight. In contrast to the chaotic nature of most phase space trajectories, collective system properties such as entropy, pressure, or temperature, for the most part exhibit relatively simple behavior. The formalism of statistical mechanics allows us to study these properties by considering the average behavior of a large number of identically prepared systems, i.e. the statistical ensemble. It is well established that in the thermodynamic limit all ensembles become equivalent. However this is emphatically not true in the case of intrinsically finite systems for which the choice of an ensemble is non-trivial. Therefore, I shall briefly discuss several prominent statistical ensembles starting with the most fundamental one, the \textit{microcanonical ensemble}.
@@ -176,24 +184,49 @@ In the following section, we discuss the central role of inverse microcanonical 
 \subsection{Microcanonical analysis of phase transitions}
 A macrostate of a system is specified by a set of macroscopic variables and possesses the characteristics of the predominant microstates. Macrostates are said to belong to the same thermodynamic phase, if in a given range of some external control parameters\footnote{Some common examples of external control parameters are the canonical temperature, pressure, or the chemical potential.} all of the system's thermodynamic observables are analytic, i.e. have convergent Taylor expansions. Singularities in the observables signify the presence of phase transitions between distinct phases, typically marked by abrupt changes in macrosopic properties in response to minute variations of external control parameters. Phase transitions can be roughly divided into two categories. \textit{Abrupt} transitions are characterized by the coexistence of two distinct phases and discontinuities in most physical properties. \textit{Continuous} transitions, although less common in nature, have been the object of most intense research. They are marked by diverging correlation lenghts, large fluctuations, and scale invariance. 
 
-Divergences and singularities in the thermodynamic observables and their derivatives are only found in systems which satisfy the thermodynamic limit. In mesoscopic systems\footnote{Typical length scales in a mesoscopic system are of the order of $\sim 10$ nanometers. In this regime, exact quantum many-body interactions can be replaced by effective classical potentials, and cooperative effects dominate structure formation processes. Mesoscopic systems are distinct from macroscopic systems due to the presence of significant finite size effects which disallow the simplifying assumptions of the thermodynamic limit.}, due to finite size effects, divergences are replaced by peaks and discontinuities are smoothed over. For clarity, we designate the term \textit{pseudophase transition} to represent significant conformational changes in finite systems. Likewise, a thermodynamic phase in a finite system shall be referred to as \textit{pseudophase}. In the following, we present a powerful formalism for the analysis of pseudophase transitions in the microcanonical ensemble; the microcanonical inflection point analysis.
+Divergences and singularities in thermodynamic observables and their derivatives are only found in systems which satisfy the thermodynamic limit. In mesoscopic systems\footnote{Typical length scales in  mesoscopic systems are of the order of $\sim 10$ nanometers. In this regime, exact quantum many-body interactions can be replaced by effective classical potentials, and cooperative effects dominate structure formation processes. Mesoscopic systems are distinct from macroscopic systems due to the presence of significant finite-size effects, which disallow the simplifying assumptions of the thermodynamic limit.}, due to finite size effects, divergences are replaced by peaks and discontinuities are smoothed over. For clarity, we designate the term \textit{pseudophase transition} to represent significant conformational changes in finite systems. Likewise, thermodynamic phases in finite systems shall be referred to as \textit{pseudophases}. In the following, we present a powerful formalism for the analysis of pseudophase transitions in the microcanonical ensemble; the microcanonical inflection point analysis.
 
-\subsubsection{Microcanonical inflection point analysis}
+\subsubsection{Microcanonical inflection-point analysis}
 Unlike its canonical counterpart~-- the heat-bath temperature~-- the
-microcanonical inverse temperature is an inherent property of the system, derived directly from the fundamental microcanonical quantities $S(E)$ and $E$. We assert that all essential information about energetically and entropically driven thermodynamic processes, is contained in its curvature. Hence the microcanonical inverse temperature is an ideal starting point for a comprehensive analysis of pseudophase transitions.  
+microcanonical inverse temperature is an inherent property of the system, derived directly from the fundamental microcanonical quantities $S(E)$ and $E$. We assert that all essential information about energetically and entropically driven thermodynamic processes is contained in its curvature. Hence the microcanonical inverse temperature is an ideal starting point for a comprehensive analysis of pseudophase transitions.  
 
-In analogy to the principle of minimal sensitivity~\cite{Stevenson}, structural transitions between pseudophases occur if $\beta (E)$, or one of its energy
-derivatives, responds least sensitively to variations in energy. In particular, \textit{first-order} transitions are associated with inflection points in $\beta (E)$ that have a positive slope. Therefore, it can easily be identified by a positive-valued peak in the energy derivative $\gamma(E)=d\beta(E)/dE$. 
-
-Similarly, a \textit{second-order} transition occurs if $\gamma(E)$ attains a negative-valued peak. Examples of microcanonical \textit{first-} and \textit{second-order} transition signals are shown in Fig.~\ref{fig:Fig_1}.
-Based on the principle of minimal sensitivity and Ehrenfest's original idea of characterizing the order of a transition by the free-energy derivative at which a discontinuity occurs, one can likewise introduce a hierarchy of higher-order transitions microcanonically.
-
+In analogy to the principle of minimal sensitivity~\cite{Stevenson}, structural transitions between pseudophases occur when $\beta (E)$, or one of its energy
+derivatives, responds least sensitively to variations in energy. In particular, \textit{first-order} transitions are associated with inflection points in $\beta (E)$ that have a positive slope, accompanied by positive-valued peaks in the energy derivative $\gamma(E)=d\beta(E)/dE$. Similarly, a \textit{second-order} transition occurs when $\beta(E)$ exhibits an inflection point with a negative slope and $\gamma(E)$ attains a negative-valued peak. Examples of microcanonical \textit{first-} and \textit{second-order} transition signals are shown in Fig.~\ref{fig:Fig_1}.
+%
 \begin{figure}
-\includegraphics[width = 0.5\textwidth]{chapter2Figs/MicroAnalysisExample.eps}
+\center
+\includegraphics[width = 0.7\textwidth]{chapter2Figs/MicroAnalysisExample.eps}
 \caption{\label{fig:Fig_1}%
 Microcanonical inflection-point analysis of the inverse microcanonical temperature $\beta(E)$. The prominent back-bending region in $\beta(E)$, together with the positive-valued peak in its energy derivative $\gamma(E)$ at $E \approx -15$, indicates a \textit{first-order} transition. The negative-valued peak at $E\approx -24$ corresponds to a \textit{second-order} transition.}
 \end{figure}
+%
 
+Alternatively, in the case of \textit{first-order} transitions, the transition temperature $\beta_{\mathrm{tr}}$ can be obtained by the means of the Maxwell construction, which was originally introduced to repair the unphysical back-bending in the pressure versus volume phase diagram for the van der Waals gas. However, in mesoscopic systems, finite-size effects lead to entropic suppression of the transition states, which is manifested in the backbending of $\beta(E)$ and the convex intruder in $S(E)$. 
+%
+\begin{figure}
+\center
+\includegraphics[width = 0.7\textwidth]{chapter2Figs/maxwellConstruct.pdf}
+\caption{\label{fig:Fig_2}%
+The convex region of the microcanonical entropy $S(E)$ and the back-bending of the microcanonical inverse temperature $\beta(E)$ are prominent indicators of \textit{first-order} transitions. The slope of the double-tangent Gibbs hull $\mathcal{H}(E)$ defines the transition temperature $\beta_{\mathrm{tr}}$. The Maxwell construction, defined by equal areas of $s_{\mathrm{o}}$ and $s_{\mathrm{d}}$, is itself positioned at $\beta_{\mathrm{tr}}$. The transition energy $E_{\mathrm{tr}}$ indicates the location of the largest separation between $\mathcal{H}(E)$ and $S(E)$, which signifies maximal entropic suppression of the transition states. The latent heat $\Delta Q$ corresponds to the width of the transition region between $E_{\mathrm{d}}$ and $E_{\mathrm{o}}$.}
+\end{figure}
+%
+Figure \ref{fig:Fig_2} shows an example of a Maxwell construction. Its position is determined by the equality of the areas $s_{\mathrm{o}}$ and $s_{\mathrm{d}}$. Often referred to as \textit{surface entropies}, $s_{\mathrm{o}}$ and $s_{\mathrm{d}}$ are defined in terms of the integrals
+\begin{eqnarray}
+s_{\mathrm{o}} &=& \int_{E_{\mathrm{o}}}^{E_{\mathrm{tr}}} dE \:\: (\beta_{\mathrm{tr}}-\beta(E)), \\
+s_{\mathrm{d}} &=& \int_{E_{\mathrm{tr}}}^{E_{\mathrm{d}}} dE \:\: (\beta(E)-\beta_{\mathrm{tr}}).
+\end{eqnarray}
+There are three intersections between the Maxwell line and the inverse temperature at energies $E_{\mathrm{o}}$, $E_{\mathrm{tr}}$, and $E_{\mathrm{d}}$. The separation between the boundary energies of the ordered pseudophase $E_{\mathrm{o}}$ and the disordered pseudophase $E_{\mathrm{d}}$, corresponds to the latent heat $\Delta Q = E_{\mathrm{d}} - E_{\mathrm{o}}$. The transition energy $E_{\mathrm{tr}}$ indicates the location where the intermediate states experience maximal entropic suppression.
+The slope of the double-tangent Gibbs construction, also shown in Figure \ref{fig:Fig_2}, provides yet another definition of $\beta_{\mathrm{tr}}$. As a function of energy, the Gibbs hull is defined as
+\begin{equation}
+\mathcal{H}(E) = S(E_{\mathrm{o}}) + \beta_{\mathrm{tr}}[E-E_{\mathrm{o}}],
+\end{equation}
+where $\beta_{\mathrm{tr}}$ can be expressed in terms of the energy and entropy differences between the ordered and disordered pseudophases as
+\begin{equation}
+\beta_{\mathrm{tr}} = \frac{S_{\mathrm{d}}-S_{\mathrm{o}}}{E_{\mathrm{d}}-E_{\mathrm{o}}} = \frac{\Delta S}{\Delta Q}.
+\end{equation}
+With the exception of composite multi-step transitions, characterized by additional oscillations in the back-bending region of $\beta(E)$, the transition temperatures obtained by the means of the Maxwell and Gibbs constructions are identical.
+
+ Based on the principle of minimal sensitivity and Ehrenfest's original idea of characterizing the order of a transition by the free-energy derivative at which a discontinuity occurs, one can likewise introduce a hierarchy of higher-order transitions microcanonically.
 \section{The canonical ensemble}
 \section{Configurational density of states}
 \section{Generalized ensembles}
@@ -254,10 +287,11 @@ Microcanonical inflection-point analysis of the inverse microcanonical temperatu
 
 
 
-
-
-
-
+%~~~~~~~~~~~~~~~~ Reference ~~~~~~~~~~~~~~~~~~%
+\addcontentsline{toc}{chapter}{Bibliography}
+\begin{thebibliography}{99}
+        \input{References.tex}
+\end{thebibliography}
 
 
 \end{document}
