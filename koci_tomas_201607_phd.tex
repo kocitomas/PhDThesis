@@ -227,7 +227,53 @@ where $\beta_{\mathrm{tr}}$ can be expressed in terms of the energy and entropy 
 With the exception of composite multi-step transitions, characterized by additional oscillations in the back-bending region of $\beta(E)$, the transition temperatures obtained by the means of the Maxwell and Gibbs constructions are identical.
 
  Based on the principle of minimal sensitivity and Ehrenfest's original idea of characterizing the order of a transition by the free-energy derivative at which a discontinuity occurs, one can likewise introduce a hierarchy of higher-order transitions microcanonically.
+ 
+ 
 \section{The canonical ensemble}
+The canonical ensemble describes the behavior of a closed system in thermal equilibrium with a large external heat bath at a fixed temperature $T$. In analogy to the density of states in the microcanonical ensemble, the partition function $Z(T)$ contains all the essential information about the thermodynamic properties of the system under consideration. It can be defined directly as a Laplace transform\footnote{Here we assume that the system under investigation has discrete energy levels, which is always true in the context of computational studies. In the case of a continuous energy spectrum, the discrete sum is replaced by the integral $Z(T) = \int dE \:\:  g(E) e^{-\frac{E}{k_{\mathrm{B}}T}}$.} of the microcanical density of states $g(E)$
+\begin{equation}
+Z(T) = \sum g(E) e^{-\frac{E}{k_{\mathrm{B}}T}},
+\end{equation}
+where $T$ is the canonical heat bath temperature and $k_{\mathrm{B}}$ is the Boltzmann constant. While the condition of thermal equilibrium prohibits any net average energy transfer between the system and the heat bath, the system can gain or loose energy through constant fluctuations and dissipations. This leads to the well known temperature dependent Boltzmann distribution, where the probability for a given microstate $\mu$ is given by 
+\begin{equation}
+p(\mu) = \frac{1}{Z(T)}e^{-\frac{\mathcal{H}(\mu)}{k_{\mathrm{B}}T}},
+\end{equation}
+and $\mathcal{H}$ is the Hamiltonian of the system. The appropriate thermodynamic potential in the canonical ensemble is the Helmholtz free energy
+\begin{equation}
+F(T) = -k_{\mathrm{B}}T \: \mathrm{ln}\, Z.
+\end{equation}
+This quantity represents the energy available to perform work and can be used to obtain all other thermodynamic quantities by differentiation. The temperature derivative of the free energy defines the canonical entropy
+\begin{equation}
+S(T) = -\frac{\partial}{\partial T}F(T)\bigg|_{N,V},
+\end{equation} 
+which measures the amount of disorder in the system.
+The internal energy $U$ is defined as a sum over all microstate energies weighted by the Boltzmann distribution  
+\begin{equation}
+U(T) = \frac{\sum_{\mu} \mathcal{H}(\mu)e^{-\frac{\mathcal{H}(\mu)}{k_{\mathrm{B}}T}}}{Z(T)} =  \frac{\sum_{E} E \, g(E) e^{-\frac{E}{k_{\mathrm{B}}T}}}{Z(T)}
+\end{equation}
+and represents the average energy of the system. Alternatively, the internal energy can be obtained by differentiating the free energy
+\begin{equation}
+U(T) = k_{\mathrm{B}}T^{2}\frac{\partial}{\partial T} \mathrm{ln} Z\bigg|_{N,V}
+= -T^{2}\frac{\partial}{\partial T}\left(\frac{F}{T}\right)\bigg|_{N,V}.
+\end{equation}
+The amount of energy needed to increase the temperature of the system by one unit is given by the specific heat 
+$C_{V}$, defined as a temperature derivative of the internal energy
+\begin{equation}
+C_{V}(T) = \frac{\partial}{dT}U(T)\bigg|_{N,V} = -T\frac{\partial^{2}}{\partial T^{2}}F(T)\bigg|_{N,V},
+\end{equation}
+or differentiating the third term in equation 2.20 we get
+\begin{eqnarray}
+C_{V}(T) &=&  \frac{\partial}{dT}\frac{\sum_{E} E \, g(E) e^{-\frac{E}{k_{\mathrm{B}}T}}}{Z(T)} = -\frac{1}{k_{\mathrm{B}}T^2}\frac{\partial}{\partial \beta}\frac{\sum_{E} E \, g(E) e^{-\beta E}}{\sum_{E}g(E) e^{-\beta E}} \nonumber \\
+&=& \frac{1}{k_{\mathrm{B}}T^2} \left[\left(\frac{\sum_{E} E^{2} \, g(E)  e^{-\beta E}}{Z(T)}\right) - \left(\frac{\sum_{E} E \, g(E)  e^{-\beta E}}{Z(T)}\right)^{2}\right] \nonumber \\
+&=& \frac{1}{k_{\mathrm{B}}T^2}\left(\left<E^{2}\right> - \left<E\right>^{2}\right),
+\end{eqnarray}
+where the last expression corresponds to the variance of the Boltzmann distribution. This result is of a profound physical importance, establishing the connection between the macroscopic response quantity $C_{V}$, and microscopic fluctuations.
+
+\subsection{Canonical analysis of phase transitions} 
+
+
+
+
 \section{Configurational density of states}
 \section{Generalized ensembles}
 

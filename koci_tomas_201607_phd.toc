@@ -5,35 +5,36 @@
 \contentsline {subsection}{\numberline {2.1.2}Microcanonical analysis of phase transitions}{5}
 \contentsline {subsubsection}{Microcanonical inflection-point analysis}{6}
 \contentsline {section}{\numberline {2.2}The canonical ensemble}{9}
-\contentsline {section}{\numberline {2.3}Configurational density of states}{9}
-\contentsline {section}{\numberline {2.4}Generalized ensembles}{9}
-\contentsline {chapter}{\numberline {3}Computational Methods}{10}
-\contentsline {section}{\numberline {3.1}Markov chain Monte Carlo}{10}
-\contentsline {subsection}{\numberline {3.1.1}Master equation and detailed balance}{10}
-\contentsline {subsection}{\numberline {3.1.2}Metropolis sampling}{10}
-\contentsline {section}{\numberline {3.2}Generalized ensemble Monte Carlo}{10}
-\contentsline {subsection}{\numberline {3.2.1}Parallel tempering}{10}
-\contentsline {subsection}{\numberline {3.2.2}Multiple Gaussian modified ensemble}{10}
-\contentsline {subsection}{\numberline {3.2.3}Histogram reweighting methods}{10}
-\contentsline {subsection}{\numberline {3.2.4}Multicanonical sampling}{10}
-\contentsline {section}{\numberline {3.3}Simple Monte Carlo updates}{10}
-\contentsline {chapter}{\numberline {4}Coarse-grained Homopolymer Model}{11}
-\contentsline {section}{\numberline {4.1}Flexible elastic homopolymer}{11}
-\contentsline {section}{\numberline {4.2}Interacting homopolymers}{11}
-\contentsline {chapter}{\numberline {5}Confinement Effects on Structural Transitions in Flexible Homopolymers}{12}
-\contentsline {section}{\numberline {5.1}Introduction}{12}
-\contentsline {section}{\numberline {5.2}Canonical analysis}{12}
-\contentsline {section}{\numberline {5.3}Inflection-point analysis}{12}
-\contentsline {section}{\numberline {5.4}Hyper-phase diagrams}{12}
-\contentsline {chapter}{\numberline {6}Impact of Bonded Interactions on the Ground-State Geometries of Flexible Homopolymers}{13}
-\contentsline {section}{\numberline {6.1}Structural order parameters}{13}
-\contentsline {section}{\numberline {6.2}15-mer}{13}
-\contentsline {section}{\numberline {6.3}55-mer}{13}
-\contentsline {chapter}{\numberline {7}Aggregation of Flexible Elastic Homopolymers}{14}
-\contentsline {section}{\numberline {7.1}Introduction}{14}
-\contentsline {section}{\numberline {7.2}Microcanonical analysis}{14}
-\contentsline {subsection}{\numberline {7.2.1}Subphases and subphase transitions}{14}
-\contentsline {subsection}{\numberline {7.2.2}Missing subphases and translational entropy}{14}
-\contentsline {subsection}{\numberline {7.2.3}Density effects on the latent heat}{14}
-\contentsline {chapter}{\numberline {8}Summary and Outlook}{15}
-\contentsline {chapter}{Bibliography}{15}
+\contentsline {subsection}{\numberline {2.2.1}Canonical analysis of phase transitions}{12}
+\contentsline {section}{\numberline {2.3}Configurational density of states}{12}
+\contentsline {section}{\numberline {2.4}Generalized ensembles}{12}
+\contentsline {chapter}{\numberline {3}Computational Methods}{13}
+\contentsline {section}{\numberline {3.1}Markov chain Monte Carlo}{13}
+\contentsline {subsection}{\numberline {3.1.1}Master equation and detailed balance}{13}
+\contentsline {subsection}{\numberline {3.1.2}Metropolis sampling}{13}
+\contentsline {section}{\numberline {3.2}Generalized ensemble Monte Carlo}{13}
+\contentsline {subsection}{\numberline {3.2.1}Parallel tempering}{13}
+\contentsline {subsection}{\numberline {3.2.2}Multiple Gaussian modified ensemble}{13}
+\contentsline {subsection}{\numberline {3.2.3}Histogram reweighting methods}{13}
+\contentsline {subsection}{\numberline {3.2.4}Multicanonical sampling}{13}
+\contentsline {section}{\numberline {3.3}Simple Monte Carlo updates}{13}
+\contentsline {chapter}{\numberline {4}Coarse-grained Homopolymer Model}{14}
+\contentsline {section}{\numberline {4.1}Flexible elastic homopolymer}{14}
+\contentsline {section}{\numberline {4.2}Interacting homopolymers}{14}
+\contentsline {chapter}{\numberline {5}Confinement Effects on Structural Transitions in Flexible Homopolymers}{15}
+\contentsline {section}{\numberline {5.1}Introduction}{15}
+\contentsline {section}{\numberline {5.2}Canonical analysis}{15}
+\contentsline {section}{\numberline {5.3}Inflection-point analysis}{15}
+\contentsline {section}{\numberline {5.4}Hyper-phase diagrams}{15}
+\contentsline {chapter}{\numberline {6}Impact of Bonded Interactions on the Ground-State Geometries of Flexible Homopolymers}{16}
+\contentsline {section}{\numberline {6.1}Structural order parameters}{16}
+\contentsline {section}{\numberline {6.2}15-mer}{16}
+\contentsline {section}{\numberline {6.3}55-mer}{16}
+\contentsline {chapter}{\numberline {7}Aggregation of Flexible Elastic Homopolymers}{17}
+\contentsline {section}{\numberline {7.1}Introduction}{17}
+\contentsline {section}{\numberline {7.2}Microcanonical analysis}{17}
+\contentsline {subsection}{\numberline {7.2.1}Subphases and subphase transitions}{17}
+\contentsline {subsection}{\numberline {7.2.2}Missing subphases and translational entropy}{17}
+\contentsline {subsection}{\numberline {7.2.3}Density effects on the latent heat}{17}
+\contentsline {chapter}{\numberline {8}Summary and Outlook}{18}
+\contentsline {chapter}{Bibliography}{18}
