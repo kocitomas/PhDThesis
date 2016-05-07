@@ -272,16 +272,31 @@ where the last expression corresponds to the variance of the Boltzmann distribut
 \subsection{Canonical analysis of phase transitions} 
 Sudden dramatic changes in macroscopic properties in response to small variations of an external control parameter indicate that the system under investigation is undergoing a phase transition. Here we consider temperature-driven transitions and apply a classification scheme similar to Ehrenfest's.
 
-In the thermodynamic limit, it is generally possible to identify some property of the system which is non-zero in the ordered phase and zero in the disordered phase, i.e. the order parameter. A standard example is the magnetization $m$ in a ferromagnetic system, where $m = 1$ in the ordered ferromagnetic phase and $m = 0$ in the disordered paramagnetic phase. Discontinuity in the derivative of the order parameter with respect to its conjugate variable indicates the transition point\footnote{In the case of the magnetization $m$, the appropriate conjugate thermodynamic variable is the external field $H$.}. The concept of an order parameter also plays a central role in the formulation of the Landau theory, where it is used as a basis for the expansion of the free energy around the transition point.
+In the thermodynamic limit, it is generally possible to identify some property of the system which is non-zero in the ordered phase and zero in the disordered phase, i.e. the order parameter. A standard example is the magnetization $m$ in a ferromagnetic system, where $m = 1$ in the ordered ferromagnetic phase and $m = 0$ in the disordered paramagnetic phase. The derivative of the order parameter with respect to its conjugate variable defines a response quantity\footnote{In the case of the magnetization $m$, the appropriate conjugate thermodynamic variable is the external field $H$, and the corresponding response quantity is the magnetic susceptibility $\chi$.} which has a discontinuity at the transition point. The concept of an order parameter also plays a central role in the formulation of the Landau theory, where it is used as a basis for the expansion of the free energy around the transition point. 
 
-First order transition are characterized by a jump discontinuity in the first temperature derivative of the free energy, i.e. the entropy of the system. This results in the coexistence of two distinct phases\footnote{As a familiar example, consider the coexistence of gas bubbles and liquid at the boiling point of water.} whose energetic separation defines the latent heat
+\begin{figure}
+\center
+\includegraphics[width = 0.8\textwidth]{chapter2Figs/CanonicalFirstOrder.pdf}
+\caption{\label{fig:Fig_3}% 
+(A) The jump discontinuity in the canonical entropy $S$, and (B) the delta peak in the specific heat $C_{V}$, are characteristic of a first order phase transition.}
+\end{figure}
+
+First order transition are characterized by a jump discontinuity in the first temperature derivative of the free energy, i.e. the entropy of the system. This results in the coexistence of two distinct phases\footnote{As a familiar example, consider the coexistence of gas bubbles and liquid at the boiling point of water.} at the transition temperature, whose energetic separation corresponds to the latent heat
 \begin{equation}
 \Delta Q = T_{\mathrm{trans}}\,\Delta S,
 \end{equation}
 where $\Delta S$ is the height of the discontinuity. The specific heat $C_{V}$ has a delta peak at the transition temperature, however as shown in Fig. \ref{fig:Fig_3}, it does not exhibit divergence as it approaches the transition point.
 
-Second order transitions do not posses discontinuities in entropy, and for that reason are often called \textit{continuous} transitions. Instead, discontinuities are found in the second derivative of the free energy with respect to temperature. It is customary to make use of the relationship shown in Eq. \ref{eq:22}, and consider the specific heat $C_{V}$ which also exhibits the same discontinuities.
-In the vicinity of the transition point $T_{c}$, the specific heat exhibits a power law behavior $C_{V}(\tau) \propto \left| \tau \right|^{-\alpha}$, where $\tau = \left(T-T_{c}\right)/T_{c}$ and $\alpha$ is the associated critical exponent. Two common types of behaviors of $C_{V}$ in real physical systems are shown in Fig. \ref{fig:Fig_3}. Other quantities such as the magnetic susceptibility $\chi$ and the correlation length $\xi$ also exhibit a power law behavior near the transition point, governed by the critical exponents $\gamma$ and $\nu$ respectively. One of the most impactful achievements of statistical mechanic was the discovery of universality: the critical behavior of classes of physically distinct systems can be described by the same sets of critical exponents. 
+\begin{figure}
+\center
+\includegraphics[width = 0.8\textwidth]{chapter2Figs/CanonicalSecondOrder.pdf}
+\caption{\label{fig:Fig_4}% 
+Second order transitions are characterized by discontinuities in response quantities, such as the specific heat. (A,B) If the entropy $S$ attains an infinite slope at the critical temperature $T_{c}$, the specific heat $C_{V}$ diverges to infinity. (C,D) Alternatively, a jump discontinuity in $C_{V}$, observed for example in superconducting transitions, corresponds to the cusp singularity in entropy.}
+\end{figure}
+
+Second order transitions do not posses discontinuities in entropy, and for that reason are often called \textit{continuous} transitions. Instead, discontinuities are found in the second derivative of the free energy with respect to temperature. It is customary to make use of the relationship shown in Eq.\,\,\ref{eq:22}, and consider the specific heat $C_{V}$ which also exhibits the same discontinuities.
+In the vicinity of the transition point $T_{c}$, the specific heat exhibits a power law behavior $C_{V}(\tau) \propto \left| \tau \right|^{-\alpha}$, where $\tau = \left(T-T_{c}\right)/T_{c}$ and $\alpha$ is the associated critical exponent. Two common types of behaviors of $C_{V}$ in real physical systems are shown in Fig. \ref{fig:Fig_4}. Other important quantities such as the magnetic susceptibility $\chi$ and the correlation length $\xi$ also exhibit a power law behavior near the transition point, governed by the critical exponents $\gamma$ and $\nu$ respectively. One of the most impactful achievements of statistical mechanic was the discovery of universality: the critical behavior of classes of physically distinct systems can be described by the same sets of critical exponents. 
+
 
 \section{Configurational density of states}
 \section{Generalized ensembles}

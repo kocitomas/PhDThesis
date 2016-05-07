@@ -2,10 +2,12 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Microcanonical inflection-point analysis of the inverse microcanonical temperature $\beta (E)$. The prominent back-bending region in $\beta (E)$, together with the positive-valued peak in its energy derivative $\gamma (E)$ at $E \approx -15$, indicates a \textit {first-order} transition. The negative-valued peak at $E\approx -24$ corresponds to a \textit {second-order} transition.}}{7}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces The convex region of the microcanonical entropy $S(E)$ and the back-bending of the microcanonical inverse temperature $\beta (E)$ are prominent indicators of \textit {first-order} transitions. The slope of the double-tangent Gibbs hull $\mathcal {H}(E)$ defines the transition temperature $\beta _{\mathrm {tr}}$. The Maxwell construction, defined by equal areas of $s_{\mathrm {o}}$ and $s_{\mathrm {d}}$, is itself positioned at $\beta _{\mathrm {tr}}$. The transition energy $E_{\mathrm {tr}}$ indicates the location of the largest separation between $\mathcal {H}(E)$ and $S(E)$, which signifies maximal entropic suppression of the transition states. The latent heat $\Delta Q$ corresponds to the width of the transition region between $E_{\mathrm {d}}$ and $E_{\mathrm {o}}$.}}{8}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces (A) The jump discontinuity in the canonical entropy $S$, and (B) the delta peak in the specific heat $C_{V}$, are characteristic of a first order phase transition.}}{12}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Second order transitions are characterized by discontinuities in response quantities, such as the specific heat. (A,B) If the entropy $S$ attains an infinite slope at the critical temperature $T_{c}$, the specific heat $C_{V}$ diverges to infinity. (C,D) Alternatively, a jump discontinuity in $C_{V}$, observed for example in superconducting transitions, corresponds to the cusp singularity in entropy.}}{13}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {8.1}{\ignorespaces Example of a figure.}}{19}
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Example of a figure.}}{20}
