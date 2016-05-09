@@ -121,9 +121,11 @@ Kickass intro...
 
 
 \chapter{Elements of Statistical Mechanics}
+\label{chap:elements_of_stat_mech}
 Statistical mechanics aims at explaining the microscopic origins of macroscopic properties of systems with large numbers of degrees of freedom. The exact solution for a single phase space trajectory of a complex system requires enormous computational efforts and in most cases provides only a limited insight. In contrast to the chaotic nature of most phase space trajectories, collective system properties such as entropy, pressure, or temperature, for the most part exhibit relatively simple behavior. The formalism of statistical mechanics allows us to study these properties by considering the average behavior of a large number of identically prepared systems, i.e. the statistical ensemble. It is well established that in the thermodynamic limit all ensembles become equivalent. However this is emphatically not true in the case of intrinsically finite systems for which the choice of an ensemble is non-trivial. Therefore, I shall briefly discuss several prominent statistical ensembles starting with the most fundamental one, the \textit{microcanonical ensemble}.
 
 \section{The microcanonical ensemble}
+\label{sec:mic_ensemble}
 Let us consider a mechanically and adiabatically isolated system with a constant number of particles $(N)$, volume $(V)$, and energy $(E)$. At any given moment, the system is to be found in a particular microstate $\mu$, which is represented by a point in a $6N$ dimensional phase-space. At a fixed energy $E$, the accessible microstates are constrained to the surface of constant energy $\mathcal{H}(\mu) = E$, where $\mathcal{H}$ is the Hamiltonian of the system. The total number of microstates corresponding to a macrostate with a fixed energy $E$ is obtained by calculating the density of states\footnote{In the context of computer simulations, the energy space becomes by necessity discretized and the density of states is determined by counting the number of microstates within some finite energy range $[E,E+\Delta E]$.}\textsuperscript{,}\footnote{Please refer to section 2.3 for detailed discussion of alternative definitions of the density of states.}
 \begin{equation}
 g(E) = \int \mathcal{DP}\mathcal{DQ} \:\: \delta(E - \mathcal{H}(\mathcal{P},\mathcal{Q})),
@@ -182,16 +184,17 @@ Frequently, it is more convenient to consider the inverse microcanonical tempera
 In the following section, we discuss the central role of inverse microcanonical temperature and its energy derivatives in the classification of structural phase transitions.
 
 \subsection{Microcanonical analysis of phase transitions}
+\label{subsec: micro_analysis}
 A macrostate of a system is specified by a set of macroscopic variables and possesses the characteristics of the predominant microstates. Macrostates are said to belong to the same thermodynamic phase, if in a given range of some external control parameters\footnote{Some common examples of external control parameters are the canonical temperature, pressure, or the chemical potential.} all of the system's thermodynamic observables are analytic, i.e. have convergent Taylor expansions. Singularities in the observables signify the presence of phase transitions between distinct phases, typically marked by abrupt changes in macrosopic properties in response to minute variations of external control parameters. Phase transitions can be roughly divided into two categories. \textit{Abrupt} transitions are characterized by the coexistence of two distinct phases and discontinuities in most physical properties. \textit{Continuous} transitions, although less common in nature, have been the object of most intense research. They are marked by diverging correlation lenghts, large fluctuations, and scale invariance. 
 
-Divergences and singularities in thermodynamic observables and their derivatives are only found in systems which satisfy the thermodynamic limit. In mesoscopic systems\footnote{Typical length scales in  mesoscopic systems are of the order of $\sim 10$ nanometers. In this regime, exact quantum many-body interactions can be replaced by effective classical potentials, and cooperative effects dominate structure formation processes. Mesoscopic systems are distinct from macroscopic systems due to the presence of significant finite-size effects, which disallow the simplifying assumptions of the thermodynamic limit.}, due to finite size effects, divergences are replaced by peaks and discontinuities are smoothed over. For clarity, we designate the term \textit{pseudophase transition} to represent significant conformational changes in finite systems. Likewise, thermodynamic phases in finite systems shall be referred to as \textit{pseudophases}. In the following, we present a powerful formalism for the analysis of pseudophase transitions in the microcanonical ensemble; the microcanonical inflection point analysis.
+Divergences and singularities in thermodynamic observables and their derivatives are only found in systems which satisfy the thermodynamic limit. In mesoscopic systems\footnote{Typical length scales in  mesoscopic systems are of the order of $\sim 10  10^{3}$ nanometers. In this regime, exact quantum many-body interactions can be replaced by effective classical potentials, and cooperative effects dominate structure formation processes. Mesoscopic systems are distinct from macroscopic systems due to the presence of significant finite-size effects, which disallow the simplifying assumptions of the thermodynamic limit.}, due to finite size effects, divergences are replaced by peaks and discontinuities are smoothed over. For clarity, we designate the term \textit{pseudophase transition} to represent significant conformational changes in finite systems. Likewise, thermodynamic phases in finite systems shall be referred to as \textit{pseudophases}. In the following, we present a powerful formalism for the analysis of pseudophase transitions in the microcanonical ensemble; the microcanonical inflection point analysis.
 
 \subsubsection{Microcanonical inflection-point analysis}
 Unlike its canonical counterpart~-- the heat-bath temperature~-- the
 microcanonical inverse temperature is an inherent property of the system, derived directly from the fundamental microcanonical quantities $S(E)$ and $E$. We assert that all essential information about energetically and entropically driven thermodynamic processes is contained in its curvature. Hence the microcanonical inverse temperature is an ideal starting point for a comprehensive analysis of pseudophase transitions.  
 
 In analogy to the principle of minimal sensitivity~\cite{Stevenson}, structural transitions between pseudophases occur when $\beta (E)$, or one of its energy
-derivatives, responds least sensitively to variations in energy. In particular, \textit{first-order} transitions are associated with inflection points in $\beta (E)$ that have a positive slope, accompanied by positive-valued peaks in the energy derivative $\gamma(E)=d\beta(E)/dE$. Similarly, a \textit{second-order} transition occurs when $\beta(E)$ exhibits an inflection point with a negative slope and $\gamma(E)$ attains a negative-valued peak. Examples of microcanonical \textit{first-} and \textit{second-order} transition signals are shown in Fig.~\ref{fig:Fig_1}.
+derivatives, responds least sensitively to variations in energy. In particular, \textit{first-order} transitions are associated with inflection points in $\beta (E)$ that have a positive slope, accompanied by positive-valued peaks in the energy derivative $\gamma(E)=d\beta(E)/dE$. Similarly, a \textit{second-order} transition occurs when $\beta(E)$ exhibits an inflection point with a negative slope and $\gamma(E)$ attains a negative-valued peak. Examples of microcanonical \textit{first-} and \textit{second-order} transition signals are shown in Fig.~\ref{fig:Fig_1}. The formalism can be naturally extended to higher-order transitions. 
 %
 \begin{figure}
 \center
@@ -200,8 +203,9 @@ derivatives, responds least sensitively to variations in energy. In particular, 
 Microcanonical inflection-point analysis of the inverse microcanonical temperature $\beta(E)$. The prominent back-bending region in $\beta(E)$, together with the positive-valued peak in its energy derivative $\gamma(E)$ at $E \approx -15$, indicates a \textit{first-order} transition. The negative-valued peak at $E\approx -24$ corresponds to a \textit{second-order} transition.}
 \end{figure}
 %
+Inflection point in the $(2\mathrm{n})$th-derivative of entropy, accompanied by a positive-valued valley in the $(2\mathrm{n}+1)$th-derivative, indicates a $(2\mathrm{n}+1)$th-order transition. Similarly, a $(2\mathrm{n})$th-order transition is marked by an inflection point in the $(2\mathrm{n}-1)$th-derivative of entropy and a negative-valued peak in the $(2\mathrm{n})$th-order derivative.
 
-Alternatively, in the case of \textit{first-order} transitions, the transition temperature $\beta_{\mathrm{tr}}$ can be obtained by the means of the Maxwell construction, which was originally introduced to repair the unphysical back-bending in the pressure versus volume phase diagram for the van der Waals gas. However, in mesoscopic systems, finite-size effects lead to entropic suppression of the transition states, which is manifested in the backbending of $\beta(E)$ and the convex intruder in $S(E)$. 
+Alternatively, for \textit{first-order} transitions the transition temperature $\beta_{\mathrm{tr}}$ can be obtained by the means of the Maxwell construction, which was originally introduced to repair the unphysical back-bending in the pressure versus volume phase diagram for the van der Waals gas. However, in mesoscopic systems, finite-size effects lead to entropic suppression of the transition states, which is manifested in the backbending of $\beta(E)$ and the convex intruder in $S(E)$. 
 %
 \begin{figure}
 \center
@@ -226,7 +230,7 @@ where $\beta_{\mathrm{tr}}$ can be expressed in terms of the energy and entropy 
 \end{equation}
 With the exception of composite multi-step transitions, characterized by additional oscillations in the back-bending region of $\beta(E)$, the transition temperatures obtained by the means of the Maxwell and Gibbs constructions are identical.
 
- Based on the principle of minimal sensitivity and Ehrenfest's original idea of characterizing the order of a transition by the free-energy derivative at which a discontinuity occurs, one can likewise introduce a hierarchy of higher-order transitions microcanonically.
+The formalism of the microcanonical inflection-point analysis makes no reference to the thermodynamic limit. In fact, it is equally suitable for analysis of macroscopic and mesoscopic systems alike. This is in stark contrast to the more traditional canonical analysis which is defined under the assumption of the thermodynamic limit and has to be modified for the treatment of finite systems.
  
  
 \section{The canonical ensemble}
@@ -269,34 +273,47 @@ C_{V}(T) &=&  \frac{\partial}{dT}\frac{\sum_{E} E \, g(E) e^{-\frac{E}{k_{\mathr
 \end{eqnarray}
 where the last expression corresponds to the variance of the Boltzmann distribution. This result is of a profound physical importance, establishing the connection between the macroscopic response quantity $C_{V}$, and microscopic fluctuations.
 
-\subsection{Canonical analysis of phase transitions} 
-Sudden dramatic changes in macroscopic properties in response to small variations of an external control parameter indicate that the system under investigation is undergoing a phase transition. Here we consider temperature-driven transitions and apply a classification scheme similar to Ehrenfest's.
+\subsection{Canonical analysis of phase transitions}
+Sudden dramatic changes in macroscopic properties, as a response to small variations of an external control parameter, indicate that the system under investigation is undergoing a phase transition. Here we consider temperature-driven transitions and apply a classification scheme similar to Ehrenfest's.
 
-In the thermodynamic limit, it is generally possible to identify some property of the system which is non-zero in the ordered phase and zero in the disordered phase, i.e. the order parameter. A standard example is the magnetization $m$ in a ferromagnetic system, where $m = 1$ in the ordered ferromagnetic phase and $m = 0$ in the disordered paramagnetic phase. The derivative of the order parameter with respect to its conjugate variable defines a response quantity\footnote{In the case of the magnetization $m$, the appropriate conjugate thermodynamic variable is the external field $H$, and the corresponding response quantity is the magnetic susceptibility $\chi$.} which has a discontinuity at the transition point. The concept of an order parameter also plays a central role in the formulation of the Landau theory, where it is used as a basis for the expansion of the free energy around the transition point. 
+In the thermodynamic limit, it is generally possible to identify some property of the system which is non-zero in the ordered phase and zero in the disordered phase, i.e. the order parameter. A standard example is the magnetization $m$ in a ferromagnetic system, where $m = 1$ in the ordered ferromagnetic phase and $m = 0$ in the disordered paramagnetic phase. The derivative of the order parameter with respect to its conjugate variable defines a response quantity\footnote{In the case of the magnetization $m$, the appropriate conjugate thermodynamic variable is the external field $H$, and the corresponding response quantity is the magnetic susceptibility $\chi$.} which is discontinuous at the transition point. Order parameters also play a central role in the formulation of the Landau theory, where they are used as a basis for the expansion of the free energy around the transition point. 
 
 \begin{figure}
 \center
 \includegraphics[width = 0.8\textwidth]{chapter2Figs/CanonicalFirstOrder.pdf}
 \caption{\label{fig:Fig_3}% 
 (A) The jump discontinuity in the canonical entropy $S$, and (B) the delta peak in the specific heat $C_{V}$, are characteristic of a first order phase transition.}
-\end{figure}
-
-First order transition are characterized by a jump discontinuity in the first temperature derivative of the free energy, i.e. the entropy of the system. This results in the coexistence of two distinct phases\footnote{As a familiar example, consider the coexistence of gas bubbles and liquid at the boiling point of water.} at the transition temperature, whose energetic separation corresponds to the latent heat
-\begin{equation}
-\Delta Q = T_{\mathrm{trans}}\,\Delta S,
-\end{equation}
-where $\Delta S$ is the height of the discontinuity. The specific heat $C_{V}$ has a delta peak at the transition temperature, however as shown in Fig. \ref{fig:Fig_3}, it does not exhibit divergence as it approaches the transition point.
+\end{figure} 
 
 \begin{figure}
 \center
 \includegraphics[width = 0.8\textwidth]{chapter2Figs/CanonicalSecondOrder.pdf}
 \caption{\label{fig:Fig_4}% 
-Second order transitions are characterized by discontinuities in response quantities, such as the specific heat. (A,B) If the entropy $S$ attains an infinite slope at the critical temperature $T_{c}$, the specific heat $C_{V}$ diverges to infinity. (C,D) Alternatively, a jump discontinuity in $C_{V}$, observed for example in superconducting transitions, corresponds to the cusp singularity in entropy.}
+Second order transitions are characterized by discontinuities in response quantities, such as the specific heat. (A,B) In the case of a \textbf{critical} second order transition, the entropy $S$ attains an infinite slope at $T_{c}$ accompanied by a divergence in the specific heat $C_{V}$. (C,D) So called \textit{lambda} transitions, do not exhibit criticality and are characterized by a jump discontinuity in $C_{V}$ and a cusp singularity in entropy.}
 \end{figure}
 
-Second order transitions do not posses discontinuities in entropy, and for that reason are often called \textit{continuous} transitions. Instead, discontinuities are found in the second derivative of the free energy with respect to temperature. It is customary to make use of the relationship shown in Eq.\,\,\ref{eq:22}, and consider the specific heat $C_{V}$ which also exhibits the same discontinuities.
-In the vicinity of the transition point $T_{c}$, the specific heat exhibits a power law behavior $C_{V}(\tau) \propto \left| \tau \right|^{-\alpha}$, where $\tau = \left(T-T_{c}\right)/T_{c}$ and $\alpha$ is the associated critical exponent. Two common types of behaviors of $C_{V}$ in real physical systems are shown in Fig. \ref{fig:Fig_4}. Other important quantities such as the magnetic susceptibility $\chi$ and the correlation length $\xi$ also exhibit a power law behavior near the transition point, governed by the critical exponents $\gamma$ and $\nu$ respectively. One of the most impactful achievements of statistical mechanic was the discovery of universality: the critical behavior of classes of physically distinct systems can be described by the same sets of critical exponents. 
+First order transitions are characterized by a jump discontinuity in the entropy, also expressible as the negative of the first temperature derivative of the free energy. This results in the coexistence of two distinct phases\footnote{As a familiar example, consider the coexistence of gas bubbles and liquid at the boiling point of water.} at the transition temperature, whose energetic separation corresponds to the latent heat
+\begin{equation}
+\Delta Q = T_{\mathrm{trans}}\,\Delta S,
+\end{equation}
+where $\Delta S$ is the height of the discontinuity. The specific heat $C_{V}$ has a delta peak at the transition temperature, as shown in Fig. \ref{fig:Fig_3}.
 
+Second order transitions do not posses discontinuities in entropy, and for that reason are often called \textit{continuous} transitions. Instead, discontinuities are found in the second derivative of the free energy with respect to temperature. It is customary to make use of the relationship shown in Eq.\,\,\ref{eq:22}, and consider the specific heat $C_{V}$ which also has the same discontinuities.
+In the vicinity of the transition point $T_{c}$, the specific heat exhibits a power law behavior $C_{V}(\tau) \propto \left| \tau \right|^{-\alpha}$, where $\tau = \left(T-T_{c}\right)/T_{c}$ and $\alpha$ is the associated critical exponent. Examples of common types of discontinuities of $C_{V}$ are shown in Fig. \ref{fig:Fig_4}. Other important quantities such as the magnetic susceptibility $\chi$ and the correlation length $\xi$ also exhibit a power law behavior near the transition point, governed by the critical exponents $\gamma$ and $\nu$ respectively.
+
+\subsubsection{Canonical analysis in mesoscopic systems} 
+The description of phase transitions in the terms of discontinuities and divergences is valid only in the thermodynamic limit. In situations where the thermodynamic behavior of a system is affected by finite size effects, this idealized description no longer applies. Nevertheless, the numerous examples of abrupt changes of macroscopic properties in finite systems necessitate the generalization of the theory. In order to avoid possible confusion, we shall refer to significant conformational changes in finite systems as \textit{pseudophase transitions}. Similarly, sets of macrostates with sufficiently similar macroscopic properties will be denoted \textit{pseudophases}.
+
+In the generalized formalism, peaks in the specific heat and other response quantities indicate regions of increased thermodynamic activity, i.e. pseudophase transitions. The order of the transition is determined from the shape of the canonical energy distribution in the transition region. Bimodal distributions reveal the coexistence of two pseudophases and indicate a first-order transition, where the latent heat of the transition is given by the energetic separation of the two peaks in the distribution. Second-order transitions correspond to unimodal energy distributions. The power law behavior of response quantities contains significant finite-size corrections and in some cases is altogether not applicable. An example of canonical analysis, applied to first- and second-order pseudophase transitions, is illustrated in Fig. \ref{fig:Fig_5}. 
+
+\begin{figure}
+\center
+\includegraphics[width = 0.8\textwidth]{chapter2Figs/CanonicalAnalysisSample.pdf}
+\caption{\label{fig:Fig_5}% 
+(a) The peak in the specific heat $C_{V}$ indicates a region of heightened thermodynamic activity. (b) The two peaks in the bimodal canonical energy distribution correspond to the ordered and disordered pseudophases, energetically separated by the latent heat $\Delta Q$. Pseudophase coexistence and latent heat are reliable indicators of a first-order pseudophase transition. (c) Second-order transitions are marked by wide unimodal energy distributions at the transition point.}
+\end{figure}
+
+Here it should be mentioned that second-order pseudophase transitions do not always produce peaks in the specific heat. Therefore, it is necessary to investigate the behavior of several response quantities in order to obtain an accurate picture of the transition properties of the system under investigation. However, due to finite size effects, the signals obtained from different quantities will in general not coincide at a single transition temperature. This fact further fortifies the argument that the microcanonical inflection-point analysis\footnote{Introduced in Sec. \ref{subsec: micro_analysis}}, which defines a unique transition temperature in mesoscopic and macroscopic systems alike, is the natural formalism for the analysis of finite systems.
 
 \section{Configurational density of states}
 \section{Generalized ensembles}
