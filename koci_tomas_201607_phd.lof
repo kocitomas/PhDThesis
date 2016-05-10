@@ -5,10 +5,11 @@
 \contentsline {figure}{\numberline {2.3}{\ignorespaces (Aa) The jump discontinuity in the canonical entropy $S$, and (b) the delta peak in the specific heat $C_{V}$, are characteristic of a first order phase transition.}}{13}
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Second order transitions are characterized by discontinuities in response quantities, such as the specific heat. (a,b) In the case of a \textbf {critical} second order transition, the entropy $S$ attains an infinite slope at $T_{c}$ accompanied by a divergence in the specific heat $C_{V}$. (c,d) So called \textit {lambda} transitions, do not exhibit criticality and are characterized by a jump discontinuity in $C_{V}$ and a cusp singularity in entropy.}}{13}
 \contentsline {figure}{\numberline {2.5}{\ignorespaces (a) The peak in the specific heat $C_{V}$ indicates a region of heightened thermodynamic activity. (b) The two peaks in the bimodal canonical energy distribution correspond to the ordered and disordered pseudophases, energetically separated by the latent heat $\Delta Q$. Pseudophase coexistence and latent heat are reliable indicators of a first-order pseudophase transition. (c) Second-order transitions are marked by wide unimodal energy distributions at the transition point.}}{15}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Results of a Monte Carlo simulation of a short flexible homopolymer of length $N=13$. The average kinetic energy $\delimiter "426830A E _{k}\delimiter "526930B $ and the kinetic contributions $C_{\mathrm {V,kin.}}$ towards the specific heat are plotted as points on top of their respective theoretical curves (blue). The average potential energy $\delimiter "426830A E_{c} \delimiter "526930B $ and the configurational specific heat $C_{\mathrm {V},\mathrm {conf.}}$ (green) were obtained by sampling of the configurational space. Sampling of the full phase space was performed to obtain the total average energy $U$ and the combined specific heat $C_{\mathrm {V}}$ (red). As expected, the combined specific heat is identical to $C_{\mathrm {V},\mathrm {conf.}}$, except for a trivial additive constant.}}{18}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {8.1}{\ignorespaces Example of a figure.}}{22}
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Example of a figure.}}{25}

@@ -128,6 +128,7 @@ Statistical mechanics aims at explaining the microscopic origins of macroscopic 
 \label{sec:mic_ensemble}
 Let us consider a mechanically and adiabatically isolated system with a constant number of particles $(N)$, volume $(V)$, and energy $(E)$. At any given moment, the system is to be found in a particular microstate $\mu$, which is represented by a point in a $6N$ dimensional phase-space. At a fixed energy $E$, the accessible microstates are constrained to the surface of constant energy $\mathcal{H}(\mu) = E$, where $\mathcal{H}$ is the Hamiltonian of the system. The total number of microstates corresponding to a macrostate with a fixed energy $E$ is obtained by calculating the density of states\footnote{In the context of computer simulations, the energy space becomes by necessity discretized and the density of states is determined by counting the number of microstates within some finite energy range $[E,E+\Delta E]$.}\textsuperscript{,}\footnote{Please refer to section 2.3 for detailed discussion of alternative definitions of the density of states.}
 \begin{equation}
+\label{eq:densityOfStatesTheoretic}
 g(E) = \int \mathcal{DP}\mathcal{DQ} \:\: \delta(E - \mathcal{H}(\mathcal{P},\mathcal{Q})),
 \end{equation} 
 where 
@@ -234,6 +235,7 @@ The formalism of the microcanonical inflection-point analysis makes no reference
  
  
 \section{The canonical ensemble}
+\label{sec:canonicalEnsemble}
 The canonical ensemble describes the behavior of a closed system in thermal equilibrium with a large external heat bath at a fixed temperature $T$. In analogy to the density of states in the microcanonical ensemble, the partition function $Z(T)$ contains all the essential information about the thermodynamic properties of the system under consideration. It can be defined directly as a Laplace transform\footnote{Here we assume that the system under investigation has discrete energy levels, which is always true in the context of computational studies. In the case of a continuous energy spectrum, the discrete sum is replaced by the integral $Z(T) = \int dE \:\:  g(E) e^{-\frac{E}{k_{\mathrm{B}}T}}$.} of the microcanical density of states $g(E)$
 \begin{equation}
 Z(T) = \sum g(E) e^{-\frac{E}{k_{\mathrm{B}}T}},
@@ -244,7 +246,7 @@ p(\mu) = \frac{1}{Z(T)}e^{-\frac{\mathcal{H}(\mu)}{k_{\mathrm{B}}T}},
 \end{equation}
 and $\mathcal{H}$ is the Hamiltonian of the system. The appropriate thermodynamic potential in the canonical ensemble is the Helmholtz free energy
 \begin{equation}
-F(T) = -k_{\mathrm{B}}T \: \mathrm{ln}\, Z.
+F(T) = -k_{\mathrm{B}}T \: \mathrm{ln}\, Z(T).
 \end{equation}
 This quantity represents the energy available to perform work and can be used to obtain all other thermodynamic quantities by differentiation. The temperature derivative of the free energy defines the canonical entropy
 \begin{equation}
@@ -257,7 +259,7 @@ U(T) = \frac{\sum_{\mu} \mathcal{H}(\mu)e^{-\frac{\mathcal{H}(\mu)}{k_{\mathrm{B
 \end{equation}
 and represents the average energy of the system. Alternatively, the internal energy can be obtained by differentiating the free energy
 \begin{equation}
-U(T) = k_{\mathrm{B}}T^{2}\frac{\partial}{\partial T} \mathrm{ln} Z\bigg|_{N,V}
+U(T) = k_{\mathrm{B}}T^{2}\frac{\partial}{\partial T} \mathrm{ln} Z(T)\bigg|_{N,V}
 = -T^{2}\frac{\partial}{\partial T}\left(\frac{F}{T}\right)\bigg|_{N,V}.
 \end{equation}
 The amount of energy needed to increase the temperature of the system by one unit is given by the specific heat 
@@ -315,8 +317,65 @@ In the generalized formalism, peaks in the specific heat and other response quan
 
 Here it should be mentioned that second-order pseudophase transitions do not always produce peaks in the specific heat. Therefore, it is necessary to investigate the behavior of several response quantities in order to obtain an accurate picture of the transition properties of the system under investigation. However, due to finite size effects, the signals obtained from different quantities will in general not coincide at a single transition temperature. This fact further fortifies the argument that the microcanonical inflection-point analysis\footnote{Introduced in Sec. \ref{subsec: micro_analysis}}, which defines a unique transition temperature in mesoscopic and macroscopic systems alike, is the natural formalism for the analysis of finite systems.
 
-\section{Configurational density of states}
-\section{Generalized ensembles}
+\section{Alternative definitions of the density of states}
+In section \ref{sec:mic_ensemble} we have defined the microcanonical density of states $g(E)$ as an integral over the surface of constant energy in the $6N$-dimensional phase space. We have argued that $g(E)$ contains all the essential information about the thermodynamic properties of the system under consideration, and introduced the formalism of the microcanonical inflection-point analysis which uses the logarithm of $g(E)$ as its starting point. In section \ref{sec:canonicalEnsemble} we have shown that the canonical partition function $Z(T)$ can be obtained by performing a Laplace transform of $g(E)$. Clearly, the microcanonical density of states plays a fundamental role in equilibrium statistical mechanics, and as such needs to be carefully defined. In the following, we introduce a necessary modification to the definition of $g(E)$ in discretized energy spaces, and follow with a discussion of two commonly used forms of $g(E)$.
+
+
+
+In computational studies, the energy space is by necessity discretized into intervals of width $\Delta E$, and the density of states $g(E_{i})$ is obtained by sampling the microstates within a thin shell in the interval $[E_{i}-\Delta E/2, E_{i}+\Delta E/2]$. Formally, $g(E_{i})$ is a discrete function defined as
+\begin{equation}
+g(E_{i}) = \int _{E_{i}-\Delta E/2} ^{E_{i}+\Delta E/2} g(E)dE,
+\end{equation}
+where $g(E)$ in the integrand is the continuous density of states introduced in Eq. \ref{eq:densityOfStatesTheoretic}.
+
+Molecular dynamics and some Monte Carlo simulations are used to compute $g(E_{i}$ in the \textit{full} microcanonical ensemble by sampling the microstates in both the conformational and momentum space.
+
+
+
+\subsection{Consequences for canonical analysis}
+The canonical partition function $Z(T)$ and the microcanonical density of states are connected via a Laplace transform. We begin with the full density of states $\Gamma(E)$ and using the definition from Eq. \ref{eq:22} write
+\begin{equation}
+Z(T) = \mathcal{L}\left\lbrace\Gamma(E)\right\rbrace = \mathcal{L}\{g_{c} \ast g_{k} \} = \mathcal{L}\{g_{c}\} \mathcal{L}\{g_{k}\},
+\end{equation}
+where the last step follows from the convolution theorem. The partition function of the system can therefore be written as a product of two independent partition functions
+\begin{equation}
+Z(T) = Z_{c}(T)Z_{k}(T),
+\end{equation}
+which depend on the potential and kinetic energies respectively. It follows that the average ensemble energy can be expressed as the sum of the average potential and kinetic energies
+\begin{eqnarray}
+U(T)  &=& k_{\mathrm{B}}T^{2}\frac{\partial}{\partial T} \mathrm{ln} Z\bigg|_{N,V} \nonumber \\
+	 &=& k_{\mathrm{B}}T^{2}\frac{\partial}{\partial T} \mathrm{ln} Z_{c} \bigg|_{N,V}	 + k_{\mathrm{B}}T^{2}\frac{\partial}{\partial T} \mathrm{ln} Z_{k} \bigg|_{N,V}	 \nonumber \\
+	 &=& \langle E_{c} \rangle + \langle E _{k}\rangle.  
+\end{eqnarray}
+With the exception of systems with rigid constraints, the average kinetic energy is given by the equipartition theorem 
+\begin{equation}
+ \langle E _{k}\rangle = \frac{3Nk_{\mathrm{B}}T}{2},
+\end{equation}
+where $N$ is the number of particles in the system. It follows that the specific heat $C_{\mathrm{V}}$ obtains only a trivial additive constant from the kinetic energy term
+\begin{eqnarray}
+C_{\mathrm{V}}(T) &=& \frac{\partial}{\partial T} U(T)\bigg|_{N,V} \nonumber \\
+				 &=& \frac{\partial}{\partial T} \langle E_{c} \rangle\bigg|_{N,V} + \frac{\partial}{\partial T}\frac{3Nk_{\mathrm{B}}T}{2} \nonumber \\
+				 &=& C_{\mathrm{V},\mathrm{conf.}} + \frac{3Nk_{\mathrm{B}}}{2}.
+\end{eqnarray}
+
+\begin{figure}
+\center
+\includegraphics[width = 0.49\textwidth]{chapter2Figs/N13Energy.eps}
+\includegraphics[width = 0.49\textwidth]{chapter2Figs/N13Spec.eps}
+\caption{\label{fig:Fig_6}% 
+Results of a Monte Carlo simulation of a short flexible homopolymer of length $N=13$. The average kinetic energy $\langle E _{k}\rangle$ and the kinetic contributions $C_{\mathrm{V,kin.}}$ towards the specific heat are plotted as points on top of their respective theoretical curves (blue). The average potential energy $\langle E_{c} \rangle$ and the configurational specific heat $C_{\mathrm{V},\mathrm{conf.}}$ (green) were obtained by sampling of the configurational space. Sampling of the full phase space was performed to obtain the total average energy $U$ and the combined specific heat $C_{\mathrm{V}}$ (red). As expected, the combined specific heat is identical to $C_{\mathrm{V},\mathrm{conf.}}$, except for a trivial additive constant.}
+\end{figure}
+
+In conclusion, the locations and shapes of pseudophase transition signals are unaffected by the inclusion of the momentum space into a sampling scheme. To substantiate this assertion, we present the results of a Monte Carlo study of a short flexible homopolymer in Fig. \ref{fig:Fig_6}. The average kinetic energy $\langle E _{k}\rangle$ and the kinetic contributions $C_{\mathrm{V,kin.}}$ towards the specific heat are plotted as points on top of their respective theoretical curves (blue), showing good agreement with the predicted values. The average potential energy $\langle E_{c} \rangle$ and the configurational specific heat $C_{\mathrm{V},\mathrm{conf.}}$ (green) were obtained by sampling restricted to the configurational space only. Sampling of both the momentum and configurational space was performed to obtain the total average energy $U$ and the combined specific heat $C_{\mathrm{V}}$ (red). As expected, the combined specific heat is identical to $C_{\mathrm{V},\mathrm{conf.}}$, except for a trivial additive constant. The estimate of the transition temperature is independent of the choice of either definition of the density of states.  
+
+\subsection{Consequences for microcanonical analysis}
+
+
+
+
+
+ 
+
 
 \chapter{Computational Methods}
 \section{Markov chain Monte Carlo}
