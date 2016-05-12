@@ -122,7 +122,7 @@ Kickass intro...
 
 \chapter{Elements of Statistical Mechanics}
 \label{chap:elements_of_stat_mech}
-Statistical mechanics aims at explaining the microscopic origins of macroscopic properties of systems with large numbers of degrees of freedom. The exact solution for a single phase space trajectory of a complex system requires enormous computational efforts and in most cases provides only a limited insight. In contrast to the chaotic nature of most phase space trajectories, collective system properties such as entropy, pressure, or temperature, for the most part exhibit relatively simple behavior. The formalism of statistical mechanics allows us to study these properties by considering the average behavior of a large number of identically prepared systems, i.e. the statistical ensemble. It is well established that in the thermodynamic limit all ensembles become equivalent. However this is emphatically not true in the case of intrinsically finite systems for which the choice of an ensemble is non-trivial. Therefore, I shall briefly discuss several prominent statistical ensembles starting with the most fundamental one, the \textit{microcanonical ensemble}.
+Statistical mechanics aims at explaining the microscopic origins of macroscopic properties of systems with large numbers of degrees of freedom. The exact solution for the time evolution of every particle in a single complex system requires enormous computational efforts, and in most cases provides little insight. In contrast to the chaotic motion of particles at the microscopic level, collective system properties such as entropy, pressure, or temperature, for the most part exhibit relatively simple behavior. The formalism of statistical mechanics allows us to study these properties by considering the average behavior of a large number of identically prepared systems, i.e., the statistical ensemble. It is well established, that for very large systems near the thermodynamic limit, all ensembles become equivalent. However this is emphatically not true in the case of intrinsically finite systems for which the choice of an ensemble is non-trivial\cite{Bachmann2014}. Therefore, I shall briefly discuss several prominent statistical ensembles, starting with arguably the most fundamental one, the \textit{microcanonical ensemble}.
 
 \section{The microcanonical ensemble}
 \label{sec:mic_ensemble}
@@ -135,13 +135,13 @@ where
 \begin{equation}
 \mathcal{DP}\mathcal{DX} = \prod_{n = 1}^{N} \frac{d^{3}p_{n}d^{3}x_{n}}{(2 \pi \hbar)^{3}}
 \end{equation}
-is the Lebesgue measure over phase space. In computational studies, the energy space is by necessity discretized into intervals of width $\Delta E$, and the density of states $g(E_{i})$ is obtained by counting the microstates within a thin shell of width $\Delta E$. Formally, $g(E_{i})$ is a discrete function defined as
+is the Lebesgue measure over phase space\cite{Rugh2001}. In computational studies, the energy space is by necessity discretized into intervals of width $\Delta E$, and the density of states $g(E_{i})$ is obtained by counting the microstates within a thin shell of width $\Delta E$. Formally, $g(E_{i})$ is a discrete function defined as
 \begin{equation}
 g(E_{i}) = \int _{E_{i}-\Delta E/2} ^{E_{i}+\Delta E/2} g(E)dE,
 \end{equation}
-where $g(E)$ in the integrand is the continuous density of states.
+where $g(E)$ in the integrand is the continuous density of states\cite{Bachmann2014}.
 
-Assuming that no additional quantities are conserved, i.e. the system is ergodic, all accessible microstates have equal a priori probabilities. The microcanonical equilibrium probability distribution is given by 
+Assuming that no additional quantities are conserved, i.e. the system is ergodic, all accessible microstates have equal a priori probabilities\cite{Kardar2007}. The microcanonical equilibrium probability distribution is given by 
 \begin{equation}
 p(\mu)_{E} = \left\{
 \begin{array}{lr}
@@ -163,15 +163,16 @@ as an \textit{extensive} quantity with dimensions of energy over temperature.\fo
 
 
 \subsection{Microcanonical temperature}
-Temperature is one of the fundamental concepts of statistical mechanics and has been traditionally defined in terms of the average kinetic energies of particles in a system. Here we motivate a more fundamental definition of temperature as an intrinsic system property, which can be obtained directly from the microcanonical density of states $g(E)$. For this purpose, let us consider an adiabatically isolated system composed of two weakly interacting subsystems, $S_{1}$ and $S_{2}$. The energy of the combined system is fixed and can be written as the sum of the energies of the two subsystems $E = E_{1} + E_{2}$. The probability density for a given pair of subsystem energies $(E_{1},E_{2})$ is  
+Temperature is one of the most fundamental concepts of statistical mechanics. Traditionally, it has been defined in terms of average kinetic energies of particles in a system\cite{Pathria}. In the following, we wish to motivate a more fundamental definition and introduce temperature as an intrinsic system property which can be obtained directly from the microcanonical density of states. For this purpose, let us consider an adiabatically isolated system composed of two weakly interacting subsystems, $S_{1}$ and $S_{2}$. The energy of the combined system is constant and can be written as the sum of the energies of the two subsystems $E = E_{1} + E_{2}$. At a fixed system energy $E$, the probability density for subsystem $S_{1}$ to contain energy $E_{1}$ is written as 
 \begin{equation}
-\rho(E_{1},E_{2}) = \frac{g_{1}(E_{1})g_{2}(E-E_{1})}{g(E)},
+\rho(E_{1})_{E} = \frac{g_{1}(E_{1})g_{2}(E-E_{1})}{g(E)}.
 \end{equation}
-where the density of states of the combined system is expressed as a convolution
+The density of states of the combined system is given by the convolution of the subsystem densities
 \begin{equation}
+\label{eq:DOSConvolution}
 g(E) = \int dE_{1}g_{1}(E_{1})g_{2}(E-E_{1}).
 \end{equation}
-In systems with many degrees of freedom, the probability density $\rho(E_{1},E_{2})$ is a sharply peaked distribution around the equilibrium energies $(\bar{E}_{1},\bar{E}_{2})$\footnote{The energy fluctuations per particle around the equilibrium energy $\bar{E}_{1}$ scale as $N^{-1/2}$.}. These can be found by setting the energy derivative of the probability density to zero, from which we obtain
+In systems with many degrees of freedom, the probability density $\rho(E_{1})_{E}$ is a sharply peaked distribution around the equilibrium energy $\bar{E}_{1}$\footnote{The energy fluctuations per particle around the equilibrium energy $\bar{E}_{1}$ scale as $N^{-1/2}$\cite{Sethna2006}.}. Hence the convolution in Eq. \ref{eq:DOSConvolution} can be well approximated by the maximum value of the integrand\cite{Sethna2006}. The maximum is found when the derivative of the integrand with respect to $E_{1}$ is set to zero. It follows that
 \begin{equation}
 \frac{1}{g_{1}}\frac{dg_{1}}{dE_{1}}\bigg|_{\bar{E}_{1}} = \frac{1}{g_{2}}\frac{dg_{2}}{dE_{2}}\bigg|_{E - \bar{E}_{1}},
 \end{equation}
@@ -179,37 +180,36 @@ or alternatively in terms of the microcanonical entropy
 \begin{equation}
 \frac{dS_{1}}{dE_1}\bigg|_{\bar{E}_{1}} = \frac{dS_{2}}{dE_{2}}\bigg|_{E - \bar{E}_{1}}.
 \end{equation}
-Motivated by the familiar observation that interacting systems at thermal equilibrium have equal temperatures, we define the microcanonical temperature as 
+In analogy to the familiar observation that interacting systems at thermal equilibrium have equal temperatures, we define the microcanonical temperature as 
 \begin{equation}
 T(E) = \left(\frac{dS(E)}{dE}\right)^{-1}.
 \end{equation}
-Frequently, it is more convenient to consider the inverse microcanonical temperature defined as 
+Frequently, it is more convenient to consider instead the inverse microcanonical temperature 
 \begin{equation}
 \beta(E) = \frac{dS(E)}{dE}.
 \end{equation}
-In the following section, we discuss the central role of inverse microcanonical temperature and its energy derivatives in the classification of structural phase transitions.
 
 \subsection{Microcanonical analysis of phase transitions}
 \label{subsec: micro_analysis}
-A macrostate of a system is specified by a set of macroscopic variables and possesses the characteristics of the predominant microstates. Macrostates are said to belong to the same thermodynamic phase, if in a given range of some external control parameters\footnote{Some common examples of external control parameters are the canonical temperature, pressure, or the chemical potential.} all of the system's thermodynamic observables are analytic, i.e. have convergent Taylor expansions. Singularities in the observables signify the presence of phase transitions between distinct phases, typically marked by abrupt changes in macrosopic properties in response to minute variations of external control parameters. Phase transitions can be roughly divided into two categories. \textit{Abrupt} transitions are characterized by the coexistence of two distinct phases and discontinuities in most physical properties. \textit{Continuous} transitions, although less common in nature, have been the object of most intense research. They are marked by diverging correlation lenghts, large fluctuations, and scale invariance. 
+A macrostate of a system is specified by a set of macroscopic variables and possesses the characteristics of the predominant microstates. Macrostates are said to belong to the same thermodynamic phase, if in a given range of some external control parameters\footnote{Some common examples of external control parameters are the canonical temperature, pressure, or the chemical potential.} all of the system's thermodynamic observables are analytic, i.e. have convergent Taylor expansions. Singularities in the observables signify the presence of phase transitions between distinct phases, typically marked by abrupt changes in macrosopic properties in response to minute variations of external control parameters. Phase transitions can be roughly divided into two categories. \textit{Abrupt} transitions are characterized by the coexistence of two distinct phases and discontinuities in most physical properties. \textit{Continuous} transitions, although less common in nature, have been the object of most intense research. They are marked by diverging correlation lenghts, large fluctuations, and scale invariance\cite{Sethna2006}. 
 
-Divergences and singularities in thermodynamic observables and their derivatives are only found in systems which satisfy the thermodynamic limit. In mesoscopic systems\footnote{Typical length scales in  mesoscopic systems are of the order of $\sim 10  10^{3}$ nanometers. In this regime, exact quantum many-body interactions can be replaced by effective classical potentials, and cooperative effects dominate structure formation processes. Mesoscopic systems are distinct from macroscopic systems due to the presence of significant finite-size effects, which disallow the simplifying assumptions of the thermodynamic limit.}, due to finite size effects, divergences are replaced by peaks and discontinuities are smoothed over. For clarity, we designate the term \textit{pseudophase transition} to represent significant conformational changes in finite systems. Likewise, thermodynamic phases in finite systems shall be referred to as \textit{pseudophases}. In the following, we present a powerful formalism for the analysis of pseudophase transitions in the microcanonical ensemble; the microcanonical inflection point analysis.
+Divergences and singularities in thermodynamic observables and their derivatives are only found in systems which satisfy the thermodynamic limit. In mesoscopic systems\footnote{Typical length scales in  mesoscopic systems are of the order of $\sim 10  10^{3}$ nanometers. In this regime, exact quantum many-body interactions can be replaced by effective classical potentials, and cooperative effects dominate structure formation processes. Mesoscopic systems are distinct from macroscopic systems due to the presence of significant finite-size effects, which disallow the simplifying assumptions of the thermodynamic limit.}, due to finite size effects, divergences are replaced by peaks and discontinuities are smoothed over\cite{Bachmann2014}. For clarity, we designate the term \textit{pseudophase transition} to represent significant conformational changes in finite systems. Likewise, thermodynamic phases in finite systems shall be referred to as \textit{pseudophases}. In the following, we present a powerful formalism for the analysis of pseudophase transitions in the microcanonical ensemble; the microcanonical inflection point analysis.
 
 \subsubsection{Microcanonical inflection-point analysis}
 Unlike its canonical counterpart~-- the heat-bath temperature~-- the
-microcanonical inverse temperature is an inherent property of the system, derived directly from the fundamental microcanonical quantities $S(E)$ and $E$. We assert that all essential information about energetically and entropically driven thermodynamic processes is contained in its curvature. Hence the microcanonical inverse temperature is an ideal starting point for a comprehensive analysis of pseudophase transitions.  
+microcanonical inverse temperature is an inherent property of the system, derived directly from the fundamental microcanonical quantities $S(E)$ and $E$. We assert that all essential information about energetically and entropically driven thermodynamic processes is contained in its curvature. Hence the microcanonical inverse temperature is an ideal starting point for a comprehensive analysis of pseudophase transitions\cite{Gross2001}.  
 
 %
 \begin{figure}
 \center
 \includegraphics[width = 0.7\textwidth]{chapter2Figs/MicroAnalysisExample.eps}
 \caption{\label{fig:Fig_1}%
-Microcanonical inflection-point analysis of the inverse microcanonical temperature $\beta(E)$. The prominent back-bending region in $\beta(E)$, together with the positive-valued peak in its energy derivative $\gamma(E)$ at $E \approx -15$, indicates a \textit{first-order} transition. The negative-valued peak at $E\approx -24$ corresponds to a \textit{second-order} transition.}
+Microcanonical inflection-point analysis of the inverse microcanonical temperature $\beta(E)$. The prominent back-bending region in $\beta(E)$, together with the positive-valued peak in its energy derivative $\gamma(E)$ at $E \approx -15$, indicates a first-order transition. The negative-valued peak at $E\approx -24$ corresponds to a second-order transition.}
 \end{figure}
 %
 
-In analogy to the principle of minimal sensitivity~\cite{Stevenson}, structural transitions between pseudophases occur when $\beta (E)$, or one of its energy
-derivatives, responds least sensitively to variations in energy. In particular, \textit{first-order} transitions are associated with inflection points in $\beta (E)$ that have a positive slope, accompanied by positive-valued peaks in the energy derivative $\gamma(E)=d\beta(E)/dE$. Similarly, a \textit{second-order} transition occurs when $\beta(E)$ exhibits an inflection point with a negative slope and $\gamma(E)$ attains a negative-valued peak. Examples of microcanonical \textit{first-} and \textit{second-order} transition signals are shown in Fig.~\ref{fig:Fig_1}. The formalism can be naturally extended to higher-order transitions. Inflection point in the $(2\mathrm{n})$th-derivative of entropy, accompanied by a positive-valued valley in the $(2\mathrm{n}+1)$th-derivative, indicates a $(2\mathrm{n}+1)$th-order transition. Similarly, a $(2\mathrm{n})$th-order transition is marked by an inflection point in the $(2\mathrm{n}-1)$th-derivative of entropy and a negative-valued peak in the $(2\mathrm{n})$th-order derivative.
+In analogy to the principle of minimal sensitivity~\cite{Stevenson}, structural transitions between pseudophases occur when $\beta(E)$, or one of its energy
+derivatives, respond least sensitively to variations in energy\cite{Schnabel2011}. In particular, first-order transitions are associated with inflection points in $\beta (E)$ that have a positive slope, accompanied by positive-valued peaks in the energy derivative $\gamma(E)=d\beta(E)/dE$. Similarly, a second-order transition occurs when $\beta(E)$ exhibits an inflection point with a negative slope and $\gamma(E)$ attains a negative-valued peak. Examples of microcanonical pseudophase transition signals are shown in Fig.~\ref{fig:Fig_1}. The formalism can be naturally extended to higher-order transitions. Inflection point in the $(2\mathrm{n})$th-derivative of entropy, accompanied by a positive-valued valley in the $(2\mathrm{n}+1)$th-derivative, indicates a $(2\mathrm{n}+1)$th-order transition. Similarly, a $(2\mathrm{n})$th-order transition is marked by an inflection point in the $(2\mathrm{n}-1)$th-derivative of entropy and a negative-valued peak in the $(2\mathrm{n})$th-order derivative.
 
 %
 \begin{figure}
@@ -219,13 +219,14 @@ derivatives, responds least sensitively to variations in energy. In particular, 
 The convex region of the microcanonical entropy $S(E)$ and the back-bending of the microcanonical inverse temperature $\beta(E)$ are prominent indicators of \textit{first-order} transitions. The slope of the double-tangent Gibbs hull $\mathcal{H}(E)$ defines the transition temperature $\beta_{\mathrm{tr}}$. The Maxwell construction, defined by equal areas of $s_{\mathrm{o}}$ and $s_{\mathrm{d}}$, is itself positioned at $\beta_{\mathrm{tr}}$. The transition energy $E_{\mathrm{tr}}$ indicates the location of the largest separation between $\mathcal{H}(E)$ and $S(E)$, which signifies maximal entropic suppression of the transition states. The latent heat $\Delta Q$ corresponds to the width of the transition region between $E_{\mathrm{d}}$ and $E_{\mathrm{o}}$.}
 \end{figure}
 %
-Alternatively, for \textit{first-order} transitions the transition temperature $\beta_{\mathrm{tr}}$ can be obtained by the means of the Maxwell construction, which was originally introduced to repair the unphysical back-bending in the pressure versus volume phase diagram for the van der Waals gas. However, in mesoscopic systems, finite-size effects lead to entropic suppression of the transition states, which is manifested in the backbending of $\beta(E)$ and the convex intruder in $S(E)$.Figure \ref{fig:Fig_2} shows an example of a Maxwell construction. Its position is determined by the equality of the areas $s_{\mathrm{o}}$ and $s_{\mathrm{d}}$. Often referred to as \textit{surface entropies}, $s_{\mathrm{o}}$ and $s_{\mathrm{d}}$ are defined in terms of the integrals
+Alternatively, in the case of first-order transitions, the transition temperature $\beta_{\mathrm{tr}}$ can be obtained by the means of the Maxwell construction which was originally introduced to repair the unphysical back-bending in the pressure versus volume isotherms for the van der Waals gas. In mesoscopic systems, the finite-size effects lead to the entropic suppression of transition states, which is manifested in the backbending of $\beta(E)$ and the convex intruder in $S(E)$. The position of the Maxwell construction is determined by the equality of the areas $s_{\mathrm{o}}$ and $s_{\mathrm{d}}$ [Fig.\ref{fig:Fig_2}]. Commonly referred to as \textit{surface entropies}, $s_{\mathrm{o}}$ and $s_{\mathrm{d}}$ are defined as the integrals
 \begin{eqnarray}
 \label{eq:surfaceEntr}
 s_{\mathrm{o}} &=& \int_{E_{\mathrm{o}}}^{E_{\mathrm{tr}}} dE \:\: (\beta_{\mathrm{tr}}-\beta(E)), \\
 s_{\mathrm{d}} &=& \int_{E_{\mathrm{tr}}}^{E_{\mathrm{d}}} dE \:\: (\beta(E)-\beta_{\mathrm{tr}}).
 \end{eqnarray}
-There are three intersections between the Maxwell line and the inverse temperature at energies $E_{\mathrm{o}}$, $E_{\mathrm{tr}}$, and $E_{\mathrm{d}}$. The separation between the boundary energies of the ordered pseudophase $E_{\mathrm{o}}$ and the disordered pseudophase $E_{\mathrm{d}}$, corresponds to the latent heat $\Delta Q = E_{\mathrm{d}} - E_{\mathrm{o}}$. The transition energy $E_{\mathrm{tr}}$ indicates the location where the intermediate states experience maximal entropic suppression.
+The Maxwell line intersects the inverse temperature at the energies $E_{\mathrm{o}}$, $E_{\mathrm{tr}}$, and $E_{\mathrm{d}}$. The latent heat
+$\Delta Q = E_{\mathrm{d}} - E_{\mathrm{o}}$ corresponds to the energetic separation between the ordered and the disordered pseudophases . The transition energy $E_{\mathrm{tr}}$ indicates the location where intermediate states experience the maximal entropic suppression\cite{Bachmann2014}.
 
 The slope of the double-tangent Gibbs construction, also shown in Figure \ref{fig:Fig_2}, provides yet another definition of $\beta_{\mathrm{tr}}$. As a function of energy, the Gibbs hull is defined as
 \begin{equation}
@@ -243,7 +244,7 @@ The formalism of the microcanonical inflection-point analysis makes no reference
  
 \section{The canonical ensemble}
 \label{sec:canonicalEnsemble}
-The canonical ensemble describes the behavior of a closed system in thermal equilibrium with a large external heat bath at a fixed temperature $T$. In analogy to the density of states in the microcanonical ensemble, the partition function $Z(T)$ contains all the essential information about the thermodynamic properties of the system under consideration. It can be defined directly as a Laplace transform\footnote{Here we assume that the system under investigation has discrete energy levels, which is always true in the context of computational studies. In the case of a continuous energy spectrum, the discrete sum is replaced by the integral $Z(T) = \int dE \:\:  g(E) e^{-\frac{E}{k_{\mathrm{B}}T}}$.} of the microcanical density of states $g(E)$
+The canonical ensemble describes the behavior of a closed system, in a thermal equilibrium with a large external heat bath at a fixed temperature $T$. In analogy to the density of states in the microcanonical ensemble, the partition function $Z(T)$ contains all the essential information about the thermodynamic properties of the system under consideration\cite{Landau2000}. It can be defined directly as a Laplace transform\footnote{Here we assume that the system under investigation has discrete energy levels, which is always true in the context of computational studies. In the case of a continuous energy spectrum, the discrete sum is replaced by the integral $Z(T) = \int dE \:\:  g(E) e^{-\frac{E}{k_{\mathrm{B}}T}}$.} of the microcanical density of states $g(E)$
 \begin{equation}
 Z(T) = \sum g(E) e^{-\frac{E}{k_{\mathrm{B}}T}},
 \end{equation}
