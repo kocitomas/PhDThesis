@@ -9,10 +9,10 @@
 \contentsline {figure}{\numberline {2.7}{\ignorespaces Comparison of microcanonical results from a Monte Carlo simulation of a flexible homopolymer of length $N=55$.(a) The combined $S$, conformational $S_{c}$, and kinetic $S_{k}$ entropy curves. (b) The kinetic inverse temperature $\beta _{k}$ is a strictly convex function and the application of the inflection-point analysis reveals no transition signals. The conformational inverse temperature $\beta _{c}$ clearly differs from $\beta (E)$, however both indicate a first-order pseudophase transition at virtually the same temperature. }}{23}
 \contentsline {figure}{\numberline {2.8}{\ignorespaces Comparison of the inverse microcanonical temperature $\beta (E)$ (red) and the conformational inverse temperature $\beta _{c}(\mathaccent "7016\relax {E}_{p})$ (blue) evaluated at the most probable potential energy $\mathaccent "7016\relax {E}_{p}$. The approximation introduced in equation 2.41\hbox {} holds except in the back-bending region of the first-order pseudophase transition. The inverse transition temperature $\beta _{\mathrm {trans}}$ obtained from the two quantities is virtually identical.}}{24}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces (Color online) Canonical and MGME energy histograms for a 30mer with $R=30$, exhibiting a strong first-order-like $\Theta $ transition. The canonical histogram is clearly bimodal while the MGME histograms are all of unimodal shape.}}{26}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces (Color online) Canonical and MGME energy histograms for a 30mer with $R=30$, exhibiting a strong first-order-like $\Theta $ transition. The canonical histogram is clearly bimodal while the MGME histograms are all of unimodal shape.}}{27}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {8.1}{\ignorespaces Example of a figure.}}{33}
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Example of a figure.}}{34}

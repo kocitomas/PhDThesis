@@ -468,10 +468,32 @@ Comparison of the inverse microcanonical temperature $\beta(E)$ (red) and the co
 
 
 \chapter{Computational Methods}
+
+Computational algorithms are powerful tools that enable the investigation of physical systems that are far too complex to be solved analytically.
+In fact, only a handful of systems are exactly solvable\footnote{The most prominent examples are the ideal gas and the two dimensional Ising model.} and even the simplest solutions require bewildering mathematical gymnastics. Consequently, computational studies are the main source of advances in the fundemental understanding of complex microscopic and mesoscopic systems such as biopolymers and proteins.
+
+Two complementary classes of computational algorithms have been particularly successful. In molecular dynamics simulations, the positions and momenta of every particle in a system are updated according to Hamilton's equations, to generate a single phase space trajectory. On the other hand, Monte Carlo simulations perform stochastic sampling of the phase space to extract equilibrium properties, without an explicit consideration for the system's dynamics. In this chapter, we shall focus our attention on Markov chain Monte Carlo methods. We will briefly discuss the essential theory and introduce the well established Metropolis and Parallel Tempering methods as well as the lesser known Multiple Gaussian modified ensemble method.
+
+
+
 \section{Markov chain Monte Carlo}
+The underlying theory behind Monte Carlo simulations is that of Markov chains.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \subsection{Master equation and detailed balance}
 \subsection{Metropolis sampling}
-\section{Generalized ensemble Monte Carlo}
 
 \subsection{Parallel tempering}
 In parallel tempering, $M$ replicas of the system are simulated in parallel
@@ -557,8 +579,38 @@ at
 different temperatures. 
 
 
-\subsection{Histogram reweighting methods}
+\section{Histogram reweighting methods}
+As a result of parallel tempering simulations, each replica generates 
+a canonical energy histogram $h(E,\beta_{i})$,
+which is then used to calculate an estimate for the microcanonical density 
+of states $g_{i}(E) \approx h(E,\beta_{i})\exp{(\beta _{i} E)}$.
+Individual estimates $g_{i}(E)$ are only reliable for energies in the
+neighborhood 
+of the peak of the canonical distribution obtained at the temperature
+$\beta _{i}$.
+Therefore a sufficient overlap between the histograms of
+neighboring replicas 
+is necessary to ensure that an accurate estimate of the density of states 
+can be
+obtained for the entire energetic range. To combine the histograms obtained
+from the individual temperature threads, we have used the weighted
+multiple-histogram 
+method~\cite{Ferrenberg1989,Kumar1992}, where the system of equations
+%%%%%% Weighted Histogram Reweighting %%%%%%
+\begin{eqnarray}
+\hat{g}(E)&= &\frac{\sum_{i=1}^{R} h(E,\beta _{i})}{\sum_{i=1}^{R} M_i
+\hat{Z}_i^{-1} e^{-\beta_i E}}, \\
+\hat{Z}_i &= &\sum_E \hat{g}(E) e^{-\beta_i E},
+\end{eqnarray}
+%
+must be solved iteratively until $\hat{g}(E)$ has converged.
+\subsection{Beziere smoothing}
 \section{Simple Monte Carlo updates}
+Mention that a proper choice of updates is equally important as choosing the right algorithm.
+\subsection{Single displacement update}
+Include optimization for the size of the displacement box
+\subsection{Pivot update}
+
 
 
 
