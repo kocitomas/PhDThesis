@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.3.27)  12 MAY 2016 17:08
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.3.27)  13 MAY 2016 10:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -246,11 +246,11 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 ] [3] [4] [5] [6]
 Package epstopdf Info: Source file: <chapter2Figs/MicroAnalysisExample.eps>
-(epstopdf)                    date: 2015-07-07 10:41:12
+(epstopdf)                    date: 2016-05-13 10:50:46
 (epstopdf)                    size: 179402 bytes
 (epstopdf)             Output file: <chapter2Figs/MicroAnalysisExample-eps-conv
 erted-to.pdf>
-(epstopdf)                    date: 2016-05-04 17:39:43
+(epstopdf)                    date: 2016-05-13 10:50:46
 (epstopdf)                    size: 93378 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter2Figs/MicroAnalysis
 Example-eps-converted-to.pdf chapter2Figs/MicroAnalysisExample.eps>
@@ -300,11 +300,11 @@ Package pdftex.def Info: chapter2Figs/CanonicalAnalysisSample.pdf used on input
 (pdftex.def)             Requested size: 375.80544pt x 181.11504pt.
  [15] [16 <./chapter2Figs/CanonicalAnalysisSample.pdf>] [17] [18]
 Package epstopdf Info: Source file: <chapter2Figs/N13Energy.eps>
-(epstopdf)                    date: 2016-05-12 16:21:00
+(epstopdf)                    date: 2016-05-13 10:50:47
 (epstopdf)                    size: 112697 bytes
 (epstopdf)             Output file: <chapter2Figs/N13Energy-eps-converted-to.pd
 f>
-(epstopdf)                    date: 2016-05-12 16:24:39
+(epstopdf)                    date: 2016-05-13 10:50:47
 (epstopdf)                    size: 16025 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter2Figs/N13Energy-eps
 -converted-to.pdf chapter2Figs/N13Energy.eps>
@@ -318,11 +318,11 @@ Package pdftex.def Info: chapter2Figs/N13Energy-eps-converted-to.pdf used on in
 put line 391.
 (pdftex.def)             Requested size: 230.18253pt x 173.13692pt.
 Package epstopdf Info: Source file: <chapter2Figs/N13Spec.eps>
-(epstopdf)                    date: 2016-05-12 16:25:29
+(epstopdf)                    date: 2016-05-13 10:50:47
 (epstopdf)                    size: 99394 bytes
 (epstopdf)             Output file: <chapter2Figs/N13Spec-eps-converted-to.pdf>
 
-(epstopdf)                    date: 2016-05-12 16:25:50
+(epstopdf)                    date: 2016-05-13 10:50:47
 (epstopdf)                    size: 14322 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter2Figs/N13Spec-eps-c
 onverted-to.pdf chapter2Figs/N13Spec.eps>
@@ -340,11 +340,11 @@ t line 392.
 ec-eps-converted-to.pdf>]
 [21] [22]
 Package epstopdf Info: Source file: <chapter2Figs/N55Entropy.eps>
-(epstopdf)                    date: 2016-05-11 19:30:06
+(epstopdf)                    date: 2016-05-13 10:50:47
 (epstopdf)                    size: 120911 bytes
 (epstopdf)             Output file: <chapter2Figs/N55Entropy-eps-converted-to.p
 df>
-(epstopdf)                    date: 2016-05-11 19:39:25
+(epstopdf)                    date: 2016-05-13 10:50:47
 (epstopdf)                    size: 30104 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter2Figs/N55Entropy-ep
 s-converted-to.pdf chapter2Figs/N55Entropy.eps>
@@ -358,11 +358,11 @@ Package pdftex.def Info: chapter2Figs/N55Entropy-eps-converted-to.pdf used on i
 nput line 446.
 (pdftex.def)             Requested size: 230.18253pt x 172.86314pt.
 Package epstopdf Info: Source file: <chapter2Figs/N55Beta.eps>
-(epstopdf)                    date: 2016-05-11 19:30:11
+(epstopdf)                    date: 2016-05-13 10:50:47
 (epstopdf)                    size: 104283 bytes
 (epstopdf)             Output file: <chapter2Figs/N55Beta-eps-converted-to.pdf>
 
-(epstopdf)                    date: 2016-05-11 19:39:26
+(epstopdf)                    date: 2016-05-13 10:50:47
 (epstopdf)                    size: 25959 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter2Figs/N55Beta-eps-c
 onverted-to.pdf chapter2Figs/N55Beta.eps>
@@ -379,11 +379,11 @@ t line 447.
  [23 <./chapter2Figs/N55Entropy-eps-converted-to.pdf> <./chapter2Figs/N55Beta-e
 ps-converted-to.pdf>]
 Package epstopdf Info: Source file: <chapter2Figs/N55BetaComp.eps>
-(epstopdf)                    date: 2016-05-11 19:47:51
+(epstopdf)                    date: 2016-05-13 10:50:47
 (epstopdf)                    size: 124742 bytes
 (epstopdf)             Output file: <chapter2Figs/N55BetaComp-eps-converted-to.
 pdf>
-(epstopdf)                    date: 2016-05-11 19:49:46
+(epstopdf)                    date: 2016-05-13 10:50:47
 (epstopdf)                    size: 22078 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter2Figs/N55BetaComp-e
 ps-converted-to.pdf chapter2Figs/N55BetaComp.eps>
@@ -402,62 +402,89 @@ Chapter 3.
 [25
 
 ]
+Package epstopdf Info: Source file: <chapter3Figs/mgme.eps>
+(epstopdf)                    date: 2015-07-07 10:41:12
+(epstopdf)                    size: 107578 bytes
+(epstopdf)             Output file: <chapter3Figs/mgme-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-05-13 10:57:44
+(epstopdf)                    size: 12375 bytes
+(epstopdf)             Command: <repstopdf --outfile=chapter3Figs/mgme-eps-conv
+erted-to.pdf chapter3Figs/mgme.eps>
+(epstopdf)             \includegraphics on input line 507.
+Package epstopdf Info: Output file is already uptodate.
+
+<chapter3Figs/mgme-eps-converted-to.pdf, id=345, 257.96375pt x 190.7125pt>
+File: chapter3Figs/mgme-eps-converted-to.pdf Graphic file (type pdf)
+
+<use chapter3Figs/mgme-eps-converted-to.pdf>
+Package pdftex.def Info: chapter3Figs/mgme-eps-converted-to.pdf used on input l
+ine 507.
+(pdftex.def)             Requested size: 328.82707pt x 243.12465pt.
+
+
+LaTeX Warning: Citation `Neuhaus2006' on page 26 undefined on input line 522.
+
+[26 <./chapter3Figs/mgme-eps-converted-to.pdf>] [27] [28]
 Chapter 4.
-[26
-
-]
-Chapter 5.
-[27
-
-]
-Chapter 6.
-[28
-
-]
-Chapter 7.
 [29
 
 ]
-Chapter 8.
+Chapter 5.
 [30
 
-] [31] (./References.tex [32
+]
+Chapter 6.
+[31
 
-]) [33] (./koci_tomas_201607_phd.aux) ) 
+]
+Chapter 7.
+[32
+
+]
+Chapter 8.
+[33
+
+] [34] (./References.tex [35
+
+]) [36] (./koci_tomas_201607_phd.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 2506 strings out of 494985
- 38466 string characters out of 6180356
- 95231 words of memory out of 5000000
- 5663 multiletter control sequences out of 15000+600000
- 9148 words of font info for 32 fonts, out of 8000000 for 9000
+ 2518 strings out of 494985
+ 38720 string characters out of 6180356
+ 94242 words of memory out of 5000000
+ 5671 multiletter control sequences out of 15000+600000
+ 9769 words of font info for 34 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  38i,10n,35p,1191b,289s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on koci_tomas_201607_phd.pdf (44 pages, 712748 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+sy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on koci_tomas_201607_phd.pdf (47 pages, 737830 bytes).
 PDF statistics:
- 432 PDF objects out of 1000 (max. 8388607)
- 289 compressed objects within 3 object streams
+ 455 PDF objects out of 1000 (max. 8388607)
+ 306 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

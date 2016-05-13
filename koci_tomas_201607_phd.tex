@@ -472,11 +472,96 @@ Comparison of the inverse microcanonical temperature $\beta(E)$ (red) and the co
 \subsection{Master equation and detailed balance}
 \subsection{Metropolis sampling}
 \section{Generalized ensemble Monte Carlo}
+
 \subsection{Parallel tempering}
+In parallel tempering, $M$ replicas of the system are simulated in parallel
+at inverse temperatures in the interval 
+$\beta \in \left[0.5,50\right]$. The conformations in an individual
+temperature thread are updated using random single-monomer displacements
+with the acceptance probability given by the Metropolis criterion
+\begin{equation}
+A\left(\mathbf{X}_{\mathrm{old}} \rightarrow
+\mathbf{X}_{\mathrm{new}}\right) = 			
+\mathrm{min}\left(1,e^{ -\beta\left[E (\mathbf{X}_{\mathrm{new}}) - 	
+E(\mathbf{X}_{\mathrm{old}})\right]} \right).
+\end{equation}
+Periodically, an exchange of conformations between adjacent replicas $i$
+and $j$ is proposed with the acceptance probability
+\begin{equation}
+A\left(\mathbf{X}_{i} \leftrightarrow \mathbf{X}_{j};
+\beta _{i}, \beta_{j} \right) = \mathrm{min}\left(1,e^{\left[\beta_{j} -
+\beta _{i} \right] \left[E (\mathbf{X}_{j}) -
+E(\mathbf{X}_{i})\right]} \right).
+\end{equation}
+In principle, this allows each replica to traverse the entire simulated
+temperature range which would decrease the autocorrelation time
+and increase sampling efficiency. However, the performance of this method
+rapidly decreases near first-order transitions with high free-energy
+barriers due to entropic depletion of energetic states. As
+Fig.~\ref{fig:Fig_9} shows, this issue is encountered in polymer systems
+with highly elastic bonds or gas-like systems (large $R$ values).
+
+%
+\begin{figure}
+\center
+\includegraphics[width = 0.7\textwidth]{chapter3Figs/mgme.eps}
+\caption{\label{fig:Fig_9}%
+(Color online) Canonical and MGME energy histograms for a 30mer
+with $R=30$, exhibiting a
+strong first-order-like $\Theta$ transition. The canonical histogram is
+clearly
+bimodal while the MGME histograms are all of unimodal shape.}
+\end{figure} 
+%  
 \subsection{Multiple Gaussian modified ensemble}
+
+An alternative scheme that offers improved sampling in strongly first-order
+transition regions is based on the combination of parallel tempering with
+the
+multiple Gaussian modified ensemble (MGME) 
+method~\cite{Neuhaus2006}. In a single Gaussian modified ensemble
+(GME)
+at inverse temperature $\beta$, the probability of a state $\mathbf{X}$
+with energy $E$ is given by
+\begin{equation}
+P_{\mathrm{GME}}(\mathbf{X}) \sim e^{-\beta E(\mathbf{X}) -
+\left[E(\mathbf{X}) - E_{G}\right]^{2} / \Delta E_{G}^{2}},
+\end{equation}
+where $E_G$ and $\Delta E_G$ are the center and the width of the
+Gaussian, respectively. 
+Strong first-order transitions with bimodal energy distributions typically
+require several overlapping GME ensembles to cover the relevant energy
+range
+as shown in Fig.~\ref{fig:Fig_9} for a 30mer with $R=30$ at
+the $\Theta$ transition temperature. The acceptance probability for the
+exchange of
+conformations $\mathbf{X}_{i} , \mathbf{X}_{j}$ between neighboring GME
+ensembles at inverse temperature $\beta$ is
+\begin{equation}
+A\left(\mathbf{X}_{i} \leftrightarrow \mathbf{X}_{j}\right) = 	
+\mathrm{min}\left(1,e^{\Delta G}\right),
+\end{equation}
+where
+\begin{eqnarray}
+\Delta G  &=& 
+\frac{\left(E_{i} - E_{G,j}\right)^{2}-\left(E_{j}-
+E_{G,j}\right)^{2}}{\Delta E_{G,j}^{2}}  \nonumber \\
+&&- \frac{\left(E_{j} - 	
+E_{G,i}\right)^{2}-\left(E_{i} - E_{G,i}\right)^{2}}{\Delta E_{G,i}^{2}}.
+\end{eqnarray}
+The resultant energy distribution of this combined MGME ensemble is nearly
+flat and the Monte Carlo sampling of the entropically suppressed region is
+enhanced. The sampling can be further improved by combining the MGME method
+with parallel tempering, hence allowing for exchanges between GME ensembles
+at
+different temperatures. 
+
+
 \subsection{Histogram reweighting methods}
-\subsection{Multicanonical sampling}
 \section{Simple Monte Carlo updates}
+
+
+
 
 \chapter{Coarse-grained Homopolymer Model}
 \section{Flexible elastic homopolymer}
