@@ -472,13 +472,31 @@ Comparison of the inverse microcanonical temperature $\beta(E)$ (red) and the co
 Computational algorithms are powerful tools that enable the investigation of physical systems that are far too complex to be solved analytically.
 In fact, only a handful of systems are exactly solvable\footnote{The most prominent examples are the ideal gas and the two dimensional Ising model.} and even the simplest solutions require bewildering mathematical gymnastics. Consequently, computational studies are the main source of advances in the fundemental understanding of complex microscopic and mesoscopic systems such as biopolymers and proteins.
 
-Two complementary classes of computational algorithms have been particularly successful. In molecular dynamics simulations, the positions and momenta of every particle in a system are updated according to Hamilton's equations, to generate a single phase space trajectory. On the other hand, Monte Carlo simulations perform stochastic sampling of the phase space to extract equilibrium properties, without an explicit consideration for the system's dynamics. In this chapter, we shall focus our attention on Markov chain Monte Carlo methods. We will briefly discuss the essential theory and introduce the well established Metropolis and Parallel Tempering methods as well as the lesser known Multiple Gaussian modified ensemble method.
+Two complementary classes of computational algorithms have been particularly successful. In molecular dynamics simulations, the positions and momenta of every particle in a system are updated according to Hamilton's equations, to generate a single phase space trajectory. On the other hand, Monte Carlo simulations perform stochastic sampling of the phase space to extract equilibrium properties, without an explicit consideration for the system's dynamics. In this chapter, we shall focus our attention to Markov chain Monte Carlo methods. We will briefly discuss the essential theory and introduce the well established Metropolis and Parallel Tempering methods as well as the lesser known Multiple Gaussian modified ensemble method.
 
 
 
 \section{Markov chain Monte Carlo}
-The underlying theory behind Monte Carlo simulations is that of Markov chains.
+The aim of all Monte Carlo methods is to extract the equilibrium thermodynamic properties of physical systems by performing an efficient stochastic sampling of the phase space. For this purpose, a set of random microstates $\{\mu_{1},\mu_{2},...,\mu_{M}\}$ is generated according to some previously known probability distribution $p(\mu_{i})$, and the expectation values for any observables $O_{\mu}$ are estimated by calculating the average
+\begin{equation}
+\bar{O} = \frac{1}{M}\sum_{i = 1}^{M} O(\mu_{i}).
+\end{equation}
+In most Monte Carlo methods, the set of random microstates is generated according to a discrete-time Markov chain (DTMC). Markov chains are sequences of random states $\{X_{1},X_{2},...,X_{M}\}$, generated according to the time-independent transition probabilities $T(X_{i+1} = \mu |X_{i} = \nu)$ which satisfy the Markov property
+\begin{equation}
+T(X_{i+1} = \mu |X_{i} = \nu,X_{i-1} = \upsilon,...,X_{1} = \alpha) = T(X_{i+1} = \mu |X_{i} = \nu).
+\end{equation}
+In simple terms, the probability of moving to state $\mu$ from state $\nu$ depends only on the present state and is independent of the history of the process. In order to achieve a correct statistical sampling according to a probability distribution $p(\mu_{i})$, two additional conditions must be satisfied.
 
+The process must be \textbf{ergodic}, i.e., there must be a path of non-zero probability between any pair of states. More formally, the state space $\mathcal{S}$ of the Markov chain must consist of a single aperiodic recurrence class. When ergodicity is satisfied, it is possible to establish a link between the true ensemble average $\left\langle O \right\rangle$ and the estimate of the expectation value $\bar{O}$ obtained by Monte Carlo sampling according to some probability distribution $p(\mu_{i})$
+\begin{equation}
+\bar{O} = \frac{1}{M}\sum_{i = 1}^{M} O(\mu_{i}) \approx \left\langle O \right\rangle = \int \mathcal{DP}\mathcal{DQ} \:\: O(\mathcal{P},\mathcal{Q})
+p(\mathcal{P},\mathcal{Q}),
+\end{equation}
+where $M$ is the length of the Markov chain. In the limit of an infinitely long Markov chain, the approximation becomes exact
+\begin{equation}
+\lim_{M\rightarrow \infty}\frac{1}{M}\sum_{i = 1}^{M} O(\mu_{i}) = \int \mathcal{DP}\mathcal{DQ} \:\: O(\mathcal{P},\mathcal{Q})
+p(\mathcal{P},\mathcal{Q}).
+\end{equation}
 
 
 
