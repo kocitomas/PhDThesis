@@ -466,52 +466,107 @@ which clearly resembles the well known relationship between the canonical temper
 Comparison of the inverse microcanonical temperature $\beta(E)$ (red) and the conformational inverse temperature $\beta_{c}(\bar{E}_{p})$ (blue) evaluated at the most probable potential energy $\bar{E}_{p}$. The approximation introduced in equation \ref{eq:approx1} holds except in the back-bending region of the first-order pseudophase transition. The inverse transition temperature $\beta_{\mathrm{trans}}$ obtained from the two quantities is virtually identical.}
 \end{figure}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%% 			CHAPTER 3     		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{Computational Methods}
 
 Computational algorithms are powerful tools that enable the investigation of physical systems that are far too complex to be solved analytically.
 In fact, only a handful of systems are exactly solvable\footnote{The most prominent examples are the ideal gas and the two dimensional Ising model.} and even the simplest solutions require bewildering mathematical gymnastics. Consequently, computational studies are the main source of advances in the fundemental understanding of complex microscopic and mesoscopic systems such as biopolymers and proteins.
 
-Two complementary classes of computational algorithms have been particularly successful. In molecular dynamics simulations, the positions and momenta of every particle in a system are updated according to Hamilton's equations, to generate a single phase space trajectory. On the other hand, Monte Carlo simulations perform stochastic sampling of the phase space to extract equilibrium properties, without an explicit consideration for the system's dynamics. In this chapter, we shall focus our attention to Markov chain Monte Carlo methods. We will briefly discuss the essential theory and introduce the well established Metropolis and Parallel Tempering methods as well as the lesser known Multiple Gaussian modified ensemble method.
+Two complementary classes of computational algorithms have been particularly successful in unravelling the thermodynamic properties of physical systems. \textit{Molecular dynamics} simulations generate a single phase space trajectory by updating the positions and momenta of every particle in a system according to Hamilton's equations. On the other hand, carrying out a stochastic sampling of the phase space, \textit{Monte Carlo} simulations estimate the equilibrium properties without the explicit consideration for the system's dynamics. In this chapter, we shall focus our attention to Markov chain Monte Carlo methods. We will briefly discuss the essential theory and introduce the well established Metropolis and Parallel Tempering algorithms as well as the lesser known Multiple Gaussian modified ensemble method.
 
 
 
 \section{Markov chain Monte Carlo}
-The aim of all Monte Carlo methods is to extract the equilibrium thermodynamic properties of physical systems by performing an efficient stochastic sampling of the phase space. For this purpose, a set of random microstates $\{\mu_{1},\mu_{2},...,\mu_{M}\}$ is generated according to some previously known probability distribution $p(\mu_{i})$, and the expectation values for any observables $O_{\mu}$ are estimated by calculating the average
+The aim of all Monte Carlo methods is to extract the equilibrium thermodynamic properties of physical systems by performing an efficient stochastic sampling of the phase space. For this purpose, a set of random microstates $\{\mu_{1},\mu_{2},...,\mu_{M}\}$ is generated according to some previously known probability distribution $p(\mu_{i})$, and the expectation values for any observables $O({\mu})$ are estimated by calculating the average
+%
 \begin{equation}
+\label{eq:expectationValue}
 \bar{O} = \frac{1}{M}\sum_{i = 1}^{M} O(\mu_{i}).
 \end{equation}
-In most Monte Carlo methods, the set of random microstates is generated according to a discrete-time Markov chain (DTMC). Markov chains are sequences of random states $\{X_{1},X_{2},...,X_{M}\}$, generated according to the time-independent transition probabilities $T(X_{i+1} = \mu |X_{i} = \nu)$ which satisfy the Markov property
-\begin{equation}
-T(X_{i+1} = \mu |X_{i} = \nu,X_{i-1} = \upsilon,...,X_{1} = \alpha) = T(X_{i+1} = \mu |X_{i} = \nu).
-\end{equation}
-In simple terms, the probability of moving to state $\mu$ from state $\nu$ depends only on the present state and is independent of the history of the process. In order to achieve a correct statistical sampling according to a probability distribution $p(\mu_{i})$, two additional conditions must be satisfied.
+%
+In most Monte Carlo methods, the set of random microstates is generated according to a discrete-time Markov chain (DTMC). Markov chains are sequences of random states generated according to the time-independent transition probabilities 
+$T(\mu \rightarrow \nu)$ which satisfy the Markov property. In simple terms, the probability of moving to state $\nu$ from state $\mu$ depends only on the present state and is independent of the history of the process. In order to achieve the correct statistical sampling of an equilibrium thermodynamic ensemble, the following conditions must also be satisfied.
 
-The process must be \textbf{ergodic}, i.e., there must be a path of non-zero probability between any pair of states. More formally, the state space $\mathcal{S}$ of the Markov chain must consist of a single aperiodic recurrence class. When ergodicity is satisfied, it is possible to establish a link between the true ensemble average $\left\langle O \right\rangle$ and the estimate of the expectation value $\bar{O}$ obtained by Monte Carlo sampling according to some probability distribution $p(\mu_{i})$
+The process must be \textbf{ergodic}, i.e., there must be a path of non-zero probability between any pair of states. More formally, the state space $\mathcal{S}$ of the Markov chain must consist of a single aperiodic recurrence class. When ergodicity is satisfied, the ensemble average $\left\langle O \right\rangle$ can be approximated by the measured expectation value $\bar{O}$ [Eq. \ref{eq:expectationValue}] 
+%
 \begin{equation}
 \bar{O} = \frac{1}{M}\sum_{i = 1}^{M} O(\mu_{i}) \approx \left\langle O \right\rangle = \int \mathcal{DP}\mathcal{DQ} \:\: O(\mathcal{P},\mathcal{Q})
 p(\mathcal{P},\mathcal{Q}),
 \end{equation}
-where $M$ is the length of the Markov chain. In the limit of an infinitely long Markov chain, the approximation becomes exact
+%
+where $M$ is the length of the Markov chain. According to the ergodic hypothesis, the approximation becomes exact in the limit of an infinitely long Markov chain
+%
 \begin{equation}
 \lim_{M\rightarrow \infty}\frac{1}{M}\sum_{i = 1}^{M} O(\mu_{i}) = \int \mathcal{DP}\mathcal{DQ} \:\: O(\mathcal{P},\mathcal{Q})
 p(\mathcal{P},\mathcal{Q}).
 \end{equation}
+%
+%
+The time evolution of a discrete-time Markov process is described by the master equation
+%
+\begin{equation}
+\label{eq:MasterEquation}
+\frac{\Delta p(\mu)}{\Delta t} = \sum_{\nu} p(\nu)T\left(\nu \rightarrow \mu\right) - p(\mu)T\left(\mu \rightarrow \nu\right).
+\end{equation}
+%
+The equilibrium condition requires that the probability distribution $p(\mu)$ is stationary. In other words, the probability currents into and out of the state $\mu$ must be always equal
+\begin{equation}
+\label{eq:balance}
+\sum_{\nu} p(\nu)T\left(\nu \rightarrow \mu\right) = \sum_{\nu} p(\mu)T\left(\mu \rightarrow \nu\right).
+\end{equation}
+%
+Also known as the $\textbf{balance}$ condition, equation \ref{eq:balance} sometimes allows for solutions that are not permitted in the equilibrium ensemble. The stricter condition of $\textbf{detailed balance}$ requires that the probability of a transfer between any two states must be equal to the probability of the reverse process. Embodied in the expression
+%
+\begin{equation}
+\label{eq:detailedBalance}
+p(\mu)T\left(\mu \rightarrow \nu\right) = p(\nu)T\left(\nu \rightarrow \mu\right),
+\end{equation} 
+%
+this condition is sufficient to prevent any non-physical solutions as well as to ensure that the process is invariant under time reversal.
 
 
+Having introduced the conditions of ergodicity and detailed balance, we can now derive the expression for transition probabilities which will ensure correct stochastic sampling according to an equilibrium distribution $p\left(\mu\right)$. 
+For convenience, we will separate the transition probabilities into two separate terms and write
 
 
+%
+\begin{equation}
+\label{eq:factoredTransitionProb}
+T\left(\mu \rightarrow \nu\right) = s\left(\mu \rightarrow \nu\right)a\left(\mu \rightarrow \nu\right).
+\end{equation}
+Assuming a current state $\mu$, the probability of generating a new state $\nu$ is given by the selection probability $s\left(\mu \rightarrow \nu\right)$, while the probability of accepting the proposed update is controlled by the \textit{acceptance} probability $a\left(\mu \rightarrow \nu\right)$. Combining equations \ref{eq:detailedBalance} and \ref{eq:ratioWithFactors}, we express the ratio of the transition probabilities as
+%
+\begin{equation}
+\label{eq:ratioOfTransitionProb}
+\frac{T\left(\mu \rightarrow \nu\right)}{T\left(\nu \rightarrow \mu\right)} = \frac{s\left(\mu \rightarrow \nu\right)a\left(\mu \rightarrow \nu\right)}{s\left(\nu \rightarrow \mu\right)a\left(\nu \rightarrow \mu\right)} = \frac{p\left(\nu\right)}{p\left(\mu\right)}.
+\end{equation}
+%
+The ratios of the forward and backward selection probabilities
+\begin{equation}
+\sigma(\mu,\nu) = \frac{s\left(\mu \rightarrow \nu\right)}{s\left(\nu \rightarrow \mu\right)}
+\end{equation}
+depend on the choice of the particular update scheme. In the remainder of this thesis, we shall assume that the forward and backward selection probabilities are equal and the ratio equals to unity, which is valid for most local Monte Carlo updates. This simplifying assumption allows us to rewrite equation \ref{eq:ratioOfTransitionProb} without making explicit references to the selection probabilities
+%
+\begin{equation}
+\label{eq:acceptanceProbs}
+\frac{a\left(\mu \rightarrow \nu\right)}{a\left(\nu \rightarrow \mu\right)} = \frac{p\left(\nu\right)}{p\left(\mu\right)}.
+\end{equation}
+%
 
-
-
-
-
-
-
-
-
-\subsection{Master equation and detailed balance}
 \subsection{Metropolis sampling}
+
+Any choice of acceptance probabilities which satisfies equation \ref{eq:acceptanceProbs} is allowable, however the standard choice is to set the higher of the two probabilities to unity. This gives the well known Metropolis acceptance criterion:
+%
+\begin{equation}
+\label{eq:MetropolisCriterion}
+a\left(\mu \rightarrow \nu\right) = \mathrm{min}\left(1,\frac{p\left(\nu\right)}{p\left(\mu\right)} \right).
+\end{equation} 
+
+
+
 
 \subsection{Parallel tempering}
 In parallel tempering, $M$ replicas of the system are simulated in parallel
