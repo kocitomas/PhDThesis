@@ -105,7 +105,7 @@ July 2016
 % Now we begin the regular LaTeX document.
 % You may want to have a regular LaTeX title page here...
 
-\chapter*{Acknowledgments}
+\chapter{Acknowledgments}
 \pagenumbering{roman}
 \setcounter{page}{4}
 
@@ -480,15 +480,15 @@ Two complementary classes of computational algorithms have been particularly suc
 
 
 \section{Markov chain Monte Carlo}
-The aim of all Monte Carlo methods is to extract the equilibrium thermodynamic properties of physical systems by performing an efficient stochastic sampling of the phase space. For this purpose, a set of random microstates $\{\mu_{1},\mu_{2},...,\mu_{M}\}$ is generated according to some previously known probability distribution $p(\mu_{i})$, and the expectation values for any observables $O({\mu})$ are estimated by calculating the average
+The aim of all Monte Carlo methods is to extract the equilibrium thermodynamic properties of physical systems by performing an efficient stochastic sampling of the phase space. For this purpose, a set of random microstates $\{\mu_{1},\mu_{2},...,\mu_{M}\}$ is generated according to some previously known probability distribution $p(\mu_{i})$, and the expectation value for any observable $O({\mu})$ is estimated by calculating the average
 %
 \begin{equation}
 \label{eq:expectationValue}
 \bar{O} = \frac{1}{M}\sum_{i = 1}^{M} O(\mu_{i}).
 \end{equation}
 %
-In most Monte Carlo methods, the set of random microstates is generated according to a discrete-time Markov chain (DTMC). Markov chains are sequences of random states generated according to the time-independent transition probabilities 
-$T(\mu \rightarrow \nu)$ which satisfy the Markov property. In simple terms, the probability of moving to state $\nu$ from state $\mu$ depends only on the present state and is independent of the history of the process. In order to achieve the correct statistical sampling of an equilibrium thermodynamic ensemble, the following conditions must also be satisfied.
+In most Monte Carlo methods, the set of random microstates is generated according to a discrete-time Markov chain (DTMC). Markov chains are sequences of random states, generated according to the time-independent transition probabilities 
+$T(\mu \rightarrow \nu)$ which satisfy the Markov property. In simple terms, the probability of moving to state $\nu$ from state $\mu$ depends only on the present state, and is independent of the history of the process. In order to achieve the correct statistical sampling of an equilibrium thermodynamic ensemble, the following conditions must also be satisfied.
 
 The process must be \textbf{ergodic}, i.e., there must be a path of non-zero probability between any pair of states. More formally, the state space $\mathcal{S}$ of the Markov chain must consist of a single aperiodic recurrence class. When ergodicity is satisfied, the ensemble average $\left\langle O \right\rangle$ can be approximated by the measured expectation value $\bar{O}$ [Eq. \ref{eq:expectationValue}] 
 %
@@ -539,7 +539,7 @@ For convenience, we will separate the transition probabilities into two separate
 \label{eq:factoredTransitionProb}
 T\left(\mu \rightarrow \nu\right) = s\left(\mu \rightarrow \nu\right)a\left(\mu \rightarrow \nu\right).
 \end{equation}
-Assuming a current state $\mu$, the probability of generating a new state $\nu$ is given by the selection probability $s\left(\mu \rightarrow \nu\right)$, while the probability of accepting the proposed update is controlled by the \textit{acceptance} probability $a\left(\mu \rightarrow \nu\right)$. Combining equations \ref{eq:detailedBalance} and \ref{eq:factoredTransitionProb}, we express the ratio of the transition probabilities as
+Assuming the current state $\mu$, the probability of generating a new state $\nu$ is given by the selection probability $s\left(\mu \rightarrow \nu\right)$, while the probability of accepting the proposed update is controlled by the \textit{acceptance} probability $a\left(\mu \rightarrow \nu\right)$. Combining equations \ref{eq:detailedBalance} and \ref{eq:factoredTransitionProb}, we express the ratio of the transition probabilities as
 %
 \begin{equation}
 \label{eq:ratioOfTransitionProb}
@@ -589,23 +589,17 @@ In reality, most measurements obtained from Monte Carlo simulations are correlat
 %
 where $M_{\mathrm{eff}}$ is the number of uncorrelated measurements\footnote{For detailed description of the more practical \textit{binning} and \textit{jackknife} error estimation methods, please refer to chapter 4 in \cite{Bachmann2014}.}.
 
-The Metropolis method provides the means for an efficient sampling of microstates which are dominant at a given temperature. However, the microstates which are found in the tails of the canonical energy distribution are rarely visited. Further shortcomings of the Metropolis algorithm, such as the propensity for getting trapped in low-energy configurations and the notorious reduction in sampling efficiency near pseudophase transitions, highlight the demand more efficient sampling methods.
+The Metropolis method provides the means for an efficient sampling of microstates which are dominant at a given temperature. However, the microstates which are found in the tails of the canonical energy distribution are rarely visited. Further shortcomings of the Metropolis algorithm, such as the propensity for getting trapped in low-energy configurations and the notorious reduction in sampling efficiency near pseudophase transitions, motivate the introduction of more efficient sampling methods.
 
 
 \subsection{Parallel tempering}
-In parallel tempering, $M$ replicas of the system are simulated in parallel
-at inverse temperatures in the interval 
-$\beta \in \left[0.5,50\right]$. The conformations in an individual
-temperature thread are updated using random single-monomer displacements
-with the acceptance probability given by the Metropolis criterion
-\begin{equation}
-A\left(\mathbf{X}_{\mathrm{old}} \rightarrow
-\mathbf{X}_{\mathrm{new}}\right) = 			
-\mathrm{min}\left(1,e^{ -\beta\left[E (\mathbf{X}_{\mathrm{new}}) - 	
-E(\mathbf{X}_{\mathrm{old}})\right]} \right).
-\end{equation}
-Periodically, an exchange of conformations between adjacent replicas $i$
-and $j$ is proposed with the acceptance probability
+In situations, when the Metropolis sampling of a single canonical ensemble is insufficient, a standard way of increasing the sampling efficiency is to perform the simulation in a conveniently chosen \textit{generalized ensemble}. In parallel tempering, multiple canonical ensembles, with different inverse temperatures $\{\beta_{1} < \beta_{2} < ... < \beta_{N}\}$, are simulated in parallel according to the standard Metropolis scheme.
+At judiciously chosen intervals, an exchange of conformations between adjacent temperature threads $i$ and $j$ is proposed. 
+
+
+
+
+ with the acceptance probability
 \begin{equation}
 A\left(\mathbf{X}_{i} \leftrightarrow \mathbf{X}_{j};
 \beta _{i}, \beta_{j} \right) = \mathrm{min}\left(1,e^{\left[\beta_{j} -
