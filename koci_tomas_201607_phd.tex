@@ -493,6 +493,7 @@ $T(\mu \rightarrow \nu)$ which satisfy the Markov property. In simple terms, the
 The process must be \textbf{ergodic}, i.e., there must be a path of non-zero probability between any pair of states. More formally, the state space $\mathcal{S}$ of the Markov chain must consist of a single aperiodic recurrence class. When ergodicity is satisfied, the ensemble average $\left\langle O \right\rangle$ can be approximated by the measured expectation value $\bar{O}$ [Eq. \ref{eq:expectationValue}] 
 %
 \begin{equation}
+\label{eq:approximationOfExpectationValues}
 \bar{O} = \frac{1}{M}\sum_{i = 1}^{M} O(\mu_{i}) \approx \left\langle O \right\rangle = \int \mathcal{DP}\mathcal{DQ} \:\: O(\mathcal{P},\mathcal{Q})
 p(\mathcal{P},\mathcal{Q}),
 \end{equation}
@@ -500,6 +501,7 @@ p(\mathcal{P},\mathcal{Q}),
 where $M$ is the length of the Markov chain. According to the ergodic hypothesis, the approximation becomes exact in the limit of an infinitely long Markov chain
 %
 \begin{equation}
+\label{eq:ergodicHyp}
 \lim_{M\rightarrow \infty}\frac{1}{M}\sum_{i = 1}^{M} O(\mu_{i}) = \int \mathcal{DP}\mathcal{DQ} \:\: O(\mathcal{P},\mathcal{Q})
 p(\mathcal{P},\mathcal{Q}).
 \end{equation}
@@ -537,18 +539,18 @@ For convenience, we will separate the transition probabilities into two separate
 \label{eq:factoredTransitionProb}
 T\left(\mu \rightarrow \nu\right) = s\left(\mu \rightarrow \nu\right)a\left(\mu \rightarrow \nu\right).
 \end{equation}
-Assuming a current state $\mu$, the probability of generating a new state $\nu$ is given by the selection probability $s\left(\mu \rightarrow \nu\right)$, while the probability of accepting the proposed update is controlled by the \textit{acceptance} probability $a\left(\mu \rightarrow \nu\right)$. Combining equations \ref{eq:detailedBalance} and \ref{eq:ratioWithFactors}, we express the ratio of the transition probabilities as
+Assuming a current state $\mu$, the probability of generating a new state $\nu$ is given by the selection probability $s\left(\mu \rightarrow \nu\right)$, while the probability of accepting the proposed update is controlled by the \textit{acceptance} probability $a\left(\mu \rightarrow \nu\right)$. Combining equations \ref{eq:detailedBalance} and \ref{eq:factoredTransitionProb}, we express the ratio of the transition probabilities as
 %
 \begin{equation}
 \label{eq:ratioOfTransitionProb}
 \frac{T\left(\mu \rightarrow \nu\right)}{T\left(\nu \rightarrow \mu\right)} = \frac{s\left(\mu \rightarrow \nu\right)a\left(\mu \rightarrow \nu\right)}{s\left(\nu \rightarrow \mu\right)a\left(\nu \rightarrow \mu\right)} = \frac{p\left(\nu\right)}{p\left(\mu\right)}.
 \end{equation}
 %
-The ratios of the forward and backward selection probabilities
+The ratio of the forward and backward selection probabilities
 \begin{equation}
 \sigma(\mu,\nu) = \frac{s\left(\mu \rightarrow \nu\right)}{s\left(\nu \rightarrow \mu\right)}
 \end{equation}
-depend on the choice of the particular update scheme. In the remainder of this thesis, we shall assume that the forward and backward selection probabilities are equal and the ratio equals to unity, which is valid for most local Monte Carlo updates. This simplifying assumption allows us to rewrite equation \ref{eq:ratioOfTransitionProb} without making explicit references to the selection probabilities
+depends on the choice of the particular update scheme. In the remainder of this thesis, we shall assume that the forward and backward selection probabilities are equal and the ratio equals to unity, which is valid for most local Monte Carlo updates. This simplifying assumption allows us to rewrite equation \ref{eq:ratioOfTransitionProb} without making explicit references to the selection probabilities
 %
 \begin{equation}
 \label{eq:acceptanceProbs}
@@ -558,14 +560,36 @@ depend on the choice of the particular update scheme. In the remainder of this t
 
 \subsection{Metropolis sampling}
 
-Any choice of acceptance probabilities which satisfies equation \ref{eq:acceptanceProbs} is allowable, however the standard choice is to set the higher of the two probabilities to unity. This gives the well known Metropolis acceptance criterion:
+Any set of acceptance probabilities which satisfies equation \ref{eq:acceptanceProbs} is allowable, however the standard choice is to set the higher of the two probabilities to unity. This yields the well known Metropolis acceptance criterion:
 %
 \begin{equation}
 \label{eq:MetropolisCriterion}
 a\left(\mu \rightarrow \nu\right) = \mathrm{min}\left(1,\frac{p\left(\nu\right)}{p\left(\mu\right)} \right).
-\end{equation} 
+\end{equation}
+% 
+Under most circumstances, Metropolis sampling is carried out according to the canonical microstate probability distribution $p(\mu) \propto e^{-\beta E(\mu)}$, where $\beta$ is the inverse canonical temperature. Hence the acceptance probability is governed by the energy difference between the proposed and the current states
+%
+\begin{equation}
+\label{eq:MetropolisCriterion}
+a\left(\mu \rightarrow \nu\right) = \mathrm{min}\left(1,\frac{e^{-\beta E(\nu)}}{e^{-\beta E(\mu)}} \right) = \mathrm{min}\left(1,e^{-\beta \Delta E} \right).
+\end{equation}
+%
+The average of the observable $O(\mu)$, measured over the length of a finite Metropolis run, serves as an estimate for the canonical expectation value $\left\langle O \right\rangle$ [Eq.\,\,\ref{eq:approximationOfExpectationValues}]. 
+In the limit of an infinite run, this approximation becomes exact [Eq.\,\,\ref{eq:ergodicHyp}]. However, since all simulations are of finite length, it is imperative to account for the statistical errors introduced due to the finiteness of the measured data sets. The standard bias corrected error estimator for the calculated average $\bar{O}$, obtained from a finite set of $M$ uncorrelated measurements, is written as
+%
+\begin{equation}
+\mathrm{err}(\bar{O}) = \pm \,\,\sqrt{\frac{1}{M(M-1)} \sum_{m} (O_{m} - \bar{O})^{2}}.
+\end{equation}
+%
+In reality, most measurements obtained from Monte Carlo simulations are correlated. Hence it is necessary to introduce the modified error estimator
+%
+\begin{equation}
+\mathrm{err}(\bar{O}) = \pm \,\,\sqrt{\frac{1}{M(M_{\mathrm{eff}}-1)} \sum_{m} (O_{m} - \bar{O})^{2}},
+\end{equation}
+%
+where $M_{\mathrm{eff}}$ is the number of uncorrelated measurements\footnote{For detailed description of the more practical \textit{binning} and \textit{jackknife} error estimation methods, please refer to chapter 4 in \cite{Bachmann2014}.}.
 
-
+The Metropolis method provides the means for an efficient sampling of microstates which are dominant at a given temperature. However, the microstates which are found in the tails of the canonical energy distribution are rarely visited. Further shortcomings of the Metropolis algorithm, such as the propensity for getting trapped in low-energy configurations and the notorious reduction in sampling efficiency near pseudophase transitions, highlight the demand more efficient sampling methods.
 
 
 \subsection{Parallel tempering}
