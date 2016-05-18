@@ -105,15 +105,17 @@ July 2016
 % Now we begin the regular LaTeX document.
 % You may want to have a regular LaTeX title page here...
 
-\chapter{Acknowledgments}
+\chapter*{Acknowledgments}
+\addcontentsline{toc}{chapter}{Acknowledgments}
 \pagenumbering{roman}
 \setcounter{page}{4}
 
 \setcounter{tocdepth}{1}
 \tableofcontents
 \listoffigures  % if any
+\addcontentsline{toc}{chapter}{\listfigurename}
 \listoftables % if any
-
+\addcontentsline{toc}{chapter}{\listtablename}
 \chapter{Introduction}
 \pagenumbering{arabic}
 \setcounter{page}{1}
