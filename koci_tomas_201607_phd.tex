@@ -547,9 +547,7 @@ Assuming the current state $\mu$, the probability of generating a new state $\nu
 \end{equation}
 %
 The ratio of the forward and backward selection probabilities
-\begin{equation}
-\sigma(\mu,\nu) = \frac{s\left(\mu \rightarrow \nu\right)}{s\left(\nu \rightarrow \mu\right)}
-\end{equation}
+$\sigma(\mu,\nu) = s\left(\mu \rightarrow \nu\right)/s\left(\nu \rightarrow \mu\right)$
 depends on the choice of the particular update scheme. In the remainder of this thesis, we shall assume that the forward and backward selection probabilities are equal and the ratio equals to unity, which is valid for most local Monte Carlo updates. This simplifying assumption allows us to rewrite equation \ref{eq:ratioOfTransitionProb} without making explicit references to the selection probabilities
 %
 \begin{equation}
@@ -593,23 +591,23 @@ The Metropolis method provides the means for an efficient sampling of microstate
 
 
 \subsection{Parallel tempering}
-In situations, when the Metropolis sampling of a single canonical ensemble is not sufficient, the standard way of increasing sampling efficiency is to perform the simulation in a conveniently chosen \textit{generalized ensemble}\footnote{The microstate probability distribution of a generalized ensemble can be arbitrary and does not have to bear any resemblance to the Boltzmann distribution.}. In parallel tempering, multiple canonical ensembles with different inverse temperatures $\{\beta_{1} < \beta_{2} < ... < \beta_{N}\}$ are simulated in parallel according to the standard Metropolis scheme. In this context, the generalized ensemble is defined as the direct product of the $N$ canonical ensembles, and the partition function is given by
+In situations where the Metropolis method fails to produce data of reasonable quality, the standard way of increasing sampling efficiency is to perform the simulation in a conveniently chosen \textit{generalized ensemble}\footnote{The microstate probability distribution of a generalized ensemble can be arbitrary and does not have to bear any resemblance to the Boltzmann distribution.}. In parallel tempering, multiple canonical ensembles with different inverse temperatures $\{\beta_{1} < \beta_{2} < ... < \beta_{N}\}$ are simulated in parallel according to the standard Metropolis scheme. In this context, the generalized ensemble is defined as the direct product of $N$ canonical ensembles, and the partition function is given by
 %
 \begin{equation}
-Z_{\mathrm{gen}}(\beta_{1},\beta_{2},...,\beta_{N}) = \prod_{i=1}^{N} Z_{\mathrm{can}}(\beta_{i}).
+Z_{\mathrm{PT}}(\beta_{1},\beta_{2},...,\beta_{N}) = \prod_{i=1}^{N} Z_{\mathrm{can}}(\beta_{i}).
 \end{equation}
 %
 At judiciously chosen intervals, an exchange of conformations between adjacent temperature threads $i$ and $j$ is proposed. The combined probability for states $(\mu, \, \nu)$ at respective temperatures $(\beta_{i}, \, \beta_{j})$ is given by
 \begin{equation}
-p_{\mu\nu} =  \frac{e^{-\beta_{i}E(\mu)}}{Z_{\mathrm{can}}(\beta_{i})} \frac{e^{-\beta_{j}E(\nu)}}{Z_{\mathrm{can}}(\beta_{j})},
+p_{\mu\nu} =  \frac{\displaystyle e^{-\beta_{i}E(\mu)}}{\displaystyle Z_{\mathrm{can}}(\beta_{i})} \frac{\displaystyle e^{-\beta_{j}E(\nu)}}{\displaystyle Z_{\mathrm{can}}(\beta_{j})},
 \end{equation}
 %
-and the acceptance probability for the exchange of conformations is obtained from the equation \ref{eq:MetropolisCriterion}
+and the acceptance probability for the exchange of conformations is obtained from Eq. \ref{eq:MetropolisCriterion}
 %
 \begin{eqnarray}
 \label{eq:replicaExchange}
 a\left(\mu \leftrightarrow \nu;\beta _{i}, \beta_{j} \right) &=&
-\mathrm{min}\left(1, \frac{e^{-\beta_{i}E(\nu)}e^{-\beta_{j}E(\mu)}}{e^{-\beta_{i}E(\mu)}e^{-\beta_{j}E(\nu)}}\right) \nonumber \\
+\mathrm{min}\left(1, \frac{\displaystyle e^{-\beta_{i}E(\nu)}e^{-\beta_{j}E(\mu)}}{\displaystyle e^{-\beta_{i}E(\mu)}e^{-\beta_{j}E(\nu)}}\right) \nonumber \\
 &=&
 \mathrm{min}\left(1,e^{\left[\beta_{j} -
 \beta _{i} \right] \left[E (\nu) -
@@ -619,58 +617,52 @@ E(\mu)\right]} \right).
 The exchange rates are governed by the overlap of canonical energy distributions of the adjacent ensembles, hence the efficiency of the method depends sensitively on the choice of an appropriate temperature set. As a general rule, the density of temperatures must be increased in ordered phases and in the vicinity of pseudophase transitions. 
 
 In principle, each replica is allowed to traverse the entire simulated
-temperature range which leads to the decrease the autocorrelation time and reduces the likelihood of getting trapped in local energy minima at low temperatures. However, the performance of this method rapidly decreases near first-order transitions, where the joint effect of the entropic suppression of intermediate states and the energetic separation between the ordered and disordered pseudophases, virtually prevents the exchange of configurations between adjacent ensembles.
+temperature range which leads to the decrease of the autocorrelation time and reduces the likelihood of getting trapped in local energy minima at low temperatures. However, the performance of this method rapidly decreases near first-order transitions, where the joint effects of the entropic suppression of intermediate states and the energetic separation between the ordered and disordered pseudophases, virtually prevent the exchange of configurations between adjacent ensembles.
  
 \subsection{Multiple Gaussian modified ensemble}
 
-An alternative scheme that offers improved sampling in strongly first-order
-transition regions is based on the combination of parallel tempering with
-the
-multiple Gaussian modified ensemble (MGME) 
-method~\cite{Neuhaus2006}. In a single Gaussian modified ensemble
-(GME)
-at inverse temperature $\beta$, the probability of a state $\mathbf{X}$
-with energy $E$ is given by
+An alternative generalized ensemble method that offers improved performance is based on the combination of parallel tempering with the Gaussian modified ensemble (GME) method. The idea behind GME is to modify the canonical Boltzmann distribution by multiplying it by a Gaussian function, in order to promote sampling in selected energy regions. The mean energy $E_{G}$ and the variance $\Delta E_{G}^{2}$ of the Gaussian form controls the location and the width of the region of enhanced sampling. The modified microstate probability at the inverse temperature $\beta$ is given by
+%
 \begin{equation}
-P_{\mathrm{GME}}(\mathbf{X}) \sim e^{-\beta E(\mathbf{X}) -
-\left[E(\mathbf{X}) - E_{G}\right]^{2} / \Delta E_{G}^{2}},
+P_{\mathrm{GME}}(\mu) \propto e^{-\beta E_{\mu} -
+\left(E_{\mu} - E_{G}\right)^{2} / \Delta E_{G}^{2}}.
 \end{equation}
-where $E_G$ and $\Delta E_G$ are the center and the width of the
-Gaussian, respectively. 
-Strong first-order transitions with bimodal energy distributions typically
-require several overlapping GME ensembles to cover the relevant energy
-range
-as shown in Fig.~\ref{fig:Fig_9} for a 30mer with $R=30$ at
-the $\Theta$ transition temperature. The acceptance probability for the
-exchange of
-conformations $\mathbf{X}_{i} , \mathbf{X}_{j}$ between neighboring GME
-ensembles at inverse temperature $\beta$ is
+% 
+The measurements obtained from simulations in a modified ensemble must be reweighted in order to obtain the expectation values in the original canonical ensemble. In the context of the modified Gaussian ensemble this is done by calculating
 \begin{equation}
-A\left(\mathbf{X}_{i} \leftrightarrow \mathbf{X}_{j}\right) = 	
-\mathrm{min}\left(1,e^{\Delta G}\right),
-\end{equation}
-where
-\begin{eqnarray}
-\Delta G  &=& 
-\frac{\left(E_{i} - E_{G,j}\right)^{2}-\left(E_{j}-
-E_{G,j}\right)^{2}}{\Delta E_{G,j}^{2}}  \nonumber \\
-&&- \frac{\left(E_{j} - 	
-E_{G,i}\right)^{2}-\left(E_{i} - E_{G,i}\right)^{2}}{\Delta E_{G,i}^{2}}.
-\end{eqnarray}
-The resultant energy distribution of this combined MGME ensemble is nearly
-flat and the Monte Carlo sampling of the entropically suppressed region is
-enhanced. The sampling can be further improved by combining the MGME method
-with parallel tempering, hence allowing for exchanges between GME ensembles
-at
-different temperatures. 
+\left\langle O \right\rangle_{\mathrm{can},\beta} = \frac{\displaystyle \sum_{i=1}^{M} O_{i}e^{\beta 
+\left(E_{i} - E_{G}\right)^{2} / \Delta E_{G}^{2}}}{\displaystyle \sum_{i=1}^{M} e^{\beta 
+\left(E_{i} - E_{G}\right)^{2} / \Delta E_{G}^{2}}}.
+\end{equation} 
 %
 \begin{figure}
 \center
 \includegraphics[width = 0.7\textwidth]{chapter3Figs/mgme.eps}
-\caption{\label{fig:MGMR}%
-Canonical and MGME energy histograms at a strong first-order pseudophase transition. The canonical energy histogram is clearly bimodal, indicating the coexistence of the ordered and disordered pseudophases  while the MGME histograms are all of unimodal shape.}
+\caption{\label{fig:MGME}%
+Canonical and GME energy histograms at a first-order pseudophase transition. The bimodal canonical energy histogram indicates the coexistence of ordered and disordered pseudophases, separated by an entropically suppressed energy region. Each GME ensemble enhances the sampling of suppressed states over a limited energy range.}
 \end{figure} 
 % 
+
+
+Strong first-order transitions with bimodal energy distributions typically
+require several overlapping GME ensembles to cover the relevant energy range, as illustrated in Fig.~\ref{fig:MGME}. The acceptance probability for the
+exchange of conformations $(\mu,\nu)$ between neighboring GME ensembles with mean energies $(E_{G,i}, E_{G,j})$ at a constant inverse temperature $\beta$ is
+%
+\begin{equation}
+a\left(\mu \leftrightarrow \nu \right) = 	
+\mathrm{min}\left(1,e^{\Delta G}\right),
+\end{equation}
+%
+where
+\begin{equation}
+\Delta G  = 
+\frac{\left(E_{\mu} - E_{G,j}\right)^{2}-\left(E_{\nu}-
+E_{G,j}\right)^{2}}{\Delta E_{G,j}^{2}} - \frac{\left(E_{\nu} - 	
+E_{G,i}\right)^{2}-\left(E_{\mu} - E_{G,i}\right)^{2}}{\Delta E_{G,i}^{2}}.
+\end{equation}
+
+The direct product of GME ensembles defines the multiple Gaussian modified ensemble (MGME). With a proper choice of ensemble parameters $(E_{G},\Delta E_{G})$ it is possible to achieve a significantly improved sampling of previously inaccessible states. This can be further improved by allowing for exchanges between GME ensembles at different temperatures. However, previous knowledge of the system under consideration is usually needed to make a reasonable estimate for the ensemble parameters. 
+
 
 \section{Histogram reweighting methods}
 As a result of parallel tempering simulations, each replica generates 
