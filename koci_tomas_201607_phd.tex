@@ -570,7 +570,7 @@ a\left(\mu \rightarrow \nu\right) = \mathrm{min}\left(1,\frac{p\left(\nu\right)}
 Under most circumstances, Metropolis sampling is carried out according to the canonical microstate probability distribution $p(\mu) \propto e^{-\beta E(\mu)}$, where $\beta$ is the inverse canonical temperature. Hence the acceptance probability is governed by the energy difference between the proposed and the current states
 %
 \begin{equation}
-\label{eq:MetropolisCriterion}
+\label{eq:MetropolisCriterionCanonical}
 a\left(\mu \rightarrow \nu\right) = \mathrm{min}\left(1,\frac{e^{-\beta E(\nu)}}{e^{-\beta E(\mu)}} \right) = \mathrm{min}\left(1,e^{-\beta \Delta E} \right).
 \end{equation}
 %
@@ -593,39 +593,34 @@ The Metropolis method provides the means for an efficient sampling of microstate
 
 
 \subsection{Parallel tempering}
-In situations, when the Metropolis sampling of a single canonical ensemble is insufficient, a standard way of increasing the sampling efficiency is to perform the simulation in a conveniently chosen \textit{generalized ensemble}. In parallel tempering, multiple canonical ensembles, with different inverse temperatures $\{\beta_{1} < \beta_{2} < ... < \beta_{N}\}$, are simulated in parallel according to the standard Metropolis scheme.
-At judiciously chosen intervals, an exchange of conformations between adjacent temperature threads $i$ and $j$ is proposed. 
-
-
-
-
- with the acceptance probability
-\begin{equation}
-A\left(\mathbf{X}_{i} \leftrightarrow \mathbf{X}_{j};
-\beta _{i}, \beta_{j} \right) = \mathrm{min}\left(1,e^{\left[\beta_{j} -
-\beta _{i} \right] \left[E (\mathbf{X}_{j}) -
-E(\mathbf{X}_{i})\right]} \right).
-\end{equation}
-In principle, this allows each replica to traverse the entire simulated
-temperature range which would decrease the autocorrelation time
-and increase sampling efficiency. However, the performance of this method
-rapidly decreases near first-order transitions with high free-energy
-barriers due to entropic depletion of energetic states. As
-Fig.~\ref{fig:Fig_9} shows, this issue is encountered in polymer systems
-with highly elastic bonds or gas-like systems (large $R$ values).
-
+In situations, when the Metropolis sampling of a single canonical ensemble is not sufficient, the standard way of increasing sampling efficiency is to perform the simulation in a conveniently chosen \textit{generalized ensemble}\footnote{The microstate probability distribution of a generalized ensemble can be arbitrary and does not have to bear any resemblance to the Boltzmann distribution.}. In parallel tempering, multiple canonical ensembles with different inverse temperatures $\{\beta_{1} < \beta_{2} < ... < \beta_{N}\}$ are simulated in parallel according to the standard Metropolis scheme. In this context, the generalized ensemble is defined as the direct product of the $N$ canonical ensembles, and the partition function is given by
 %
-\begin{figure}
-\center
-\includegraphics[width = 0.7\textwidth]{chapter3Figs/mgme.eps}
-\caption{\label{fig:Fig_9}%
-(Color online) Canonical and MGME energy histograms for a 30mer
-with $R=30$, exhibiting a
-strong first-order-like $\Theta$ transition. The canonical histogram is
-clearly
-bimodal while the MGME histograms are all of unimodal shape.}
-\end{figure} 
-%  
+\begin{equation}
+Z_{\mathrm{gen}}(\beta_{1},\beta_{2},...,\beta_{N}) = \prod_{i=1}^{N} Z_{\mathrm{can}}(\beta_{i}).
+\end{equation}
+%
+At judiciously chosen intervals, an exchange of conformations between adjacent temperature threads $i$ and $j$ is proposed. The combined probability for states $(\mu, \, \nu)$ at respective temperatures $(\beta_{i}, \, \beta_{j})$ is given by
+\begin{equation}
+p_{\mu\nu} =  \frac{e^{-\beta_{i}E(\mu)}}{Z_{\mathrm{can}}(\beta_{i})} \frac{e^{-\beta_{j}E(\nu)}}{Z_{\mathrm{can}}(\beta_{j})},
+\end{equation}
+%
+and the acceptance probability for the exchange of conformations is obtained from the equation \ref{eq:MetropolisCriterion}
+%
+\begin{eqnarray}
+\label{eq:replicaExchange}
+a\left(\mu \leftrightarrow \nu;\beta _{i}, \beta_{j} \right) &=&
+\mathrm{min}\left(1, \frac{e^{-\beta_{i}E(\nu)}e^{-\beta_{j}E(\mu)}}{e^{-\beta_{i}E(\mu)}e^{-\beta_{j}E(\nu)}}\right) \nonumber \\
+&=&
+\mathrm{min}\left(1,e^{\left[\beta_{j} -
+\beta _{i} \right] \left[E (\nu) -
+E(\mu)\right]} \right).
+\end{eqnarray}
+%
+The exchange rates are governed by the overlap of canonical energy distributions of the adjacent ensembles, hence the efficiency of the method depends sensitively on the choice of an appropriate temperature set. As a general rule, the density of temperatures must be increased in ordered phases and in the vicinity of pseudophase transitions. 
+
+In principle, each replica is allowed to traverse the entire simulated
+temperature range which leads to the decrease the autocorrelation time and reduces the likelihood of getting trapped in local energy minima at low temperatures. However, the performance of this method rapidly decreases near first-order transitions, where the joint effect of the entropic suppression of intermediate states and the energetic separation between the ordered and disordered pseudophases, virtually prevents the exchange of configurations between adjacent ensembles.
+ 
 \subsection{Multiple Gaussian modified ensemble}
 
 An alternative scheme that offers improved sampling in strongly first-order
@@ -668,7 +663,14 @@ enhanced. The sampling can be further improved by combining the MGME method
 with parallel tempering, hence allowing for exchanges between GME ensembles
 at
 different temperatures. 
-
+%
+\begin{figure}
+\center
+\includegraphics[width = 0.7\textwidth]{chapter3Figs/mgme.eps}
+\caption{\label{fig:MGMR}%
+Canonical and MGME energy histograms at a strong first-order pseudophase transition. The canonical energy histogram is clearly bimodal, indicating the coexistence of the ordered and disordered pseudophases  while the MGME histograms are all of unimodal shape.}
+\end{figure} 
+% 
 
 \section{Histogram reweighting methods}
 As a result of parallel tempering simulations, each replica generates 
