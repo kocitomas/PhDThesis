@@ -139,6 +139,7 @@ where
 \end{equation}
 is the Lebesgue measure over phase space\cite{Rugh2001}. In computational studies, the energy space is by necessity discretized into intervals of width $\Delta E$, and the density of states $g(E_{i})$ is obtained by counting the microstates within a thin shell of width $\Delta E$. Formally, $g(E_{i})$ is a discrete function defined as
 \begin{equation}
+\label{eq:densitOfStatesExplicit}
 g(E_{i}) = \int _{E_{i}-\Delta E/2} ^{E_{i}+\Delta E/2} g(E)dE,
 \end{equation}
 where $g(E)$ in the integrand is the continuous density of states\cite{Bachmann2014}.
@@ -663,34 +664,61 @@ E_{G,j}\right)^{2}}{\Delta E_{G,j}^{2}} - \frac{\left(E_{\nu} -
 E_{G,i}\right)^{2}-\left(E_{\mu} - E_{G,i}\right)^{2}}{\Delta E_{G,i}^{2}}.
 \end{equation}
 
-The direct product of GME ensembles defines the multiple Gaussian modified ensemble (MGME). With a proper choice of ensemble parameters $(E_{G},\Delta E_{G})$ it is possible to achieve a significantly improved sampling of previously inaccessible states. This can be further improved by allowing for exchanges between GME ensembles at different temperatures. However, previous knowledge of the system under consideration is usually needed to make a reasonable estimate for the ensemble parameters. 
+The direct product of GME ensembles defines the multiple Gaussian modified ensemble (MGME). With a proper choice of ensemble parameters $(E_{G},\Delta E_{G})$ it is possible to achieve a significantly enhanced sampling of previously inaccessible states. This can be further improved by allowing for exchanges between GME ensembles at different temperatures. However, previous knowledge of the system under consideration is usually needed to make a reasonable estimate for the ensemble parameters. Therefore other more systematic methods, such as multicanonical and Wang-Landau sampling, are often used.    
 
 
 \section{Histogram reweighting methods}
-As a result of parallel tempering simulations, each replica generates 
-a canonical energy histogram $h(E,\beta_{i})$,
-which is then used to calculate an estimate for the microcanonical density 
-of states $g_{i}(E) \approx h(E,\beta_{i})\exp{(\beta _{i} E)}$.
-Individual estimates $g_{i}(E)$ are only reliable for energies in the
-neighborhood 
-of the peak of the canonical distribution obtained at the temperature
-$\beta _{i}$.
-Therefore a sufficient overlap between the histograms of
-neighboring replicas 
-is necessary to ensure that an accurate estimate of the density of states 
-can be
-obtained for the entire energetic range. To combine the histograms obtained
-from the individual temperature threads, we have used the weighted
-multiple-histogram 
-method~\cite{Ferrenberg1989,Kumar1992}, where the system of equations
-%%%%%% Weighted Histogram Reweighting %%%%%%
-\begin{eqnarray}
-\hat{g}(E)&= &\frac{\sum_{i=1}^{R} h(E,\beta _{i})}{\sum_{i=1}^{R} M_i
-\hat{Z}_i^{-1} e^{-\beta_i E}}, \\
-\hat{Z}_i &= &\sum_E \hat{g}(E) e^{-\beta_i E},
-\end{eqnarray}
+
+In chapter \ref{chap:elements_of_stat_mech}, we have introduced the microcanonical inflection point analysis as the means for the systematic study of pseudophase transitions in the microcanonical ensemble. Application of this method however presumes the precise knowledge of the microcanonical density of states $g(E)$ [Eq \ref{eq:densitOfStatesExplicit}]. Previously introduced sampling methods do not directly measure $g(E)$ but rather generate canonical energy histograms $h(E,\beta_{i})$. Hence, it is necessary to introduce a general method for estimating the density of states from energy histograms.
+
+\subsection{Multiple\,-histogram reweighting}
+Canonical histogram $h(E,\beta_{i})$ provides an approximation for the Boltzmann distribution $p_{\mathrm{can}}(E, \beta_{i})$, which is itself proportional to the microcanonical density of states
 %
-must be solved iteratively until $\hat{g}(E)$ has converged.
+\begin{equation}
+\label{eq:canonicalDistribution}
+h(E,\beta_{i}) \approx p_{\mathrm{can}}(E, \beta_{i}) \propto g(E)e^{-\beta_{i}E}
+\end{equation}
+%
+Therefore each histogram yields an estimate of the density of states 
+%
+\begin{equation}
+\label{eq:singleHistogramReweighting}
+\bar{g}_{i}(E) = h(E,\beta_{i})e^{\beta _{i} E}
+\end{equation}
+%
+%
+\begin{figure}
+\center
+\includegraphics[width = 0.95\textwidth]{chapter3Figs/multipleHistogramReweighting.pdf}
+\caption{\label{fig:MHR}%
+(a) Sketch of the canonical energy histograms $h(E,\beta_{i})$, (b) the individual estimates of the logarithm of the density of states $\bar{S}_{i}(E)$, (c) and the combined estimate of the logarithm of the density of states $\hat{S}(E)$.}
+\end{figure}
+% 
+Individual estimates $\bar{g}_{i}(E)$ are only reliable for energies in the
+vicinity of the peak of the canonical histogram obtained at the temperature
+$\beta _{i}$. Therefore a sufficient overlap between the histograms of
+adjacent replicas is necessary to ensure that an accurate estimate of the density of states can be obtained for the entire energetic range. 
+
+The task is now to combine the individual estimates $\bar{g}_{i}(E)$ and obtain an improved estimate $\hat{g}(E)$. Unfortunately, general Monte Carlo methods do not yield absolute estimates for the partition function $Z(\beta)$ and the estimates $\bar{g}_{i}(E)$ cannot be directly related if obtained at different temperatures.
+However, it is possible to introduce a reference partition function
+%
+\begin{equation}
+\label{eq:referencePartitionFunction}
+\hat{Z}_i = \sum_E \hat{g}(E) e^{-\beta_i E},
+\end{equation}
+%
+which serves as the appropriate weight in the estimator for the density of states
+\begin{equation}
+\label{eq:dosEstimator}
+\hat{g}(E)= \frac{\sum_{i=1}^{R} h(E,\beta _{i})}{\sum_{i=1}^{R} M_i
+\hat{Z}_i^{-1} e^{-\beta_i E}}.
+\end{equation}
+%
+The equations \ref{eq:referencePartitionFunction} and \ref{eq:dosEstimator} must be solved iteratively until $\hat{g}(E)$ has converged. The relationship between the energy histograms, the individual estimates $\bar{g}_{i}(E)$, and the final estimate $\hat{g}(E)$ of the density of states is illustrated in Fig. \ref{fig:MHR}. For  detailed derivation and a further discussion of the multiple-histogram reweighting method please refer to \cite{Ferrenberg1989,Kumar1992}.
+
+
+
+
 \subsection{Beziere smoothing}
 \section{Simple Monte Carlo updates}
 Mention that a proper choice of updates is equally important as choosing the right algorithm.
