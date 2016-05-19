@@ -74,7 +74,7 @@
 \newlabel{eq:approx2}{{2.42}{22}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.7}{\ignorespaces Comparison of microcanonical results from a Monte Carlo simulation of a flexible homopolymer of length $N=55$.(a) The combined $S$, conformational $S_{c}$, and kinetic $S_{k}$ entropy curves. (b) The kinetic inverse temperature $\beta _{k}$ is a strictly convex function and the application of the inflection-point analysis reveals no transition signals. The conformational inverse temperature $\beta _{c}$ clearly differs from $\beta (E)$, however both indicate a first-order pseudophase transition at virtually the same temperature. }}{23}}
 \newlabel{fig:Fig_7}{{2.7}{23}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.8}{\ignorespaces Comparison of the inverse microcanonical temperature $\beta (E)$ (red) and the conformational inverse temperature $\beta _{c}(\mathaccent "7016\relax {E}_{p})$ (blue) evaluated at the most probable potential energy $\mathaccent "7016\relax {E}_{p}$. The approximation introduced in equation 2.41\hbox {} holds except in the back-bending region of the first-order pseudophase transition. The inverse transition temperature $\beta _{\mathrm  {trans}}$ obtained from the two quantities is virtually identical.}}{24}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.8}{\ignorespaces Comparison of the inverse microcanonical temperature $\beta (E)$ (red) and the conformational inverse temperature $\beta _{c}(\mathaccentV {bar}016{E}_{p})$ (blue) evaluated at the most probable potential energy $\mathaccentV {bar}016{E}_{p}$. The approximation introduced in equation 2.41\hbox {} holds except in the back-bending region of the first-order pseudophase transition. The inverse transition temperature $\beta _{\mathrm  {trans}}$ obtained from the two quantities is virtually identical.}}{24}}
 \newlabel{fig:Fig_8}{{2.8}{24}}
 \@writefile{toc}{\contentsline {chapter}{\numberline {3}Computational Methods}{25}}
 \@writefile{lof}{\addvspace {10\p@ }}
@@ -99,50 +99,53 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces Canonical and GME energy histograms at a first-order pseudophase transition. The bimodal canonical energy histogram indicates the coexistence of ordered and disordered pseudophases, separated by an entropically suppressed energy region. Each GME ensemble enhances the sampling of suppressed states over a limited energy range.}}{32}}
 \newlabel{fig:MGME}{{3.1}{32}}
 \@writefile{toc}{\contentsline {section}{\numberline {3.2}Histogram reweighting methods}{33}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}Multiple\,-histogram reweighting}{33}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}Multiple\tmspace  +\thinmuskip {.1667em}-histogram reweighting}{33}}
 \newlabel{eq:canonicalDistribution}{{3.21}{33}}
 \newlabel{eq:singleHistogramReweighting}{{3.22}{33}}
 \citation{Ferrenberg1989,Kumar1992}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces (a) Sketch of the canonical energy histograms $h(E,\beta _{i})$, (b) the individual estimates of the logarithm of the density of states $\mathaccent "7016\relax {S}_{i}(E)$, (c) and the combined estimate of the logarithm of the density of states $\mathaccent "705E\relax {S}(E)$.}}{34}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces (a) Illustration of the canonical energy histograms $h(E,\beta _{i})$, (b) the individual estimates of the logarithm of the density of states $\mathaccentV {bar}016{S}_{i}(E)$, (c) and the combined estimate of the logarithm of the density of states $\mathaccentV {hat}05E{S}(E)$.}}{34}}
 \newlabel{fig:MHR}{{3.2}{34}}
 \newlabel{eq:referencePartitionFunction}{{3.23}{34}}
 \newlabel{eq:dosEstimator}{{3.24}{34}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}Beziere smoothing}{35}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.3}Simple Monte Carlo updates}{35}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}Single displacement update}{35}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}Pivot update}{35}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}Coarse-grained Homopolymer Model}{36}}
+\newlabel{eq:beziereDefinition}{{3.25}{35}}
+\newlabel{eq:BernsteinPoly}{{3.26}{35}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Comparison between the noisy derivative of the microcanonical inverse temperature $\gamma (E) = d\beta /dE$ and the Bezi\'{e}r approximation $\gamma _{\mathrm  {bez}}(E)$. The systematic error in the Bezi\'{e}r approximation is visible near $E_{\mathrm  {trans}}$, where the curvature of $\gamma (E)$ changes abruptly. }}{36}}
+\newlabel{fig:Bezier}{{3.3}{36}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}Simple Monte Carlo updates}{37}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}Single displacement update}{37}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}Pivot update}{37}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Coarse-grained Homopolymer Model}{38}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}Flexible elastic homopolymer}{36}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}Interacting homopolymers}{36}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Confinement Effects on Structural Transitions in Flexible Homopolymers}{37}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Flexible elastic homopolymer}{38}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Interacting homopolymers}{38}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Confinement Effects on Structural Transitions in Flexible Homopolymers}{39}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}Introduction}{37}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}Canonical analysis}{37}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.3}Inflection-point analysis}{37}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.4}Hyper-phase diagrams}{37}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Impact of Bonded Interactions on the Ground-State Geometries of Flexible Homopolymers}{38}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Introduction}{39}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Canonical analysis}{39}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Inflection-point analysis}{39}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.4}Hyper-phase diagrams}{39}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Impact of Bonded Interactions on the Ground-State Geometries of Flexible Homopolymers}{40}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {6.1}Structural order parameters}{38}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.2}15-mer}{38}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.3}55-mer}{38}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {7}Aggregation of Flexible Elastic Homopolymers}{39}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}Structural order parameters}{40}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}15-mer}{40}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.3}55-mer}{40}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}Aggregation of Flexible Elastic Homopolymers}{41}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {7.1}Introduction}{39}}
-\@writefile{toc}{\contentsline {section}{\numberline {7.2}Microcanonical analysis}{39}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.2.1}Subphases and subphase transitions}{39}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.2.2}Missing subphases and translational entropy}{39}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.2.3}Density effects on the latent heat}{39}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {8}Summary and Outlook}{40}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.1}Introduction}{41}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.2}Microcanonical analysis}{41}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2.1}Subphases and subphase transitions}{41}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2.2}Missing subphases and translational entropy}{41}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2.3}Density effects on the latent heat}{41}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {8}Summary and Outlook}{42}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {chapter}{Bibliography}{40}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8.1}{\ignorespaces Example of a figure.}}{40}}
-\@writefile{lot}{\contentsline {table}{\numberline {8.1}{\ignorespaces Example of a table.}}{41}}
+\@writefile{toc}{\contentsline {chapter}{Bibliography}{42}}
+\@writefile{lot}{\contentsline {table}{\numberline {8.1}{\ignorespaces Example of a table.}}{42}}
 \bibcite{Bachmann2014}{1}
 \bibcite{Rugh2001}{2}
 \bibcite{Kardar2007}{3}

@@ -8,6 +8,7 @@
 \usepackage{graphicx}
 \usepackage{cite}
 \usepackage{adjustbox}
+\usepackage{amsmath}
 \textfloatsep 0.75in                   % important with double spacing
 
 \begin{document}
@@ -691,7 +692,7 @@ Therefore each histogram yields an estimate of the density of states
 \center
 \includegraphics[width = 0.95\textwidth]{chapter3Figs/multipleHistogramReweighting.pdf}
 \caption{\label{fig:MHR}%
-(a) Sketch of the canonical energy histograms $h(E,\beta_{i})$, (b) the individual estimates of the logarithm of the density of states $\bar{S}_{i}(E)$, (c) and the combined estimate of the logarithm of the density of states $\hat{S}(E)$.}
+(a) Illustration of the canonical energy histograms $h(E,\beta_{i})$, (b) the individual estimates of the logarithm of the density of states $\bar{S}_{i}(E)$, (c) and the combined estimate of the logarithm of the density of states $\hat{S}(E)$.}
 \end{figure}
 % 
 Individual estimates $\bar{g}_{i}(E)$ are only reliable for energies in the
@@ -716,14 +717,51 @@ which serves as the appropriate weight in the estimator for the density of state
 %
 The equations \ref{eq:referencePartitionFunction} and \ref{eq:dosEstimator} must be solved iteratively until $\hat{g}(E)$ has converged. The relationship between the energy histograms, the individual estimates $\bar{g}_{i}(E)$, and the final estimate $\hat{g}(E)$ of the density of states is illustrated in Fig. \ref{fig:MHR}. For  detailed derivation and a further discussion of the multiple-histogram reweighting method please refer to \cite{Ferrenberg1989,Kumar1992}.
 
-
-
-
 \subsection{Beziere smoothing}
+The estimator for the density of states, obtained either by multiple-histogram reweighting or directly by multicanonical sampling, is not a smooth function but rather a discrete set of stochastic values. The formalism of the microcanonical inflection point analysis requires the accurate knowledge of its energy derivatives. These have to be computed by numerical differentiation which is prone to enhancing the random statistical fluctuations of the original data set. It is therefore desirable to approximate the density of states by a smooth analytic function, which can be done very effectively with Bezi\'{e}r curves.
+
+Bezi\'{e}r curve of order $n$ is a parametric curve defined by a set of $(n+1)$ control points $\left\lbrace P_{0},P_{1},....,P_{n}\right\rbrace$ and the formula 
+%
+\begin{equation}
+\label{eq:beziereDefinition}
+B(t) = \sum_{i=0}^{n}\mathcal{B}_{i}^{(n)}(t)P_{i},
+\end{equation}
+%
+where ${B}_{i}^{(n)}$ are the Bernstein basis polynomials of degree $n$
+%
+\begin{equation}
+\label{eq:BernsteinPoly}
+{B}_{i}^{(n)}(t) = \binom{n}{i}(1-t)^{n-i}t^{i}.
+\end{equation}
+The discrete values of the estimated density of states $g(E_{i})$ serve as control points for the approximating Bezi\'{e}r curve. Assuming that the set of $(n+1)$ control points
+\newline
+$\left\lbrace g(E_{0}),g(E_{1}),....,g(E_{n})\right\rbrace$ is equally spaced in the energy space over the interval $[E_{\mathrm{min}},E_{\mathrm{max}}]$, the approximating Bezi\'{e}r function can be directly calculated from
+%
+\begin{equation}
+g_{\mathrm{bez}}(E) = \sum_{i=0}^{n} \binom{n}{i} \left(\frac{E_{\mathrm{max}} - E}{E_{\mathrm{max}} - E_{\mathrm{min}}} \right)^{n-i} \left(\frac{E - E_{\mathrm{min}}}{E_{\mathrm{max}} - E_{\mathrm{min}}} \right)^{i} 
+g(E_{i}).
+\end{equation}
+%
+The numerical error introduced by the approximation scheme is typically much smaller than the random statistical fluctuations in the original noisy data set. However it should be mentioned that Bezi\'{e}r smoothing may introduce systematic errors to the derivatives of $g(E)$ in areas of abrupt changes in curvature.  This is illustrated in Fig. \ref{fig:Bezier} where we compare the noisy derivative of the microcanonical inverse temperature $\gamma(E) = d\beta/dE$ and the Bezi\'{e}r approximation $\gamma_{\mathrm{bez}}(E)$ in the region of a first-order pseudophase transition.
+%
+\begin{figure}
+\center
+\includegraphics[width = 0.7\textwidth]{chapter3Figs/bezierComparison.eps}
+\caption{\label{fig:Bezier}%
+Comparison between the noisy derivative of the microcanonical inverse temperature $\gamma(E) = d\beta/dE$ and the Bezi\'{e}r approximation $\gamma_{\mathrm{bez}}(E)$. The systematic error in the Bezi\'{e}r approximation is visible near $E_{\mathrm{trans}}$, where the curvature of $\gamma(E)$ changes abruptly.
+}
+\end{figure}
+% 
+\newpage
 \section{Simple Monte Carlo updates}
 Mention that a proper choice of updates is equally important as choosing the right algorithm.
+
+
+
 \subsection{Single displacement update}
 Include optimization for the size of the displacement box
+
+
 \subsection{Pivot update}
 
 
@@ -763,10 +801,6 @@ Include optimization for the size of the displacement box
 
 
 
-\begin{figure}
-\centerline{[ You could put a picture here. ]}
-\caption{Example of a figure.}
-\end{figure}
 
 \begin{table}
 \caption{Example of a table.}
