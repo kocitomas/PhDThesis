@@ -125,7 +125,7 @@ Kickass intro...
 
 \chapter{Elements of Statistical Mechanics}
 \label{chap:elements_of_stat_mech}
-Statistical mechanics aims at explaining the microscopic origins of macroscopic properties of systems with large numbers of degrees of freedom. The exact solution for the time evolution of every particle in a single complex system requires enormous computational efforts, and in most cases provides little insight. In contrast to the chaotic motion of particles at the microscopic level, collective system properties such as entropy, pressure, or temperature, for the most part exhibit relatively simple behavior. The formalism of statistical mechanics allows us to study these properties by considering the average behavior of a large number of identically prepared systems, i.e., the statistical ensemble. It is well established, that for very large systems near the thermodynamic limit, all ensembles become equivalent. However this is emphatically not true in the case of intrinsically finite systems for which the choice of an ensemble is non-trivial\cite{Bachmann2014}. Therefore, I shall briefly discuss several prominent statistical ensembles, starting with arguably the most fundamental one, the \textit{microcanonical ensemble}.
+Statistical mechanics aims at explaining the microscopic origins of macroscopic properties of systems with large numbers of degrees of freedom. The exact solution for the time evolution of every particle in a single complex system requires enormous computational efforts, and in most cases provides little insight. In contrast to the stochastic motion of microscopic particles in a thermal environment, collective system properties such as entropy, pressure, or temperature, for the most part exhibit relatively simple behavior. The formalism of statistical mechanics allows us to study these properties by considering the average behavior of a large number of identically prepared systems, i.e., the statistical ensemble. It is well established, that for very large systems near the thermodynamic limit, all ensembles become equivalent. However this is emphatically not true in the case of intrinsically finite systems for which the choice of an ensemble is non-trivial\cite{Bachmann2014}. Therefore, we shall briefly introduce several prominent statistical ensembles, starting with arguably the most fundamental one, the \textit{microcanonical ensemble}.
 
 \section{The microcanonical ensemble}
 \label{sec:mic_ensemble}
@@ -477,9 +477,9 @@ Comparison of the inverse microcanonical temperature $\beta(E)$ (red) and the co
 \chapter{Computational Methods}
 
 Computational algorithms are powerful tools that enable the investigation of physical systems that are far too complex to be solved analytically.
-In fact, only a handful of systems are exactly solvable\footnote{The most prominent examples are the ideal gas and the two dimensional Ising model.} and even the simplest solutions require bewildering mathematical gymnastics. Consequently, computational studies are the main source of advances in the fundemental understanding of complex microscopic and mesoscopic systems such as biopolymers and proteins.
+In fact, only a handful of systems with large number of degrees of freedom are exactly solvable\footnote{The most prominent examples are the ideal gas and the two dimensional Ising model.}, and even the simplest solutions often require bewildering mathematical gymnastics. Consequently, computational studies are the main source of advances in the fundemental understanding of complex microscopic and mesoscopic systems such as biopolymers and proteins.
 
-Two complementary classes of computational algorithms have been particularly successful in unravelling the thermodynamic properties of physical systems. \textit{Molecular dynamics} simulations generate a single phase space trajectory by updating the positions and momenta of every particle in a system according to Hamilton's equations. On the other hand, carrying out a stochastic sampling of the phase space, \textit{Monte Carlo} simulations estimate the equilibrium properties without the explicit consideration for the system's dynamics. In this chapter, we shall focus our attention to Markov chain Monte Carlo methods. We will briefly discuss the essential theory and introduce the well established Metropolis and Parallel Tempering algorithms as well as the lesser known Multiple Gaussian modified ensemble method.
+Two complementary classes of computational algorithms have been particularly successful in unravelling the thermodynamic properties of physical systems. \textit{Molecular dynamics} simulations generate a single phase space trajectory by updating the positions and momenta of every particle in a system according to Hamilton's equations. Alternatively, carrying out a stochastic sampling of the phase space, \textit{Monte Carlo} simulations estimate the equilibrium properties without the explicit consideration for the system's dynamics. In this chapter, we shall focus our attention to Markov chain Monte Carlo methods. We will briefly discuss the essential theory and introduce the well established Metropolis and Parallel Tempering algorithms as well as the lesser known Multiple Gaussian modified ensemble method.
 
 
 
@@ -752,23 +752,43 @@ Comparison between the noisy derivative of the microcanonical inverse temperatur
 }
 \end{figure}
 % 
-\newpage
 \section{Simple Monte Carlo updates}
-Mention that a proper choice of updates is equally important as choosing the right algorithm.
-
-
+The efficiency of Monte Carlo simulations depends in equal measure on the choice of  the sampling algorithm and on the selection of appropriate conformational updates. All update sets must be ergodic, i.e., it must be in principle possible to connect any two arbitrary states through a finite number of updates. Additionally, all updates must preserve the constraints of the model, such as volume exclusion and boundary conditions. The efficiency of individual updates depends strongly on the model to which they are being applied. Hence, there is no general set of updates that guarantees good performance across different physical models. In the following, we shall briefly discuss conformational updates which are suitable for simulations of off-lattice polymers and proteins. 
 
 \subsection{Single displacement update}
-Include optimization for the size of the displacement box
-
-
+The single displacement update is easy to implement, satisfies ergodicity, and has equal forward and backward selection probabilities. The original conformation of a polymer chain $\mathbf{R} = \{\mathbf{r_{1}},\mathbf{r_{2}},...,\mathbf{r_{N}}\}$ is updated by a random\footnote{Monte Carlo simulations make an extensive use of pseudo-random numbers. The popular Mersenne Twister pseudo-random number generator is used throughout this thesis. For more information on the `art' of random number generation please refer to \cite{Landau2000}.} displacement $\Delta \mathbf{r_{i}}$ of the randomly selected i-th monomer. The displacement vector is defined in Cartesian coordinates as $\Delta \mathbf{r_{i}} = (\Delta x_{i}, \Delta y_{i}, \Delta z_{i})$, where each component is selected with uniform probability from some interval $[-l,\,l\,\,]$. In general, longer displacement updates lead to larger energy differences between the old and the new states $\Delta E = E_{\mathrm{new}} - E_{\mathrm{old}}$. In Monte Carlo simulations, large positive values of the term $\Delta E/T$ result in an exponential suppression of the acceptance rates [Eq. \ref{eq:MetropolisCriterionCanonical}]. In order to achieve acceptance rates within the optimal range of $\sim 30\%-70\%$, the set of temperature dependent displacement parameters $l(T_{i})$ must be determined. Unfortunately, for most off-lattice polymer models, only very short displacement updates are allowed at low temperatures and the generated sequence of states becomes strongly correlated. An example of the temperature dependence of $l(T_{i})$, obtained from a simulation of a flexible elastic 55-mer, is shown in Fig. \ref{fig:acceptanceRates}.Polymer models which contain stiff bonds cannot be sampled using displacement updates and require more sophisticated rotational updates.
+%
+\begin{figure}
+\center
+\includegraphics[width = 0.75\textwidth]{chapter3Figs/acceptanceRates.eps}
+\caption{\label{fig:acceptanceRates}%
+Example of a distribution of the temperature dependent displacement parameter $l(T)$, used in a parallel tempering simulation of a flexible elastic 55-mer. The values of $l(T)$ were selected to keep the average acceptance rates $\left\langle a \right\rangle$ within the optimal range of $\sim 30\%-70\%$.
+}
+\end{figure}
+% 
 \subsection{Pivot update}
+The pivot update consists of rotating a portion of the polymer chain over a randomly chosen rotation axis. This allows for a global change in the polymer conformation decreases the correlation between the sampled states. In practice, first a random monomer is selected to serve as the pivot and the direction of the rotation axis is defined by a random vector $\mathbf{k}$. With equal probability, either terminus of the chain is selected for rotation. The vector which connects the pivot to any monomer which is to be rotated is denoted as $\mathbf{r}$. The random rotation angle $\Delta \phi$ is selected with uniform probability from some interval $[-\lambda,\,\lambda]$. Finally, the projection $\mathbf{r}_{\bot}$ of the vector $\mathbf{r}$ into the plane perpendicular to $\mathbf{k}$ is rotated by $\Delta \phi$ and the resultant vector connecting the pivot and the rotated monomer is given by $\mathbf{r}^{\prime}$. A schematic depiction of the single-displacement and the pivot updates is provided in Fig. \ref{fig:conformUpdate}. It should be mentioned, that when used in simulations of polymer models with elastic bonds, the pivot update is not ergodic since it preserves bond length. Therefore it is recommended to combine rotational updates with single displacement updates whenever applicable. 
+
+%
+\begin{figure}
+\center
+\includegraphics[width = 0.99\textwidth]{chapter3Figs/conformationalUpdatesNew.pdf}
+\caption{\label{fig:conformUpdate}%
+Schematic depiction of the single-displacement and the rotational pivot updates.
+In a displacement update, a randomly selected monomer is moved according to a randomly generated displacement vector $\Delta \mathbf{r_{i}}$. The pivot update consists of rotating a portion of the polymer chain over a randomly chosen axis $\mathbf{k}$ by a random angle $\Delta \phi$. 
+}
+\end{figure}
+% 
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%% 			CHAPTER 4     		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 
 \chapter{Coarse-grained Homopolymer Model}
+\label{chap:HomopolymerModel}
 \section{Flexible elastic homopolymer}
 \section{Interacting homopolymers}
 
