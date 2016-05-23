@@ -786,10 +786,226 @@ In a displacement update, a randomly selected monomer is moved according to a ra
 
 
 
-\chapter{Coarse-grained Homopolymer Model}
+\chapter{Off-Lattice Polymer Models}
 \label{chap:HomopolymerModel}
+
+\section{Coarse-grained models}
+In the $6N$-dimensional phase space, the canonical partition function is
+\begin{equation}
+Z_{\mathrm{can}} = \int \mathcal{DP}\mathcal{DX}e^{-\beta \mathcal{H}(\mathbf{P,X})},
+\end{equation}
+where
+\begin{equation}
+\int \mathcal{DP}\mathcal{DX} = C_{\mathrm{N}}\prod_{n = 1}^{N}\iint\frac{d^{3}p_{n}d^{3}x_{n}}{(2 \pi \hbar)^{3}}.
+\end{equation}
+For the hamiltonian in the standard form
+\begin{equation}
+\mathcal{H}(\mathbf{P,X}) = \sum_{n = 1}^{N} \frac{\mathbf{p}_{n}^{2}}{2m} + V(\mathbf{X}),
+\end{equation}
+the momentum integrals factorize and yield
+\begin{equation}
+\left(\dfrac{m}{2\pi \beta \hbar ^{2}}\right)^{3N/2} = \lambda _{\mathrm{th}}^{-3N}.
+\end{equation}
+Hence the partition function can be written as
+\begin{equation}
+Z_{\mathrm{can}} = \int \mathcal{DX}e^{-\beta V(\mathbf{X})},
+\end{equation}
+where
+\begin{equation}
+\int \mathcal{DX} = C_{\mathrm{N}}\prod_{n = 1}^{N}\int\frac{d^{3}x_{n}}{\lambda _{\mathrm{th}}^{3}}.
+\end{equation}
+We introduce the reduced set of coordinates which represent the coarse-grained degrees of freedom
+\begin{equation}
+\mathbf{Q(X)} = (q_{1}(\mathbf{X}),q_{2}(\mathbf{X}),....,q_{L}(\mathbf{X})).
+\end{equation}
+The partition function can be written in the new set of coordinates as
+\begin{equation}
+Z_{\mathrm{can}} = \lambda _{\mathrm{th}}^{L}\int \mathcal{DQ}\int \mathcal{DX}\prod _{l = 1}^{L} \left[\delta (q_{l} - q_{l}^{s}(\mathbf{X}))\right]e^{-\beta V(\mathbf{X})} = \int \mathcal{DQ}e^{-\beta \tilde{V}(\mathbf{X})},
+\end{equation}
+where $\tilde{V}(\mathbf{X})$ is the effective potential of the coarse-grained model
+
+\begin{equation}
+\tilde{V}(\mathbf{X}) = -k_{\mathrm{B}}\,T\,ln \lambda _{\mathrm{th}}^{L}\int \mathcal{DX}\prod_{l = 1}^{L} \left[\delta (q_{l} - q_{l}^{s}(\mathbf{X}))\right]e^{-\beta V(\mathbf{X})} = -k_{\mathrm{B}}\,T\,ln\,Z_{\mathrm{res}}(\mathbf{Q}).
+\end{equation}
+
+
 \section{Flexible elastic homopolymer}
-\section{Interacting homopolymers}
+\subsection{Single elastic chain}
+In this study, we employ a generic model of a single, elastic, flexible,
+linear
+homopolymer chain with $N$ monomers. A pair of monomers $i$ and $j$
+($i,j\in [1,N]$, $i\neq j$) with relative distance $r_{ij}$ interacts
+via a
+truncated and shifted Lennard-Jones potential
+\begin{equation}
+U_{\mathrm{LJ}}^{\mathrm{trunc}}(r_{ij}) =  \begin{cases}
+U_{\mathrm{LJ}}(r_{ij}) -  U_{\mathrm{LJ}}(r_{c}), &
+r_{ij} \leq r_{c},\\
+0, &   r_{ij} > r_{c}, \end{cases}
+\end{equation}
+where
+\begin{equation}
+U_{\mathrm{LJ}}(r_{ij})= 4\epsilon \left[ \left(
+\frac{\sigma}{r_{ij}} \right)^{12} - 			\left(
+\frac{\sigma}{r_{ij}} \right)^{6} \right], 
+\label{LJ2}
+\end{equation}
+with the energy scale set to $\epsilon=1$ and the length scale to 
+$\sigma=r_0/2^{1/6}$, where $r_0 = 0.7$ is the location of the minimum
+potential. We select a cut-off radius $r_c=2.5\sigma$ such that
+$U_{\mathrm{LJ}}(r_{c}) \approx -0.0163169\epsilon$.
+
+The bonds between the adjacent monomers are represented by the
+anharmonic FENE (finitely extensible nonlinear elastic) 
+potential~\cite{BiCuArHa1987,FENE3,MilBhaBin2001}, which we use here in
+modified
+form
+\begin{equation}
+U_{\mathrm{FENE}}(r_{ii+1})=-\frac{K}{2}R_{0}^2 
+\mathrm{ln}\left[1-\left(\frac{r_{ii+1}-r_0}{R}\right)^2\right]. 
+\label{FENE}
+\end{equation}
+We set $K=40$ and $R_{0}=0.3$~\cite{Gross2013}. 
+The parameter $R$ controls the effective elasticity of the polymer bonds,
+whereas the energy scale is kept constant. The qualitative behavior of the
+combined bond potential for different values of $R$ is shown in
+Fig.~\ref{fig:Fig_1}. The bond elasticity increases with $R$,
+i.e., by changing $R$ in a wide range of values
+($R\in[0.3,90]$), we systematically investigate an
+entire class of polymer systems between the limits of stiff polymers
+($R\to 0$) and, effectively, a gas of nonbonded Lennard-Jones particles
+(``noble gas''), for which $R\to \infty$.  
+
+The total energy of a polymer chain of length $N$ in a conformation
+$\mathbf{X} = (\vec{r}_1,\cdots,\vec{r}_{N})$ is given by
+\begin{equation}
+E(\mathbf{X}) = \sum^{N}_{i<j}
+U_{\mathrm{LJ}}^{\mathrm{trunc}}(r_{ij}) + \sum^{N-1}_{i=1} 	
+U_{\mathrm{FENE}}(r_{ii+1}). 
+\label{totalE}
+\end{equation}
+
+\subsection{Interacting elastic chains}
+
+ The total energy of
+the system can be separated into intra-chain and inter-chain
+pairwise interactions
+%%%%%%     Total Energy      %%%%%%
+\begin{equation}
+E_{\mathrm{total}} = E_{\mathrm{intra}} + E_{\mathrm{inter}}.
+\end{equation}
+%
+The intra-chain contribution 
+%%%%%% Intra-Chain Energy %%%%%%%
+\begin{equation}
+E_{\mathrm{intra}} = \sum^{M}_{k = 1}\sum^{N-1}_{i = 1}
+U_{\mathrm{FENE}}(r\,^{(k)}_{ii+1}) +
+\sum^{M}_{k=1}\sum^{N}_{i<j}
+U_{\mathrm{LJ}}^{\mathrm{trunc}}(r\,^{(k)}_{ij})
+\end{equation}
+%
+consists of both bonded and non-bonded interactions, where
+$r\,^{(k)}_{ij}$ is the distance between the pair of monomers
+($i$,$j$) of the $k$-th chain. The first term contains the anharmonic
+finitely extensible nonlinear elastic (FENE)
+potential~\cite{Bird1987, Kremer1990, Milchev2001}
+%%%%%% FENE Potential %%%%%%
+\begin{equation}
+U_{\mathrm{FENE}}(r_{ii+1})=-\frac{K}{2}R^2 
+\mathrm{ln}\left[1-\left(\frac{r_{ii+1}-r_0}{R}\right)^2\right],	
+\label{FENE}
+\end{equation}
+%
+with parameter values $K=40$ and $R=0.3$ as used in~\cite{Gross2013}.
+The second term represents 
+the truncated and shifted Lennard-Jones (LJ) potential
+%%%%%% LJ Potential %%%%%%
+\begin{equation}
+U_{\mathrm{LJ}}^{\mathrm{trunc}}(r_{ij}) = \left\{
+\begin{array}{lr}
+U_{\mathrm{LJ}}(r_{ij}) - U_{\mathrm{LJ}}(r_{c}), & \quad
+\mathrm{if} \,\, r_{ij} \leq r_{c},\\
+0, &  \quad \mathrm{if} \,\,r_{ij} > r_{c},
+\end{array}
+\right.
+\end{equation}
+%
+where
+%%%%%% LJ Potential %%%%%%
+\begin{equation}
+U_{\mathrm{LJ}}(r_{ij})= 4\epsilon \left[ \left(
+\frac{\sigma}{r_{ij}} \right)^{12} - \left(
+\frac{\sigma}{r_{ij}} \right)^{6} \right].
+\end{equation}
+%
+We set the energy scale $\epsilon$ to unity and the length scale
+to $\sigma=r_0/2^{1/6}$, where $r_0 = 0.7$ is the location of
+the LJ potential minimum. The cutoff radius is set to
+$r_c=2.5\,\sigma$.
+The inter-chain contribution
+%%%%%% Inter-Chain Energy %%%%%% 
+\begin{equation}
+E_{\mathrm{inter}} = \sum^{M}_{k < l}
+\sum^{N}_{i,j}U_{\mathrm{LJ}}^{\mathrm{trunc}}(|\textbf{r}^{(k)}_{i}
+- \textbf{r}^{(l)}_{j}|),
+\end{equation}
+%
+consists solely of non-bonded LJ interactions. For the purpose
+of this study, all LJ interactions (intra- and inter-chain) have
+their parameters set to identical values.
+
+\section{Structural order parameters}
+Various order parameters, such as the number of monomer-monomer
+contacts, radius of gyration, or radial and angular distributions, have
+proven to provide valuable insight into the thermodynamic and structural
+properties of polymer systems. Based on the microcanonical results in
+Fig.~\ref{phase_diagram}, we expect the existence of two solid phases
+when the strength of the bond flexibility parameter is sufficiently small
+$(\eta \leq 0.1)$. We aim to identify the dominant structures in the
+low-energy phases and to gather additional data supporting the existence of
+the
+solid-solid transition line. For this purpose, we employ a set of order
+parameters exploiting the symmetry properties of real spherical
+harmonics~\cite{Neirotti2000}.
+
+We define a polymer core to consist of monomers within a
+distance $r_{\mathrm{core}} < 1.25\sigma$ of the central monomer, which has
+been chosen to be nearest to the center of mass. Let $\mathcal{C} = \lbrace
+\vec{r}_{1},.....,\vec{r}_{M} \rbrace $ be the coordinates of a core with
+$M$ monomers. Various core geometries can be distinguished using the set of
+rotationally invariant order parameters
+%
+\begin{equation}
+Q_{l} =  \left[ \frac{4\pi}{2l + 1} \displaystyle\sum_{m =-l}^{l}
+|\rho_{l,m}|^{2} \right]^{1/2},	
+\end{equation}
+%
+where 
+\begin{equation}
+\rho _{l,m} = \frac{1}{M}\sum _{i = 0} ^{M} \mathrm{Y}_{l,m}(\vec{r}_{i})
+\label{eq:15}
+\end{equation}
+%
+is the average of the real spherical harmonics evaluated at the locations
+of the core monomers. The connection between the real and complex spherical
+harmonics is given by
+% 
+\begin{equation}
+	\mathrm{Y}_{lm} =  \left\{
+		\begin{array}{lr}
+		\frac{i}{\sqrt{2}}\left[\mathrm{Y}_{l}^{m} -
+(-1)^{m}\mathrm{Y}_{l}^{-m}\right] & \quad \mathrm{if} \quad  m < 0,
+\\[1.5ex]
+		{Y}_{l}^{m} & \quad \mathrm{if} \quad  m = 0, \\[1.5ex]
+		\frac{1}{\sqrt{2}}\left[\mathrm{Y}_{l}^{-m} +
+(-1)^{m}\mathrm{Y}_{l}^{m}\right] & \quad \mathrm{if} \quad  m > 0. \\
+		\end{array}
+	\right. 
+\end{equation}
+
+
+
+
 
 \chapter{Confinement Effects on Structural Transitions in Flexible Homopolymers}
 \section{Introduction}

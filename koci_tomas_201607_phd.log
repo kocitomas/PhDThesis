@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.3.27)  23 MAY 2016 10:09
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.3.27)  23 MAY 2016 11:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -174,7 +174,11 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
-(./koci_tomas_201607_phd.aux)
+(./koci_tomas_201607_phd.aux
+
+LaTeX Warning: Label `FENE' multiply defined.
+
+)
 \openout1 = `koci_tomas_201607_phd.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
@@ -189,8 +193,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
 LaTeX Font Info:    ... okay on input line 14.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
 LaTeX Font Info:    ... okay on input line 14.
-
-(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+ (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count104
 \scratchdimen=\dimen124
@@ -450,10 +453,10 @@ Chapter 3.
 
 ] [26] [27] [28] [29] [30]
 Package epstopdf Info: Source file: <chapter3Figs/mgme.eps>
-(epstopdf)                    date: 2015-07-07 10:41:12
+(epstopdf)                    date: 2016-05-23 10:36:43
 (epstopdf)                    size: 107578 bytes
 (epstopdf)             Output file: <chapter3Figs/mgme-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-05-13 10:57:44
+(epstopdf)                    date: 2016-05-23 10:36:43
 (epstopdf)                    size: 12375 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter3Figs/mgme-eps-conv
 erted-to.pdf chapter3Figs/mgme.eps>
@@ -477,11 +480,11 @@ input line 692.
 (pdftex.def)             Requested size: 446.26582pt x 189.66554pt.
  [33] [34 <./chapter3Figs/multipleHistogramReweighting.pdf>] [35]
 Package epstopdf Info: Source file: <chapter3Figs/bezierComparison.eps>
-(epstopdf)                    date: 2016-05-19 17:06:09
+(epstopdf)                    date: 2016-05-23 10:36:43
 (epstopdf)                    size: 113859 bytes
 (epstopdf)             Output file: <chapter3Figs/bezierComparison-eps-converte
 d-to.pdf>
-(epstopdf)                    date: 2016-05-19 17:06:54
+(epstopdf)                    date: 2016-05-23 10:36:43
 (epstopdf)                    size: 52524 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter3Figs/bezierCompari
 son-eps-converted-to.pdf chapter3Figs/bezierComparison.eps>
@@ -498,11 +501,11 @@ d on input line 748.
 (pdftex.def)             Requested size: 328.82707pt x 243.5435pt.
  [36 <./chapter3Figs/bezierComparison-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <chapter3Figs/acceptanceRates.eps>
-(epstopdf)                    date: 2016-05-21 10:54:47
+(epstopdf)                    date: 2016-05-23 10:36:43
 (epstopdf)                    size: 118885 bytes
 (epstopdf)             Output file: <chapter3Figs/acceptanceRates-eps-converted
 -to.pdf>
-(epstopdf)                    date: 2016-05-21 10:55:25
+(epstopdf)                    date: 2016-05-23 10:36:43
 (epstopdf)                    size: 20024 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter3Figs/acceptanceRat
 es-eps-converted-to.pdf chapter3Figs/acceptanceRates.eps>
@@ -529,62 +532,103 @@ t line 774.
 Chapter 4.
 [40
 
-]
+] [41]
+
+LaTeX Warning: Citation `BiCuArHa1987' on page 42 undefined on input line 860.
+
+
+LaTeX Warning: Citation `FENE3' on page 42 undefined on input line 860.
+
+
+LaTeX Warning: Citation `MilBhaBin2001' on page 42 undefined on input line 860.
+
+
+
+LaTeX Warning: Citation `Gross2013' on page 42 undefined on input line 868.
+
+[42]
+
+LaTeX Warning: Citation `Bird1987' on page 43 undefined on input line 911.
+
+
+LaTeX Warning: Citation `Kremer1990' on page 43 undefined on input line 911.
+
+
+LaTeX Warning: Citation `Milchev2001' on page 43 undefined on input line 911.
+
+
+LaTeX Warning: Citation `Gross2013' on page 43 undefined on input line 919.
+
+[43]
+
+LaTeX Warning: Reference `phase_diagram' on page 44 undefined on input line 962
+.
+
+
+LaTeX Warning: Citation `Neirotti2000' on page 44 undefined on input line 969.
+
+[44] [45]
 Chapter 5.
-[41
+[46
 
 ]
 Chapter 6.
-[42
+[47
 
 ]
 Chapter 7.
-[43
+[48
 
 ]
 Chapter 8.
-[44
+[49
 
-] (./References.tex [45
+] (./References.tex [50
 
-] [46]) [47] (./koci_tomas_201607_phd.aux) ) 
+] [51]) [52] (./koci_tomas_201607_phd.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 3197 strings out of 494985
- 47267 string characters out of 6180356
- 106017 words of memory out of 5000000
- 6324 multiletter control sequences out of 15000+600000
+ 3210 strings out of 494985
+ 47404 string characters out of 6180356
+ 106104 words of memory out of 5000000
+ 6337 multiletter control sequences out of 15000+600000
  12170 words of font info for 43 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  38i,10n,35p,1939b,299s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
-i10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmti12.pfb>
-Output written on koci_tomas_201607_phd.pdf (59 pages, 941711 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+msy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on koci_tomas_201607_phd.pdf (64 pages, 960432 bytes).
 PDF statistics:
- 610 PDF objects out of 1000 (max. 8388607)
- 396 compressed objects within 4 object streams
+ 627 PDF objects out of 1000 (max. 8388607)
+ 407 compressed objects within 5 object streams
  0 named destinations out of 1000 (max. 500000)
  76 words of extra memory for PDF output out of 10000 (max. 10000000)
 
