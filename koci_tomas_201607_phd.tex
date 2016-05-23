@@ -476,10 +476,10 @@ Comparison of the inverse microcanonical temperature $\beta(E)$ (red) and the co
 
 \chapter{Computational Methods}
 
-Computational algorithms are powerful tools that enable the investigation of physical systems that are far too complex to be solved analytically.
-In fact, only a handful of systems with large number of degrees of freedom are exactly solvable\footnote{The most prominent examples are the ideal gas and the two dimensional Ising model.}, and even the simplest solutions often require bewildering mathematical gymnastics. Consequently, computational studies are the main source of advances in the fundemental understanding of complex microscopic and mesoscopic systems such as biopolymers and proteins.
+Computational algorithms are powerful tools that enable the investigation of  many-body physical systems under thermal conditions, that are far too complex to be solved analytically.
+In fact, only a handful of systems with large number of degrees of freedom are exactly solvable\footnote{The most prominent examples of exactly solvable systems with large number of degrees of freedom are the ideal gas and the two dimensional Ising model.}, and even the simplest solutions often require bewildering mathematical gymnastics. Consequently, computational studies are the main source of advances in the fundemental understanding of complex microscopic and mesoscopic systems such as biopolymers and proteins \cite{Bachmann2014}.
 
-Two complementary classes of computational algorithms have been particularly successful in unravelling the thermodynamic properties of physical systems. \textit{Molecular dynamics} simulations generate a single phase space trajectory by updating the positions and momenta of every particle in a system according to Hamilton's equations. Alternatively, carrying out a stochastic sampling of the phase space, \textit{Monte Carlo} simulations estimate the equilibrium properties without the explicit consideration for the system's dynamics. In this chapter, we shall focus our attention to Markov chain Monte Carlo methods. We will briefly discuss the essential theory and introduce the well established Metropolis and Parallel Tempering algorithms as well as the lesser known Multiple Gaussian modified ensemble method.
+Two complementary classes of computational algorithms have been particularly successful in unravelling the thermodynamic properties of physical systems. \textit{Molecular dynamics} simulations generate a single phase space trajectory by updating the positions and momenta of every particle in a system according to Hamilton's equations \cite{Rapaport2004,Tuckerman2010}. Alternatively, carrying out a stochastic sampling of the phase space, \textit{Monte Carlo} simulations estimate the equilibrium properties without an explicit consideration of the system's dynamics \cite{Bachmann2014, Landau2000}. In this chapter, we shall focus our attention to Markov chain Monte Carlo methods. We will briefly discuss the essential theory and introduce the well established Metropolis and Parallel Tempering algorithms as well as the lesser known Multiple Gaussian modified ensemble method.
 
 
 
@@ -491,8 +491,7 @@ The aim of all Monte Carlo methods is to extract the equilibrium thermodynamic p
 \bar{O} = \frac{1}{M}\sum_{i = 1}^{M} O(\mu_{i}).
 \end{equation}
 %
-In most Monte Carlo methods, the set of random microstates is generated according to a discrete-time Markov chain (DTMC). Markov chains are sequences of random states, generated according to the time-independent transition probabilities 
-$T(\mu \rightarrow \nu)$ which satisfy the Markov property. In simple terms, the probability of moving to state $\nu$ from state $\mu$ depends only on the present state, and is independent of the history of the process. In order to achieve the correct statistical sampling of an equilibrium thermodynamic ensemble, the following conditions must also be satisfied.
+In most Monte Carlo methods, the set of random microstates is generated according to a discrete-time Markov chain (DTMC) \cite{Resnick2005}. Markov chains are sequences of random states, generated according to the time-independent transition probabilities $T(\mu \rightarrow \nu)$ which satisfy the Markov property. In simple terms, the probability of moving to state $\nu$ from state $\mu$ depends only on the present state, and is independent of the history of the process. In order to achieve the correct statistical sampling of an equilibrium thermodynamic ensemble, the following conditions must also be satisfied.
 
 The process must be \textbf{ergodic}, i.e., there must be a path of non-zero probability between any pair of states. More formally, the state space $\mathcal{S}$ of the Markov chain must consist of a single aperiodic recurrence class. When ergodicity is satisfied, the ensemble average $\left\langle O \right\rangle$ can be approximated by the measured expectation value $\bar{O}$ [Eq. \ref{eq:expectationValue}] 
 %
@@ -502,7 +501,7 @@ The process must be \textbf{ergodic}, i.e., there must be a path of non-zero pro
 p(\mathcal{P},\mathcal{Q}),
 \end{equation}
 %
-where $M$ is the length of the Markov chain. According to the ergodic hypothesis, the approximation becomes exact in the limit of an infinitely long Markov chain
+where $M$ is the length of the Markov chain. According to the ergodic hypothesis \cite{Tuckerman2010}, the approximation becomes exact in the limit of an infinitely long Markov chain
 %
 \begin{equation}
 \label{eq:ergodicHyp}
@@ -524,7 +523,7 @@ The equilibrium condition requires that the probability distribution $p(\mu)$ is
 \sum_{\nu} p(\nu)T\left(\nu \rightarrow \mu\right) = \sum_{\nu} p(\mu)T\left(\mu \rightarrow \nu\right).
 \end{equation}
 %
-Also known as the $\textbf{balance}$ condition, equation \ref{eq:balance} sometimes allows for solutions that are not permitted in the equilibrium ensemble. The stricter condition of $\textbf{detailed balance}$ requires that the probability of a transfer between any two states must be equal to the probability of the reverse process. Embodied in the expression
+Also known as the $\textbf{balance}$ condition, equation \ref{eq:balance} sometimes allows for solutions that are not permitted in the equilibrium ensemble \cite{Landau2000}. The stricter condition of $\textbf{detailed balance}$ requires that the probability of a transfer between any two states must be equal to the probability of the reverse process. Embodied in the expression
 %
 \begin{equation}
 \label{eq:detailedBalance}
@@ -562,7 +561,7 @@ depends on the choice of the particular update scheme. In the remainder of this 
 
 \subsection{Metropolis sampling}
 
-Any set of acceptance probabilities which satisfies equation \ref{eq:acceptanceProbs} is allowable, however the standard choice is to set the higher of the two probabilities to unity. This yields the well known Metropolis acceptance criterion:
+Any set of acceptance probabilities which satisfies equation \ref{eq:acceptanceProbs} is allowable, however the standard choice is to set the higher of the two probabilities to unity. This yields the well known Metropolis acceptance criterion \cite{Landau2000,Metropolis1953}:
 %
 \begin{equation}
 \label{eq:MetropolisCriterion}
@@ -595,7 +594,7 @@ The Metropolis method provides the means for an efficient sampling of microstate
 
 
 \subsection{Parallel tempering}
-In situations where the Metropolis method fails to produce data of reasonable quality, the standard way of increasing sampling efficiency is to perform the simulation in a conveniently chosen \textit{generalized ensemble}\footnote{The microstate probability distribution of a generalized ensemble can be arbitrary and does not have to bear any resemblance to the Boltzmann distribution.}. In parallel tempering, multiple canonical ensembles with different inverse temperatures $\{\beta_{1} < \beta_{2} < ... < \beta_{N}\}$ are simulated in parallel according to the standard Metropolis scheme. In this context, the generalized ensemble is defined as the direct product of $N$ canonical ensembles, and the partition function is given by
+In situations where the Metropolis method fails to produce data of reasonable quality, the standard way of increasing sampling efficiency is to perform the simulation in a conveniently chosen \textit{generalized ensemble}\footnote{The microstate probability distribution of a generalized ensemble can be arbitrary and does not have to bear any resemblance to the Boltzmann distribution.}. In parallel tempering \cite{sw1,geyer1,huku1,huku2}, multiple canonical ensembles with different inverse temperatures $\{\beta_{1} < \beta_{2} < ... < \beta_{N}\}$ are simulated in parallel according to the standard Metropolis scheme. In this context, the generalized ensemble is defined as the direct product of $N$ canonical ensembles, and the partition function is given by
 %
 \begin{equation}
 Z_{\mathrm{PT}}(\beta_{1},\beta_{2},...,\beta_{N}) = \prod_{i=1}^{N} Z_{\mathrm{can}}(\beta_{i}).
@@ -625,7 +624,7 @@ temperature range which leads to the decrease of the autocorrelation time and re
  
 \subsection{Multiple Gaussian modified ensemble}
 
-An alternative generalized ensemble method that offers improved performance is based on the combination of parallel tempering with the Gaussian modified ensemble (GME) method. The idea behind GME is to modify the canonical Boltzmann distribution by multiplying it by a Gaussian function, in order to promote sampling in selected energy regions. The mean energy $E_{G}$ and the variance $\Delta E_{G}^{2}$ of the Gaussian form controls the location and the width of the region of enhanced sampling. The modified microstate probability at the inverse temperature $\beta$ is given by
+An alternative generalized ensemble method that offers improved performance is based on the combination of parallel tempering with the Gaussian modified ensemble (GME) method \cite{Neuhaus2006}. The idea behind GME is to modify the canonical Boltzmann distribution by multiplying it by a Gaussian function, in order to promote sampling in selected energy regions. The mean energy $E_{G}$ and the variance $\Delta E_{G}^{2}$ of the Gaussian form controls the location and the width of the region of enhanced sampling. The modified microstate probability at the inverse temperature $\beta$ is given by
 %
 \begin{equation}
 P_{\mathrm{GME}}(\mu) \propto e^{-\beta E_{\mu} -
@@ -665,7 +664,7 @@ E_{G,j}\right)^{2}}{\Delta E_{G,j}^{2}} - \frac{\left(E_{\nu} -
 E_{G,i}\right)^{2}-\left(E_{\mu} - E_{G,i}\right)^{2}}{\Delta E_{G,i}^{2}}.
 \end{equation}
 
-The direct product of GME ensembles defines the multiple Gaussian modified ensemble (MGME). With a proper choice of ensemble parameters $(E_{G},\Delta E_{G})$ it is possible to achieve a significantly enhanced sampling of previously inaccessible states. This can be further improved by allowing for exchanges between GME ensembles at different temperatures. However, previous knowledge of the system under consideration is usually needed to make a reasonable estimate for the ensemble parameters. Therefore other more systematic methods, such as multicanonical and Wang-Landau sampling, are often used.    
+The direct product of GME ensembles defines the multiple Gaussian modified ensemble (MGME). With a proper choice of ensemble parameters $(E_{G},\Delta E_{G})$ it is possible to achieve a significantly enhanced sampling of previously inaccessible states. This can be further improved by allowing for exchanges between GME ensembles at different temperatures. However, previous knowledge of the system under consideration is usually needed to make a reasonable estimate for the ensemble parameters. Therefore other more systematic methods, such as the multicanonical \cite{muca1a,muca1b,muca2,muca3,muca4,Bachmann2013} and Wang-Landau sampling \cite{wl1,wl2,wl3}, are often used.    
 
 
 \section{Histogram reweighting methods}
@@ -692,7 +691,7 @@ Therefore each histogram yields an estimate of the density of states
 \center
 \includegraphics[width = 0.95\textwidth]{chapter3Figs/multipleHistogramReweighting.pdf}
 \caption{\label{fig:MHR}%
-(a) Illustration of the canonical energy histograms $h(E,\beta_{i})$, (b) the individual estimates of the logarithm of the density of states $\bar{S}_{i}(E)$, (c) and the combined estimate of the logarithm of the density of states $\hat{S}(E)$.}
+(a) Illustration of the canonical energy histograms $h(E,\beta_{i})$, (b) the individual estimates of the logarithm of the density of states $\bar{S}_{i}(E)$, (c) and the combined estimate of the logarithm of the density of states $\hat{S}(E)$ obtained by reweighting.}
 \end{figure}
 % 
 Individual estimates $\bar{g}_{i}(E)$ are only reliable for energies in the
@@ -718,7 +717,7 @@ which serves as the appropriate weight in the estimator for the density of state
 The equations \ref{eq:referencePartitionFunction} and \ref{eq:dosEstimator} must be solved iteratively until $\hat{g}(E)$ has converged. The relationship between the energy histograms, the individual estimates $\bar{g}_{i}(E)$, and the final estimate $\hat{g}(E)$ of the density of states is illustrated in Fig. \ref{fig:MHR}. For  detailed derivation and a further discussion of the multiple-histogram reweighting method please refer to \cite{Ferrenberg1989,Kumar1992}.
 
 \subsection{Beziere smoothing}
-The estimator for the density of states, obtained either by multiple-histogram reweighting or directly by multicanonical sampling, is not a smooth function but rather a discrete set of stochastic values. The formalism of the microcanonical inflection point analysis requires the accurate knowledge of its energy derivatives. These have to be computed by numerical differentiation which is prone to enhancing the random statistical fluctuations of the original data set. It is therefore desirable to approximate the density of states by a smooth analytic function, which can be done very effectively with Bezi\'{e}r curves.
+The estimator for the density of states, obtained either by multiple-histogram reweighting or directly by multicanonical sampling, is not a smooth function but rather a discrete set of stochastic values. The formalism of the microcanonical inflection point analysis requires the accurate knowledge of its energy derivatives. These have to be computed by numerical differentiation which is prone to enhancing the random statistical fluctuations of the original data set. It is therefore desirable to approximate the density of states by a smooth analytic function, which can be done very effectively with Bezi\'{e}r curves \cite{Bachmann2014, Bezier1968}.
 
 Bezi\'{e}r curve of order $n$ is a parametric curve defined by a set of $(n+1)$ control points $\left\lbrace P_{0},P_{1},....,P_{n}\right\rbrace$ and the formula 
 %
@@ -727,7 +726,7 @@ Bezi\'{e}r curve of order $n$ is a parametric curve defined by a set of $(n+1)$ 
 B(t) = \sum_{i=0}^{n}\mathcal{B}_{i}^{(n)}(t)P_{i},
 \end{equation}
 %
-where ${B}_{i}^{(n)}$ are the Bernstein basis polynomials of degree $n$
+where ${B}_{i}^{(n)}$ are the Bernstein basis polynomials \cite{Lorentz1953} of degree $n$
 %
 \begin{equation}
 \label{eq:BernsteinPoly}
@@ -742,7 +741,7 @@ g_{\mathrm{bez}}(E) = \sum_{i=0}^{n} \binom{n}{i} \left(\frac{E_{\mathrm{max}} -
 g(E_{i}).
 \end{equation}
 %
-The numerical error introduced by the approximation scheme is typically much smaller than the random statistical fluctuations in the original noisy data set. However it should be mentioned that Bezi\'{e}r smoothing may introduce systematic errors to the derivatives of $g(E)$ in areas of abrupt changes in curvature.  This is illustrated in Fig. \ref{fig:Bezier} where we compare the noisy derivative of the microcanonical inverse temperature $\gamma(E) = d\beta/dE$ and the Bezi\'{e}r approximation $\gamma_{\mathrm{bez}}(E)$ in the region of a first-order pseudophase transition.
+The numerical error introduced by the approximation scheme is typically much smaller than the random statistical fluctuations in the original noisy data set \cite{Bachmann2014}. However it should be mentioned that Bezi\'{e}r smoothing may introduce systematic errors to the derivatives of $g(E)$ in areas of abrupt changes in curvature.  This is illustrated in Fig. \ref{fig:Bezier} where we compare the noisy derivative of the microcanonical inverse temperature $\gamma(E) = d\beta/dE$ and the Bezi\'{e}r approximation $\gamma_{\mathrm{bez}}(E)$ in the region of a first-order pseudophase transition.
 %
 \begin{figure}
 \center
@@ -756,7 +755,7 @@ Comparison between the noisy derivative of the microcanonical inverse temperatur
 The efficiency of Monte Carlo simulations depends in equal measure on the choice of  the sampling algorithm and on the selection of appropriate conformational updates. All update sets must be ergodic, i.e., it must be in principle possible to connect any two arbitrary states through a finite number of updates. Additionally, all updates must preserve the constraints of the model, such as volume exclusion and boundary conditions. The efficiency of individual updates depends strongly on the model to which they are being applied. Hence, there is no general set of updates that guarantees good performance across different physical models. In the following, we shall briefly discuss conformational updates which are suitable for simulations of off-lattice polymers and proteins. 
 
 \subsection{Single displacement update}
-The single displacement update is easy to implement, satisfies ergodicity, and has equal forward and backward selection probabilities. The original conformation of a polymer chain $\mathbf{R} = \{\mathbf{r_{1}},\mathbf{r_{2}},...,\mathbf{r_{N}}\}$ is updated by a random\footnote{Monte Carlo simulations make an extensive use of pseudo-random numbers. The popular Mersenne Twister pseudo-random number generator is used throughout this thesis. For more information on the `art' of random number generation please refer to \cite{Landau2000}.} displacement $\Delta \mathbf{r_{i}}$ of the randomly selected i-th monomer. The displacement vector is defined in Cartesian coordinates as $\Delta \mathbf{r_{i}} = (\Delta x_{i}, \Delta y_{i}, \Delta z_{i})$, where each component is selected with uniform probability from some interval $[-l,\,l\,\,]$. In general, longer displacement updates lead to larger energy differences between the old and the new states $\Delta E = E_{\mathrm{new}} - E_{\mathrm{old}}$. In Monte Carlo simulations, large positive values of the term $\Delta E/T$ result in an exponential suppression of the acceptance rates [Eq. \ref{eq:MetropolisCriterionCanonical}]. In order to achieve acceptance rates within the optimal range of $\sim 30\%-70\%$, the set of temperature dependent displacement parameters $l(T_{i})$ must be determined. Unfortunately, for most off-lattice polymer models, only very short displacement updates are allowed at low temperatures and the generated sequence of states becomes strongly correlated. An example of the temperature dependence of $l(T_{i})$, obtained from a simulation of a flexible elastic 55-mer, is shown in Fig. \ref{fig:acceptanceRates}.Polymer models which contain stiff bonds cannot be sampled using displacement updates and require more sophisticated rotational updates.
+The single displacement update is easy to implement, satisfies ergodicity, and has equal forward and backward selection probabilities. The original conformation of a polymer chain $\mathbf{R} = \{\mathbf{r_{1}},\mathbf{r_{2}},...,\mathbf{r_{N}}\}$ is updated by a random\footnote{Monte Carlo simulations make extensive use of pseudo-random numbers. The popular Mersenne Twister pseudo-random number generator \cite{Matsumoto1998} is used throughout this thesis. For more information on the `art' of random number generation please refer to \cite{Landau2000}.} displacement $\Delta \mathbf{r_{i}}$ of a randomly selected i-th monomer. The displacement vector is defined in the Cartesian coordinates as $\Delta \mathbf{r_{i}} = (\Delta x_{i}, \Delta y_{i}, \Delta z_{i})$, where each component is selected with uniform probability from some interval $[-l,\,l\,\,]$. In general, longer displacement updates lead to larger energy differences between the old and the new states $\Delta E = E_{\mathrm{new}} - E_{\mathrm{old}}$. In Monte Carlo simulations, large positive values of the ratio $\Delta E/T$ result in an exponential suppression of the acceptance rates [Eq. \ref{eq:MetropolisCriterionCanonical}]. In order to achieve acceptance rates within the optimal range of $\sim 30\%-70\%$, the set of temperature dependent displacement parameters $l(T_{i})$ must be determined. Unfortunately, for most off-lattice polymer models, only very short displacement updates are allowed at low temperatures and the generated sequence of states becomes strongly correlated. An example of the temperature dependence of $l(T_{i})$, obtained from a simulation of a flexible elastic 55-mer, is shown in Fig.\,\ref{fig:acceptanceRates}. Polymer models which contain stiff bonds cannot be sampled using displacement updates and require more sophisticated rotational updates \cite{Bachmann2014}.
 %
 \begin{figure}
 \center
@@ -767,7 +766,7 @@ Example of a distribution of the temperature dependent displacement parameter $l
 \end{figure}
 % 
 \subsection{Pivot update}
-The pivot update consists of rotating a portion of the polymer chain over a randomly chosen rotation axis. This allows for a global change in the polymer conformation decreases the correlation between the sampled states. In practice, first a random monomer is selected to serve as the pivot and the direction of the rotation axis is defined by a random vector $\mathbf{k}$. With equal probability, either terminus of the chain is selected for rotation. The vector which connects the pivot to any monomer which is to be rotated is denoted as $\mathbf{r}$. The random rotation angle $\Delta \phi$ is selected with uniform probability from some interval $[-\lambda,\,\lambda]$. Finally, the projection $\mathbf{r}_{\bot}$ of the vector $\mathbf{r}$ into the plane perpendicular to $\mathbf{k}$ is rotated by $\Delta \phi$ and the resultant vector connecting the pivot and the rotated monomer is given by $\mathbf{r}^{\prime}$. A schematic depiction of the single-displacement and the pivot updates is provided in Fig. \ref{fig:conformUpdate}. It should be mentioned, that when used in simulations of polymer models with elastic bonds, the pivot update is not ergodic since it preserves bond length. Therefore it is recommended to combine rotational updates with single displacement updates whenever applicable. 
+The pivot update consists of rotating a portion of the polymer chain over a randomly chosen rotation axis. This allows for a global change in the polymer conformation and decreases the correlation between the sampled states. In practice, first a random monomer is selected to serve as the pivot and the direction of the rotation axis is defined by a random vector $\mathbf{k}$. With equal probability, either terminus of the chain is selected for rotation. The vector which connects the pivot to any monomer which is to be rotated is denoted as $\mathbf{r}$. The random rotation angle $\Delta \phi$ is selected with uniform probability from some interval $[-\lambda,\,\lambda]$. Finally, the projection $\mathbf{r}_{\bot}$ of the vector $\mathbf{r}$ into the plane perpendicular to $\mathbf{k}$ is rotated by $\Delta \phi$ and the resultant vector connecting the pivot and the rotated monomer is given by $\mathbf{r}^{\prime}$. A schematic depiction of the single-displacement and the pivot updates is provided in Fig. \ref{fig:conformUpdate}. It should be mentioned, that when used in simulations of polymer models with elastic bonds, the pivot update is not ergodic since it preserves bond length \cite{Bachmann2014}. Therefore it is recommended to combine rotational updates with single displacement updates whenever applicable. 
 
 %
 \begin{figure}

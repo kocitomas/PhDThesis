@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.3.27)  21 MAY 2016 13:11
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.3.27)  23 MAY 2016 10:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -457,7 +457,7 @@ Package epstopdf Info: Source file: <chapter3Figs/mgme.eps>
 (epstopdf)                    size: 12375 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter3Figs/mgme-eps-conv
 erted-to.pdf chapter3Figs/mgme.eps>
-(epstopdf)             \includegraphics on input line 644.
+(epstopdf)             \includegraphics on input line 643.
 Package epstopdf Info: Output file is already uptodate.
 
 <chapter3Figs/mgme-eps-converted-to.pdf, id=365, 257.96375pt x 190.7125pt>
@@ -465,7 +465,7 @@ File: chapter3Figs/mgme-eps-converted-to.pdf Graphic file (type pdf)
 
 <use chapter3Figs/mgme-eps-converted-to.pdf>
 Package pdftex.def Info: chapter3Figs/mgme-eps-converted-to.pdf used on input l
-ine 644.
+ine 643.
 (pdftex.def)             Requested size: 328.82707pt x 243.12465pt.
  [31] [32 <./chapter3Figs/mgme-eps-converted-to.pdf>]
 <chapter3Figs/multipleHistogramReweighting.pdf, id=382, 722.7pt x 307.1475pt>
@@ -473,17 +473,9 @@ File: chapter3Figs/multipleHistogramReweighting.pdf Graphic file (type pdf)
 
 <use chapter3Figs/multipleHistogramReweighting.pdf>
 Package pdftex.def Info: chapter3Figs/multipleHistogramReweighting.pdf used on 
-input line 693.
+input line 692.
 (pdftex.def)             Requested size: 446.26582pt x 189.66554pt.
- [33]
-
-LaTeX Warning: Citation `Ferrenberg1989' on page 34 undefined on input line 718
-.
-
-
-LaTeX Warning: Citation `Kumar1992' on page 34 undefined on input line 718.
-
-[34 <./chapter3Figs/multipleHistogramReweighting.pdf>] [35]
+ [33] [34 <./chapter3Figs/multipleHistogramReweighting.pdf>] [35]
 Package epstopdf Info: Source file: <chapter3Figs/bezierComparison.eps>
 (epstopdf)                    date: 2016-05-19 17:06:09
 (epstopdf)                    size: 113859 bytes
@@ -493,7 +485,7 @@ d-to.pdf>
 (epstopdf)                    size: 52524 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter3Figs/bezierCompari
 son-eps-converted-to.pdf chapter3Figs/bezierComparison.eps>
-(epstopdf)             \includegraphics on input line 749.
+(epstopdf)             \includegraphics on input line 748.
 Package epstopdf Info: Output file is already uptodate.
 
 <chapter3Figs/bezierComparison-eps-converted-to.pdf, id=410, 321.2pt x 237.8887
@@ -502,7 +494,7 @@ File: chapter3Figs/bezierComparison-eps-converted-to.pdf Graphic file (type pdf
 )
  <use chapter3Figs/bezierComparison-eps-converted-to.pdf>
 Package pdftex.def Info: chapter3Figs/bezierComparison-eps-converted-to.pdf use
-d on input line 749.
+d on input line 748.
 (pdftex.def)             Requested size: 328.82707pt x 243.5435pt.
  [36 <./chapter3Figs/bezierComparison-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <chapter3Figs/acceptanceRates.eps>
@@ -514,7 +506,7 @@ Package epstopdf Info: Source file: <chapter3Figs/acceptanceRates.eps>
 (epstopdf)                    size: 20024 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter3Figs/acceptanceRat
 es-eps-converted-to.pdf chapter3Figs/acceptanceRates.eps>
-(epstopdf)             \includegraphics on input line 763.
+(epstopdf)             \includegraphics on input line 762.
 Package epstopdf Info: Output file is already uptodate.
 
 <chapter3Figs/acceptanceRates-eps-converted-to.pdf, id=433, 356.33125pt x 237.8
@@ -523,16 +515,16 @@ File: chapter3Figs/acceptanceRates-eps-converted-to.pdf Graphic file (type pdf)
 
  <use chapter3Figs/acceptanceRates-eps-converted-to.pdf>
 Package pdftex.def Info: chapter3Figs/acceptanceRates-eps-converted-to.pdf used
- on input line 763.
+ on input line 762.
 (pdftex.def)             Requested size: 352.31625pt x 235.21655pt.
  [37] [38 <./chapter3Figs/acceptanceRates-eps-converted-to.pdf>]
-<chapter3Figs/conformationalUpdatesNew.pdf, id=489, 615.29875pt x 253.94875pt>
+<chapter3Figs/conformationalUpdatesNew.pdf, id=489, 614.295pt x 263.98625pt>
 File: chapter3Figs/conformationalUpdatesNew.pdf Graphic file (type pdf)
 
 <use chapter3Figs/conformationalUpdatesNew.pdf>
 Package pdftex.def Info: chapter3Figs/conformationalUpdatesNew.pdf used on inpu
-t line 775.
-(pdftex.def)             Requested size: 465.06004pt x 191.94519pt.
+t line 774.
+(pdftex.def)             Requested size: 465.06004pt x 199.8542pt.
  [39 <./chapter3Figs/conformationalUpdatesNew.pdf>]
 Chapter 4.
 [40
@@ -555,47 +547,44 @@ Chapter 8.
 
 ] (./References.tex [45
 
-]) [46] (./koci_tomas_201607_phd.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+] [46]) [47] (./koci_tomas_201607_phd.aux) ) 
 Here is how much of TeX's memory you used:
- 3174 strings out of 494985
- 47047 string characters out of 6180356
- 105925 words of memory out of 5000000
- 6301 multiletter control sequences out of 15000+600000
+ 3197 strings out of 494985
+ 47267 string characters out of 6180356
+ 106017 words of memory out of 5000000
+ 6324 multiletter control sequences out of 15000+600000
  12170 words of font info for 43 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 38i,10n,35p,1896b,299s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-msy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on koci_tomas_201607_phd.pdf (58 pages, 938010 bytes).
+ 38i,10n,35p,1939b,299s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
+i10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmti12.pfb>
+Output written on koci_tomas_201607_phd.pdf (59 pages, 941711 bytes).
 PDF statistics:
- 607 PDF objects out of 1000 (max. 8388607)
- 394 compressed objects within 4 object streams
+ 610 PDF objects out of 1000 (max. 8388607)
+ 396 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
  76 words of extra memory for PDF output out of 10000 (max. 10000000)
 

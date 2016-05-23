@@ -76,26 +76,37 @@
 \newlabel{fig:Fig_7}{{2.7}{23}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.8}{\ignorespaces Comparison of the inverse microcanonical temperature $\beta (E)$ (red) and the conformational inverse temperature $\beta _{c}(\mathaccentV {bar}016{E}_{p})$ (blue) evaluated at the most probable potential energy $\mathaccentV {bar}016{E}_{p}$. The approximation introduced in equation 2.41\hbox {} holds except in the back-bending region of the first-order pseudophase transition. The inverse transition temperature $\beta _{\mathrm  {trans}}$ obtained from the two quantities is virtually identical.}}{24}}
 \newlabel{fig:Fig_8}{{2.8}{24}}
+\citation{Bachmann2014}
+\citation{Rapaport2004,Tuckerman2010}
+\citation{Bachmann2014,Landau2000}
 \@writefile{toc}{\contentsline {chapter}{\numberline {3}Computational Methods}{25}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
+\citation{Resnick2005}
+\citation{Tuckerman2010}
 \@writefile{toc}{\contentsline {section}{\numberline {3.1}Markov chain Monte Carlo}{26}}
 \newlabel{eq:expectationValue}{{3.1}{26}}
 \newlabel{eq:approximationOfExpectationValues}{{3.2}{26}}
+\citation{Landau2000}
 \newlabel{eq:ergodicHyp}{{3.3}{27}}
 \newlabel{eq:MasterEquation}{{3.4}{27}}
 \newlabel{eq:balance}{{3.5}{27}}
 \newlabel{eq:detailedBalance}{{3.6}{27}}
+\citation{Landau2000,Metropolis1953}
 \newlabel{eq:factoredTransitionProb}{{3.7}{28}}
 \newlabel{eq:ratioOfTransitionProb}{{3.8}{28}}
 \newlabel{eq:acceptanceProbs}{{3.9}{28}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1.1}Metropolis sampling}{28}}
 \newlabel{eq:MetropolisCriterion}{{3.10}{28}}
 \citation{Bachmann2014}
+\citation{sw1,geyer1,huku1,huku2}
 \newlabel{eq:MetropolisCriterionCanonical}{{3.11}{29}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1.2}Parallel tempering}{30}}
 \newlabel{eq:replicaExchange}{{3.16}{30}}
+\citation{Neuhaus2006}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1.3}Multiple Gaussian modified ensemble}{31}}
+\citation{muca1a,muca1b,muca2,muca3,muca4,Bachmann2013}
+\citation{wl1,wl2,wl3}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces Canonical and GME energy histograms at a first-order pseudophase transition. The bimodal canonical energy histogram indicates the coexistence of ordered and disordered pseudophases, separated by an entropically suppressed energy region. Each GME ensemble enhances the sampling of suppressed states over a limited energy range.}}{32}}
 \newlabel{fig:MGME}{{3.1}{32}}
 \@writefile{toc}{\contentsline {section}{\numberline {3.2}Histogram reweighting methods}{33}}
@@ -103,18 +114,24 @@
 \newlabel{eq:canonicalDistribution}{{3.21}{33}}
 \newlabel{eq:singleHistogramReweighting}{{3.22}{33}}
 \citation{Ferrenberg1989,Kumar1992}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces (a) Illustration of the canonical energy histograms $h(E,\beta _{i})$, (b) the individual estimates of the logarithm of the density of states $\mathaccentV {bar}016{S}_{i}(E)$, (c) and the combined estimate of the logarithm of the density of states $\mathaccentV {hat}05E{S}(E)$.}}{34}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces (a) Illustration of the canonical energy histograms $h(E,\beta _{i})$, (b) the individual estimates of the logarithm of the density of states $\mathaccentV {bar}016{S}_{i}(E)$, (c) and the combined estimate of the logarithm of the density of states $\mathaccentV {hat}05E{S}(E)$ obtained by reweighting.}}{34}}
 \newlabel{fig:MHR}{{3.2}{34}}
 \newlabel{eq:referencePartitionFunction}{{3.23}{34}}
 \newlabel{eq:dosEstimator}{{3.24}{34}}
+\citation{Bachmann2014,Bezier1968}
+\citation{Lorentz1953}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}Beziere smoothing}{35}}
 \newlabel{eq:beziereDefinition}{{3.25}{35}}
 \newlabel{eq:BernsteinPoly}{{3.26}{35}}
+\citation{Bachmann2014}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Comparison between the noisy derivative of the microcanonical inverse temperature $\gamma (E) = d\beta /dE$ and the Bezi\'{e}r approximation $\gamma _{\mathrm  {bez}}(E)$. The systematic error in the Bezi\'{e}r approximation is visible near $E_{\mathrm  {trans}}$, where the curvature of $\gamma (E)$ changes abruptly. }}{36}}
 \newlabel{fig:Bezier}{{3.3}{36}}
+\citation{Matsumoto1998}
 \citation{Landau2000}
+\citation{Bachmann2014}
 \@writefile{toc}{\contentsline {section}{\numberline {3.3}Simple Monte Carlo updates}{37}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}Single displacement update}{37}}
+\citation{Bachmann2014}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces Example of a distribution of the temperature dependent displacement parameter $l(T)$, used in a parallel tempering simulation of a flexible elastic 55-mer. The values of $l(T)$ were selected to keep the average acceptance rates $\left \delimiter "426830A a \right \delimiter "526930B $ within the optimal range of $\sim 30\%-70\%$. }}{38}}
 \newlabel{fig:acceptanceRates}{{3.4}{38}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}Pivot update}{38}}
@@ -165,3 +182,26 @@
 \bibcite{Janke1998}{11}
 \bibcite{Calvo1995}{12}
 \bibcite{Arfken}{13}
+\bibcite{Rapaport2004}{14}
+\bibcite{Tuckerman2010}{15}
+\bibcite{Resnick2005}{16}
+\bibcite{Metropolis1953}{17}
+\bibcite{sw1}{18}
+\bibcite{geyer1}{19}
+\bibcite{huku1}{20}
+\bibcite{huku2}{21}
+\bibcite{Neuhaus2006}{22}
+\bibcite{muca1a}{23}
+\bibcite{muca1b}{24}
+\bibcite{muca2}{25}
+\bibcite{muca3}{26}
+\bibcite{muca4}{27}
+\bibcite{Bachmann2013}{28}
+\bibcite{wl1}{29}
+\bibcite{wl2}{30}
+\bibcite{wl3}{31}
+\bibcite{Ferrenberg1989}{32}
+\bibcite{Kumar1992}{33}
+\bibcite{Bezier1968}{34}
+\bibcite{Lorentz1953}{35}
+\bibcite{Matsumoto1998}{36}
