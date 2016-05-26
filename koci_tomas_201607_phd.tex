@@ -788,8 +788,12 @@ In a displacement update, a randomly selected monomer is moved according to a ra
 
 \chapter{Off-Lattice Polymer Models}
 \label{chap:HomopolymerModel}
+It is hardly possible to overestimate the importance of defining an appropriate model to represent a real physical system in a computational study. What constitutes an `appropriate' model depends largely on the system under investigation and the level of detail which is needed to correctly capture the properties of a given physical phenomena. For example, the study of chemical reaction kinetics, ground-state geometries of molecules, or the optical and electronic properties of semiconductors, requires detailed knowledge of the electronic structure and interactions. In such cases, Density functional theory (DFT) or other quantum mechanical modelling methods need to be employed. On the other hand, a wide range of interesting physical phenomena, such as protein folding, polymer collapse, adsorption, and aggregation, are driven by cooperative structure forming processes and as such are not expected to depend sensitively on the precise electronic or even atomic structures. In principle, it is possible to gain insight into these processes by the means of simplified models with a reduced number of effective parameters. In this chapter we shall briefly discuss the concept of \textit{coarse-graining} and introduce the model for the flexible elastic homopolymer together with a set of structural order parameters which are particularly effective at characterizing the conformational geometries of polymers in the solid pseudophase.
+
 
 \section{Coarse-grained models}
+The method for obtaining simplified models by the systematic reduction of the number of degrees of freedom is typically called \text{coarse-graining}. 
+
 In the $6N$-dimensional phase space, the canonical partition function is
 \begin{equation}
 Z_{\mathrm{can}} = \int \mathcal{DP}\mathcal{DX}e^{-\beta \mathcal{H}(\mathbf{P,X})},
