@@ -792,46 +792,32 @@ It is hardly possible to overestimate the importance of defining an appropriate 
 
 
 \section{Coarse-grained models}
-The method for obtaining simplified models by the systematic reduction of the number of degrees of freedom is typically called \text{coarse-graining}. 
-
-In the $6N$-dimensional phase space, the canonical partition function is
+The general idea behind \text{coarse-graining} is the observation that for a wide range of physical phenomena the individual degrees of freedom do not act independently but rather behave in a cooperative fashion. The goal is then to find the minimal set of degrees of freedom which allows for the accurate description of a given physical process. In the context of biomolecules, this amounts to replacing the individual atomic positions by \textit{united atoms} and the exact quantum many-body interactions by \textit{effective potentials} [Fig. ]. The new coarse-grained interaction sites are often referred to as \textit{monomers} and their positions correspond to the reduced set of degrees of freedom represented by the $R$-dimensional vector
+%
 \begin{equation}
-Z_{\mathrm{can}} = \int \mathcal{DP}\mathcal{DX}e^{-\beta \mathcal{H}(\mathbf{P,X})},
+\mathbf{Q(X)} = (q_{1}(\mathbf{X}),q_{2}(\mathbf{X}),....,q_{R}(\mathbf{X})).
 \end{equation}
-where
-\begin{equation}
-\int \mathcal{DP}\mathcal{DX} = C_{\mathrm{N}}\prod_{n = 1}^{N}\iint\frac{d^{3}p_{n}d^{3}x_{n}}{(2 \pi \hbar)^{3}}.
-\end{equation}
-For the hamiltonian in the standard form
-\begin{equation}
-\mathcal{H}(\mathbf{P,X}) = \sum_{n = 1}^{N} \frac{\mathbf{p}_{n}^{2}}{2m} + V(\mathbf{X}),
-\end{equation}
-the momentum integrals factorize and yield
-\begin{equation}
-\left(\dfrac{m}{2\pi \beta \hbar ^{2}}\right)^{3N/2} = \lambda _{\mathrm{th}}^{-3N}.
-\end{equation}
-Hence the partition function can be written as
+%
+In the full conformational space, the canonical partition function is defined as
+%
 \begin{equation}
 Z_{\mathrm{can}} = \int \mathcal{DX}e^{-\beta V(\mathbf{X})},
 \end{equation}
-where
+%
+where $V(\mathbf{X})$ is the exact inter-atomic potential. In terms of the coarse-grained coordinates, the partition function is written as
+%
 \begin{equation}
-\int \mathcal{DX} = C_{\mathrm{N}}\prod_{n = 1}^{N}\int\frac{d^{3}x_{n}}{\lambda _{\mathrm{th}}^{3}}.
+Z_{\mathrm{can}} = \int \mathcal{DQ}\int \mathcal{DX}\prod _{r = 1}^{R} \left[\delta (q_{r} - q_{r}^{s}(\mathbf{X}))\right]e^{-\beta V(\mathbf{X})} = \int \mathcal{DQ}e^{-\beta \tilde{V}(\mathbf{X})},
 \end{equation}
-We introduce the reduced set of coordinates which represent the coarse-grained degrees of freedom
+where $q_{r}^{s}(\mathbf{X})$ is the map from the full conformational space $\mathbf{X}$ to the reduced coordinate space $\mathbf{Q}$. The potential $V(\mathbf{X})$ is replaced by an effective potential
+%
 \begin{equation}
-\mathbf{Q(X)} = (q_{1}(\mathbf{X}),q_{2}(\mathbf{X}),....,q_{L}(\mathbf{X})).
+\label{eq:EffectivePotential}
+\tilde{V}(\mathbf{X}) = -k_{\mathrm{B}}\,T\,\mathrm{ln} \int \mathcal{DX}\prod_{l = 1}^{L} \left[\delta (q_{r} - q_{r}^{s}(\mathbf{X}))\right]e^{-\beta V(\mathbf{X})}.
 \end{equation}
-The partition function can be written in the new set of coordinates as
-\begin{equation}
-Z_{\mathrm{can}} = \lambda _{\mathrm{th}}^{L}\int \mathcal{DQ}\int \mathcal{DX}\prod _{l = 1}^{L} \left[\delta (q_{l} - q_{l}^{s}(\mathbf{X}))\right]e^{-\beta V(\mathbf{X})} = \int \mathcal{DQ}e^{-\beta \tilde{V}(\mathbf{X})},
-\end{equation}
-where $\tilde{V}(\mathbf{X})$ is the effective potential of the coarse-grained model
-
-\begin{equation}
-\tilde{V}(\mathbf{X}) = -k_{\mathrm{B}}\,T\,ln \lambda _{\mathrm{th}}^{L}\int \mathcal{DX}\prod_{l = 1}^{L} \left[\delta (q_{l} - q_{l}^{s}(\mathbf{X}))\right]e^{-\beta V(\mathbf{X})} = -k_{\mathrm{B}}\,T\,ln\,Z_{\mathrm{res}}(\mathbf{Q}).
-\end{equation}
-
+%
+In principle, $\tilde{V}(\mathbf{X})$ contains the effects of the exact inter-atomic potentials and should allow for 
+In reality, effective potentials are often only crude approximations to the definition introduced in Eq. \ref{eq:EffectivePotential}. 
 
 \section{Flexible elastic homopolymer}
 \subsection{Single elastic chain}
