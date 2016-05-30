@@ -16,6 +16,10 @@
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Schematic depiction of the single-displacement and the rotational pivot updates. In a displacement update, a randomly selected monomer is moved according to a randomly generated displacement vector $\Delta \mathbf {r_{i}}$. The pivot update consists of rotating a portion of the polymer chain over a randomly chosen axis $\mathbf {k}$ by a random angle $\Delta \phi $. }}{39}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces (Color online) Specific heat and the thermal fluctuations of the radius of gyration for 13mers parametrized by the bond elasticity parameter $R$.}}{43}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces (Color online) Same as Fig.\nobreakspace {}5.1\hbox {}, but for 30mers.}}{44}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces (Color online) Structural phase diagrams for 13mers and 30mers, parametrized by the canonical temperature $T$ and the bond elasticity parameter $R$. The red and green segments indicate first-order-like and second-order-like transitions, respectively.}}{46}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces (Color online) Microcanonical results for 13mers with bond elasticities (a) $R=0.3$, (b) $4.5$, and (c) $30$ as well as for 30mers (d)-(f). Shown are inverse temperature curves $\beta (E)$, their first derivatives $\gamma (E)=d\beta (E)/dE$, and (on arbitrary scale) the energy histograms $h(E)$ at the $\Theta $ transition temperature. The horizontal dashed line marks $\gamma =0$. The positive valued peaks of $\gamma (E)$ for values of $R > 4.5$ clearly indicate that the $\Theta $ transition is first order, but remains separate from the freezing transition. The absorption of the freezing transition by the $\Theta $ transition is apparent for highly elastic bonds (c, f).}}{50}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
