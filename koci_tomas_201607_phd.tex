@@ -792,10 +792,29 @@ It is hardly possible to overestimate the importance of defining an appropriate 
 
 
 \section{Coarse-grained models}
-The general idea behind \text{coarse-graining} is the observation that for a wide range of physical phenomena the individual degrees of freedom do not act independently but rather behave in a cooperative fashion. The goal is then to find the minimal set of degrees of freedom which allows for the accurate description of a given physical process. In the context of biomolecules, this amounts to replacing the individual atomic positions by \textit{united atoms} and the exact quantum many-body interactions by \textit{effective potentials} [Fig. ]. The new coarse-grained interaction sites are often referred to as \textit{monomers} and their positions correspond to the reduced set of degrees of freedom represented by the $R$-dimensional vector
+%
+\begin{figure}
+\center
+\includegraphics[width = 0.99\textwidth]{chapter4Figs/coarseGraining.png}
+\caption{\label{fig:coarseGraining}%
+An example of a coarse-grained model of polyethylene. The atoms in the methylene groups $\mathrm{CH}_{2}$ are replaced by coarse-grained interaction sites which are depicted as transparent spheres. The interactions between the sites are described in terms of effective potentials.
+}
+\end{figure}
+% 
+The general idea behind \text{coarse-graining} is the observation that for a wide range of physical phenomena the individual degrees of freedom do not act independently but rather behave in a cooperative fashion. The goal is then to find the minimal set of degrees of freedom which allows for the accurate description of a given physical process. In the context of biomolecules, this amounts to replacing individual atoms by coarse-grained interaction sites and exact quantum many-body interactions by effective potentials [Fig. ]. The new interaction sites are often referred to as \textit{monomers}. 
+
+
+Conformations of a coarse-grained model with $N$ monomers are represented by a $3N$-dimensional vector  
+$\mathbf{Q} = (q_{1},q_{2},....,q_{3N})$ in the reduced coordinate system. The components $q_{i}$ represent the relevant degrees of freedom and are defined in terms of a map 
 %
 \begin{equation}
-\mathbf{Q(X)} = (q_{1}(\mathbf{X}),q_{2}(\mathbf{X}),....,q_{R}(\mathbf{X})).
+\tilde{q_{i}}(\textbf{X}): \textbf{X} \rightarrow \textbf{Q} 
+\end{equation}
+%
+ and their positions correspond to the relevant degrees of freedom.
+%
+\begin{equation}
+\mathbf{Q} = (q_{1},q_{2}(\mathbf{X}),....,q_{R}(\mathbf{X})).
 \end{equation}
 %
 In the full conformational space, the canonical partition function is defined as
@@ -821,6 +840,16 @@ In reality, effective potentials are often only crude approximations to the defi
 
 \section{Flexible elastic homopolymer}
 \subsection{Single elastic chain}
+%
+\begin{figure}
+\center
+\includegraphics[width = 0.99\textwidth]{chapter4Figs/singleChain.png}
+\caption{\label{fig:singleChain}%
+The model of a flexible elastic homopolymer chain.
+}
+\end{figure}
+% 
+
 In this study, we employ a generic model of a single, elastic, flexible,
 linear
 homopolymer chain with $N$ monomers. A pair of monomers $i$ and $j$

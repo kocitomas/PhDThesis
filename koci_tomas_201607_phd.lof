@@ -15,6 +15,8 @@
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Example of a distribution of the temperature dependent displacement parameter $l(T)$, used in a parallel tempering simulation of a flexible elastic 55-mer. The values of $l(T)$ were selected to keep the average acceptance rates $\left \delimiter "426830A a \right \delimiter "526930B $ within the optimal range of $\sim 30\%-70\%$. }}{38}
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Schematic depiction of the single-displacement and the rotational pivot updates. In a displacement update, a randomly selected monomer is moved according to a randomly generated displacement vector $\Delta \mathbf {r_{i}}$. The pivot update consists of rotating a portion of the polymer chain over a randomly chosen axis $\mathbf {k}$ by a random angle $\Delta \phi $. }}{39}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces An example of a coarse-grained model of polyethylene. The atoms in the methylene groups $\mathrm {CH}_{2}$ are replaced by coarse-grained interaction sites which are depicted as transparent spheres. The interactions between the sites are described in terms of effective potentials. }}{41}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces The model of a flexible elastic homopolymer chain. }}{43}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

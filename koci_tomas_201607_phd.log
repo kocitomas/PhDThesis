@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.3.27)  27 MAY 2016 16:00
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.3.27)  28 MAY 2016 13:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -530,62 +530,76 @@ t line 774.
 (pdftex.def)             Requested size: 465.06004pt x 199.8542pt.
  [39 <./chapter3Figs/conformationalUpdatesNew.pdf>]
 Chapter 4.
-[40
+<chapter4Figs/coarseGraining.png, id=518, 894.34125pt x 352.31625pt>
+File: chapter4Figs/coarseGraining.png Graphic file (type png)
 
-] [41]
+<use chapter4Figs/coarseGraining.png>
+Package pdftex.def Info: chapter4Figs/coarseGraining.png used on input line 798
+.
+(pdftex.def)             Requested size: 465.06004pt x 183.21088pt.
+ [40
 
-LaTeX Warning: Citation `BiCuArHa1987' on page 42 undefined on input line 850.
+] [41 <./chapter4Figs/coarseGraining.png>] <chapter4Figs/singleChain.png, id=52
+7, 1165.35374pt x 617.30624pt>
+File: chapter4Figs/singleChain.png Graphic file (type png)
 
+<use chapter4Figs/singleChain.png>
+Package pdftex.def Info: chapter4Figs/singleChain.png used on input line 846.
+(pdftex.def)             Requested size: 465.06004pt x 246.34354pt.
+ [42]
 
-LaTeX Warning: Citation `FENE3' on page 42 undefined on input line 850.
-
-
-LaTeX Warning: Citation `MilBhaBin2001' on page 42 undefined on input line 850.
-
-
-
-LaTeX Warning: Citation `Gross2013' on page 42 undefined on input line 858.
-
-[42]
-
-LaTeX Warning: Citation `Bird1987' on page 43 undefined on input line 901.
-
-
-LaTeX Warning: Citation `Kremer1990' on page 43 undefined on input line 901.
+LaTeX Warning: Citation `BiCuArHa1987' on page 43 undefined on input line 879.
 
 
-LaTeX Warning: Citation `Milchev2001' on page 43 undefined on input line 901.
+LaTeX Warning: Citation `FENE3' on page 43 undefined on input line 879.
 
 
-LaTeX Warning: Citation `Gross2013' on page 43 undefined on input line 909.
+LaTeX Warning: Citation `MilBhaBin2001' on page 43 undefined on input line 879.
 
-[43]
 
-LaTeX Warning: Reference `phase_diagram' on page 44 undefined on input line 952
+[43 <./chapter4Figs/singleChain.png (PNG copy)>]
+
+LaTeX Warning: Citation `Gross2013' on page 44 undefined on input line 887.
+
+
+LaTeX Warning: Citation `Bird1987' on page 44 undefined on input line 930.
+
+
+LaTeX Warning: Citation `Kremer1990' on page 44 undefined on input line 930.
+
+
+LaTeX Warning: Citation `Milchev2001' on page 44 undefined on input line 930.
+
+[44]
+
+LaTeX Warning: Citation `Gross2013' on page 45 undefined on input line 938.
+
+
+LaTeX Warning: Reference `phase_diagram' on page 45 undefined on input line 981
 .
 
 
-LaTeX Warning: Citation `Neirotti2000' on page 44 undefined on input line 959.
+LaTeX Warning: Citation `Neirotti2000' on page 45 undefined on input line 988.
 
-[44] [45]
+[45] [46]
 Chapter 5.
-[46
-
-]
-Chapter 6.
 [47
 
 ]
-Chapter 7.
+Chapter 6.
 [48
 
 ]
-Chapter 8.
+Chapter 7.
 [49
 
-] (./References.tex [50
+]
+Chapter 8.
+[50
 
-] [51]) [52] (./koci_tomas_201607_phd.aux)
+] (./References.tex [51
+
+] [52]) [53] (./koci_tomas_201607_phd.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -594,10 +608,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3211 strings out of 494985
- 47427 string characters out of 6180356
- 106113 words of memory out of 5000000
- 6338 multiletter control sequences out of 15000+600000
+ 3225 strings out of 494985
+ 47788 string characters out of 6180356
+ 106135 words of memory out of 5000000
+ 6348 multiletter control sequences out of 15000+600000
  12170 words of font info for 43 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  38i,10n,35p,1939b,299s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -625,10 +639,10 @@ msy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on koci_tomas_201607_phd.pdf (64 pages, 961383 bytes).
+Output written on koci_tomas_201607_phd.pdf (65 pages, 1157553 bytes).
 PDF statistics:
- 627 PDF objects out of 1000 (max. 8388607)
- 407 compressed objects within 5 object streams
+ 634 PDF objects out of 1000 (max. 8388607)
+ 410 compressed objects within 5 object streams
  0 named destinations out of 1000 (max. 500000)
- 76 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 86 words of extra memory for PDF output out of 10000 (max. 10000000)
 
