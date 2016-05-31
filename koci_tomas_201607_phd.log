@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.3.27)  28 MAY 2016 13:35
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.3.27)  30 MAY 2016 20:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -539,13 +539,13 @@ Package pdftex.def Info: chapter4Figs/coarseGraining.png used on input line 798
 (pdftex.def)             Requested size: 465.06004pt x 183.21088pt.
  [40
 
-] [41 <./chapter4Figs/coarseGraining.png>] <chapter4Figs/singleChain.png, id=52
-7, 1165.35374pt x 617.30624pt>
-File: chapter4Figs/singleChain.png Graphic file (type png)
+] [41 <./chapter4Figs/coarseGraining.png>] <chapter4Figs/polymerModel.pdf, id=5
+27, 955.57pt x 412.54124pt>
+File: chapter4Figs/polymerModel.pdf Graphic file (type pdf)
 
-<use chapter4Figs/singleChain.png>
-Package pdftex.def Info: chapter4Figs/singleChain.png used on input line 846.
-(pdftex.def)             Requested size: 465.06004pt x 246.34354pt.
+<use chapter4Figs/polymerModel.pdf>
+Package pdftex.def Info: chapter4Figs/polymerModel.pdf used on input line 846.
+(pdftex.def)             Requested size: 465.06004pt x 200.77469pt.
  [42]
 
 LaTeX Warning: Citation `BiCuArHa1987' on page 43 undefined on input line 879.
@@ -557,10 +557,10 @@ LaTeX Warning: Citation `FENE3' on page 43 undefined on input line 879.
 LaTeX Warning: Citation `MilBhaBin2001' on page 43 undefined on input line 879.
 
 
-[43 <./chapter4Figs/singleChain.png (PNG copy)>]
 
-LaTeX Warning: Citation `Gross2013' on page 44 undefined on input line 887.
+LaTeX Warning: Citation `Gross2013' on page 43 undefined on input line 887.
 
+[43 <./chapter4Figs/polymerModel.pdf>]
 
 LaTeX Warning: Citation `Bird1987' on page 44 undefined on input line 930.
 
@@ -570,10 +570,10 @@ LaTeX Warning: Citation `Kremer1990' on page 44 undefined on input line 930.
 
 LaTeX Warning: Citation `Milchev2001' on page 44 undefined on input line 930.
 
+
+LaTeX Warning: Citation `Gross2013' on page 44 undefined on input line 938.
+
 [44]
-
-LaTeX Warning: Citation `Gross2013' on page 45 undefined on input line 938.
-
 
 LaTeX Warning: Reference `phase_diagram' on page 45 undefined on input line 981
 .
@@ -609,7 +609,7 @@ LaTeX Warning: There were multiply-defined labels.
  ) 
 Here is how much of TeX's memory you used:
  3225 strings out of 494985
- 47788 string characters out of 6180356
+ 47793 string characters out of 6180356
  106135 words of memory out of 5000000
  6348 multiletter control sequences out of 15000+600000
  12170 words of font info for 43 fonts, out of 8000000 for 9000
@@ -639,10 +639,10 @@ msy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on koci_tomas_201607_phd.pdf (65 pages, 1157553 bytes).
+Output written on koci_tomas_201607_phd.pdf (65 pages, 1293316 bytes).
 PDF statistics:
- 634 PDF objects out of 1000 (max. 8388607)
- 410 compressed objects within 5 object streams
+ 640 PDF objects out of 1000 (max. 8388607)
+ 414 compressed objects within 5 object streams
  0 named destinations out of 1000 (max. 500000)
  86 words of extra memory for PDF output out of 10000 (max. 10000000)
 
