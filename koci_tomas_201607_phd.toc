@@ -26,9 +26,9 @@
 \contentsline {subsection}{\numberline {3.3.2}Pivot update}{38}
 \contentsline {chapter}{\numberline {4}Off-Lattice Polymer Models}{40}
 \contentsline {section}{\numberline {4.1}Coarse-grained models}{41}
-\contentsline {section}{\numberline {4.2}Flexible elastic homopolymer}{42}
-\contentsline {subsection}{\numberline {4.2.1}Single elastic chain}{42}
-\contentsline {subsection}{\numberline {4.2.2}Interacting elastic chains}{45}
+\contentsline {section}{\numberline {4.2}Flexible elastic homopolymer}{43}
+\contentsline {subsection}{\numberline {4.2.1}Single elastic chain}{43}
+\contentsline {subsection}{\numberline {4.2.2}Interacting elastic chains}{44}
 \contentsline {section}{\numberline {4.3}Structural order parameters}{46}
 \contentsline {chapter}{\numberline {5}Confinement Effects on Structural Transitions in Flexible Homopolymers}{48}
 \contentsline {section}{\numberline {5.1}Introduction}{48}

@@ -788,55 +788,55 @@ In a displacement update, a randomly selected monomer is moved according to a ra
 
 \chapter{Off-Lattice Polymer Models}
 \label{chap:HomopolymerModel}
-It is hardly possible to overestimate the importance of defining an appropriate model to represent a real physical system in a computational study. What constitutes an `appropriate' model depends largely on the system under investigation and the level of detail which is needed to correctly capture the properties of a given physical phenomena. For example, the study of chemical reaction kinetics, ground-state geometries of molecules, or the optical and electronic properties of semiconductors, requires detailed knowledge of the electronic structure and interactions. In such cases, Density functional theory (DFT) or other quantum mechanical modelling methods need to be employed. On the other hand, a wide range of interesting physical phenomena, such as protein folding, polymer collapse, adsorption, and aggregation, are driven by cooperative structure forming processes and as such are not expected to depend sensitively on the precise electronic or even atomic structures. In principle, it is possible to gain insight into these processes by the means of simplified models with a reduced number of effective parameters. In this chapter we shall briefly discuss the concept of \textit{coarse-graining} and introduce the model for the flexible elastic homopolymer together with a set of structural order parameters which are particularly effective at characterizing the conformational geometries of polymers in the solid pseudophase.
+It is hardly possible to overestimate the importance of defining an appropriate model to represent a real physical system in a computational study. What constitutes an `appropriate' model depends largely on the system under investigation and on the level of detail which is needed to correctly capture the properties of a given physical phenomena. For example, the study of chemical reaction kinetics, ground-state geometries of molecules, or the optical and electronic properties of semiconductors, requires detailed knowledge of the electronic structure and interactions. In such cases, Density functional theory (DFT) or other quantum mechanical modelling methods need to be employed. On the other hand, a wide range of interesting physical phenomena, such as protein folding, polymer collapse, adsorption, and aggregation, are driven by cooperative structure forming processes and as such are not expected to depend sensitively on the precise electronic or even atomic structures. In principle, it is possible to gain insight into these processes by the means of simplified models with a reduced number of effective parameters. In this chapter we shall briefly discuss the concept of \textit{coarse-graining} and introduce the model for the flexible elastic homopolymer together with a set of structural order parameters which are particularly effective at characterizing the conformational geometries of polymers in the solid pseudophase.
 
 
 \section{Coarse-grained models}
 %
 \begin{figure}
 \center
-\includegraphics[width = 0.99\textwidth]{chapter4Figs/coarseGraining.png}
+\includegraphics[width = 1.01\textwidth]{chapter4Figs/coarseGraining.png}
 \caption{\label{fig:coarseGraining}%
 An example of a coarse-grained model of polyethylene. The atoms in the methylene groups $\mathrm{CH}_{2}$ are replaced by coarse-grained interaction sites which are depicted as transparent spheres. The interactions between the sites are described in terms of effective potentials.
 }
 \end{figure}
 % 
-The general idea behind \text{coarse-graining} is the observation that for a wide range of physical phenomena the individual degrees of freedom do not act independently but rather behave in a cooperative fashion. The goal is then to find the minimal set of degrees of freedom which allows for the accurate description of a given physical process. In the context of biomolecules, this amounts to replacing individual atoms by coarse-grained interaction sites and exact quantum many-body interactions by effective potentials [Fig. ]. The new interaction sites are often referred to as \textit{monomers}. 
+The general idea behind \text{coarse-graining} is the observation that for a wide range of physical phenomena the individual degrees of freedom of a system do not act independently but rather behave in a cooperative fashion. The goal is then to find the minimal set of degrees of freedom which would allow for an accurate description of a given physical process. In the context of biomolecules, this typically amounts to replacing individual atoms by coarse-grained interaction sites and exact quantum many-body interactions by effective potentials [Fig. \ref{fig:coarseGraining}]. The new interaction sites are often referred to as \textit{monomers}. 
 
 
-Conformations of a coarse-grained model with $N$ monomers are represented by a $3N$-dimensional vector  
-$\mathbf{Q} = (q_{1},q_{2},....,q_{3N})$ in the reduced coordinate system. The components $q_{i}$ represent the relevant degrees of freedom and are defined in terms of a map 
+Individual conformations of a coarse-grained model with $N$ monomers can be represented by a $3N$-dimensional vector $\mathbf{Q} = (q_{1},q_{2},....,q_{3N})$ in the reduced coordinate system. The components $q_{i}$ represent the relevant degrees of freedom and are defined in terms of the map 
 %
 \begin{equation}
 \tilde{q_{i}}(\textbf{X}): \textbf{X} \rightarrow \textbf{Q} 
 \end{equation}
 %
- and their positions correspond to the relevant degrees of freedom.
-%
-\begin{equation}
-\mathbf{Q} = (q_{1},q_{2}(\mathbf{X}),....,q_{R}(\mathbf{X})).
-\end{equation}
-%
-In the full conformational space, the canonical partition function is defined as
+between the full conformational space $\mathbf{X}$ and the reduced space $\mathbf{Q}$. In the full conformational space, the canonical partition function is defined as
 %
 \begin{equation}
 Z_{\mathrm{can}} = \int \mathcal{DX}e^{-\beta V(\mathbf{X})},
 \end{equation}
 %
-where $V(\mathbf{X})$ is the exact inter-atomic potential. In terms of the coarse-grained coordinates, the partition function is written as
+where $V(\mathbf{X})$ is the exact inter-atomic potential. In order to express $Z_{\mathrm{can}}$ in terms of the coarse-grained coordinates, we begin by integrating out the additional degrees of freedom
 %
 \begin{equation}
-Z_{\mathrm{can}} = \int \mathcal{DQ}\int \mathcal{DX}\prod _{r = 1}^{R} \left[\delta (q_{r} - q_{r}^{s}(\mathbf{X}))\right]e^{-\beta V(\mathbf{X})} = \int \mathcal{DQ}e^{-\beta \tilde{V}(\mathbf{X})},
+Z_{\mathrm{can}} = \int \mathcal{DQ}\int \mathcal{DX}\prod _{i = 1}^{3N} \left[\delta (q_{i} - \tilde{q_{i}}(\mathbf{X}))\right]e^{-\beta V(\mathbf{X})}.
 \end{equation}
-where $q_{r}^{s}(\mathbf{X})$ is the map from the full conformational space $\mathbf{X}$ to the reduced coordinate space $\mathbf{Q}$. The potential $V(\mathbf{X})$ is replaced by an effective potential
+Next we replace $V(\mathbf{X})$ by an effective potential
 %
 \begin{equation}
 \label{eq:EffectivePotential}
-\tilde{V}(\mathbf{X}) = -k_{\mathrm{B}}\,T\,\mathrm{ln} \int \mathcal{DX}\prod_{l = 1}^{L} \left[\delta (q_{r} - q_{r}^{s}(\mathbf{X}))\right]e^{-\beta V(\mathbf{X})}.
+\tilde{V}(\mathbf{Q}) = -k_{\mathrm{B}}\,T\,\mathrm{ln} \int \mathcal{DX}\prod_{i = 1}^{3N} \left[\delta (q_{i} - \tilde{q_{i}}(\mathbf{X}))\right]e^{-\beta V(\mathbf{X})}.
 \end{equation}
 %
-In principle, $\tilde{V}(\mathbf{X})$ contains the effects of the exact inter-atomic potentials and should allow for 
-In reality, effective potentials are often only crude approximations to the definition introduced in Eq. \ref{eq:EffectivePotential}. 
+and write
+%
+\begin{equation}
+Z_{\mathrm{can}} = \int \mathcal{DQ}e^{-\beta \tilde{V}(\mathbf{Q})}.
+\end{equation}
+%
+In principle, $\tilde{V}(\mathbf{X})$ contains the combined effects of the exact inter-atomic potentials and hence should allow for an accurate description of the thermodynamic and structural properties of the original system. However in reality, effective potentials are often only crude approximations to the definition introduced in Eq. \ref{eq:EffectivePotential}. The perhaps surprising fact, that a wide range of physical phenomena can be studied by the means of drastically simplified models, suggests that physical properties that arise through cooperative behaviors do not depend sensitively on microscopic details.
+
+\newpage
 
 \section{Flexible elastic homopolymer}
 \subsection{Single elastic chain}

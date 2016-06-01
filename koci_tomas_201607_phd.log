@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.3.27)  31 MAY 2016 15:40
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.3.27)  1 JUN 2016 12:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -539,11 +539,16 @@ File: chapter4Figs/coarseGraining.png Graphic file (type png)
 <use chapter4Figs/coarseGraining.png>
 Package pdftex.def Info: chapter4Figs/coarseGraining.png used on input line 798
 .
-(pdftex.def)             Requested size: 465.06004pt x 183.21088pt.
- [40
+(pdftex.def)             Requested size: 474.44998pt x 186.9095pt.
 
-] [41 <./chapter4Figs/coarseGraining.png>] <chapter4Figs/polymerModel.pdf, id=5
-27, 923.45pt x 359.3425pt>
+Overfull \hbox (4.69496pt too wide) in paragraph at lines 798--801
+ [] 
+ []
+
+[40
+
+] [41 <./chapter4Figs/coarseGraining.png>] [42]
+<chapter4Figs/polymerModel.pdf, id=530, 923.45pt x 359.3425pt>
 File: chapter4Figs/polymerModel.pdf Graphic file (type pdf)
 
 <use chapter4Figs/polymerModel.pdf>
@@ -554,7 +559,6 @@ Overfull \hbox (4.69496pt too wide) in paragraph at lines 846--849
  [] 
  []
 
-[42]
 
 LaTeX Warning: Citation `BiCuArHa1987' on page 43 undefined on input line 879.
 
@@ -565,10 +569,10 @@ LaTeX Warning: Citation `FENE3' on page 43 undefined on input line 879.
 LaTeX Warning: Citation `MilBhaBin2001' on page 43 undefined on input line 879.
 
 
-
-LaTeX Warning: Citation `Gross2013' on page 43 undefined on input line 887.
-
 [43 <./chapter4Figs/polymerModel.pdf>]
+
+LaTeX Warning: Citation `Gross2013' on page 44 undefined on input line 887.
+
 <chapter4Figs/potentialLarge.pdf, id=541, 962.59625pt x 396.48125pt>
 File: chapter4Figs/potentialLarge.pdf Graphic file (type pdf)
 
@@ -581,20 +585,20 @@ Overfull \hbox (4.69496pt too wide) in paragraph at lines 910--913
  [] 
  []
 
-[44 <./chapter4Figs/potentialLarge.pdf>]
 
-LaTeX Warning: Citation `Bird1987' on page 45 undefined on input line 940.
-
-
-LaTeX Warning: Citation `Kremer1990' on page 45 undefined on input line 940.
+LaTeX Warning: Citation `Bird1987' on page 44 undefined on input line 940.
 
 
-LaTeX Warning: Citation `Milchev2001' on page 45 undefined on input line 940.
+LaTeX Warning: Citation `Kremer1990' on page 44 undefined on input line 940.
 
+
+LaTeX Warning: Citation `Milchev2001' on page 44 undefined on input line 940.
+
+[44]
 
 LaTeX Warning: Citation `Gross2013' on page 45 undefined on input line 948.
 
-[45]
+[45 <./chapter4Figs/potentialLarge.pdf>]
 
 LaTeX Warning: Reference `phase_diagram' on page 46 undefined on input line 991
 .
@@ -671,7 +675,7 @@ msy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on koci_tomas_201607_phd.pdf (66 pages, 2477918 bytes).
+Output written on koci_tomas_201607_phd.pdf (66 pages, 2477978 bytes).
 PDF statistics:
  665 PDF objects out of 1000 (max. 8388607)
  428 compressed objects within 5 object streams
