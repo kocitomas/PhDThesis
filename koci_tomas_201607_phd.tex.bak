@@ -854,9 +854,9 @@ The generic model of a flexible, elastic, homopolymer is suitable for the invest
 
 The potential energy of a dipole-dipole interaction between a pair of monomers $(i,j)$ is given by 
 \begin{equation}
-V_{\mathrm{dip}}(r) = \frac{1}{4\pi \varepsilon _{0} }\frac{1}{r^{3}} \left[\mathbf{p}_{i}\cdot \mathbf{p}_{j} - 3\left(\mathbf{p}_{i}\cdot \hat{\mathbf{r}}\right)\left(\mathbf{p}_{j}\cdot \hat{\mathbf{r}}\right)\right],
+V_{\mathrm{dip}}(r) = \frac{1}{4\pi \varepsilon _{0} }\frac{1}{r^{3}} \left[\mathbf{p}_{i}\cdot \mathbf{p}_{j} - 3\left(\mathbf{p}_{i}\cdot \hat{\mathbf{r}}\right)\left(\mathbf{p}_{i}\cdot \hat{\mathbf{r}}\right)
 \end{equation}
-where $\mathbf{p}_{i}$ is the dipole moment of the $i$th monomer and $\hat{\mathbf{r}}$ is the unit vector in the direction of the separation vector between the monomers.
+
 
 
 longitudinal bond vibrations
