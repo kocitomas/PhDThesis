@@ -29,7 +29,7 @@
 \contentsline {section}{\numberline {4.2}Flexible elastic homopolymer}{43}
 \contentsline {subsection}{\numberline {4.2.1}Single elastic chain}{43}
 \contentsline {subsection}{\numberline {4.2.2}Interacting elastic chains}{45}
-\contentsline {section}{\numberline {4.3}Structural order parameters}{46}
+\contentsline {section}{\numberline {4.3}Structural order parameters}{47}
 \contentsline {chapter}{\numberline {5}Confinement Effects on Structural Transitions in Flexible Homopolymers}{49}
 \contentsline {section}{\numberline {5.1}Introduction}{49}
 \contentsline {section}{\numberline {5.2}Canonical analysis}{49}

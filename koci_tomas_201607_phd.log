@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  1 JUN 2016 16:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  1 JUN 2016 18:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -561,65 +561,66 @@ Overfull \hbox (4.69496pt too wide) in paragraph at lines 846--849
  [] 
  []
 
-[43 <./chapter4Figs/polymerModel.pdf>]
+[43 <./chapter4Figs/polymerModel.pdf>] [44]
 
-LaTeX Warning: Citation `BiCuArHa1987' on page 44 undefined on input line 897.
-
-
-LaTeX Warning: Citation `FENE3' on page 44 undefined on input line 897.
+LaTeX Warning: Citation `BiCuArHa1987' on page 45 undefined on input line 898.
 
 
-LaTeX Warning: Citation `MilBhaBin2001' on page 44 undefined on input line 897.
+LaTeX Warning: Citation `FENE3' on page 45 undefined on input line 898.
+
+
+LaTeX Warning: Citation `MilBhaBin2001' on page 45 undefined on input line 898.
 
 
 
-LaTeX Warning: Citation `Gross2013' on page 44 undefined on input line 905.
+LaTeX Warning: Citation `Gross2013' on page 45 undefined on input line 906.
 
-[44] <chapter4Figs/potentialLarge.pdf, id=544, 962.59625pt x 396.48125pt>
+<chapter4Figs/potentialLarge.pdf, id=544, 962.59625pt x 396.48125pt>
 File: chapter4Figs/potentialLarge.pdf Graphic file (type pdf)
 
 <use chapter4Figs/potentialLarge.pdf>
-Package pdftex.def Info: chapter4Figs/potentialLarge.pdf used on input line 928
+Package pdftex.def Info: chapter4Figs/potentialLarge.pdf used on input line 929
 .
 (pdftex.def)             Requested size: 474.44998pt x 195.41487pt.
 
-Overfull \hbox (4.69496pt too wide) in paragraph at lines 928--931
+Overfull \hbox (4.69496pt too wide) in paragraph at lines 929--932
  [] 
  []
 
 
-LaTeX Warning: Citation `Bird1987' on page 45 undefined on input line 958.
+LaTeX Warning: Citation `Bird1987' on page 45 undefined on input line 959.
 
 
-LaTeX Warning: Citation `Kremer1990' on page 45 undefined on input line 958.
+LaTeX Warning: Citation `Kremer1990' on page 45 undefined on input line 959.
 
 
-LaTeX Warning: Citation `Milchev2001' on page 45 undefined on input line 958.
+LaTeX Warning: Citation `Milchev2001' on page 45 undefined on input line 959.
 
-[45 <./chapter4Figs/potentialLarge.pdf>]
+[45]
 
-LaTeX Warning: Citation `Gross2013' on page 46 undefined on input line 966.
+LaTeX Warning: Citation `Gross2013' on page 46 undefined on input line 967.
 
+[46 <./chapter4Figs/potentialLarge.pdf>]
 
-LaTeX Warning: Reference `phase_diagram' on page 46 undefined on input line 100
-9.
-
-
-LaTeX Warning: Citation `Neirotti2000' on page 46 undefined on input line 1016.
+LaTeX Warning: Reference `phase_diagram' on page 47 undefined on input line 101
+0.
 
 
-[46] <chapter4Figs/q6.pdf, id=562, 1107.13625pt x 541.02126pt>
+LaTeX Warning: Citation `Neirotti2000' on page 47 undefined on input line 1017.
+
+
+[47] <chapter4Figs/q6.pdf, id=565, 1107.13625pt x 541.02126pt>
 File: chapter4Figs/q6.pdf Graphic file (type pdf)
 
 <use chapter4Figs/q6.pdf>
-Package pdftex.def Info: chapter4Figs/q6.pdf used on input line 1056.
+Package pdftex.def Info: chapter4Figs/q6.pdf used on input line 1057.
 (pdftex.def)             Requested size: 474.44998pt x 231.84209pt.
 
-Overfull \hbox (4.69496pt too wide) in paragraph at lines 1056--1059
+Overfull \hbox (4.69496pt too wide) in paragraph at lines 1057--1060
  [] 
  []
 
-[47] [48 <./chapter4Figs/q6.pdf>]
+[48 <./chapter4Figs/q6.pdf>]
 Chapter 5.
 [49
 
@@ -679,7 +680,7 @@ ts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2015/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2015/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2015/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmti12.pfb>
-Output written on koci_tomas_201607_phd.pdf (67 pages, 2479994 bytes).
+Output written on koci_tomas_201607_phd.pdf (67 pages, 2481342 bytes).
 PDF statistics:
  669 PDF objects out of 1000 (max. 8388607)
  431 compressed objects within 5 object streams

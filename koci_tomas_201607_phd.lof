@@ -17,7 +17,7 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces An example of a coarse-grained model of polyethylene. The atoms in the methylene groups $\mathrm {CH}_{2}$ are replaced by coarse-grained interaction sites which are depicted as transparent spheres. The interactions between the sites are described in terms of effective potentials. }}{41}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces (a) Generic model of a flexible elastic homopolymer. All monomers interact via a pairwise Lennard-Jones potential (LJ). Bonded interactions include an additional finitely extensible nonlinear elastic potential (FENE). (b) In a multi-chain system, the interactions between monomers belonging to different chains are also represented by the (LJ) potential. }}{43}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces The model of a flexible elastic homopolymer chain. }}{45}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces The model of a flexible elastic homopolymer chain. }}{46}
 \contentsline {figure}{\numberline {4.4}{\ignorespaces The model of a flexible elastic homopolymer chain. }}{48}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
