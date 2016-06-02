@@ -1,6 +1,6 @@
 \contentsline {chapter}{Acknowledgments}{iv}
-\contentsline {chapter}{List of Figures}{x}
-\contentsline {chapter}{List of Tables}{xi}
+\contentsline {chapter}{List of Figures}{xi}
+\contentsline {chapter}{List of Tables}{xii}
 \contentsline {chapter}{\numberline {1}Introduction}{1}
 \contentsline {chapter}{\numberline {2}Elements of Statistical Mechanics}{2}
 \contentsline {section}{\numberline {2.1}The microcanonical ensemble}{3}
