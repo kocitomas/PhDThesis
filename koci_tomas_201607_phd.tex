@@ -839,6 +839,42 @@ In principle, $\tilde{V}(\mathbf{X})$ contains the combined effects of the exact
 \newpage
 
 \section{Flexible elastic homopolymer}
+The generic model of a flexible, elastic, homopolymer is suitable for the investigation of the thermodynamic properties of polymer chains on a coarse-grained level. The polymer is represented by a linear chain of elastically bonded coarse-grained interaction sites, i.e., monomers [Fig.\,\,\ref{fig:singleChain}]. Individual monomers have neutral electric charges and do not interact via Coulomb forces. Instead, all structure forming processes are primarily driven by effective dipole-dipole interactions represented by the van Der Waals forces. 
+
+The potential energy of a dipole-dipole interaction between a pair of monomers $(i,j)$ separated by the distance $r$ is given by 
+\begin{equation}
+V_{\mathrm{dip}}(r) = \frac{1}{4\pi \varepsilon _{0} }\frac{1}{r^{3}} \left[\mathbf{p}_{i}\cdot \mathbf{p}_{j} - 3\left(\mathbf{p}_{i}\cdot \hat{\mathbf{r}}\right)\left(\mathbf{p}_{j}\cdot \hat{\mathbf{r}}\right)\right],
+\end{equation}
+where $\mathbf{p}_{i}$ is the dipole moment of the $i$th monomer and $\hat{\mathbf{r}}$ is the unit vector in the direction given by the separation vector between the two monomers. However the strength of the potential decreases with the third power of the distance which is not consistent with the $1/r^{6}$ decay typically observed in experiments. In fact, the problem must be treated quantum mechanically to account for the existing overlap between electron wave functions. The potential $V_{\mathrm{dip}}(r)$ is replaced by a dipole-dipole operator $\hat{H}_{\mathrm{dip}}$, which is then introduced as a perturbation to a system of two non-interacting monomers. The first non-trivial term in the perturbation expansion of the ground state energy yields the desired $1/r^{6}$ dependence. In addition to this generic long range attraction, interacting bodies experience strong short range repulsion due to repelling electronic clouds. Both effects are contained in the famous Lennard-Jones potential
+%
+\begin{equation}
+U_{\mathrm{LJ}}(r_{ij})= 4\epsilon \left[ \left(
+\frac{\sigma}{r_{ij}} \right)^{12} - 			\left(
+\frac{\sigma}{r_{ij}} \right)^{6} \right], 
+\label{eq:LJ1}
+\end{equation}
+%
+where $\epsilon$  sets the energy scale of the interaction while the relevant length scale is given by the van der Walls distance $\sigma$ [Fig.\,\,\ref{fig:potentials}(a)].
+ 
+%
+\begin{figure}
+\center
+\includegraphics[width = 1.01\textwidth]{chapter4Figs/potentialLarge.pdf}
+\caption{\label{fig:potentials}%
+asdf}
+\end{figure}
+% 
+
+The bonds between adjacent monomers are represented by an elastic potential which allows for longitudinal bond vibrations. The simplest approximation is given by the harmonic spring potential (Rouse model), however the linearity of the interaction force allows for large separation between the bonded monomers. This problem can be avoided by introducing a potential which diverges for $|r-r_{0}|\geq R$, where $r_0$ is the equilibrium bond length and $R$ controls the allowed fluctuation width. A particularly suitable choice is the finitely extensible nonlinear elastic (FENE) potential [Fig.\,\,\ref{fig:potentials}]
+%
+\begin{equation}
+\label{eq:FENE}
+U_{\mathrm{FENE}}(r_{ii+1})=-\frac{K}{2}R^2 
+\mathrm{ln}\left[1-\left(\frac{r_{ii+1}-r_0}{R}\right)^2\right].
+\end{equation}
+%
+
+
 \subsection{Single elastic chain}
 %
 \begin{figure}
@@ -849,89 +885,32 @@ In principle, $\tilde{V}(\mathbf{X})$ contains the combined effects of the exact
 }
 \end{figure}
 % 
-
-The generic model of a flexible, elastic, homopolymer is suitable for the investigation of the thermodynamic properties of polymer chains on a coarse-grained level. The individual monomers have a neutral electric charge and do not interact via Coulomb forces. Instead, structure forming processes are primarily driven by effective dipole-dipole interactions represented by the van Der Waals forces. 
-
-The potential energy of a dipole-dipole interaction between a pair of monomers $(i,j)$ separated by the distance $r$ is given by 
+In the following, we will define the model for a single elastic polymer chain which will be used for the remainder of this thesis [Fig.\,\,\ref{fig:singleChain}]. The specific values of the model parameters will be provided individually in the later chapters. The energy of a polymer chain of length $N$ in a conformation $\mathbf{X} = (\vec{r}_1,\cdots,\vec{r}_{N})$ is given by the sum of non-bonded and bonded contributions
 \begin{equation}
-V_{\mathrm{dip}}(r) = \frac{1}{4\pi \varepsilon _{0} }\frac{1}{r^{3}} \left[\mathbf{p}_{i}\cdot \mathbf{p}_{j} - 3\left(\mathbf{p}_{i}\cdot \hat{\mathbf{r}}\right)\left(\mathbf{p}_{j}\cdot \hat{\mathbf{r}}\right)\right],
-\end{equation}
-where $\mathbf{p}_{i}$ is the dipole moment of the $i$th monomer and $\hat{\mathbf{r}}$ is the unit vector in the direction of the separation vector between the monomers. The strength of the potential decreases with the third power of the distance, however this is not consistent with the $1/r^{6}$ decay which has been observed in experiments. In fact, the problem must be treated quantum mechanically to account for the existing overlap between electron wave functions. The potential $V_{\mathrm{dip}}(r)$ is replaced by a dipole-dipole operator $\hat{H}_{\mathrm{dip}}$, which is then introduced as a perturbation to a system of two non-interacting monomers. The first non-trivial term in the perturbation expansion of the ground state energy of the system yields the desired $1/r^{6}$ dependence. In addition to this generic long range attraction, interacting bodies experience strong short range repulsion due to repelling electronic clouds.  Both effects are contained in the famous Lennard-Jones potential
-%
-\begin{equation}
-U_{\mathrm{LJ}}(r_{ij})= 4\epsilon \left[ \left(
-\frac{\sigma}{r_{ij}} \right)^{12} - 			\left(
-\frac{\sigma}{r_{ij}} \right)^{6} \right], 
-\label{LJ2}
-\end{equation}
-%
-where $\epsilon$  sets the energy scale of the interaction while the relevant length scale is given by the van der Walls distance $\sigma$. 
-
-longitudinal bond vibrations
-elastic bond potential
-harmonic potential 
-FENE potential
-asymmetric contribution of LJ
-represent covalent bonds in a generic fashion
-intended for the investigation of structural phases of polymers on coarse-grained level
-
-
-In this study, we employ a generic model of a single, elastic, flexible,
-linear
-homopolymer chain with $N$ monomers. A pair of monomers $i$ and $j$
-($i,j\in [1,N]$, $i\neq j$) with relative distance $r_{ij}$ interacts
-via a
-truncated and shifted Lennard-Jones potential
-\begin{equation}
-U_{\mathrm{LJ}}^{\mathrm{trunc}}(r_{ij}) =  \begin{cases}
-U_{\mathrm{LJ}}(r_{ij}) -  U_{\mathrm{LJ}}(r_{c}), &
-r_{ij} \leq r_{c},\\
-0, &   r_{ij} > r_{c}, \end{cases}
-\end{equation}
-where
-
- We select a cut-off radius $r_c=2.5\sigma$ such that
-$U_{\mathrm{LJ}}(r_{c}) \approx -0.0163169\epsilon$.
-
-The bonds between the adjacent monomers are represented by the
-anharmonic FENE (finitely extensible nonlinear elastic) 
-potential~\cite{BiCuArHa1987,FENE3,MilBhaBin2001}, which we use here in
-modified
-form
-\begin{equation}
-U_{\mathrm{FENE}}(r_{ii+1})=-\frac{K}{2}R_{0}^2 
-\mathrm{ln}\left[1-\left(\frac{r_{ii+1}-r_0}{R}\right)^2\right]. 
-\label{FENE}
-\end{equation}
-We set $K=40$ and $R_{0}=0.3$~\cite{Gross2013}. 
-The parameter $R$ controls the effective elasticity of the polymer bonds,
-whereas the energy scale is kept constant. The qualitative behavior of the
-combined bond potential for different values of $R$ is shown in
-Fig.~\ref{fig:Fig_1}. The bond elasticity increases with $R$,
-i.e., by changing $R$ in a wide range of values
-($R\in[0.3,90]$), we systematically investigate an
-entire class of polymer systems between the limits of stiff polymers
-($R\to 0$) and, effectively, a gas of nonbonded Lennard-Jones particles
-(``noble gas''), for which $R\to \infty$.  
-
-The total energy of a polymer chain of length $N$ in a conformation
-$\mathbf{X} = (\vec{r}_1,\cdots,\vec{r}_{N})$ is given by
-\begin{equation}
-E(\mathbf{X}) = \sum^{N}_{i<j}
-U_{\mathrm{LJ}}^{\mathrm{trunc}}(r_{ij}) + \sum^{N-1}_{i=1} 	
-U_{\mathrm{FENE}}(r_{ii+1}). 
+E(\mathbf{X}) = \sum^{N}_{i<j+1}
+U_{\mathrm{non-bonded}}(r_{ij}) + \sum^{N-1}_{i=1} 	
+U_{\mathrm{bonded}}(r_{ii+1}). 
 \label{totalE}
 \end{equation}
-
 %
-\begin{figure}
-\center
-\includegraphics[width = 1.01\textwidth]{chapter4Figs/potentialLarge.pdf}
-\caption{\label{fig:potentials}%
-The model of a flexible elastic homopolymer chain.
-}
-\end{figure}
-% 
+ 
+All non-bonded interactions are represented by the Lennard-Jones potential introduced in Eq. \ref{eq:LJ1}. In order to reduce the number of required calculations in a computer simulation, it is a standard procedure to introduce a cutoff distance $r_{c}$ and set $U_{\mathrm{LJ}} = 0$ for all $r\geq r_{c}$. The truncated LJ potential must also be shifted vertically by the constant $U_{\mathrm{LJ}}(r_{c})$ to prevent a discontinuity at $r_{c}$. Hence the non-bonded potential is given by
+%
+\begin{equation}
+U_{\mathrm{non-bonded}}(r_{ij}) = U_{\mathrm{LJ}}^{\mathrm{trunc}}(r_{ij}) =  \begin{cases}
+U_{\mathrm{LJ}}(r_{ij}) -  U_{\mathrm{LJ}}(r_{c}), &
+r_{ij} \leq r_{c},\\
+0, &   r_{ij} > r_{c}. \end{cases}
+\end{equation}
+%
+In addition to the FENE potential [Eq. \ref{eq:FENE}], the bonded interactions contain an additional Lennard-Jones term which makes the resultant potential asymmetric
+%
+\begin{equation}
+U_{\mathrm{bonded}}(r_{ii+1})= U_{\mathrm{FENE}}(r_{ii+1}) +  U_{\mathrm{LJ}}^{\mathrm{trunc}}(r_{ii+1}).
+\end{equation}
+%
+The shapes of the bonded and non-bonded potentials are depicted in Fig. \ref{fig:potentials}. 
+
 
 \subsection{Interacting elastic chains}
 
@@ -1055,7 +1034,7 @@ harmonics is given by
 \begin{figure}
 \center
 \includegraphics[width = 1.01\textwidth]{chapter4Figs/q6.pdf}
-\caption{\label{fig:potentials}%
+\caption{\label{fig:orderParameters}%
 The model of a flexible elastic homopolymer chain.
 }
 \end{figure}
