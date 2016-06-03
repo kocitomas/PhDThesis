@@ -1,6 +1,6 @@
 \contentsline {chapter}{Acknowledgments}{iv}
-\contentsline {chapter}{List of Figures}{x}
-\contentsline {chapter}{List of Tables}{xi}
+\contentsline {chapter}{List of Figures}{xi}
+\contentsline {chapter}{List of Tables}{xii}
 \contentsline {chapter}{\numberline {1}Introduction}{1}
 \contentsline {chapter}{\numberline {2}Elements of Statistical Mechanics}{2}
 \contentsline {section}{\numberline {2.1}The microcanonical ensemble}{3}
@@ -24,23 +24,26 @@
 \contentsline {section}{\numberline {3.3}Simple Monte Carlo updates}{37}
 \contentsline {subsection}{\numberline {3.3.1}Single displacement update}{37}
 \contentsline {subsection}{\numberline {3.3.2}Pivot update}{38}
-\contentsline {chapter}{\numberline {4}Coarse-grained Homopolymer Model}{40}
-\contentsline {section}{\numberline {4.1}Flexible elastic homopolymer}{40}
-\contentsline {section}{\numberline {4.2}Interacting homopolymers}{40}
-\contentsline {chapter}{\numberline {5}Confinement Effects on Structural Transitions in Flexible Homopolymers}{41}
-\contentsline {section}{\numberline {5.1}Introduction}{41}
-\contentsline {section}{\numberline {5.2}Canonical analysis}{41}
-\contentsline {section}{\numberline {5.3}Inflection-point analysis}{41}
-\contentsline {section}{\numberline {5.4}Hyper-phase diagrams}{41}
-\contentsline {chapter}{\numberline {6}Impact of Bonded Interactions on the Ground-State Geometries of Flexible Homopolymers}{42}
-\contentsline {section}{\numberline {6.1}Structural order parameters}{42}
-\contentsline {section}{\numberline {6.2}15-mer}{42}
-\contentsline {section}{\numberline {6.3}55-mer}{42}
-\contentsline {chapter}{\numberline {7}Aggregation of Flexible Elastic Homopolymers}{43}
-\contentsline {section}{\numberline {7.1}Introduction}{43}
-\contentsline {section}{\numberline {7.2}Microcanonical analysis}{43}
-\contentsline {subsection}{\numberline {7.2.1}Subphases and subphase transitions}{43}
-\contentsline {subsection}{\numberline {7.2.2}Missing subphases and translational entropy}{43}
-\contentsline {subsection}{\numberline {7.2.3}Density effects on the latent heat}{43}
-\contentsline {chapter}{\numberline {8}Summary and Outlook}{44}
-\contentsline {chapter}{Bibliography}{44}
+\contentsline {chapter}{\numberline {4}Off-Lattice Polymer Models}{40}
+\contentsline {section}{\numberline {4.1}Coarse-grained models}{41}
+\contentsline {section}{\numberline {4.2}Flexible elastic homopolymer}{43}
+\contentsline {subsection}{\numberline {4.2.1}Single elastic chain}{45}
+\contentsline {subsection}{\numberline {4.2.2}Interacting elastic chains}{46}
+\contentsline {section}{\numberline {4.3}Structural order parameters}{47}
+\contentsline {chapter}{\numberline {5}Confinement Effects on Structural Transitions in Flexible Homopolymers}{50}
+\contentsline {section}{\numberline {5.1}Introduction}{50}
+\contentsline {section}{\numberline {5.2}Canonical analysis}{50}
+\contentsline {section}{\numberline {5.3}Inflection-point analysis}{50}
+\contentsline {section}{\numberline {5.4}Hyper-phase diagrams}{50}
+\contentsline {chapter}{\numberline {6}Impact of Bonded Interactions on the Ground-State Geometries of Flexible Homopolymers}{51}
+\contentsline {section}{\numberline {6.1}Structural order parameters}{51}
+\contentsline {section}{\numberline {6.2}15-mer}{51}
+\contentsline {section}{\numberline {6.3}55-mer}{51}
+\contentsline {chapter}{\numberline {7}Aggregation of Flexible Elastic Homopolymers}{52}
+\contentsline {section}{\numberline {7.1}Introduction}{52}
+\contentsline {section}{\numberline {7.2}Microcanonical analysis}{52}
+\contentsline {subsection}{\numberline {7.2.1}Subphases and subphase transitions}{52}
+\contentsline {subsection}{\numberline {7.2.2}Missing subphases and translational entropy}{52}
+\contentsline {subsection}{\numberline {7.2.3}Density effects on the latent heat}{52}
+\contentsline {chapter}{\numberline {8}Summary and Outlook}{53}
+\contentsline {chapter}{Bibliography}{53}
