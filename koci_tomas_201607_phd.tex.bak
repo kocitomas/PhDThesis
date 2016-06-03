@@ -944,7 +944,7 @@ The formalism of the microcanonical inflection-point analysis, as introduced in 
 %
 \begin{figure}
 \center
-\includegraphics[width = 0.7\textwidth]{chapter4Figs/rogFluct.eps}
+\includegraphics[width = 0.65\textwidth]{chapter4Figs/rogFluct.eps}
 \caption{\label{fig:ROGFluct}%
 The thermal fluctuations of the radius of gyration obtained from a Monte Carlo simulation of an elastic $55$mer. The distinct peaks indicate the locations of the freezing and collapse transitions at the temperatures $T_{\mathrm{freezing}}$ and $T_{\mathrm{collapse}}$ respectively.
 }
@@ -975,101 +975,41 @@ Signals, such as peaks and shoulders, in the temperature derivative
 %
 indicate locations of heightened thermodynamic activity and are routinely used to identify pseudophase transitions [Fig.\,\,\ref{fig:ROGFluct}].
 
-Low-energy solid-like structures with well-defined symmetries can be conveniently characterized using a set of order parameters defined in terms of the real spherical harmonics. Let us consider a polymer core consisting of $M$ monomers with the coordinates $\mathcal{C} = \left\{\mathbf{r}_1,\mathbf{r}_2,\ldots,\mathbf{r}_M \right\}$, and a function $\psi(\vec{r})$ defined as 
-\begin{equation}
-    \psi(\vec{r}) = 
-	\begin{cases}
-	\vspace{2mm}
-        1/M & \quad \mathrm{if} \quad  \vec{r} \in \mathcal{C}, \\
-	\vspace{2mm}
-	0 & \quad \mathrm{otherwise}. \\
-	\end{cases}	
-\end{equation} 
-We introduce a set of rotationally invariant order parameters by 
+Alternatively, a wide range of polymer conformation geometries can be identified using the set of rotationally invariant order parameters
+%
 \begin{equation}
 Q_{l} = \left[ \frac{4\pi}{2l + 1} \displaystyle\sum_{m = -l}^{l}
 |\rho_{l,m}|^{2} \right]^{1/2},	
 \end{equation}
-where 
-\begin{equation}
-    \rho_{l,m} = \int d^{3M}r, \psi(\vec{r}) \, \mathrm{Y}_{l,m}(\vec{r})
-\label{eq:15}
-\end{equation}
-and 
-\begin{equation}
-    \hspace{-0.6mm}
-    \mathrm{Y}_{lm}(\vec{r}) = 
-	\begin{cases}
-	\vspace{2mm}
-        \frac{i}{\sqrt{2}}\left[\mathrm{Y}_{l}^{m}(\vec{r}) - (-1)^{m} 
-        \mathrm{Y}_{l}^{-m}(\vec{r}) \right] & \hspace{-2.4mm}(m < 0),\\
-	\vspace{2mm}
-        {Y}_{l}^{m}(\vec{r}) & \hspace{-2.4mm}(m = 0), \\
-	\frac{1}{\sqrt{2}}\left[\mathrm{Y}_{l}^{-m}(\vec{r}) + (-1)^{m} 
-        \mathrm{Y}_{l}^{m}(\vec{r})\right] & \hspace{-2.4mm} (m > 0) \\
-	\end{cases}	
-\end{equation}
-is a real spherical harmonic. The integral in Eq.~\eqref{eq:15} can 
-be calculated as an average of the real spherical harmonics evaluated 
-at positions of the core monomers. We define the polymer core as 
-consisting of monomers within 1.25$\sigma$ of the center of mass.
-Various order parameters, such as the number of monomer-monomer
-contacts, radius of gyration, or radial and angular distributions, have
-proven to provide valuable insight into the thermodynamic and structural
-properties of polymer systems. 
-
-
-Based on the microcanonical results in
-Fig.~\ref{phase_diagram}, we expect the existence of two solid phases
-when the strength of the bond flexibility parameter is sufficiently small
-$(\eta \leq 0.1)$. We aim to identify the dominant structures in the
-low-energy phases and to gather additional data supporting the existence of
-the
-solid-solid transition line. For this purpose, we employ a set of order
-parameters exploiting the symmetry properties of real spherical
-harmonics~\cite{Neirotti2000}.
-
-We define a polymer core to consist of monomers within a
-distance $r_{\mathrm{core}} < 1.25\sigma$ of the central monomer, which has
-been chosen to be nearest to the center of mass. Let $\mathcal{C} = \lbrace
-\vec{r}_{1},.....,\vec{r}_{M} \rbrace $ be the coordinates of a core with
-$M$ monomers. Various core geometries can be distinguished using the set of
-rotationally invariant order parameters
-%
-\begin{equation}
-Q_{l} =  \left[ \frac{4\pi}{2l + 1} \displaystyle\sum_{m =-l}^{l}
-|\rho_{l,m}|^{2} \right]^{1/2},	
-\end{equation}
 %
 where 
 \begin{equation}
-\rho _{l,m} = \frac{1}{M}\sum _{i = 0} ^{M} \mathrm{Y}_{l,m}(\vec{r}_{i})
+\rho _{l,m} = \frac{1}{N}\sum _{i = 0} ^{N} \mathrm{Y}_{l,m}(\mathbf{r}_{i})
 \label{eq:15}
 \end{equation}
 %
-is the average of the real spherical harmonics evaluated at the locations
-of the core monomers. The connection between the real and complex spherical
-harmonics is given by
-% 
+is the average of the real spherical harmonics\footnote{The real harmonics can be expressed in terms of the better known complex harmonics as
 \begin{equation}
-	\mathrm{Y}_{lm} =  \left\{
+	\mathrm{Y}_{lm}(\mathbf{r}_{i}) =  \left\{
 		\begin{array}{lr}
-		\frac{i}{\sqrt{2}}\left[\mathrm{Y}_{l}^{m} -
-(-1)^{m}\mathrm{Y}_{l}^{-m}\right] & \quad \mathrm{if} \quad  m < 0,
+		\frac{i}{\sqrt{2}}\left[\mathrm{Y}_{l}^{m}(\mathbf{r}_{i}) -
+(-1)^{m}\mathrm{Y}_{l}^{-m}(\mathbf{r}_{i})\right] & \quad \mathrm{if} \quad  m < 0,
 \\[1.5ex]
-		{Y}_{l}^{m} & \quad \mathrm{if} \quad  m = 0, \\[1.5ex]
-		\frac{1}{\sqrt{2}}\left[\mathrm{Y}_{l}^{-m} +
-(-1)^{m}\mathrm{Y}_{l}^{m}\right] & \quad \mathrm{if} \quad  m > 0. \\
+		{Y}_{l}^{m}(\mathbf{r}_{i}) & \quad \mathrm{if} \quad  m = 0, \\[1.5ex]
+		\frac{1}{\sqrt{2}}\left[\mathrm{Y}_{l}^{-m}(\mathbf{r}_{i}) +
+(-1)^{m}\mathrm{Y}_{l}^{m}(\mathbf{r}_{i})\right] & \quad \mathrm{if} \quad  m > 0. \\
 		\end{array}
 	\right. 
 \end{equation}
+} evaluated at positions of the individual monomers. This approach has been particularly effective in the investigations of polymer systems exhibiting multiple solid pseudophases at low energies.
 
-%
+
+
 \begin{figure}
 \center
 \includegraphics[width = 1.01\textwidth]{chapter4Figs/q6.pdf}
 \caption{\label{fig:orderParameters}%
-The model of a flexible elastic homopolymer chain.
+Intensity plots of the rotationally invariant order parameter $Q_{6}$ for an elastic $15
 }
 \end{figure}
 % 
