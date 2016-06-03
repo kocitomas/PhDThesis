@@ -1009,7 +1009,7 @@ is the average of the real spherical harmonics\footnote{The real harmonics can b
 \center
 \includegraphics[width = 1.01\textwidth]{chapter4Figs/q6.pdf}
 \caption{\label{fig:orderParameters}%
-Intensity plots of the rotationally invariant order parameter $Q_{6}$ for an elastic $15
+Intensity plots of the rotationally invariant order parameter $Q_{6}$ for two variants of a coarse-grained model of an elastic $15$mer. The shading indicates the probability of detecting a configuration with a given value of the order parameter, red being the maximum probability and black being the lowest. In figure (a), the existence of two distinct low energy branches reveals the existence of two solid pseudophases with distinct conformational geometries. Whereas in (b), only a single solid phase is detected.
 }
 \end{figure}
 % 
