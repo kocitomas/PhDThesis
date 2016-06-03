@@ -861,7 +861,7 @@ where $\epsilon$  sets the energy scale of the interaction while the relevant le
 \center
 \includegraphics[width = 1.01\textwidth]{chapter4Figs/potentialLarge.pdf}
 \caption{\label{fig:potentials}%
-(a) Non-bonded interactions in the generic model of an elastic homopolymer are represented by the Lennard-Jones potential. The interacting monomers experience strong repulsion below the equilibrium distance $r_{0}$, and are weakly attracted over the interval $(r_{0},r_{c})$, where $r_{c}$ marks the cutoff distance.\,\,(b) The nonlinear FENE potential (red) is a symmetric representation of the bonded interactions. As a possible variant, the symmetry of the bonded potential can be broken by combining the FENE and the Lennard-Jones potentials (green).}
+(a) Non-bonded interactions in the generic model of an elastic homopolymer are represented by the Lennard-Jones potential. Interacting monomers experience strong repulsion below the equilibrium distance $r_{0}$, and are weakly attracted over the interval $(r_{0},r_{c})$ where $r_{c}$ marks the cutoff distance.\,\,(b) The nonlinear FENE potential (red) is a symmetric representation of the bonded interactions. As a possible variant, the symmetry of the bonded potential can be broken by combining the FENE and the Lennard-Jones potentials (green).}
 \end{figure}
 % 
 
@@ -876,6 +876,7 @@ U_{\mathrm{FENE}}(r_{ii+1})=-\frac{K}{2}R^2
 
 
 \subsection{Single elastic chain}
+\label{subsec:ElasticChain}
 %
 \begin{figure}
 \center
@@ -894,7 +895,7 @@ U_{\mathrm{bonded}}(r_{ii+1}).
 \end{equation}
 %
  
-All non-bonded interactions are represented by the Lennard-Jones potential introduced in Eq. \ref{eq:LJ1}. In order to reduce the number of required calculations in a computer simulation, it is a standard procedure to introduce a cutoff distance $r_{c}$ and set $U_{\mathrm{LJ}} = 0$ for all $r\geq r_{c}$. The truncated LJ potential must also be shifted vertically by the constant $U_{\mathrm{LJ}}(r_{c})$ to prevent a discontinuity at $r_{c}$. Hence the non-bonded potential is given by
+All non-bonded interactions are represented by the Lennard-Jones potential introduced in Eq. \ref{eq:LJ1}. In order to reduce the number of required calculations in a computer simulation, it is a standard procedure to introduce a cutoff distance $r_{c}$ and set $U_{\mathrm{LJ}} = 0$ for all $r\geq r_{c}$. The truncated LJ potential must also be shifted vertically by the constant $U_{\mathrm{LJ}}(r_{c})$ to prevent a discontinuity at $r_{c}$. Hence the non-bonded interactions are represented by
 %
 \begin{equation}
 U_{\mathrm{non-bonded}}(r_{ij}) = U_{\mathrm{LJ}}^{\mathrm{trunc}}(r_{ij}) =  \begin{cases}
@@ -903,21 +904,18 @@ r_{ij} \leq r_{c},\\
 0, &   r_{ij} > r_{c}. \end{cases}
 \end{equation}
 %
-In addition to the FENE potential [Eq. \ref{eq:FENE}], the bonded interactions contain an additional Lennard-Jones term which makes the resultant potential asymmetric
+In addition to the FENE potential [Eq. \ref{eq:FENE}], bonded interactions contain an additional Lennard-Jones term
 %
 \begin{equation}
 U_{\mathrm{bonded}}(r_{ii+1})= U_{\mathrm{FENE}}(r_{ii+1}) +  U_{\mathrm{LJ}}^{\mathrm{trunc}}(r_{ii+1}).
 \end{equation}
 %
-The shapes of the bonded and non-bonded potentials are depicted in Fig. \ref{fig:potentials}. 
+The short range repulsive part of the LJ potential ensures that the resultant potential is asymmetric. The shapes of the bonded and non-bonded potentials are shown in Fig. \ref{fig:potentials}. 
 
 
 \subsection{Interacting elastic chains}
-
- The total energy of
-the system can be separated into intra-chain and inter-chain
-pairwise interactions
-%%%%%%     Total Energy      %%%%%%
+A system of interacting elastic homopolymer chains is a suitable model for the study of generic features of macromolecular aggregation. The energy of $M$ interacting chains, each consisting of $N$ identical monomers, can be separated into intra-chain and inter-chain pairwise interactions
+%
 \begin{equation}
 E_{\mathrm{total}} = E_{\mathrm{intra}} + E_{\mathrm{inter}}.
 \end{equation}
@@ -926,50 +924,12 @@ The intra-chain contribution
 %%%%%% Intra-Chain Energy %%%%%%%
 \begin{equation}
 E_{\mathrm{intra}} = \sum^{M}_{k = 1}\sum^{N-1}_{i = 1}
-U_{\mathrm{FENE}}(r\,^{(k)}_{ii+1}) +
+U_{\mathrm{bonded}}(r\,^{(k)}_{ii+1}) +
 \sum^{M}_{k=1}\sum^{N}_{i<j}
-U_{\mathrm{LJ}}^{\mathrm{trunc}}(r\,^{(k)}_{ij})
+U_{\mathrm{non-bonded}}(r\,^{(k)}_{ij})
 \end{equation}
 %
-consists of both bonded and non-bonded interactions, where
-$r\,^{(k)}_{ij}$ is the distance between the pair of monomers
-($i$,$j$) of the $k$-th chain. The first term contains the anharmonic
-finitely extensible nonlinear elastic (FENE)
-potential~\cite{Bird1987, Kremer1990, Milchev2001}
-%%%%%% FENE Potential %%%%%%
-\begin{equation}
-U_{\mathrm{FENE}}(r_{ii+1})=-\frac{K}{2}R^2 
-\mathrm{ln}\left[1-\left(\frac{r_{ii+1}-r_0}{R}\right)^2\right],	
-\label{FENE}
-\end{equation}
-%
-with parameter values $K=40$ and $R=0.3$ as used in~\cite{Gross2013}.
-The second term represents 
-the truncated and shifted Lennard-Jones (LJ) potential
-%%%%%% LJ Potential %%%%%%
-\begin{equation}
-U_{\mathrm{LJ}}^{\mathrm{trunc}}(r_{ij}) = \left\{
-\begin{array}{lr}
-U_{\mathrm{LJ}}(r_{ij}) - U_{\mathrm{LJ}}(r_{c}), & \quad
-\mathrm{if} \,\, r_{ij} \leq r_{c},\\
-0, &  \quad \mathrm{if} \,\,r_{ij} > r_{c},
-\end{array}
-\right.
-\end{equation}
-%
-where
-%%%%%% LJ Potential %%%%%%
-\begin{equation}
-U_{\mathrm{LJ}}(r_{ij})= 4\epsilon \left[ \left(
-\frac{\sigma}{r_{ij}} \right)^{12} - \left(
-\frac{\sigma}{r_{ij}} \right)^{6} \right].
-\end{equation}
-%
-We set the energy scale $\epsilon$ to unity and the length scale
-to $\sigma=r_0/2^{1/6}$, where $r_0 = 0.7$ is the location of
-the LJ potential minimum. The cutoff radius is set to
-$r_c=2.5\,\sigma$.
-The inter-chain contribution
+consists of both bonded and non-bonded interactions, as defined in Sec.\,\,\ref{subsec:ElasticChain}, and $r\,^{(k)}_{ij}$ is the distance between the pair of monomers ($i$,$j$) of the $k$-th chain. The inter-chain contribution
 %%%%%% Inter-Chain Energy %%%%%% 
 \begin{equation}
 E_{\mathrm{inter}} = \sum^{M}_{k < l}
@@ -977,15 +937,65 @@ E_{\mathrm{inter}} = \sum^{M}_{k < l}
 - \textbf{r}^{(l)}_{j}|),
 \end{equation}
 %
-consists solely of non-bonded LJ interactions. For the purpose
-of this study, all LJ interactions (intra- and inter-chain) have
-their parameters set to identical values.
+consists solely of non-bonded Lennard-Jones interactions. Schematic depiction of the model is provided in Fig.\,\,\ref{fig:singleChain}\,\,(b).
 
 \section{Structural order parameters}
+The formalism of the microcanonical inflection-point analysis, as introduced in section \ref{subsec: micro_analysis}, provides a systematic approach for the identification and classification of pseudophase transitions in mesoscopic systems. Further insight into the thermodynamic and structural properties of polymer systems can be obtained by identifying the set of conformations which are dominant in a given pseudophase. This can be accomplished either by visual inspection of sample structures, or more systematically, by introducing a suitable set of structural order parameters. 
+
+
+
+
+Low-energy solid-like structures with well-defined symmetries can be conveniently characterized using a set of order parameters defined in terms of the real spherical 
+harmonics. 
+
+Consider a polymer core consisting of $M$ monomers with 
+the coordinates 
+$\mathcal{C} = \left\{\vec{r}_1,\vec{r}_2,\ldots,\vec{r}_M \right\}$, 
+and a function $\psi(\vec{r})$ defined as 
+\begin{equation}
+    \psi(\vec{r}) = 
+	\begin{cases}
+	\vspace{2mm}
+        1/M & \quad \mathrm{if} \quad  \vec{r} \in \mathcal{C}, \\
+	\vspace{2mm}
+	0 & \quad \mathrm{otherwise}. \\
+	\end{cases}	
+\end{equation} 
+We introduce a set of rotationally invariant order parameters by 
+\begin{equation}
+Q_{l} = \left[ \frac{4\pi}{2l + 1} \displaystyle\sum_{m = -l}^{l}
+|\rho_{l,m}|^{2} \right]^{1/2},	
+\end{equation}
+where 
+\begin{equation}
+    \rho_{l,m} = \int d^{3M}r, \psi(\vec{r}) \, \mathrm{Y}_{l,m}(\vec{r})
+\label{eq:15}
+\end{equation}
+and 
+\begin{equation}
+    \hspace{-0.6mm}
+    \mathrm{Y}_{lm}(\vec{r}) = 
+	\begin{cases}
+	\vspace{2mm}
+        \frac{i}{\sqrt{2}}\left[\mathrm{Y}_{l}^{m}(\vec{r}) - (-1)^{m} 
+        \mathrm{Y}_{l}^{-m}(\vec{r}) \right] & \hspace{-2.4mm}(m < 0),\\
+	\vspace{2mm}
+        {Y}_{l}^{m}(\vec{r}) & \hspace{-2.4mm}(m = 0), \\
+	\frac{1}{\sqrt{2}}\left[\mathrm{Y}_{l}^{-m}(\vec{r}) + (-1)^{m} 
+        \mathrm{Y}_{l}^{m}(\vec{r})\right] & \hspace{-2.4mm} (m > 0) \\
+	\end{cases}	
+\end{equation}
+is a real spherical harmonic. The integral in Eq.~\eqref{eq:15} can 
+be calculated as an average of the real spherical harmonics evaluated 
+at positions of the core monomers. We define the polymer core as 
+consisting of monomers within 1.25$\sigma$ of the center of mass.
 Various order parameters, such as the number of monomer-monomer
 contacts, radius of gyration, or radial and angular distributions, have
 proven to provide valuable insight into the thermodynamic and structural
-properties of polymer systems. Based on the microcanonical results in
+properties of polymer systems. 
+
+
+Based on the microcanonical results in
 Fig.~\ref{phase_diagram}, we expect the existence of two solid phases
 when the strength of the bond flexibility parameter is sufficiently small
 $(\eta \leq 0.1)$. We aim to identify the dominant structures in the

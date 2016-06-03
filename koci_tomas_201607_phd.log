@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.3.27)  2 JUN 2016 13:58
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.3.27)  3 JUN 2016 12:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -174,7 +174,11 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
-(./koci_tomas_201607_phd.aux)
+(./koci_tomas_201607_phd.aux
+
+LaTeX Warning: Label `eq:15' multiply defined.
+
+)
 \openout1 = `koci_tomas_201607_phd.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
@@ -189,8 +193,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
 LaTeX Font Info:    ... okay on input line 14.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
 LaTeX Font Info:    ... okay on input line 14.
-
-(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+ (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count104
 \scratchdimen=\dimen124
@@ -558,73 +561,72 @@ Overfull \hbox (4.69496pt too wide) in paragraph at lines 862--864
 File: chapter4Figs/polymerModel.pdf Graphic file (type pdf)
 
 <use chapter4Figs/polymerModel.pdf>
-Package pdftex.def Info: chapter4Figs/polymerModel.pdf used on input line 882.
+Package pdftex.def Info: chapter4Figs/polymerModel.pdf used on input line 883.
 (pdftex.def)             Requested size: 474.44998pt x 184.62206pt.
 
-Overfull \hbox (4.69496pt too wide) in paragraph at lines 882--885
+Overfull \hbox (4.69496pt too wide) in paragraph at lines 883--886
  [] 
  []
 
 [44 <./chapter4Figs/potentialLarge.pdf>] [45 <./chapter4Figs/polymerModel.pdf>]
-
-LaTeX Warning: Citation `Bird1987' on page 46 undefined on input line 938.
-
-
-LaTeX Warning: Citation `Kremer1990' on page 46 undefined on input line 938.
-
-
-LaTeX Warning: Citation `Milchev2001' on page 46 undefined on input line 938.
-
-
-LaTeX Warning: Citation `Gross2013' on page 46 undefined on input line 946.
-
 [46]
+Overfull \hbox (17.23184pt too wide) in paragraph at lines 951--955
+[]\OT1/cmr/m/n/12 Consider a poly-mer core con-sist-ing of $\OML/cmm/m/it/12 M$
+ \OT1/cmr/m/n/12 monomers with the co-or-di-nates $\OMS/cmsy/m/n/12 C \OT1/cmr/
+m/n/12 = []$,
+ []
 
-LaTeX Warning: Reference `phase_diagram' on page 47 undefined on input line 989
+[47]
+
+LaTeX Warning: Reference `phase_diagram' on page 48 undefined on input line 999
 .
 
 
-LaTeX Warning: Citation `Neirotti2000' on page 47 undefined on input line 996.
+LaTeX Warning: Citation `Neirotti2000' on page 48 undefined on input line 1006.
 
-[47] <chapter4Figs/q6.pdf, id=568, 1107.13625pt x 541.02126pt>
+
+[48] <chapter4Figs/q6.pdf, id=572, 1107.13625pt x 541.02126pt>
 File: chapter4Figs/q6.pdf Graphic file (type pdf)
 
 <use chapter4Figs/q6.pdf>
-Package pdftex.def Info: chapter4Figs/q6.pdf used on input line 1036.
+Package pdftex.def Info: chapter4Figs/q6.pdf used on input line 1046.
 (pdftex.def)             Requested size: 474.44998pt x 231.84209pt.
 
-Overfull \hbox (4.69496pt too wide) in paragraph at lines 1036--1039
+Overfull \hbox (4.69496pt too wide) in paragraph at lines 1046--1049
  [] 
  []
 
-[48] [49 <./chapter4Figs/q6.pdf>]
+[49] [50 <./chapter4Figs/q6.pdf>]
 Chapter 5.
-[50
-
-]
-Chapter 6.
 [51
 
 ]
-Chapter 7.
+Chapter 6.
 [52
 
 ]
-Chapter 8.
+Chapter 7.
 [53
 
-] (./References.tex [54
+]
+Chapter 8.
+[54
 
-] [55]) [56] (./koci_tomas_201607_phd.aux)
+] (./References.tex [55
+
+] [56]) [57] (./koci_tomas_201607_phd.aux)
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 3235 strings out of 494985
- 48068 string characters out of 6180356
- 106129 words of memory out of 5000000
- 6356 multiletter control sequences out of 15000+600000
+ 3231 strings out of 494985
+ 48037 string characters out of 6180356
+ 106169 words of memory out of 5000000
+ 6352 multiletter control sequences out of 15000+600000
  12170 words of font info for 43 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  38i,10n,35p,1939b,299s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -652,10 +654,10 @@ msy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on koci_tomas_201607_phd.pdf (69 pages, 2482466 bytes).
+Output written on koci_tomas_201607_phd.pdf (70 pages, 2484291 bytes).
 PDF statistics:
- 675 PDF objects out of 1000 (max. 8388607)
- 435 compressed objects within 5 object streams
+ 678 PDF objects out of 1000 (max. 8388607)
+ 437 compressed objects within 5 object streams
  0 named destinations out of 1000 (max. 500000)
  96 words of extra memory for PDF output out of 10000 (max. 10000000)
 
