@@ -1,15 +1,15 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  3 JUN 2016 18:03
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.3.27)  4 JUN 2016 10:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **koci_tomas_201607_phd.tex
 (./koci_tomas_201607_phd.tex
-LaTeX2e <2015/01/01>
-Babel <3.9l> and hyphenation patterns for 79 languages loaded.
-(/usr/local/texlive/2015/texmf-dist/tex/latex/base/report.cls
-Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
-(/usr/local/texlive/2015/texmf-dist/tex/latex/base/size12.clo
-File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+LaTeX2e <2011/06/27>
+Babel <3.9h> and hyphenation patterns for 4 languages loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@chapter=\count80
@@ -24,38 +24,38 @@ File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/preprint/fullpage.sty
+(/usr/share/texlive/texmf-dist/tex/latex/preprint/fullpage.sty
 Package: fullpage 1999/02/23 1.1 (PWD)
 \FP@margin=\skip43
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/setspace/setspace.sty
+(/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/trig.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/graphics.cfg
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
-Package graphics Info: Driver file: pdftex.def on input line 94.
+Package graphics Info: Driver file: pdftex.def on input line 91.
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/pdftex-def/pdftex.def
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count88
@@ -63,33 +63,31 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/cite/cite.sty
+(/usr/share/texlive/texmf-dist/tex/latex/cite/cite.sty
 LaTeX Info: Redefining \cite on input line 302.
-LaTeX Info: Redefining \nocite on input line 332.
-Package: cite 2015/02/27  v 5.5
+LaTeX Info: Redefining \nocite on input line 373.
+Package: cite 2010/09/10  v 5.3
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjustbox.sty
 Package: adjustbox 2012/05/21 v1.0 Adjusting TeX boxes (trim, clip, ...)
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/xkeyval/xkeyval.sty
-Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2012/10/14 v2.6b package option processing (HA)
 
-(/usr/local/texlive/2015/texmf-dist/tex/generic/xkeyval/xkeyval.tex
-(/usr/local/texlive/2015/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
 \XKV@toks=\toks15
 \XKV@tempa@toks=\toks16
-)
 \XKV@depth=\count89
-File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+File: xkeyval.tex 2012/10/14 v2.6b key=value parser (HA)
 ))
-(/usr/local/texlive/2015/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjcalc.sty
 Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
 -ends (calc, etex, pgfmath)
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/adjustbox/trimclip.sty
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/trimclip.sty
 Package: trimclip 2012/05/16 v1.0 Trim and clip general TeX material
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/collectbox/collectbox.sty
+(/usr/share/texlive/texmf-dist/tex/latex/collectbox/collectbox.sty
 Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
 \collectedbox=\box26
 )
@@ -99,7 +97,7 @@ Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
 \tc@ury=\dimen108
 Package trimclip Info: Using driver 'tc-pdftex.def'.
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
 File: tc-pdftex.def 2012/05/13 v1.0 Clipping driver for pdftex
 ))
 \adjbox@Width=\dimen109
@@ -107,35 +105,35 @@ File: tc-pdftex.def 2012/05/13 v1.0 Clipping driver for pdftex
 \adjbox@Depth=\dimen111
 \adjbox@Totalheight=\dimen112
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+(/usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
 Package: ifoddpage 2011/09/13 v1.0 Conditionals for odd/even page detection
 \c@checkoddpage=\count90
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/varwidth/varwidth.sty
+(/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box27
 \sift@deathcycles=\count91
 \@vwid@loff=\dimen113
 \@vwid@roff=\dimen114
 ))
-(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsmath.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip44
 
 For additional information on amsmath, use the `?' option.
-(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsgen.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks17
 \ex@=\dimen115
 ))
-(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsbsy.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen116
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsopn.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count92
@@ -192,7 +190,7 @@ LaTeX Font Info:    ... okay on input line 14.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
 LaTeX Font Info:    ... okay on input line 14.
 
-(/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count104
 \scratchdimen=\dimen124
@@ -205,15 +203,15 @@ LaTeX Font Info:    ... okay on input line 14.
 \MPnumerator=\count108
 \makeMPintoPDFobject=\count109
 \everyMPtoPDFconversion=\toks23
-) (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
@@ -222,22 +220,22 @@ Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/grfext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
 
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
 Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
 ))
-(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
 Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
 
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
 Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
@@ -249,24 +247,24 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 452.
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 [1
 
-{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-[2]
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 72.
- (/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 72.
- [3] [4]
-[4
+ [3] [4] [4
 
-] (./koci_tomas_201607_phd.toc [5
+]
+(./koci_tomas_201607_phd.toc [5
 
 ])
 \tf@toc=\write3
@@ -274,8 +272,8 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 
  [6] (./koci_tomas_201607_phd.lof [7
 
-]
-[8] [9] [10])
+] [8]
+[9] [10])
 \tf@lof=\write4
 \openout4 = `koci_tomas_201607_phd.lof'.
 
@@ -295,11 +293,11 @@ Chapter 2.
 
 ] [3] [4] [5] [6]
 Package epstopdf Info: Source file: <chapter2Figs/MicroAnalysisExample.eps>
-(epstopdf)                    date: 2016-05-30 11:15:30
+(epstopdf)                    date: 2016-05-13 10:50:46
 (epstopdf)                    size: 179402 bytes
 (epstopdf)             Output file: <chapter2Figs/MicroAnalysisExample-eps-conv
 erted-to.pdf>
-(epstopdf)                    date: 2016-05-30 11:15:30
+(epstopdf)                    date: 2016-05-13 10:50:46
 (epstopdf)                    size: 93378 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter2Figs/MicroAnalysis
 Example-eps-converted-to.pdf chapter2Figs/MicroAnalysisExample.eps>
@@ -349,11 +347,11 @@ Package pdftex.def Info: chapter2Figs/CanonicalAnalysisSample.pdf used on input
 (pdftex.def)             Requested size: 375.80544pt x 181.11504pt.
  [15] [16 <./chapter2Figs/CanonicalAnalysisSample.pdf>] [17] [18]
 Package epstopdf Info: Source file: <chapter2Figs/N13Energy.eps>
-(epstopdf)                    date: 2016-05-30 11:15:30
+(epstopdf)                    date: 2016-05-13 10:50:47
 (epstopdf)                    size: 112697 bytes
 (epstopdf)             Output file: <chapter2Figs/N13Energy-eps-converted-to.pd
 f>
-(epstopdf)                    date: 2016-05-30 11:15:30
+(epstopdf)                    date: 2016-05-13 10:50:47
 (epstopdf)                    size: 16025 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter2Figs/N13Energy-eps
 -converted-to.pdf chapter2Figs/N13Energy.eps>
@@ -367,11 +365,11 @@ Package pdftex.def Info: chapter2Figs/N13Energy-eps-converted-to.pdf used on in
 put line 395.
 (pdftex.def)             Requested size: 230.18253pt x 173.13692pt.
 Package epstopdf Info: Source file: <chapter2Figs/N13Spec.eps>
-(epstopdf)                    date: 2016-05-30 11:15:30
+(epstopdf)                    date: 2016-05-13 10:50:47
 (epstopdf)                    size: 99394 bytes
 (epstopdf)             Output file: <chapter2Figs/N13Spec-eps-converted-to.pdf>
 
-(epstopdf)                    date: 2016-05-30 11:15:30
+(epstopdf)                    date: 2016-05-13 10:50:47
 (epstopdf)                    size: 14322 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter2Figs/N13Spec-eps-c
 onverted-to.pdf chapter2Figs/N13Spec.eps>
@@ -389,11 +387,11 @@ t line 396.
 ec-eps-converted-to.pdf>]
 [21] [22]
 Package epstopdf Info: Source file: <chapter2Figs/N55Entropy.eps>
-(epstopdf)                    date: 2016-05-30 11:15:30
+(epstopdf)                    date: 2016-05-13 10:50:47
 (epstopdf)                    size: 120911 bytes
 (epstopdf)             Output file: <chapter2Figs/N55Entropy-eps-converted-to.p
 df>
-(epstopdf)                    date: 2016-05-30 11:15:30
+(epstopdf)                    date: 2016-05-13 10:50:47
 (epstopdf)                    size: 30104 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter2Figs/N55Entropy-ep
 s-converted-to.pdf chapter2Figs/N55Entropy.eps>
@@ -407,11 +405,11 @@ Package pdftex.def Info: chapter2Figs/N55Entropy-eps-converted-to.pdf used on i
 nput line 450.
 (pdftex.def)             Requested size: 230.18253pt x 172.86314pt.
 Package epstopdf Info: Source file: <chapter2Figs/N55Beta.eps>
-(epstopdf)                    date: 2016-05-30 11:15:30
+(epstopdf)                    date: 2016-05-13 10:50:47
 (epstopdf)                    size: 104283 bytes
 (epstopdf)             Output file: <chapter2Figs/N55Beta-eps-converted-to.pdf>
 
-(epstopdf)                    date: 2016-05-30 11:15:30
+(epstopdf)                    date: 2016-05-13 10:50:47
 (epstopdf)                    size: 25959 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter2Figs/N55Beta-eps-c
 onverted-to.pdf chapter2Figs/N55Beta.eps>
@@ -428,11 +426,11 @@ t line 451.
  [23 <./chapter2Figs/N55Entropy-eps-converted-to.pdf> <./chapter2Figs/N55Beta-e
 ps-converted-to.pdf>]
 Package epstopdf Info: Source file: <chapter2Figs/N55BetaComp.eps>
-(epstopdf)                    date: 2016-05-30 11:15:30
+(epstopdf)                    date: 2016-05-13 10:50:47
 (epstopdf)                    size: 124742 bytes
 (epstopdf)             Output file: <chapter2Figs/N55BetaComp-eps-converted-to.
 pdf>
-(epstopdf)                    date: 2016-05-30 11:15:30
+(epstopdf)                    date: 2016-05-13 10:50:47
 (epstopdf)                    size: 22078 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter2Figs/N55BetaComp-e
 ps-converted-to.pdf chapter2Figs/N55BetaComp.eps>
@@ -452,10 +450,10 @@ Chapter 3.
 
 ] [26] [27] [28] [29] [30]
 Package epstopdf Info: Source file: <chapter3Figs/mgme.eps>
-(epstopdf)                    date: 2016-05-30 11:15:30
+(epstopdf)                    date: 2016-05-23 10:36:43
 (epstopdf)                    size: 107578 bytes
 (epstopdf)             Output file: <chapter3Figs/mgme-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-05-30 11:15:30
+(epstopdf)                    date: 2016-05-23 10:36:43
 (epstopdf)                    size: 12375 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter3Figs/mgme-eps-conv
 erted-to.pdf chapter3Figs/mgme.eps>
@@ -479,11 +477,11 @@ input line 692.
 (pdftex.def)             Requested size: 446.26582pt x 189.66554pt.
  [33] [34 <./chapter3Figs/multipleHistogramReweighting.pdf>] [35]
 Package epstopdf Info: Source file: <chapter3Figs/bezierComparison.eps>
-(epstopdf)                    date: 2016-05-30 11:15:30
+(epstopdf)                    date: 2016-05-23 10:36:43
 (epstopdf)                    size: 113859 bytes
 (epstopdf)             Output file: <chapter3Figs/bezierComparison-eps-converte
 d-to.pdf>
-(epstopdf)                    date: 2016-05-30 11:15:30
+(epstopdf)                    date: 2016-05-23 10:36:43
 (epstopdf)                    size: 52524 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter3Figs/bezierCompari
 son-eps-converted-to.pdf chapter3Figs/bezierComparison.eps>
@@ -500,11 +498,11 @@ d on input line 748.
 (pdftex.def)             Requested size: 328.82707pt x 243.5435pt.
  [36 <./chapter3Figs/bezierComparison-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <chapter3Figs/acceptanceRates.eps>
-(epstopdf)                    date: 2016-05-30 11:15:30
+(epstopdf)                    date: 2016-05-23 10:36:43
 (epstopdf)                    size: 118885 bytes
 (epstopdf)             Output file: <chapter3Figs/acceptanceRates-eps-converted
 -to.pdf>
-(epstopdf)                    date: 2016-05-30 11:15:30
+(epstopdf)                    date: 2016-05-23 10:36:43
 (epstopdf)                    size: 20024 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter3Figs/acceptanceRat
 es-eps-converted-to.pdf chapter3Figs/acceptanceRates.eps>
@@ -570,12 +568,12 @@ Overfull \hbox (4.69496pt too wide) in paragraph at lines 883--886
 [44 <./chapter4Figs/potentialLarge.pdf>] [45 <./chapter4Figs/polymerModel.pdf>]
 [46]
 Package epstopdf Info: Source file: <chapter4Figs/rogFluct.eps>
-(epstopdf)                    date: 2016-06-03 15:36:26
+(epstopdf)                    date: 2016-06-04 09:31:59
 (epstopdf)                    size: 107182 bytes
 (epstopdf)             Output file: <chapter4Figs/rogFluct-eps-converted-to.pdf
 >
-(epstopdf)                    date: 2016-06-03 15:41:11
-(epstopdf)                    size: 15180 bytes
+(epstopdf)                    date: 2016-06-04 09:37:53
+(epstopdf)                    size: 15159 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter4Figs/rogFluct-eps-
 converted-to.pdf chapter4Figs/rogFluct.eps>
 (epstopdf)             \includegraphics on input line 947.
@@ -618,45 +616,44 @@ Chapter 8.
 
 ] (./References.tex [54
 
-] [55]) [56] (./koci_tomas_201607_phd.aux) ) 
+] [55] [56]) [57] (./koci_tomas_201607_phd.aux) ) 
 Here is how much of TeX's memory you used:
- 3233 strings out of 493089
- 48822 string characters out of 6134842
- 110977 words of memory out of 5000000
- 6618 multiletter control sequences out of 15000+600000
+ 3244 strings out of 494985
+ 48337 string characters out of 6180356
+ 106177 words of memory out of 5000000
+ 6364 multiletter control sequences out of 15000+600000
  12170 words of font info for 43 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
+ 36 hyphenation exceptions out of 8191
  38i,10n,35p,1939b,299s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2015/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2015/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2015/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2015/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2015/texmf-dist/font
-s/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2015/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2015/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2015/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr5.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mr9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
-10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6
-.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.p
-fb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
-></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><
-/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></
-usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on koci_tomas_201607_phd.pdf (69 pages, 2498044 bytes).
+</usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmti12.pfb>
+Output written on koci_tomas_201607_phd.pdf (70 pages, 2500927 bytes).
 PDF statistics:
- 688 PDF objects out of 1000 (max. 8388607)
- 447 compressed objects within 5 object streams
+ 691 PDF objects out of 1000 (max. 8388607)
+ 449 compressed objects within 5 object streams
  0 named destinations out of 1000 (max. 500000)
  101 words of extra memory for PDF output out of 10000 (max. 10000000)
 
