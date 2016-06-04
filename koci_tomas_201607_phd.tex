@@ -788,7 +788,7 @@ In a displacement update, a randomly selected monomer is moved according to a ra
 
 \chapter{Off-Lattice Polymer Models}
 \label{chap:HomopolymerModel}
-It is hardly possible to overestimate the importance of defining an appropriate model to represent a real physical system in a computational study. What constitutes an `appropriate' model depends largely on the system under investigation and on the level of detail which is needed to correctly capture the properties of a given physical phenomena. For example, the study of chemical reaction kinetics, ground-state geometries of molecules, or the optical and electronic properties of semiconductors, requires detailed knowledge of the electronic structure and interactions. In such cases, Density functional theory (DFT) or other quantum mechanical modelling methods need to be employed. On the other hand, a wide range of interesting physical phenomena, such as protein folding, polymer collapse, adsorption, and aggregation, are driven by cooperative structure forming processes and as such are not expected to depend sensitively on the precise electronic or even atomic structures. In principle, it is possible to gain insight into these processes by the means of simplified models with a reduced number of effective parameters. In this chapter we shall briefly discuss the concept of \textit{coarse-graining} and introduce the model for the flexible elastic homopolymer together with a set of structural order parameters which are particularly effective at characterizing the conformational geometries of polymers in the solid pseudophase.
+It is hardly possible to overestimate the importance of defining an appropriate model to represent a real physical system in a computational study. What constitutes an `appropriate' model depends largely on the system under investigation and on the level of detail which is needed to correctly capture the properties of a given physical phenomena. For example, the study of chemical reaction kinetics, ground-state geometries of molecules, or the optical and electronic properties of semiconductors, requires detailed knowledge of the electronic structure and interactions. In such cases, Density functional theory (DFT)\cite{Sholl2009} or other quantum mechanical modelling methods need to be employed. On the other hand, a wide range of interesting physical phenomena, such as protein folding, polymer collapse, adsorption, and aggregation, are driven by cooperative structure forming processes and as such are not expected to depend sensitively on the precise electronic or even atomic structures. In principle, it is possible to gain insight into these processes by the means of simplified models with a reduced number of effective parameters\cite{Bachmann2014,Schmid2011}. In this chapter we shall briefly discuss the concept of \textit{coarse-graining} and introduce the model for the flexible elastic homopolymer together with a set of structural order parameters which are particularly effective at characterizing the conformational geometries of polymers in the solid pseudophase.
 
 
 \section{Coarse-grained models}
@@ -797,7 +797,7 @@ It is hardly possible to overestimate the importance of defining an appropriate 
 \center
 \includegraphics[width = 1.01\textwidth]{chapter4Figs/coarseGraining.png}
 \caption{\label{fig:coarseGraining}%
-An example of a coarse-grained model of polyethylene. The atoms in the methylene groups $\mathrm{CH}_{2}$ are replaced by coarse-grained interaction sites which are depicted as transparent spheres. The interactions between the sites are described in terms of effective potentials.
+An example of a coarse-grained model of polyethylene. Methylene groups $(\mathrm{CH}_{2})$ are replaced by coarse-grained interaction sites which are depicted as transparent spheres. The interactions between the sites are described in terms of effective potentials.
 }
 \end{figure}
 % 
@@ -845,7 +845,7 @@ The potential energy of a dipole-dipole interaction between a pair of monomers $
 \begin{equation}
 V_{\mathrm{dip}}(r) = \frac{1}{4\pi \varepsilon _{0} }\frac{1}{r^{3}} \left[\mathbf{p}_{i}\cdot \mathbf{p}_{j} - 3\left(\mathbf{p}_{i}\cdot \hat{\mathbf{r}}\right)\left(\mathbf{p}_{j}\cdot \hat{\mathbf{r}}\right)\right],
 \end{equation}
-where $\mathbf{p}_{i}$ is the dipole moment of the $i$th monomer and $\hat{\mathbf{r}}$ is the unit vector in the direction given by the separation vector between the two monomers. However the strength of the potential decreases with the third power of the distance which is not consistent with the $1/r^{6}$ decay typically observed in experiments. In fact, the problem must be treated quantum mechanically to account for the existing overlap between electron wave functions. The potential $V_{\mathrm{dip}}(r)$ is replaced by a dipole-dipole operator $\hat{H}_{\mathrm{dip}}$, which is then introduced as a perturbation to a system of two non-interacting monomers. The first non-trivial term in the perturbation expansion of the ground state energy yields the desired $1/r^{6}$ dependence. In addition to this generic long range attraction, interacting bodies experience strong short range repulsion due to repelling electronic clouds. Both effects are contained in the famous Lennard-Jones potential
+where $\mathbf{p}_{i}$ is the dipole moment of the $i$th monomer and $\hat{\mathbf{r}}$ is the unit vector in the direction given by the separation vector between the two monomers \cite{Griffiths1999}. However the strength of the potential decreases with the third power of the distance which is not consistent with the $1/r^{6}$ decay typically observed in experiments. In fact, the problem must be treated quantum mechanically to account for the existing overlap between electron wave functions. The potential $V_{\mathrm{dip}}(r)$ is replaced by a dipole-dipole operator $\hat{H}_{\mathrm{dip}}$, which is then introduced as a perturbation to a system of two non-interacting monomers. The first non-trivial term in the perturbation expansion of the ground state energy yields the desired $1/r^{6}$ dependence \cite{Bachmann2014}. In addition to this generic long range attraction, interacting bodies experience strong short range repulsion due to repelling electronic clouds. Both effects are contained in the famous Lennard-Jones potential \cite{Lennard-Jones1931}
 %
 \begin{equation}
 U_{\mathrm{LJ}}(r_{ij})= 4\epsilon \left[ \left(
@@ -865,7 +865,7 @@ where $\epsilon$  sets the energy scale of the interaction while the relevant le
 \end{figure}
 % 
 
-The bonds between adjacent monomers are represented by an elastic potential which allows for longitudinal bond vibrations. The simplest approximation is given by the harmonic spring potential (Rouse model), however the linearity of the interaction force allows for large separation between the bonded monomers. This problem can be avoided by introducing a potential which diverges for $|r-r_{0}|\geq R$, where $r_0$ is the equilibrium bond length and $R$ controls the allowed fluctuation width. A particularly suitable choice is the finitely extensible nonlinear elastic (FENE) potential [Fig.\,\,\ref{fig:potentials}]
+The bonds between adjacent monomers are represented by an elastic potential which allows for longitudinal bond vibrations. The simplest approximation is given by the harmonic spring potential (Rouse model), however the linearity of the interaction force allows for large separation between the bonded monomers. This problem can be avoided by introducing a potential which diverges for $|r-r_{0}|\geq R$, where $r_0$ is the equilibrium bond length and $R$ controls the allowed fluctuation width. A particularly suitable choice is the finitely extensible nonlinear elastic (FENE) potential [Fig.\,\,\ref{fig:potentials}]\cite{Bird1987,Kremer1990,Milchev2001}
 %
 \begin{equation}
 \label{eq:FENE}
@@ -1001,7 +1001,7 @@ is the average of the real spherical harmonics\footnote{The real harmonics can b
 		\end{array}
 	\right. 
 \end{equation}
-} evaluated at positions of the individual monomers. This approach has been particularly effective in the investigations of polymer systems exhibiting multiple solid pseudophases at low energies.
+} evaluated at positions of the individual monomers \cite{Neirotti2000}. This approach has been particularly effective in the investigations of polymer systems exhibiting multiple solid pseudophases at low energies \cite{Koci2016}.
 
 
 
