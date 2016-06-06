@@ -623,6 +623,7 @@ In principle, each replica is allowed to traverse the entire simulated
 temperature range which leads to the decrease of the autocorrelation time and reduces the likelihood of getting trapped in local energy minima at low temperatures. However, the performance of this method rapidly decreases near first-order transitions, where the joint effects of the entropic suppression of intermediate states and the energetic separation between the ordered and disordered pseudophases, virtually prevent the exchange of configurations between adjacent ensembles.
  
 \subsection{Multiple Gaussian modified ensemble}
+\label{subsec:GaussianEnsemble}
 
 An alternative generalized ensemble method that offers improved performance is based on the combination of parallel tempering with the Gaussian modified ensemble (GME) method \cite{Neuhaus2006}. The idea behind GME is to modify the canonical Boltzmann distribution by multiplying it by a Gaussian function, in order to promote sampling in selected energy regions. The mean energy $E_{G}$ and the variance $\Delta E_{G}^{2}$ of the Gaussian form controls the location and the width of the region of enhanced sampling. The modified microstate probability at the inverse temperature $\beta$ is given by
 %
@@ -898,6 +899,7 @@ U_{\mathrm{bonded}}(r_{ii+1}).
 All non-bonded interactions are represented by the Lennard-Jones potential introduced in Eq. \ref{eq:LJ1}. In order to reduce the number of required calculations in a computer simulation, it is a standard procedure to introduce a cutoff distance $r_{c}$ and set $U_{\mathrm{LJ}} = 0$ for all $r\geq r_{c}$. The truncated LJ potential must also be shifted vertically by the constant $U_{\mathrm{LJ}}(r_{c})$ to prevent a discontinuity at $r_{c}$. Hence the non-bonded interactions are represented by
 %
 \begin{equation}
+\label{eq:LJTruncated}
 U_{\mathrm{non-bonded}}(r_{ij}) = U_{\mathrm{LJ}}^{\mathrm{trunc}}(r_{ij}) =  \begin{cases}
 U_{\mathrm{LJ}}(r_{ij}) -  U_{\mathrm{LJ}}(r_{c}), &
 r_{ij} \leq r_{c},\\
@@ -1001,8 +1003,7 @@ is the average of the real spherical harmonics\footnote{The real harmonics can b
 		\end{array}
 	\right. 
 \end{equation}
-} evaluated at positions of the individual monomers \cite{Neirotti2000}. This approach has been particularly effective in the investigations of polymer systems exhibiting multiple solid pseudophases at low energies \cite{Koci2016}.
-
+} evaluated at positions of the individual monomers \cite{Neirotti2000}. This set of order parameters has been particularly useful in the investigations of polymer systems exhibiting multiple solid pseudophases at low energies \cite{Koci2016}. In Fig.\,\,\ref{fig:orderParameters} we provide an illustration of this approach as applied to two different variants of a coarse-grained model of an elastic $15$mer. 
 
 
 \begin{figure}
@@ -1026,8 +1027,33 @@ Intensity plots of the rotationally invariant order parameter $Q_{6}$ for two va
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\chapter{Confinement Effects on Structural Transitions in Flexible Homopolymers}
-\section{Introduction}
+\chapter{Confinement Effects upon Structural Transitions in Elastic Polymer Chains}
+
+In chapter \ref{chap:HomopolymerModel}, we have suggested that a wide range of interesting physical phenomena, such as polymer collapse and aggregation, can be investigated by the means of rather simple coarse-grained models. We have argued that coarse-graining is justified as long as we are interested in the general characteristics of physical phenomena which arise through cooperative processes and do not depend sensitively on the microscopic details of the system. It is important to make a distinction between modifications of model parameters which have only trivial effects on the thermodynamic and structural properties, and those which result in a fundamentally different physical behavior such as the appearance of a new pseudophases or changes in the ground state conformational geometry.  
+
+In this chapter, we investigate the effects of restricting the fluctuation range of bonded interactions on the structural and thermodynamic properties of a single elastic polymer chain\footnote{See also section \ref{subsec:ElasticChain}}. The variation of the bond extension range allows us to bridge the gap between self-interacting polymers with stiff bonds (such as proteins) and bead-spring chains (elastic polymers) with bonds so floppy that these polymers behave similarly to a gas of interacting particles. For this purpose, we have performed extensive replica-exchange Monte Carlo simulations in extended multiple Gaussian modified ensembles\footnote{See also section \ref{subsec:GaussianEnsemble}} ~\cite{Neuhaus2006}, which help improve the efficiency of parallel tempering simulations near first-order transitions. Systematic studies of the structural phases in the space of the bond elasticity parameters were made possible by employing standard canonical analyses of fluctuations in macroscopic thermodynamic quantities and also by careful analysis of the nature of inflection points in the microcanonical temperature curves~\cite{Bachmann2014,Schnabel2011}. 
+
+\section{Model and computational parameters}
+In this study, we employ a coarse-grained model of an elastic, flexible,
+linear homopolymer chain with $N$ monomers, in the same form as introduced in Sec.\,\,\ref{subsec:ElasticChain}. The energy and the length scales of the truncated and shifted Lennard-Jones potential (Eq.\,\,\ref{eq:LJTruncated}) were set to 
+$\epsilon=1$ and $\sigma=r_0/2^{1/6}$ respectively, where $r_0 = 0.7$ is the location of the minimum potential. The cut-off radius was set at $r_c=2.5\sigma$. The FENE potential (Eq.\,\,\ref{eq:FENE}) in the bonded interactions is used here in the modified form
+%
+\begin{equation}
+\label{eq:ModFENE}
+U_{\mathrm{FENE}}(r_{ii+1})=-\frac{K}{2}R_{0}^2 
+\mathrm{ln}\left[1-\left(\frac{r_{ii+1}-r_0}{R}\right)^2\right], 
+\end{equation}
+%
+where $K=40$ and $R_{0}=0.3$~\cite{Gross2013}. The parameter $R$ controls the effective elasticity of the polymer bonds, whereas the energy scale is kept constant. The qualitative behavior of the combined bond potential for different values of $R$ is shown in Fig.~\ref{fig:ModifiedBondedPotential}. The bond elasticity increases with $R$, i.e., by changing $R$ in a wide range of values ($R\in[0.3,90]$), we systematically investigate an entire class of polymer systems between the limits of stiff polymers ($R\to 0$) and, effectively, a gas of nonbonded Lennard-Jones particles, for which $R\to \infty$.  
+
+The results presented in this chapter are compared for classes of polymers with $N=13$ and $30$ monomers. For verification purposes, we have also studied polymers with up to $55$ monomers, which, for this kind of systematic study that covers the entire parameter space, represents the limit of currently feasible simulations.
+%
+\begin{figure}
+\center
+\includegraphics[width = 0.7\textwidth]{chapter5Figs/bond_potential.eps}
+\caption{\label{fig:ModifiedBondedPotential}%
+Behavior of the combined bond potential $U_{\mathrm{total}}(r_{ii+1}) = U_{\mathrm{LJ}}(r_{ii+1}) + U_{\mathrm{FENE}}(r_{ii+1})$ for different values of the effective bond elasticity $R$.}
+\end{figure} 
 
 \section{Canonical statistical analysis of energetic and structural fluctuations}
 %
