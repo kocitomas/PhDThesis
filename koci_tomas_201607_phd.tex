@@ -1030,15 +1030,11 @@ Intensity plots of the rotationally invariant order parameter $Q_{6}$ for two va
 
 \chapter{Confinement Effects upon Structural Transitions in Elastic Polymer Chains}
 
-In chapter \ref{chap:HomopolymerModel}, we have suggested that a wide range of interesting physical phenomena, such as polymer collapse and aggregation, can be investigated by the means of rather simple coarse-grained models. We have argued that coarse-graining is justified as long as we are interested in the general characteristics of physical phenomena which arise through cooperative processes and do not depend sensitively on the microscopic details of the system. It is important to make a distinction between modifications of model parameters which have only trivial effects on the thermodynamic and structural properties, and those which result in a fundamentally different physical behavior such as the appearance of a new pseudophases or changes in the ground state conformational geometry.  
+In chapter \ref{chap:HomopolymerModel}, we have suggested that the structural and thermodynamic properties of polymer systems can be investigated by the means of rather simple coarse-grained models. It is desirable that the general features of the model, such as the types of observed pseudophases and the ground state conformational geometries, remain at least qualitatively similar over a range of model parameters. In recent studies, the effect of the interaction range between non-bonded monomers of a single elastic homopolymer has been addressed systematically~\cite{taylorRange1,taylorRange2,Gross2013}. It has been found that for sufficiently short interaction ranges, it is possible for the polymer to fold directly from random-coil structures (i.e., the gas phase) into solid and compact conformations. Under these conditions, no globular (or liquid) phase is present.
 
+In this chapter, we investigate the effects of restricting the fluctuation range of bonded interactions on the structural and thermodynamic properties of a single elastic polymer chain. The variation of the bond extension range allows us to bridge the gap between self-interacting polymers with stiff bonds (such as proteins) and bead-spring chains (elastic polymers) with bonds so floppy that these polymers behave similarly to a gas of interacting particles. For this purpose, we have performed extensive replica-exchange Monte Carlo simulations in extended multiple Gaussian modified ensembles~\cite{Neuhaus2006}, which help improve the efficiency of parallel tempering simulations near first-order transitions. Systematic studies of the structural phases in the space of the bond confinement parameter were made possible by employing standard canonical analyses of fluctuations in macroscopic thermodynamic quantities and also by careful analysis of the nature of inflection points in the microcanonical temperature curve~\cite{Bachmann2014,Schnabel2011}.
 
-One important aspect in the study of structural transitions in polymer systems is the influence of model and environmental parameters upon the processes that lead to structure formation and the conformations themselves. In recent studies, the effect of the interaction range between non-bonded monomers has been addressed systematically~\cite{taylorRange1,taylorRange2,Gross2013}. It has been found that for sufficiently short interaction ranges, it is possible for the polymer to fold directly from random-coil structures (i.e., the gas phase) into solid and compact conformations. Under these conditions, no globular (or liquid) phase is present. 
-
-
-In this chapter, we investigate the effects of restricting the fluctuation range of bonded interactions on the structural and thermodynamic properties of a single elastic polymer chain\footnote{See also section \ref{subsec:ElasticChain}}. The variation of the bond extension range allows us to bridge the gap between self-interacting polymers with stiff bonds (such as proteins) and bead-spring chains (elastic polymers) with bonds so floppy that these polymers behave similarly to a gas of interacting particles. For this purpose, we have performed extensive replica-exchange Monte Carlo simulations in extended multiple Gaussian modified ensembles\footnote{See also section \ref{subsec:GaussianEnsemble}} ~\cite{Neuhaus2006}, which help improve the efficiency of parallel tempering simulations near first-order transitions. Systematic studies of the structural phases in the space of the bond elasticity parameters were made possible by employing standard canonical analyses of fluctuations in macroscopic thermodynamic quantities and also by careful analysis of the nature of inflection points in the microcanonical temperature curves~\cite{Bachmann2014,Schnabel2011}. 
-
-\section{Model and computational parameters}
+\section{Model and simulation parameters}
 In this study, we employ a coarse-grained model of an elastic homopolymer, in the same form as introduced in Sec.\,\,\ref{subsec:ElasticChain}. This model was originally introduced for investigations of general properties of elastic, flexible homopolymer chains. Due to the similarity in the transition behavior of atomic clusters and polymers, however, the scope of this model can be extended 
 to investigate effects of bond confinement as well. As such, this model allows 
 for the interpolation of systems ranging from polymers to an almost unconfined gas of atoms.
@@ -1060,35 +1056,29 @@ U_{\mathrm{FENE}}(r_{ii+1})=-\frac{K}{2}R_{0}^2
 Behavior of the combined bond potential $U_{\mathrm{bonded}}(r_{ii+1}) = U_{\mathrm{LJ}}(r_{ii+1}) + U_{\mathrm{FENE}}(r_{ii+1})$ for different values of the effective bond elasticity $R$.}
 \end{figure} 
 %
-where $K=40$ and $R_{0}=0.3$. The parameter $R$ inside of the logarithmic term controls the effective elasticity of the polymer bonds, whereas the energy scale of the potential is kept constant. The qualitative behavior of the combined bond potential for different values of $R$ is shown in Fig.~\ref{fig:ModifiedBondedPotential}. The bond elasticity increases with $R$, i.e., by changing $R$ in a wide range of values ($R\in[0.3,90]$), we systematically investigate an entire class of polymer systems between the limits of stiff polymers ($R\to 0$) and, effectively, a gas of nonbonded Lennard-Jones particles, for which $R\to \infty$. In our simulations, the system was constrained inside of a steric sphere at a constant density of $0.001$ particles per unit volume, in which case the diameter of the sphere is larger than the length of the fully extended chain. Under these conditions, we consider the system to be highly dilute.  
+where $K=40$ and $R_{0}=0.3$. The parameter $R$ inside of the logarithmic term controls the effective elasticity of the polymer bonds, whereas the energy scale of the potential is kept constant. The qualitative behavior of the combined bond potential for different values of $R$ is shown in Fig.~\ref{fig:ModifiedBondedPotential}. The bond elasticity increases with $R$, i.e., by changing $R$ in a wide range of values ($R\in[0.3,90]$), we systematically investigate an entire class of polymer systems between the limits of stiff polymers ($R\to 0$) and, effectively, a gas of nonbonded Lennard-Jones particles, for which $R\to \infty$.  
 
-In this study, we have used the replica-exchange Monte Carlo\footnote{See also section\,\,\ref{subsec:ParallelTempering}} (parallel tempering)~\cite{sw1,geyer1,huku1,huku2}, extended to multiple Gaussian modified ensembles\footnote{See also section\,\,\ref{subsec:GaussianEnsemble}} (MGME)~\cite{Neuhaus2006}. The typical number of replicas in a simulation was $\sim80$, covering the temperature range $T\in [0.02,2.0]$. The total number of Monte Carlo sweeps per simulation totalled $5\times 10^8$. A replica exchange update was attempted every 100 Monte Carlo sweeps and accepted at an average rate exceeding 20\%. The acceptance rates for Metropolis updates in each thread was kept at $\sim 40-60\%$. Simulations were carried out on a two-dimensional mesh of temperatures and $E_G$ values in the first-order transition region. On average 10 different values of $E_G$ were used per temperature thread.
+In our simulations, we have used the replica-exchange Monte Carlo\footnote{See also section\,\,\ref{subsec:ParallelTempering}} (parallel tempering)~\cite{sw1,geyer1,huku1,huku2}, extended to multiple Gaussian modified ensembles\footnote{See also section\,\,\ref{subsec:GaussianEnsemble}} (MGME)~\cite{Neuhaus2006}. The typical number of replicas in a simulation was $\sim80$, covering the temperature range $T\in [0.02,2.0]$. The total number of Monte Carlo sweeps per simulation totalled $5\times 10^8$. A replica exchange update was attempted every 100 Monte Carlo sweeps and accepted at an average rate exceeding 20\%. The acceptance rates for Metropolis updates in each thread was kept at $\sim 40-60\%$. Simulations were carried out on a two-dimensional mesh of temperatures and $E_G$ values in the first-order transition region. On average 10 different values of $E_G$ were used per temperature thread. The system was constrained inside of a steric sphere at a constant density of $0.001$ particles per unit volume, in which case the diameter of the sphere is larger than the length of the fully extended chain. Under these conditions, we consider the system to be highly dilute. 
 
 The results presented in this chapter are compared for classes of polymers with $N=13$ and $30$ monomers. For verification purposes, we have also studied polymers with up to $55$ monomers, which, for this kind of systematic study that covers the entire parameter space, represents the limit of currently feasible simulations. 
 
-\section{Canonical statistical analysis of energetic and structural fluctuations}
+\section{Results}
+\label{sec:res}
 %
-In this section, we investigate the influence of the elasticity
-parameter $R$ on the structural transitions in polymer chains of lengths 
-$N = 13$ and $30$. For this purpose, we first perform a conventional
-canonical statistical analysis of fluctuating quantities and compare with
-results of a corresponding microcanonical analysis.
-For the identification of transition points, we first consider the
-changes in the thermodynamic behavior of energetic and structural
-canonical fluctuation quantities of polymers. The transition behavior is
-compared for various values of the bond elasticity parameter $R$. This
-analysis enables us to construct a structural hyperphase diagram.
-Differences in the overall generic transition behavior are discussed for
-two system sizes ($N=13,30$). 
+In this section, we investigate the influence of the confinement parameter $R$ on the structural transitions in elastic chains of lengths $N = 13$ and $30$ in the dilute regime. For this purpose, we first perform a conventional canonical statistical analysis of fluctuating quantities and compare with results of a corresponding microcanonical analysis.
+%
+\subsection{Canonical statistical analysis of energetic and structural
+fluctuations}
+% 
+For the identification of transition points, we first consider the changes in the thermodynamic behavior of energetic and structural canonical fluctuation quantities. The transition behavior is compared for various values of the confinement parameter $R$. This analysis enables us to construct a structural hyperphase diagram.
+Differences in the overall generic transition behavior are discussed for two system sizes ($N=13,30$). 
  
-The statistical fluctuation of a thermodynamic quantity $O$ is suitably
-defined by the temperature derivative of its expectation value 
+The statistical fluctuation of a thermodynamic quantity $O$ is suitably defined by the temperature derivative of its expectation value 
 \begin{equation}
 \langle O(\mathbf{X})\rangle(T)=\frac{1}{Z(T)}\int {\cal D}X\,
 O(\mathbf{X}) e^{-E(\mathbf{X})/k_\mathrm{B}T},
 \end{equation}
-where ${\cal D}X$ is the integral measure in the space of all polymer
-conformations $\mathbf{X}$ and 
+where ${\cal D}X$ is the integral measure in the space of all polymer conformations $\mathbf{X}$ and 
 \begin{equation}
 Z(T)=\int {\cal D}X\, e^{-E(\mathbf{X})/k_\mathrm{B}T}
 \end{equation}
@@ -1110,14 +1100,14 @@ heat, which represents the fluctuations of energy. In this case $O=E$ and
 c_V(T)=\frac{1}{N}\frac{d}{dT}\langle E(\mathbf{X})\rangle(T).
 \]
 A structural quantity, routinely used for scaling analyses of the $\Theta$
-transition of polymer chain collapse, is the radius of gyration, which is
+transition of chain collapse, is the radius of gyration, which is
 defined by
 \begin{equation}
 r_\mathrm{gyr}(\mathbf{X})=\sqrt{\frac{1}{N}\sum\limits_{i=1}^N
 \left(\mathbf{x}_i-\mathbf{x}_\mathrm{com} \right)^2},
 \end{equation}
 where $\mathbf{x}_\mathrm{com}=\sum_{i=1}^N\mathbf{x}_i/N$ is the 
-center-of-mass location of the polymer conformation.
+center-of-mass location of the conformation.
 %
 \begin{figure}
 \centerline{\includegraphics{chapter5Figs/canon13.eps}}
@@ -1128,6 +1118,7 @@ of gyration for 13mers parametrized by the bond elasticity
 parameter $R$.}
 \end{figure} 
 %
+
 %
 \begin{figure}
 \centerline{\includegraphics{chapter5Figs/canon30.eps}}
@@ -1136,13 +1127,14 @@ parameter $R$.}
 \end{figure} 
 %
 
-The thermal fluctuations of the specific heat and the radius of gyration of
+The thermal fluctuations of the energy (specific heat) and of the radius of 
+gyration of
 13mers and 30mers
 are shown in Figs.~\ref{fig:Fig_4} and~\ref{fig:Fig_5},
-respectively, for different values of bond elasticities $R$.
+respectively, for different values of bond confinement ranges $R$.
 Generally, peaks and ``shoulders'' in these
 quantities indicate locations of structural 
-transitions. The generic transitions of flexible polymers are the
+transitions. The generic transitions of elastic chains are the
 $\Theta$ collapse transition that separates the gas-like phase of
 random-coil conformations from the liquid, collapsed globular phase and
 the freezing transition from the globular into the solid ``crystalline''
@@ -1150,48 +1142,49 @@ phase~\cite{svbj1,Schnabel2009}. Previous studies have shown that both
 transitions merge if \emph{nonbonded} interactions are extremely
 short-ranged~\cite{taylorRange1,taylorRange2,Gross2013}. 
 
-However, a similar behavior is observed for extremely elastic bonds.
-Whereas, with increasing elasticity of the
-polymer bonds, the low-temperature peak in the specific-heat curves in
-Figs.~\ref{fig:Fig_4} and~\ref{fig:Fig_5} (which, for example, for $R=0.3$
+However, a similar behavior is observed in systems with extremely 
+large bond confinement ranges.
+Whereas, with increasing values of $R$, the low-temperature 
+signal in the specific-heat curves in
+Figs.~\ref{fig:Fig_4} and~\ref{fig:Fig_5} (which, for example, for $R=3.0$
 is still clearly associated with the freezing transition) shifts only
 slightly to lower temperatures, the $\Theta$ transition signal drops
-significantly and finally merges with the freezing transition. 
+significantly and finally merges with the freezing transition 
+at $R\sim 30$. Whether the freezing and $\Theta$ transitions remain well separated
+for all values of $R < 30$ cannot be unambiguously determined by inspection
+of the canonical fluctuation quantities, in particular since for $R > 15$
+the freezing transition signal turns
+into a shoulder on the low-temperature flank of the more dominant
+$\Theta$ transition peak. We will provide evidence for the separation of
+the transitions with the methods of microcanonical analysis in the next
+section.
 
-The general freezing transition behavior of the polymer
+The general freezing transition behavior
 does not change noticeably until its merger with the
 $\Theta$ transition. This is plausible since the freezing transitions
 are driven mainly by the Lennard-Jones pair interactions between bonded and
 nonbonded monomers that optimize the icosahedral-like conformations in
 the solid phase. Therefore, this transition
 is not significantly
-affected by the modifications in the bond elasticity. In the solid phase,
+affected by the modifications in the bond elasticity.
+
+
+In the solid phase,
 the ``magic'' 13mer possesses a perfect icosahedral
 shape~\cite{svbj1,Schnabel2009}, whereas the 30mer forms amorphous
 structures. The energy histograms of the 13mer exhibit bimodal shapes near
-the transition point for all $R$ values, suggesting a first-order-like
-transition of the finite system. On the contrary, 
-the ``liquid-solid'' transition of the 30mer resembles rather a
+the freezing transition point for values of $R <  30$, suggesting a first-order-like
+transition of the finite system. 
+
+The ``liquid-solid'' transition of the 30mer resembles a
 ``liquid-liquid'' transition, since the compact globular conformations are 
 difficult to distinguish from the amorphous solid structures. Nonetheless,
 the transition signal is clearly visible and the unimodal shape of the
-canonical energy histograms in this region of $R$ space indicates a
-second-order-like transition.
-%
-\begin{figure}
-\centerline{\includegraphics{chapter5Figs/pd1330.eps}}
-\caption{\label{fig:Fig_6}%
-(Color online) Structural phase diagrams for 13mers and
-30mers,
-parametrized by the canonical temperature $T$ and the bond elasticity
-parameter $R$. The red and green segments
-indicate first-order-like and second-order-like transitions,
-respectively.}
-\end{figure}
-%
+canonical energy histograms (not shown) in this region of $R$ space 
+indicates a second-order-like transition.
 
 More striking is the dramatic change of the 
-characteristic features of the $\Theta$ transition. For $R \sim 0.3$, the
+characteristic features of the $\Theta$ transition. As expected, for $R \sim 0.3$, the
 transition is still 
 \emph{second-order-like}~\cite{Lifshitz1978,Khokhlov1981}. 
 In the specific heat-curves in Fig.~\ref{fig:Fig_4}
@@ -1199,23 +1192,51 @@ and~\ref{fig:Fig_5} it is clearly visible that with increasing values of
 $R$,
 the shoulders indicating the $\Theta$ transitions turn into distinct peaks
 which rapidly become narrower and more pronounced as they shift to lower
-temperatures.
+temperatures. 
 For values of 
 $R > 4.5$, the canonical energy histograms obtained at the transition
 temperature are no longer unimodal, which suggests that the $\Theta$
-transition becomes \emph{first-order-like}. The disappearance of the two
-distinct
-transition signals for $R > 30.0$ marks the end of existence of a separate
+transition becomes \emph{first-order-like}. This can be seen nicely in 
+Fig.~\ref{fig:hist13}, where energy histograms for the 13mer with $R=15$ at 
+temperatures near the $\Theta$ transition point are shown. For $T=0.33$, the 
+bimodal shape is clearly visible. The phase separation between gas and liquid 
+is unusual for a polymer and indicates that for $R=15$ the particles in 
+the system are quasi-free and behave rather like a loosely confined interacting 
+gas, because bond-crossings are possible. The disappearance of the two
+distinct transition signals for $R > 30.0$ marks the end of existence of a separate
 liquid phase. This behavior is similar for both systems sizes studied and
-might be universal. It should be mentioned that the phase separation
+might be universal. However, the strikingly prominent signals for the $\Theta$ transition and the disappearance of the liquid phase are limited to the dilute regime and would not be observed at higher particle densities~\cite{frantz,frant2}. 
+
+  It should be mentioned that the phase separation
 becomes substantially stronger for larger $R$ values, as well as the
 interfacial surface tension due to the radical entropic depletion in the
 energetic gap region (cf.\ the example shown in
 Fig.~\ref{fig:Fig_2} for the 30mer with $R=30$).
+%
+\begin{figure}
+\centerline{\includegraphics{chapter5Figs/hist13.eps}}
+\caption{\label{fig:hist13}%
+(Color online) Energy histograms of the 13mer with $R=15$ at several 
+temperatures near the $\Theta$ point. }
+\end{figure}
+%
+
+%
+\begin{figure}
+\centerline{\includegraphics{chapter5Figs/pd1330.eps}}
+\caption{\label{fig:Fig_6}%
+(Color online) Structural phase diagrams for 13mers and
+30mers,
+parametrized by the canonical temperature $T$ and the confinement
+parameter $R$. The blue (solid) and pink segments
+indicate first-order-like and second-order-like transitions,
+respectively.}
+\end{figure}
+%
 
 With the transition temperatures obtained from the peaks in the canonical
 quantities we construct structural phase diagrams parametrized by the
-temperature $T$ and the elasticity parameter $R$. For both system sizes,
+temperature $T$ and the confinement parameter $R$. For both system sizes,
 near the unmodified values of $R$, we observe three distinct structural
 phases. The high-temperature curves in Fig.~\ref{fig:Fig_6} represent the
 $\Theta$ transition lines, at which the expanded coils in the gas phase
@@ -1238,7 +1259,7 @@ entropy and specific energy that sets apart the liquid phase and creates
 a phase-separation scenario. On the other hand, the ``solid'' phase of the
 30mer is of rather highly entropic amorphous nature and allows for a
 continuous crossover from the liquid phase. In fact, given the small size
-of the system, the amorphous and the liquid phase are difficult to
+of the system, the amorphous and the liquid phases are difficult to
 distinguish, though the transition is visible in the canonical quantities
 even at low $R$ values (see Fig.~\ref{fig:Fig_5}).  
 %
@@ -1246,8 +1267,8 @@ even at low $R$ values (see Fig.~\ref{fig:Fig_5}).
 \caption{\label{tab:Tab_1}%
 Microcanonical transition temperatures $T_{\mathrm{f},\theta}$ and latent
 heats $\Delta q_{\mathrm{f},\theta}$ at the freezing and $\Theta$
-transition points, respectively, for 13mers with different bond
-elasticities $R$.}
+transition points, respectively, for 13mers with different 
+bond confinement ranges $R$.}
 \begin{tabular*}{\hsize}{@{\extracolsep{\fill}}rcccc@{}}
 $R$& $T_{\mathrm{f}}$ & $T_{\theta}$ & $\Delta q_{\mathrm{f}}$ & $\Delta
 q_{\mathrm{\theta}}$\\
@@ -1293,9 +1314,26 @@ $30.0$  &  $0.35 \pm 0.01$ &  $0.344  \pm 0.005$ & N/A & $3.399 \pm 0.002$
 \end{tabular*}
 \end{table}
 %
+%
+\begin{figure*}
+\centerline{\includegraphics{chapter5Figs/microelast.eps}}
+\caption{\label{fig:Fig_7}%
+(Color online) Microcanonical results for 13mers with bond confinement ranges  (a)
+$R=0.3$, (b)
+$4.5$, and (c) $30$ as well as for 30mers (d)-(f). Shown are inverse
+temperature curves $\beta(E)$, their first derivatives
+$\gamma(E)=d\beta(E)/dE$, and (on arbitrary scale) the energy histograms
+$h(E)$ at the $\Theta$ transition temperature. The horizontal dashed line
+marks $\gamma=0$. The positive
+valued peaks of $\gamma (E)$ for values of $R > 4.5$ clearly indicate that
+the $\Theta$ transition is first order, but remains separate from the
+freezing transition. The absorption of the freezing
+transition by the $\Theta$ transition is apparent for large confinement ranges (c, f).}
+\end{figure*}
+%
 
-It is instructive to consider the effects of the polymer bond
-elasticity on the ground-state structures. It was previously
+It is instructive to consider the effects of the bond
+confinement range on the ground-state structures. It was previously
 shown~\cite{Gross2013} that a decrease in the
 interaction range of the Lennard-Jones potential can lead to the
 disappearance
@@ -1311,29 +1349,12 @@ However even this limited influence of the FENE potential has been shown to
 lead to significant effects such as the suppression of conformations
 with anti-Mackay, i.e., hcp-like overlayer~\cite{Schnabel2009}. 
 %
-\section{Inflection-point analysis}
-%
-\begin{figure*}
-\centerline{\includegraphics{chapter5Figs/microelast.eps}}
-\caption{\label{fig:Fig_7}%
-(Color online) Microcanonical results for 13mers with bond elasticities (a)
-$R=0.3$, (b)
-$4.5$, and (c) $30$ as well as for 30mers (d)-(f). Shown are inverse
-temperature curves $\beta(E)$, their first derivatives
-$\gamma(E)=d\beta(E)/dE$, and (on arbitrary scale) the energy histograms
-$h(E)$ at the $\Theta$ transition temperature. The horizontal dashed line
-marks $\gamma=0$. The positive
-valued peaks of $\gamma (E)$ for values of $R > 4.5$ clearly indicate that
-the $\Theta$ transition is first order, but remains separate from the
-freezing transition. The absorption of the freezing
-transition by the $\Theta$ transition is apparent for highly elastic
-bonds (c, f).}
-\end{figure*}
-%
+\subsection{Microcanonical results}
 %
 As discussed in the previous section, the results obtained by means of
 canonical analysis suggest that the $\Theta$ transition acquires 
-first-order-like character in systems with large bond elasticity. However,
+first-order-like character in systems with large confinement range. 
+However,
 the
 analysis of structural transitions based on canonical quantities is
 often ambiguous. Canonical energy histograms are useful for determining the
@@ -1342,9 +1363,9 @@ In this section, we turn to microcanonical analysis which offers a robust
 and unambiguous approach to the classification of structural transitions by
 means of inflection-point
 analysis~\cite{Bachmann2014,Bachmann2013,Schnabel2011}.
-Figure~\ref{fig:Fig_7} summarizes the results for polymer chains of
-lengths with $N = 13$ and $30$ monomers for values of the effective bond
-elasticity $R = 0.3, 4.5, 30.0$. In addition to
+Figure~\ref{fig:Fig_7} summarizes the results for chains of
+lengths with $N = 13$ and $30$ beads for values $R = 0.3, 
+4.5, 30.0$. In addition to
 the microcanonical temperature $\beta(E)$ and its first derivative
 $\gamma(E) = d\beta/dE$, we also plot the canonical energy histograms
 $h(E)$
@@ -1354,7 +1375,10 @@ For $R = 0.3$, the negative valued peaks of $\gamma(E)$ indicate that the
 $\Theta$ transition is of second order, in agreement with the observation
 that the canonical energy histograms for both system sizes are clearly
 unimodal. At $R = 4.5$, the peaks of $\gamma(E)$ become positive and we
-conclude that the $\Theta$ transition turns to first order.
+conclude that the $\Theta$ transition turns to first order. The signals for 
+freezing transitions remain well outside of the back-bending region of the $\Theta$ 
+transition, confirming that the two transitions are well separated.
+
 In the case $R = 30$, the multiple peaks in $\gamma(E)$ indicate that
 the $\Theta$ transition consists of a hierarchy of subphase
 transitions.
@@ -1380,11 +1404,25 @@ separate
 liquid phase, which is in agreement with the overall picture
 obtained by the canonical analysis of fluctuating quantities.
 
-In Tables~\ref{tab:Tab_1} and ~\ref{tab:Tab_2}, we have listed
+The maximum $R$ value is, of course, limited by the boundary 
+of the simulation sphere that represents a steric constraint. The presence and 
+the stability of the individual structural phases depend on the particle 
+density. In the scenario presented here, where we investigate the disappearance 
+of the liquid phase, we fixed the density to $0.001$ particles per unit 
+volume, whereas additional simulations at a $10$ times larger density showed 
+that the liquid phase remained stable, even for bond confinement ranges as 
+large as $R=100$ (results not shown). In the unconstrained case of open boundaries (which for fixed 
+particle number means vanishing density) and $R\to\infty$, both liquid and solid 
+phase are supposed to disappear and the gas phase would remain as the only 
+stable phase. The disappearance of phases by reducing confinement
+has already been observed in atomic cluster systems some time 
+ago~\cite{calvo1,calvo2}.
+
+In Tables~\ref{tab:Tab_1} and~\ref{tab:Tab_2}, we have listed
 the microcanonical transition
 temperatures $T_{\mathrm{f},\theta}$ and latent-heat values per monomer
 $\Delta q_{\mathrm{f},\theta}$ for 13mers and 30mers with different bond
-elasticities $R$. Transition temperatures for the second-order transitions
+confinement ranges $R$. Transition temperatures for the second-order transitions
 were obtained by microcanonical inflections-point analysis, whereas the
 transition points and latent heat values were estimated by means of   
 microcanonical Maxwell
@@ -1395,8 +1433,9 @@ Ref.~\cite{Bachmann2014}).
 \label{sec:sum}
 %
 In this study, we have investigated the thermodynamic behavior of
-coarse-grained flexible homopolymers of finite lengths over a large range
-of values of the bond elasticity parameter $R$. Advanced parallel
+a linear chain of beads connected by confined bonds which resembles a polymer
+for a large range
+of values of the bond confinement range $R$. Advanced parallel
 replica-exchange Monte Carlo
 methods, such as the Multiple Gaussian modified ensemble (MGME), were
 utilized in order to overcome the computational difficulties posed by the
@@ -1405,7 +1444,7 @@ large $R$ values. Using the results obtained from the specific heat and the
 thermal fluctuations of the radius of gyration, we have constructed and
 compared features of the
 structural hyperphase diagrams for 13mers and 30mers.
-For stiff and moderately elastic bonds, three
+For low and intermediate confinement ranges, three
 distinct structural phases separated by the freezing and the $\Theta$
 transitions can be identified, in agreement with the expected behavior. 
 With increasing values of the parameter $R$, however, the $\Theta$
@@ -1414,27 +1453,26 @@ freezing transition line, suggesting the absence of an independent liquid
 phase. Microcanonical inflection-point 
 analysis provides conclusive evidence that the $\Theta$
 transition turns from second order to first order if 
-the bond elasticity parameter $R$ exceeds a threshold value. This change
+the bond confinement range parameter $R$ exceeds a threshold value. This change
 in the character of the $\Theta$ transition is not influenced by the
 freezing transition, which in this part of the phase diagram is still well
-separated from the $\Theta$ point. Increasing the bond elasticity further,
+separated from the $\Theta$ point. Increasing the confinement range further,
 $\Theta$ and freezing transitions merge and exhibit clear indications of a
-hierarchical nucleation transition. In this regime, the monomers in
-the polymer chain are quasi-free and interact likewise with other monomers,
+hierarchical nucleation transition. In this regime, the beads 
+are quasi-free and interact likewise with others,
 bonded or nonbonded. The still coupled system behaves like an atomic
-cluster. The general structure of the hyperphase diagrams can be expected
+cluster in a dilute regime. The general structure of the hyperphase diagrams can be expected
 to remain qualitatively intact even for substantially larger systems. The
 only anticipated change is that the freezing transition is of first order
 for all system sizes with more than about 40 monomers~\cite{Schnabel2011}.
 
 Our systematic study covers the technologically and biologically
 interesting regime of polymer chains with bond elasticities ranging from
-stiff to highly elastic. This includes all realistic linear macromolecules.
-Since our results are supposed to be generic, our results allow for a
+stiff to highly elastic, which includes all realistic linear macromolecules, 
+and extends into the space of confined systems that behave like atomic clusters.
+Since our results are supposed to be generic, they allow for a
 classification of the expected transition behavior on the basis of the
-effective bond elasticity of these molecular systems. This can be
-useful for materials design and the understanding of certain 
-functional properties of biomolecules.
+effective bond confinement range of these systems.
 %
 
 
