@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.3.27)  6 JUN 2016 13:03
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.3.27)  7 JUN 2016 12:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -291,7 +291,7 @@ las-tic Poly-mer Chains []
  [6] (./koci_tomas_201607_phd.lof [7
 
 ] [8] [9] [10]
-Overfull \hbox (7.69717pt too wide) in paragraph at lines 24--24
+Overfull \hbox (17.37787pt too wide) in paragraph at lines 24--24
  [][] []\OT1/cmr/m/n/12 Behavior of the com-bined bond po-ten-tial $\OML/cmm/m/
 it/12 U[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 r[]\OT1/cmr/m/n/12 ) = \OML/cmm/m/it
 /12 U[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 r[]\OT1/cmr/m/n/12 ) + \OML/cmm/m/it/1
@@ -482,7 +482,7 @@ Package epstopdf Info: Source file: <chapter3Figs/mgme.eps>
 (epstopdf)                    size: 12375 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter3Figs/mgme-eps-conv
 erted-to.pdf chapter3Figs/mgme.eps>
-(epstopdf)             \includegraphics on input line 644.
+(epstopdf)             \includegraphics on input line 645.
 Package epstopdf Info: Output file is already uptodate.
 
 <chapter3Figs/mgme-eps-converted-to.pdf, id=373, 257.96375pt x 190.7125pt>
@@ -490,7 +490,7 @@ File: chapter3Figs/mgme-eps-converted-to.pdf Graphic file (type pdf)
 
 <use chapter3Figs/mgme-eps-converted-to.pdf>
 Package pdftex.def Info: chapter3Figs/mgme-eps-converted-to.pdf used on input l
-ine 644.
+ine 645.
 (pdftex.def)             Requested size: 328.82707pt x 243.12465pt.
  [31] [32 <./chapter3Figs/mgme-eps-converted-to.pdf>]
 <chapter3Figs/multipleHistogramReweighting.pdf, id=388, 722.7pt x 307.1475pt>
@@ -498,7 +498,7 @@ File: chapter3Figs/multipleHistogramReweighting.pdf Graphic file (type pdf)
 
 <use chapter3Figs/multipleHistogramReweighting.pdf>
 Package pdftex.def Info: chapter3Figs/multipleHistogramReweighting.pdf used on 
-input line 693.
+input line 694.
 (pdftex.def)             Requested size: 446.26582pt x 189.66554pt.
  [33] [34 <./chapter3Figs/multipleHistogramReweighting.pdf>] [35]
 Package epstopdf Info: Source file: <chapter3Figs/bezierComparison.eps>
@@ -510,7 +510,7 @@ d-to.pdf>
 (epstopdf)                    size: 52524 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter3Figs/bezierCompari
 son-eps-converted-to.pdf chapter3Figs/bezierComparison.eps>
-(epstopdf)             \includegraphics on input line 749.
+(epstopdf)             \includegraphics on input line 750.
 Package epstopdf Info: Output file is already uptodate.
 
 <chapter3Figs/bezierComparison-eps-converted-to.pdf, id=417, 321.2pt x 237.8887
@@ -519,7 +519,7 @@ File: chapter3Figs/bezierComparison-eps-converted-to.pdf Graphic file (type pdf
 )
  <use chapter3Figs/bezierComparison-eps-converted-to.pdf>
 Package pdftex.def Info: chapter3Figs/bezierComparison-eps-converted-to.pdf use
-d on input line 749.
+d on input line 750.
 (pdftex.def)             Requested size: 328.82707pt x 243.5435pt.
  [36 <./chapter3Figs/bezierComparison-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <chapter3Figs/acceptanceRates.eps>
@@ -531,7 +531,7 @@ Package epstopdf Info: Source file: <chapter3Figs/acceptanceRates.eps>
 (epstopdf)                    size: 20024 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter3Figs/acceptanceRat
 es-eps-converted-to.pdf chapter3Figs/acceptanceRates.eps>
-(epstopdf)             \includegraphics on input line 763.
+(epstopdf)             \includegraphics on input line 764.
 Package epstopdf Info: Output file is already uptodate.
 
 <chapter3Figs/acceptanceRates-eps-converted-to.pdf, id=440, 356.33125pt x 237.8
@@ -540,7 +540,7 @@ File: chapter3Figs/acceptanceRates-eps-converted-to.pdf Graphic file (type pdf)
 
  <use chapter3Figs/acceptanceRates-eps-converted-to.pdf>
 Package pdftex.def Info: chapter3Figs/acceptanceRates-eps-converted-to.pdf used
- on input line 763.
+ on input line 764.
 (pdftex.def)             Requested size: 352.31625pt x 235.21655pt.
  [37] [38 <./chapter3Figs/acceptanceRates-eps-converted-to.pdf>]
 <chapter3Figs/conformationalUpdatesNew.pdf, id=495, 614.295pt x 263.98625pt>
@@ -548,7 +548,7 @@ File: chapter3Figs/conformationalUpdatesNew.pdf Graphic file (type pdf)
 
 <use chapter3Figs/conformationalUpdatesNew.pdf>
 Package pdftex.def Info: chapter3Figs/conformationalUpdatesNew.pdf used on inpu
-t line 775.
+t line 776.
 (pdftex.def)             Requested size: 465.06004pt x 199.8542pt.
  [39 <./chapter3Figs/conformationalUpdatesNew.pdf>]
 Chapter 4.
@@ -556,11 +556,11 @@ Chapter 4.
 File: chapter4Figs/coarseGraining.png Graphic file (type png)
 
 <use chapter4Figs/coarseGraining.png>
-Package pdftex.def Info: chapter4Figs/coarseGraining.png used on input line 799
+Package pdftex.def Info: chapter4Figs/coarseGraining.png used on input line 800
 .
 (pdftex.def)             Requested size: 474.44998pt x 186.9095pt.
 
-Overfull \hbox (4.69496pt too wide) in paragraph at lines 799--802
+Overfull \hbox (4.69496pt too wide) in paragraph at lines 800--803
  [] 
  []
 
@@ -571,11 +571,11 @@ Overfull \hbox (4.69496pt too wide) in paragraph at lines 799--802
 File: chapter4Figs/potentialLarge.pdf Graphic file (type pdf)
 
 <use chapter4Figs/potentialLarge.pdf>
-Package pdftex.def Info: chapter4Figs/potentialLarge.pdf used on input line 863
+Package pdftex.def Info: chapter4Figs/potentialLarge.pdf used on input line 864
 .
 (pdftex.def)             Requested size: 474.44998pt x 195.41487pt.
 
-Overfull \hbox (4.69496pt too wide) in paragraph at lines 863--865
+Overfull \hbox (4.69496pt too wide) in paragraph at lines 864--866
  [] 
  []
 
@@ -583,10 +583,10 @@ Overfull \hbox (4.69496pt too wide) in paragraph at lines 863--865
 File: chapter4Figs/polymerModel.pdf Graphic file (type pdf)
 
 <use chapter4Figs/polymerModel.pdf>
-Package pdftex.def Info: chapter4Figs/polymerModel.pdf used on input line 884.
+Package pdftex.def Info: chapter4Figs/polymerModel.pdf used on input line 885.
 (pdftex.def)             Requested size: 474.44998pt x 184.62206pt.
 
-Overfull \hbox (4.69496pt too wide) in paragraph at lines 884--887
+Overfull \hbox (4.69496pt too wide) in paragraph at lines 885--888
  [] 
  []
 
@@ -601,7 +601,7 @@ Package epstopdf Info: Source file: <chapter4Figs/rogFluct.eps>
 (epstopdf)                    size: 15159 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter4Figs/rogFluct-eps-
 converted-to.pdf chapter4Figs/rogFluct.eps>
-(epstopdf)             \includegraphics on input line 949.
+(epstopdf)             \includegraphics on input line 950.
 Package epstopdf Info: Output file is already uptodate.
 
 <chapter4Figs/rogFluct-eps-converted-to.pdf, id=568, 252.945pt x 158.99399pt>
@@ -609,51 +609,59 @@ File: chapter4Figs/rogFluct-eps-converted-to.pdf Graphic file (type pdf)
 
 <use chapter4Figs/rogFluct-eps-converted-to.pdf>
 Package pdftex.def Info: chapter4Figs/rogFluct-eps-converted-to.pdf used on inp
-ut line 949.
+ut line 950.
 (pdftex.def)             Requested size: 305.33789pt x 191.92963pt.
  [47] [48 <./chapter4Figs/rogFluct-eps-converted-to.pdf>]
 <chapter4Figs/q6.pdf, id=586, 1107.13625pt x 541.02126pt>
 File: chapter4Figs/q6.pdf Graphic file (type pdf)
 
 <use chapter4Figs/q6.pdf>
-Package pdftex.def Info: chapter4Figs/q6.pdf used on input line 1011.
+Package pdftex.def Info: chapter4Figs/q6.pdf used on input line 1012.
 (pdftex.def)             Requested size: 474.44998pt x 231.84209pt.
 
-Overfull \hbox (4.69496pt too wide) in paragraph at lines 1011--1014
+Overfull \hbox (4.69496pt too wide) in paragraph at lines 1012--1015
  [] 
  []
 
 [49 <./chapter4Figs/q6.pdf>]
 Chapter 5.
+
+LaTeX Warning: Citation `taylorRange1' on page 50 undefined on input line 1036.
+
+
+
+LaTeX Warning: Citation `taylorRange2' on page 50 undefined on input line 1036.
+
+
 [50
 
 ] [51]
 Package epstopdf Info: Source file: <chapter5Figs/bond_potential.eps>
-(epstopdf)                    date: 2016-06-04 10:35:52
-(epstopdf)                    size: 131960 bytes
+(epstopdf)                    date: 2016-06-07 11:06:38
+(epstopdf)                    size: 129756 bytes
 (epstopdf)             Output file: <chapter5Figs/bond_potential-eps-converted-
 to.pdf>
-(epstopdf)                    date: 2016-06-06 12:38:03
-(epstopdf)                    size: 14182 bytes
+(epstopdf)                    date: 2016-06-07 11:07:56
+(epstopdf)                    size: 16168 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter5Figs/bond_potentia
 l-eps-converted-to.pdf chapter5Figs/bond_potential.eps>
-(epstopdf)             \includegraphics on input line 1053.
+(epstopdf)             \includegraphics on input line 1058.
 Package epstopdf Info: Output file is already uptodate.
 
-<chapter5Figs/bond_potential-eps-converted-to.pdf, id=607, 273.02pt x 190.7125p
-t>
+<chapter5Figs/bond_potential-eps-converted-to.pdf, id=607, 278.03876pt x 190.71
+25pt>
 File: chapter5Figs/bond_potential-eps-converted-to.pdf Graphic file (type pdf)
  <use chapter5Figs/bond_potential-eps-converted-to.pdf>
 Package pdftex.def Info: chapter5Figs/bond_potential-eps-converted-to.pdf used 
-on input line 1053.
-(pdftex.def)             Requested size: 328.82707pt x 229.70938pt.
-
-Overfull \hbox (4.4648pt too wide) in paragraph at lines 1058--1058
+on input line 1058.
+(pdftex.def)             Requested size: 375.80544pt x 257.77667pt.
+ [52 <./chapter5Figs/bond_potential-eps-converted-to.pdf>]
+Overfull \hbox (4.4648pt too wide) in paragraph at lines 1069--1069
 []\OT1/cmr/bx/n/17.28 Canonical sta-tis-ti-cal anal-y-sis of en-er-getic and st
 ruc-
  []
 
-[52 <./chapter5Figs/bond_potential-eps-converted-to.pdf>] [53]
+[53] [54]
 Package epstopdf Info: Source file: <chapter5Figs/canon13.eps>
 (epstopdf)                    date: 2016-06-04 10:35:52
 (epstopdf)                    size: 778270 bytes
@@ -663,15 +671,15 @@ Package epstopdf Info: Source file: <chapter5Figs/canon13.eps>
 (epstopdf)                    size: 40582 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter5Figs/canon13-eps-c
 onverted-to.pdf chapter5Figs/canon13.eps>
-(epstopdf)             \includegraphics on input line 1112.
+(epstopdf)             \includegraphics on input line 1123.
 Package epstopdf Info: Output file is already uptodate.
 
-<chapter5Figs/canon13-eps-converted-to.pdf, id=631, 262.9825pt x 384.43625pt>
+<chapter5Figs/canon13-eps-converted-to.pdf, id=645, 262.9825pt x 384.43625pt>
 File: chapter5Figs/canon13-eps-converted-to.pdf Graphic file (type pdf)
 
 <use chapter5Figs/canon13-eps-converted-to.pdf>
 Package pdftex.def Info: chapter5Figs/canon13-eps-converted-to.pdf used on inpu
-t line 1112.
+t line 1123.
 (pdftex.def)             Requested size: 262.98184pt x 384.4353pt.
 Package epstopdf Info: Source file: <chapter5Figs/canon30.eps>
 (epstopdf)                    date: 2016-06-04 10:35:52
@@ -682,39 +690,39 @@ Package epstopdf Info: Source file: <chapter5Figs/canon30.eps>
 (epstopdf)                    size: 43995 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter5Figs/canon30-eps-c
 onverted-to.pdf chapter5Figs/canon30.eps>
-(epstopdf)             \includegraphics on input line 1122.
+(epstopdf)             \includegraphics on input line 1133.
 Package epstopdf Info: Output file is already uptodate.
 
-<chapter5Figs/canon30-eps-converted-to.pdf, id=632, 262.9825pt x 384.43625pt>
+<chapter5Figs/canon30-eps-converted-to.pdf, id=646, 262.9825pt x 384.43625pt>
 File: chapter5Figs/canon30-eps-converted-to.pdf Graphic file (type pdf)
 
 <use chapter5Figs/canon30-eps-converted-to.pdf>
 Package pdftex.def Info: chapter5Figs/canon30-eps-converted-to.pdf used on inpu
-t line 1122.
+t line 1133.
 (pdftex.def)             Requested size: 262.98184pt x 384.4353pt.
 
 
-LaTeX Warning: Citation `svbj1' on page 54 undefined on input line 1138.
+LaTeX Warning: Citation `svbj1' on page 55 undefined on input line 1149.
 
 
-LaTeX Warning: Citation `Schnabel2009' on page 54 undefined on input line 1138.
-
-
-
-LaTeX Warning: Citation `taylorRange1' on page 54 undefined on input line 1140.
+LaTeX Warning: Citation `Schnabel2009' on page 55 undefined on input line 1149.
 
 
 
-LaTeX Warning: Citation `taylorRange2' on page 54 undefined on input line 1140.
+LaTeX Warning: Citation `taylorRange1' on page 55 undefined on input line 1151.
 
 
-[54 <./chapter5Figs/canon13-eps-converted-to.pdf>] [55 <./chapter5Figs/canon30-
+
+LaTeX Warning: Citation `taylorRange2' on page 55 undefined on input line 1151.
+
+
+[55 <./chapter5Figs/canon13-eps-converted-to.pdf>] [56 <./chapter5Figs/canon30-
 eps-converted-to.pdf>]
 
-LaTeX Warning: Citation `svbj1' on page 56 undefined on input line 1159.
+LaTeX Warning: Citation `svbj1' on page 57 undefined on input line 1170.
 
 
-LaTeX Warning: Citation `Schnabel2009' on page 56 undefined on input line 1159.
+LaTeX Warning: Citation `Schnabel2009' on page 57 undefined on input line 1170.
 
 
 Package epstopdf Info: Source file: <chapter5Figs/pd1330.eps>
@@ -725,30 +733,30 @@ Package epstopdf Info: Source file: <chapter5Figs/pd1330.eps>
 (epstopdf)                    size: 18871 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter5Figs/pd1330-eps-co
 nverted-to.pdf chapter5Figs/pd1330.eps>
-(epstopdf)             \includegraphics on input line 1171.
+(epstopdf)             \includegraphics on input line 1182.
 Package epstopdf Info: Output file is already uptodate.
-<chapter5Figs/pd1330-eps-converted-to.pdf, id=673, 256.96pt x 384.43625pt>
+<chapter5Figs/pd1330-eps-converted-to.pdf, id=687, 256.96pt x 384.43625pt>
 File: chapter5Figs/pd1330-eps-converted-to.pdf Graphic file (type pdf)
 
 <use chapter5Figs/pd1330-eps-converted-to.pdf>
 Package pdftex.def Info: chapter5Figs/pd1330-eps-converted-to.pdf used on input
- line 1171.
+ line 1182.
 (pdftex.def)             Requested size: 256.95937pt x 384.4353pt.
 
 
-LaTeX Warning: Citation `Lifshitz1978' on page 56 undefined on input line 1185.
+LaTeX Warning: Citation `Lifshitz1978' on page 57 undefined on input line 1196.
 
 
 
-LaTeX Warning: Citation `Khokhlov1981' on page 56 undefined on input line 1185.
+LaTeX Warning: Citation `Khokhlov1981' on page 57 undefined on input line 1196.
 
 
-[56] [57 <./chapter5Figs/pd1330-eps-converted-to.pdf>] [58]
+[57] [58 <./chapter5Figs/pd1330-eps-converted-to.pdf>] [59]
 
-LaTeX Warning: Citation `Schnabel2009' on page 59 undefined on input line 1301.
+LaTeX Warning: Citation `Schnabel2009' on page 60 undefined on input line 1312.
 
 
-[59]
+[60]
 Package epstopdf Info: Source file: <chapter5Figs/microelast.eps>
 (epstopdf)                    date: 2016-06-04 10:35:52
 (epstopdf)                    size: 1690818 bytes
@@ -758,44 +766,44 @@ df>
 (epstopdf)                    size: 898638 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter5Figs/microelast-ep
 s-converted-to.pdf chapter5Figs/microelast.eps>
-(epstopdf)             \includegraphics on input line 1306.
+(epstopdf)             \includegraphics on input line 1317.
 Package epstopdf Info: Output file is already uptodate.
 
-<chapter5Figs/microelast-eps-converted-to.pdf, id=699, 489.83pt x 354.32375pt>
+<chapter5Figs/microelast-eps-converted-to.pdf, id=713, 489.83pt x 354.32375pt>
 File: chapter5Figs/microelast-eps-converted-to.pdf Graphic file (type pdf)
 
 <use chapter5Figs/microelast-eps-converted-to.pdf>
 Package pdftex.def Info: chapter5Figs/microelast-eps-converted-to.pdf used on i
-nput line 1306.
+nput line 1317.
 (pdftex.def)             Requested size: 489.8288pt x 354.32288pt.
 
 
-LaTeX Warning: Citation `Junghans2008' on page 60 undefined on input line 1354.
+LaTeX Warning: Citation `Junghans2008' on page 61 undefined on input line 1365.
 
 
 
-LaTeX Warning: Citation `Junghans2009' on page 60 undefined on input line 1354.
+LaTeX Warning: Citation `Junghans2009' on page 61 undefined on input line 1365.
 
 
 
-LaTeX Warning: Citation `Junghans2011' on page 60 undefined on input line 1354.
+LaTeX Warning: Citation `Junghans2011' on page 61 undefined on input line 1365.
 
 
-[60] [61 <./chapter5Figs/microelast-eps-converted-to.pdf>] [62] [63]
+[61] [62 <./chapter5Figs/microelast-eps-converted-to.pdf>] [63] [64]
 Chapter 6.
-[64
-
-]
-Chapter 7.
 [65
 
 ]
-Chapter 8.
+Chapter 7.
 [66
 
-] (./References.tex [67
+]
+Chapter 8.
+[67
 
-] [68] [69]) [70] (./koci_tomas_201607_phd.aux)
+] (./References.tex [68
+
+] [69] [70]) [71] (./koci_tomas_201607_phd.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -804,10 +812,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3287 strings out of 494985
- 49608 string characters out of 6180356
- 109300 words of memory out of 5000000
- 6401 multiletter control sequences out of 15000+600000
+ 3288 strings out of 494985
+ 49634 string characters out of 6180356
+ 109313 words of memory out of 5000000
+ 6402 multiletter control sequences out of 15000+600000
  12170 words of font info for 43 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  38i,11n,35p,1939b,299s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -835,10 +843,10 @@ msy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on koci_tomas_201607_phd.pdf (84 pages, 3491113 bytes).
+Output written on koci_tomas_201607_phd.pdf (85 pages, 3496066 bytes).
 PDF statistics:
- 860 PDF objects out of 1000 (max. 8388607)
- 571 compressed objects within 6 object streams
+ 875 PDF objects out of 1000 (max. 8388607)
+ 576 compressed objects within 6 object streams
  0 named destinations out of 1000 (max. 500000)
  126 words of extra memory for PDF output out of 10000 (max. 10000000)
 

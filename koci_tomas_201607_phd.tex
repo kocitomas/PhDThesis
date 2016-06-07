@@ -594,6 +594,7 @@ The Metropolis method provides the means for an efficient sampling of microstate
 
 
 \subsection{Parallel tempering}
+\label{subsec:ParallelTempering}
 In situations where the Metropolis method fails to produce data of reasonable quality, the standard way of increasing sampling efficiency is to perform the simulation in a conveniently chosen \textit{generalized ensemble}\footnote{The microstate probability distribution of a generalized ensemble can be arbitrary and does not have to bear any resemblance to the Boltzmann distribution.}. In parallel tempering \cite{sw1,geyer1,huku1,huku2}, multiple canonical ensembles with different inverse temperatures $\{\beta_{1} < \beta_{2} < ... < \beta_{N}\}$ are simulated in parallel according to the standard Metropolis scheme. In this context, the generalized ensemble is defined as the direct product of $N$ canonical ensembles, and the partition function is given by
 %
 \begin{equation}
@@ -1031,12 +1032,19 @@ Intensity plots of the rotationally invariant order parameter $Q_{6}$ for two va
 
 In chapter \ref{chap:HomopolymerModel}, we have suggested that a wide range of interesting physical phenomena, such as polymer collapse and aggregation, can be investigated by the means of rather simple coarse-grained models. We have argued that coarse-graining is justified as long as we are interested in the general characteristics of physical phenomena which arise through cooperative processes and do not depend sensitively on the microscopic details of the system. It is important to make a distinction between modifications of model parameters which have only trivial effects on the thermodynamic and structural properties, and those which result in a fundamentally different physical behavior such as the appearance of a new pseudophases or changes in the ground state conformational geometry.  
 
+
+One important aspect in the study of structural transitions in polymer systems is the influence of model and environmental parameters upon the processes that lead to structure formation and the conformations themselves. In recent studies, the effect of the interaction range between non-bonded monomers has been addressed systematically~\cite{taylorRange1,taylorRange2,Gross2013}. It has been found that for sufficiently short interaction ranges, it is possible for the polymer to fold directly from random-coil structures (i.e., the gas phase) into solid and compact conformations. Under these conditions, no globular (or liquid) phase is present. 
+
+
 In this chapter, we investigate the effects of restricting the fluctuation range of bonded interactions on the structural and thermodynamic properties of a single elastic polymer chain\footnote{See also section \ref{subsec:ElasticChain}}. The variation of the bond extension range allows us to bridge the gap between self-interacting polymers with stiff bonds (such as proteins) and bead-spring chains (elastic polymers) with bonds so floppy that these polymers behave similarly to a gas of interacting particles. For this purpose, we have performed extensive replica-exchange Monte Carlo simulations in extended multiple Gaussian modified ensembles\footnote{See also section \ref{subsec:GaussianEnsemble}} ~\cite{Neuhaus2006}, which help improve the efficiency of parallel tempering simulations near first-order transitions. Systematic studies of the structural phases in the space of the bond elasticity parameters were made possible by employing standard canonical analyses of fluctuations in macroscopic thermodynamic quantities and also by careful analysis of the nature of inflection points in the microcanonical temperature curves~\cite{Bachmann2014,Schnabel2011}. 
 
 \section{Model and computational parameters}
-In this study, we employ a coarse-grained model of an elastic, flexible,
-linear homopolymer chain with $N$ monomers, in the same form as introduced in Sec.\,\,\ref{subsec:ElasticChain}. The energy and the length scales of the truncated and shifted Lennard-Jones potential (Eq.\,\,\ref{eq:LJTruncated}) were set to 
-$\epsilon=1$ and $\sigma=r_0/2^{1/6}$ respectively, where $r_0 = 0.7$ is the location of the minimum potential. The cut-off radius was set at $r_c=2.5\sigma$. The FENE potential (Eq.\,\,\ref{eq:FENE}) in the bonded interactions is used here in the modified form
+In this study, we employ a coarse-grained model of an elastic homopolymer, in the same form as introduced in Sec.\,\,\ref{subsec:ElasticChain}. This model was originally introduced for investigations of general properties of elastic, flexible homopolymer chains. Due to the similarity in the transition behavior of atomic clusters and polymers, however, the scope of this model can be extended 
+to investigate effects of bond confinement as well. As such, this model allows 
+for the interpolation of systems ranging from polymers to an almost unconfined gas of atoms.
+
+The energy and the length scales of the truncated and shifted Lennard-Jones potential (Eq.\,\,\ref{eq:LJTruncated}) were set to 
+$\epsilon=1$ and $\sigma=r_0/2^{1/6}$ respectively, where $r_0 = 0.7$ marks the location of the minimum potential. The cut-off radius was set at $r_c=2.5\sigma$ such that $U_{\mathrm{LJ}}(r_{c}) \approx -0.0163169\epsilon$. The FENE potential (Eq.\,\,\ref{eq:FENE}), which together with the LJ potential represents bonded interactions, is used here in the modified form
 %
 \begin{equation}
 \label{eq:ModFENE}
@@ -1044,16 +1052,19 @@ U_{\mathrm{FENE}}(r_{ii+1})=-\frac{K}{2}R_{0}^2
 \mathrm{ln}\left[1-\left(\frac{r_{ii+1}-r_0}{R}\right)^2\right], 
 \end{equation}
 %
-where $K=40$ and $R_{0}=0.3$~\cite{Gross2013}. The parameter $R$ controls the effective elasticity of the polymer bonds, whereas the energy scale is kept constant. The qualitative behavior of the combined bond potential for different values of $R$ is shown in Fig.~\ref{fig:ModifiedBondedPotential}. The bond elasticity increases with $R$, i.e., by changing $R$ in a wide range of values ($R\in[0.3,90]$), we systematically investigate an entire class of polymer systems between the limits of stiff polymers ($R\to 0$) and, effectively, a gas of nonbonded Lennard-Jones particles, for which $R\to \infty$.  
-
-The results presented in this chapter are compared for classes of polymers with $N=13$ and $30$ monomers. For verification purposes, we have also studied polymers with up to $55$ monomers, which, for this kind of systematic study that covers the entire parameter space, represents the limit of currently feasible simulations.
 %
 \begin{figure}
 \center
-\includegraphics[width = 0.7\textwidth]{chapter5Figs/bond_potential.eps}
+\includegraphics[width = 0.8\textwidth]{chapter5Figs/bond_potential.eps}
 \caption{\label{fig:ModifiedBondedPotential}%
-Behavior of the combined bond potential $U_{\mathrm{total}}(r_{ii+1}) = U_{\mathrm{LJ}}(r_{ii+1}) + U_{\mathrm{FENE}}(r_{ii+1})$ for different values of the effective bond elasticity $R$.}
+Behavior of the combined bond potential $U_{\mathrm{bonded}}(r_{ii+1}) = U_{\mathrm{LJ}}(r_{ii+1}) + U_{\mathrm{FENE}}(r_{ii+1})$ for different values of the effective bond elasticity $R$.}
 \end{figure} 
+%
+where $K=40$ and $R_{0}=0.3$. The parameter $R$ inside of the logarithmic term controls the effective elasticity of the polymer bonds, whereas the energy scale of the potential is kept constant. The qualitative behavior of the combined bond potential for different values of $R$ is shown in Fig.~\ref{fig:ModifiedBondedPotential}. The bond elasticity increases with $R$, i.e., by changing $R$ in a wide range of values ($R\in[0.3,90]$), we systematically investigate an entire class of polymer systems between the limits of stiff polymers ($R\to 0$) and, effectively, a gas of nonbonded Lennard-Jones particles, for which $R\to \infty$. In our simulations, the system was constrained inside of a steric sphere at a constant density of $0.001$ particles per unit volume, in which case the diameter of the sphere is larger than the length of the fully extended chain. Under these conditions, we consider the system to be highly dilute.  
+
+In this study, we have used the replica-exchange Monte Carlo\footnote{See also section\,\,\ref{subsec:ParallelTempering}} (parallel tempering)~\cite{sw1,geyer1,huku1,huku2}, extended to multiple Gaussian modified ensembles\footnote{See also section\,\,\ref{subsec:GaussianEnsemble}} (MGME)~\cite{Neuhaus2006}. The typical number of replicas in a simulation was $\sim80$, covering the temperature range $T\in [0.02,2.0]$. The total number of Monte Carlo sweeps per simulation totalled $5\times 10^8$. A replica exchange update was attempted every 100 Monte Carlo sweeps and accepted at an average rate exceeding 20\%. The acceptance rates for Metropolis updates in each thread was kept at $\sim 40-60\%$. Simulations were carried out on a two-dimensional mesh of temperatures and $E_G$ values in the first-order transition region. On average 10 different values of $E_G$ were used per temperature thread.
+
+The results presented in this chapter are compared for classes of polymers with $N=13$ and $30$ monomers. For verification purposes, we have also studied polymers with up to $55$ monomers, which, for this kind of systematic study that covers the entire parameter space, represents the limit of currently feasible simulations. 
 
 \section{Canonical statistical analysis of energetic and structural fluctuations}
 %
