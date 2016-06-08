@@ -1233,9 +1233,367 @@ Our systematic study covers the technologically and biologically interesting reg
 
 
 \chapter{Impact of Bonded Interactions on the Ground-State Geometries of Flexible Homopolymers}
-\section{Structural order parameters}
-\section{15-mer}
-\section{55-mer}
+In this paper, we consider a generic model of the flexible
+elastic homopolymer and examine the effects of adding an extra
+Lennard-Jones term to the bonded potential. The unexpected consequences
+for the ground-state structures highlight the importance of a careful
+choice of model parameters.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  			    MODEL AND METHODS		   %%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Model and Methods}
+We employ a generic model of a flexible elastic homopolymer to study the
+effects of the shape and width of the bonded potential on the formation
+of low-energy structures for a polymer chain with $N=15$ monomers.
+Finite-size effects are essential and the 15mer shows a particularly
+distinct and clear transition behavior, which makes it a perfect
+candidate for this systematic study.
+
+Non-bonded interactions are represented by the truncated and
+shifted Lennard-Jones (LJ) potential
+%
+\begin{equation}
+	U_{\mathrm{LJ}}^{\mathrm{trunc}}(r_{ij}) = \left\{
+		\begin{array}{lr}
+		U_{\mathrm{LJ}}(r_{ij}) -  U_{\mathrm{LJ}}(r_{c}),  & 
+		\quad \mathrm{if} \,\, r_{ij} \leq r_{c},\\
+		0, 	&  \quad \mathrm{if} \,\,r_{ij} > r_{c},
+		\end{array}
+	\right.
+\end{equation}
+%
+where
+%
+\begin{equation}
+	U_{\mathrm{LJ}}(r)= 4\epsilon \left[ \left(
+\frac{\sigma}{r} \right)^{12} - \left( \frac{\sigma}{r} \right)^{6}
+\right].
+\end{equation}
+%
+The energy scale is set to $\epsilon=1$ and the van-der-Waals radius to
+$\sigma=r_0/2^{1/6}$, where $r_0 = 1.0$ is the location of the potential
+minimum. We select a cut-off radius at $r_c=2.5\,\sigma$ and introduce a
+shift $U_{\mathrm{LJ}}(r_{c}) \approx -0.0163169\,\epsilon$ to avoid
+discontinuities in the potential. In our model, monomers adjacent
+in the linear chain interact via a modified bonded
+potential
+%
+\begin{equation}
+    U_{\rm B}(r) = -\frac{1}{2} KR^2 \ln\left[1-\left(\frac{r - r_0}{R} 
+\right)^2\right] + \eta ( U_{\rm LJ}(r) + \epsilon) -
+(\epsilon + U_{\rm shift}), \label{U_b}
+\end{equation}
+%
+where $R = 3/7$ and $K = 98/5$. In addition to the standard
+anharmonic FENE (finitely extensible nonlinear elastic) potential
+\cite{fene1,fene2,fene3}, the modified potential contains an additional
+Lennard-Jones term adjusted by a bond flexibility control parameter
+$\eta$. The bonded potential is shifted by $-(\epsilon+U_{\rm shift})$
+in order to match the minimum energy with the non-bonded interactions. 
+
+The maximum bond extension is limited by the FENE potential,
+which diverges as $r \rightarrow r_0 \pm R$. Increasing the value of
+$\eta$ introduces asymmetry to the bonded potential and the energy cost
+associated with non-optimal bond lengths is increased. In particular,
+compressed bonds result in high energy penalties as
+$\eta$ becomes large. The effects of different $\eta$ values on the
+shape and width of the bonded potential is exhibited in Fig.~\ref{bond}.
+The total energy of a configuration $\textbf{X} = (\vec{r}_1, ...
+,\vec{r}_{N})$  with the monomer-monomer distances
+$r_{ij}=|\vec{r_i}-\vec{r}_{j}|$ is given by 
+%
+\begin{equation}
+        E(\textbf{X}) =
+        \sum\limits_{i<j}^{N}  U_{\rm{LJ}}(r_{ij}) +
+        \sum\limits_{i=1}^{N-1} U_{\rm{B}}(r_{i \, i+1}).\label{E_sum}
+\end{equation}
+%
+\begin{figure}%[h]
+\includegraphics[width=0.55\textwidth]{chapter6Figs/Fig1.eps}\hspace{2pc}%
+\begin{minipage}[b]{14pc}\caption{\label{bond} The modified
+bonded potential $U_{\rm B}(r)$, modeled by the FENE and LJ
+interactions. The strength of the Lennard-Jones term is controlled by
+the bond flexibility parameter $\eta \in [0,1]$.}
+\end{minipage}
+\end{figure}
+%
+%%%%%%%%%%%%%  Simulation method  %%%%%%%%%%%%%%%%%%%%%
+%
+In order to enhance the sampling of low-energy configurations, a
+parallel version of multicanonical sampling
+\cite{muca1,muca2,Zierenberg2013}  
+is employed in this simulation. The standard multicanonical runs
+are performed in $K$ replicas independently with the same initial weight
+functions but different random seeds. Displacement updates are proposed
+within a cubic box of edge lengths $d=0.3r_0$ and accepted according to
+the probability
+%
+\begin{equation}
+    P(X \rightarrow X')=
+\mathrm{min}[1,W(E(X'))/W(E(X))],
+\label{accp_prob_muca}
+\end{equation}
+%
+where $W(E(X))$ represents the weight function of a given
+configuration $X$. After the $i$th iteration, since the weights are
+identical in each thread, the energy histograms obtained for each
+replica can simply be summed up:
+%
+\begin{equation}
+    H^i(E)=\sum^K_{k=1}H^i_k(E). \label{sum_hist} 
+\end{equation}
+%
+The total histograms are combined with the current weights
+to calculate the weights for the subsequent iteration by utilizing the
+error-weighted recursive
+scheme~\cite{Bachmann2014,muca1,muca2}. 
+%
+%%%%%%%%%% Microcanonical inflection-point analysis %%%%%%%%%%%%%%
+
+To construct the hyper-phase diagram, we use the
+generalized microcanonical inflection-point
+analysis~\cite{Bachmann2014,Schnabel2011}. This approach has
+the advantage of uniquely and systematically locating the transition
+energies and thus is commonly employed to study pseudophase transitions
+in finite-size systems. By applying the principle of minimal
+sensitivity~\cite{Stevenson1981} to the derivatives of microcanonical
+entropy $S(E)$, the $(2n+1)$th-order 
+transition ($n$ is a positive integer) is identified from the
+least sensitive inflection point of the $2n$th-derivative of entropy and
+the positive valley in the $(2n+1)$th-derivative curve. For a
+$2n$th-order transition, the least sensitive inflection point in the
+$(2n-1)$th-derivative of entropy together with the negative peak in the
+$2n$th-order derivative curve are utilized to locate the transition
+energy. The specialty of the first-order-like transition is that it can
+be distinguished from the back-bending region in the inverse temperature
+$\beta(E)\equiv T^{-1}(E)=d S(E)/d E$ and the corresponding positive
+peak in the $\gamma(E)=d \beta(E) / d E$ curve. 
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  			          RESULTS		               %%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Results}
+%
+%%%%%%%%%%%% CANONICAL AND MICROCANONICAL %%%%%%%%%%%%%%
+\subsection{Canonical and microcanonical analysis}
+\begin{figure}
+\begin{center}
+    \includegraphics[width=1.0\textwidth]{chapter6Figs/Fig2.eps}%
+    \caption{\label{can_mic_analysis}
+    (a) Heat capacity $C_{\rm v}$, (b)
+microcanonical inverse temperature $\beta(E)$, and (c,d) its first and
+second derivatives $\gamma(E)$ and $\delta(E)$, respectively.}
+\end{center}
+\end{figure}
+%
+First we discuss the results of canonical statistical analysis applied to
+our generic model. Heat-capacity curves as functions of temperature
+(Fig.~\ref{can_mic_analysis}(a)) are constructed using the time series
+of data collected in the multicanonical production run. At $T \approx
+0.34$, broad prominent peaks, indicating the freezing transition, are
+identified for all simulated $\eta$ values. At this transition, globular
+structures change to more compact crystalline or amorphous structures.
+For $\eta = 0$, an additional peak emerges at $T=0.11$, suggesting the
+existence of a solid-solid transition. With increasing values of $\eta$
+the peak becomes more pronounced as it gradually shifts towards zero
+temperature and finally disappears when $\eta \geq 0.1$. However, the
+order of the individual transitions remains ambiguous and the broad
+peaks of the freezing transition may envelope several transitions which
+cannot be resolved by the methods of canonical analysis. Therefore we
+further examine the system using a more systematic 
+and robust approach. One such method that has proven to reliably
+signal transitions is the microcanonical inflection-point
+analysis~\cite{Schnabel2011}.
+
+The microcanonical results are shown in Fig.~\ref{can_mic_analysis}(b-d)
+for six different values of $\eta$. Careful inspection of the first and
+second derivatives of $\beta(E)$ in the energy region $E\in[-41,-33]$
+reveals that the broad peak in the canonical specific heat encloses two
+distinct transition signals; clear indication that the freezing
+transition is a two-step process. The first signal located at $E\approx
+-44$, is a fourth-order transition indicated by the corresponding least
+sensitive inflection point in
+$\delta(E)$. The second transition, found at $E\approx -38$, is of
+third order for $\eta \leq 0.2$, but it is classified as a second-order
+transition for higher values of the bond flexibility control parameter.
+In agreement with the canonical results, we have also identified signals
+corresponding to a solid-solid transition for values of $\eta \leq 0.1$.
+For $\eta=0.02$ and $0.05$, the negative-valued peaks in $\gamma(E)$ at
+energies $E=-49.7$ and $-50.4$ respectively, indicate a second-order
+transition. The inflection point in $\gamma(E)$ and the corresponding
+positive valley in $\delta(E)=d \gamma(E)/d E$ at $E=-48.92$ reveal that
+for $\eta = 0.00$ the solid-solid transition is of third order. 
+
+The hyperphase diagram is constructed on the basis of
+the signals identified in the microcanonical analysis and plotted in
+Fig.~\ref{phase_diagram}. 
+In the ``gas'' pseudophase at high energies,
+the polymer expands in free space and forms random-coil structures. As
+the energy decreases, the expanded chain undergoes a second-order
+collapse transition and enters the ``liquid'' pseudophase consisting
+mainly of globular structures. Passing the third/second-order
+transition associated with the nucleation process, the polymer enters
+the $S_{\rm ic}$ pseudophase in which incomplete icosahedral structures
+become dominant. Further decrease in energy weakens thermal fluctuations
+and allows for the formation of a stable surface layer. The transition
+associated with the surface formation process 
+is of fourth order. Visual inspection of low-energy structures reveals
+that icosahedral geometries are dominant. However, for $\eta \leq 0.1$,
+the additional solid-solid transition suggests the existence of
+low-energy conformations with unexpected geometric properties.
+In order to examine the low-energy structures systematically, we
+carry out a careful structural analysis utilizing a suitable set of
+order parameters.
+%
+\begin{figure}
+\begin{center}
+    \includegraphics[width=\textwidth]{chapter6Figs/Fig3.eps}%
+    \caption{\label{phase_diagram} 
+    (a) Microcanonical hyper-phase diagram parametrized by energy and
+the bond flexibility control parameter $\eta$. Here, G, L, and S stand
+for ``gas'', ``liquid'', and ``solid'' structural phases, respectively.
+The $S_{\rm ic-core}$ pseudophase consists mostly of incomplete
+icosahedral structures. $S_{\rm ic}$ and $S_{\rm bi}$ incorporate
+compact icosahedral and bihexagonal structures, respectively. (b)
+Enlarged section detailing the low energy region for $\eta < 0.15$. The
+solid-solid transition line is extended by a dashed empirical line
+constructed based on the data provided by structural analysis.}
+\end{center}
+\end{figure}
+%
+%%%%%%%%%%%%%% STRUCTURAL ANALYSIS %%%%%%%%%%%%%%%%%%
+\subsection{Structural analysis}
+Various order parameters, such as the number of monomer-monomer
+contacts, radius of gyration, or radial and angular distributions, have
+proven to provide valuable insight into the thermodynamic and structural
+properties of polymer systems. Based on the microcanonical results in
+Fig.~\ref{phase_diagram}, we expect the existence of two solid phases
+when the strength of the bond flexibility parameter is sufficiently small
+$(\eta \leq 0.1)$. We aim to identify the dominant structures in the
+low-energy phases and to gather additional data supporting the existence of
+the
+solid-solid transition line. For this purpose, we employ a set of order
+parameters exploiting the symmetry properties of real spherical
+harmonics~\cite{Neirotti2000}.
+
+We define a polymer core to consist of monomers within a
+distance $r_{\mathrm{core}} < 1.25\sigma$ of the central monomer, which has
+been chosen to be nearest to the center of mass. Let $\mathcal{C} = \lbrace
+\vec{r}_{1},.....,\vec{r}_{M} \rbrace $ be the coordinates of a core with
+$M$ monomers. Various core geometries can be distinguished using the set of
+rotationally invariant order parameters
+%
+\begin{equation}
+Q_{l} =  \left[ \frac{4\pi}{2l + 1} \displaystyle\sum_{m =-l}^{l}
+|\rho_{l,m}|^{2} \right]^{1/2},	
+\end{equation}
+%
+where 
+\begin{equation}
+\rho _{l,m} = \frac{1}{M}\sum _{i = 0} ^{M} \mathrm{Y}_{l,m}(\vec{r}_{i})
+\label{eq:15}
+\end{equation}
+%
+is the average of the real spherical harmonics evaluated at the locations
+of the core monomers. The connection between the real and complex spherical
+harmonics is given by
+% 
+\begin{equation}
+	\mathrm{Y}_{lm} =  \left\{
+		\begin{array}{lr}
+		\frac{i}{\sqrt{2}}\left[\mathrm{Y}_{l}^{m} -
+(-1)^{m}\mathrm{Y}_{l}^{-m}\right] & \quad \mathrm{if} \quad  m < 0,
+\\[1.5ex]
+		{Y}_{l}^{m} & \quad \mathrm{if} \quad  m = 0, \\[1.5ex]
+		\frac{1}{\sqrt{2}}\left[\mathrm{Y}_{l}^{-m} +
+(-1)^{m}\mathrm{Y}_{l}^{m}\right] & \quad \mathrm{if} \quad  m > 0. \\
+		\end{array}
+	\right. 
+\end{equation}
+Using of the order of $10^{6}$ polymer structures per value of $\eta$, we
+computed $Q_{l}$ up to $l = 6$ and found that $Q_{6}$ can be used most
+effectively to resolve the geometries of the low-energy conformations. We
+present the results in the form of intensity plots in
+Fig.~\ref{intensity_plots}. The probability of detecting a structure with a
+specific value of the order parameter at an energy $E$ is represented by
+shading; red indicating the maximum probability and black corresponding to
+zero. 
+%
+\begin{figure}
+\begin{center}
+	\includegraphics[trim = 0 0 0 0, clip,width=\textwidth,height=0.9
+	\textwidth]{chapter6Figs/structural_analysis.eps}
+\end{center}
+\caption{\label{intensity_plots}(a,b,c,d) Intensity plots of the
+$Q_{6}$ order parameter for a 15mer with $\eta = 0.00, 0.05, 0.10, 1.0$.
+The shading indicates the probability of detecting a configuration with a
+given value of the order parameter, red being the maximum probability and
+black being the lowest. The freezing and the solid-solid transitions are
+indicated by solid and dashed horizontal lines respectively. For $\eta \leq
+0.1$, the polymer has two distinct solid phases.  In addition to the
+icosahedral phase ($Q_{6} \approx 0.65$) the polymer is found in the
+bihexagonal phase at low energies ($Q_{6} \approx 0.41$).}
+\end{figure}
+%
+In agreement with the microcanonical and canonical results, we detect
+a single solid phase for $\eta > 0.1$, corresponding to the narrow funnel
+in $Q_{6}$ below the transition line at $E \approx -43$. The dominant
+structures in this region contain an icosahedral core which is typically
+found in the ground-state conformations of many short polymer chains.
+Below $\eta = 0.1$, the 15mer explores an additional solid phase, as
+indicated by the appearance of a second funnel centered around $Q_{6}
+\approx 0.41$. Structures which populate this phase possess an unusual
+bihexagonal geometry which has also been recently found in longer chains.
+The energy at which both phases coexist agrees well with the microcanonical
+estimates for the solid-solid transition. Representative structures of both
+solid phases are shown in Fig.~\ref{Structures}.
+
+The shape of the bonded potential has undoubtedly a strong effect on
+the geometry of the ground state. Having identified the two dominant
+structure types, we may ask why the additional LJ term in the bonded
+potential eventually precludes the existence of the bihexagonal phase. The
+answer is readily obtained by comparing the average bond lengths for the
+icosahedral and bihexagonal structures. The bihexagon accommodates all
+monomers into a single shell allowing for a larger number of non-bonded
+interactions and consequently lower energy. However, the two six-monomer
+rings of the bihexagon contain significantly compressed bonds
+$(r_{\mathrm{bond}} \approx 0.88 r_{0})$, which become energetically
+infeasible as $\eta$ increases. In contrast, we find near-optimal bond
+lengths in the icosahedron $(r_{\mathrm{bond}} \approx  r_{0})$, hence the
+``narrowing'' of the bonded potential imposes no additional energetic
+penalty.
+%
+\begin{figure}
+\begin{center}
+	\includegraphics[trim = 0 0 0 0, clip,width=0.55\textwidth]
+	{chapter6Figs/configurations.eps}
+\hspace{2pc}%
+\begin{minipage}[b]{14pc}
+\caption{\label{Structures} Two distinct low-energy structures of
+the elastic 15-mer. (a) Compact structure with a stable icosahedral core
+and two monomers displaced onto the incomplete second layer. (b) The
+bihexagon is the preferred ground-state geometry for $\eta \leq 0.1$.}
+\end{minipage}
+\end{center}
+\end{figure}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  			          SUMMARY		               %%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Summary}
+%
+By means of multicanonical simulations of a generic model for elastic,
+flexible polymers, we have investigated the structural behavior of a 15-mer
+upon changing a model parameter $\eta$
+that controls the shape of the bonded potential. For small values of
+this parameter, a freezing transition into an icosahedral phase precedes a
+solid-solid transition into low-energy states with
+bihexagonal geometry. The non-optimal bond lengths found in bihexagonal
+conformations cause a large energy penalty due to the ``narrowing'' of the
+bonded potential if $\eta$ is increased. Hence only a single
+solid phase remains for $\eta > 0.1$, which is icosahedral. The striking
+consequences of a relatively small modification to the standard model of
+elastic, flexible homopolymers illustrate the importance of a careful
+choice of model parameters.
+
 
 \chapter{Aggregation of Flexible Elastic Homopolymers}
 \label{chap:Aggregation}
