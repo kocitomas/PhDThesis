@@ -1131,19 +1131,107 @@ Energy histograms of the 13mer with $R=15$ at several temperatures near the $\Th
 %
 It should be mentioned that the phase separation becomes substantially stronger for larger $R$ values, as well as the interfacial surface tension due to the radical entropic depletion in the energetic gap region.
 
-With the transition temperatures obtained from the peaks in the canonical quantities we construct structural phase diagrams parametrized by the temperature $T$ and the confinement parameter $R$. For both system sizes, near the unmodified values of $R$, we observe three distinct structural phases. The high-temperature curves in Fig.~\ref{fig:ElasPolyPhaseDiagrams} represent the $\Theta$ transition lines, at which the expanded coils in the gas phase collapse into the compact but disordered globular states in the liquid phase. The green and red portions of the $\Theta$ transition line indicate the regions in which the transition is second-order-like and first-order-like respectively. The merging of the freezing and the $\Theta$ lines indicates the absence of the liquid phase and a direct transition from the gas to the crystalline phase for values of $R > 30$. The apparent similarities between the phase diagrams in the $\Theta$ regime suggest that similar behavior in systems of larger sizes could be expected. The different order of the liquid-solid transition (first order for the 13mer and second order for the 30mer) is a consequence of the entropic character of the solid phase. For the 13mer, the icosahedron is the all dominating morphology with comparatively low entropy and specific energy that sets apart the liquid phase and creates a phase-separation scenario. On the other hand, the ``solid'' phase of the 30mer is of rather highly entropic amorphous nature and allows for a continuous crossover from the liquid phase. 
+With the transition temperatures obtained from the peaks in the canonical quantities we construct structural phase diagrams parametrized by the temperature $T$ and the confinement parameter $R$. For both system sizes, near the unmodified values of $R$, we observe three distinct structural phases. The high-temperature curves in Fig.~\ref{fig:ElasPolyPhaseDiagrams} represent the $\Theta$ transition lines, at which the expanded coils in the gas phase collapse into the compact but disordered globular states in the liquid phase. The green and red portions of the $\Theta$ transition line indicate the regions in which the transition is second-order-like and first-order-like respectively. The merging of the freezing and the $\Theta$ lines indicates the absence of the liquid phase and a direct transition from the gas to the crystalline phase for values of $R > 30$. The apparent similarities between the phase diagrams in the $\Theta$ regime suggest that similar behavior in systems of larger sizes could be expected. The different order of the liquid-solid transition (first order for the 13mer and second order for the 30mer) is a consequence of the entropic character of the solid phase. For the 13mer, the icosahedron is the all dominating morphology with comparatively low entropy and specific energy that sets apart the liquid phase and creates a phase-separation scenario. On the other hand, the ``solid'' phase of the 30mer is of rather highly entropic amorphous nature and allows for a continuous crossover from the liquid phase. In fact, given the small size of the system, the amorphous and the liquid phases are difficult to distinguish, though the transition is visible in the canonical quantities even at low $R$ values (see Fig.~\ref{fig:ElasPolyCanonicalResults}).  
 
 %
 \begin{figure}
-\center
-\includegraphics[width = 0.7\textwidth]{chapter5Figs/pd1330.eps}
+\centerline{\includegraphics{chapter5Figs/pd1330.eps}}
 \caption{\label{fig:ElasPolyPhaseDiagrams}% 
 Structural phase diagrams for 13mers and 30mers, parametrized by the canonical temperature $T$ and the confinement parameter $R$. The blue (solid) and pink segments indicate first-order-like and second-order-like transitions, respectively.}
 \end{figure}
 %
 
-It is instructive to consider the effects of the bond confinement range on ground state conformations. It was previously shown~\cite{Gross2013} that a decrease in the interaction range of the Lennard-Jones potential can lead to the disappearance of icosahedral ground-state structures in ``magic'' system sizes (such as $N=55$). In the present study, the ground state energies remained virtually constant and the conformations of 13mers retained their icosahedral geometry even for extremely high values of the parameter $R$. This suggests that the low-temperature behavior of flexible homopolymer chains is dominated by Lennard-Jones interactions while the FENE potential influences only the particular orderings of monomers within the ground-state structures.
 
+
+
+
+%
+\begin{table}
+\caption{\label{tab:Tab_1}%
+Microcanonical transition temperatures $T_{\mathrm{f},\theta}$ and latent
+heats $\Delta q_{\mathrm{f},\theta}$ at the freezing and $\Theta$
+transition points, respectively, for 13mers with different 
+bond confinement ranges $R$.}
+\begin{tabular*}{\hsize}{@{\extracolsep{\fill}}rcccc@{}}
+$R$& $T_{\mathrm{f}}$ & $T_{\theta}$ & $\Delta q_{\mathrm{f}}$ & $\Delta
+q_{\mathrm{\theta}}$\\
+\hline
+$0.3$  &  $0.334 \pm 0.005$ &  $1.1 	\pm 0.1$ 	& $0.157 \pm 0.002$
+& N/A\\
+$1.5$  &  $0.306 \pm 0.005$ &  $0.9 	\pm 0.1$		& $0.090
+\pm 0.002$ & N/A\\
+$3.0$  &  $0.291 \pm 0.005$ &  $0.64	\pm 0.05$	& $0.208 \pm 0.002$
+& N/A\\
+$4.5$  &  $0.286 \pm 0.005$ &  $0.52	\pm 0.01$ 	& $0.228 \pm 0.002$
+& $1.132 \pm 0.005$\\
+$9.0$  &  $0.283 \pm 0.005$ &  $0.387	\pm 0.005$  	& $0.249 \pm 0.002$
+& $2.133 \pm 0.002$ \\
+$15.0$  &  $0.282 \pm 0.005$ &  $0.331  \pm 0.005$	& $0.254 \pm 0.002$
+& $2.485 \pm 0.002$ \\
+$30.0$  &  $0.282 \pm 0.005$ &  $0.284  \pm 0.005$ 	& $0.285 \pm 0.002$
+& $2.978 \pm 0.002$ \\
+\hline
+\end{tabular*}
+\end{table}
+%
+\begin{table}
+\caption{\label{tab:Tab_2}%
+Same as Table~\ref{tab:Tab_1}, but for 30mers.}
+\begin{tabular*}{\hsize}{@{\extracolsep{\fill}}rcccc@{}}
+$R$& $T_{\mathrm{f}}$ & $T_{\theta}$ & $\Delta q_{\mathrm{f}}$ & $\Delta
+q_{\mathrm{\theta}}$\\
+\hline
+$0.3$  &  $0.39 \pm 0.01$ &  $1.3 	\pm 0.1$ 	& N/A & N/A\\
+$1.5$  &  $0.39 \pm 0.01$ &  $1.2 	\pm 0.1$		& N/A &
+N/A\\
+$3.0$  &  $0.38 \pm 0.01$ &  $0.88	\pm 0.05$	& N/A & N/A\\
+$4.5$  &  $0.37 \pm 0.01$ &  $0.69	\pm 0.01$ 	& N/A & $1.650 \pm
+0.005$\\
+$9.0$  &  $0.36 \pm 0.01$ &  $0.496	\pm 0.005$  	& N/A & $2.647 \pm
+0.002$ \\
+$15.0$  &  $0.35 \pm 0.01$ &  $0.416  \pm 0.005$	& N/A & $3.057 \pm
+0.002$ \\
+$30.0$  &  $0.35 \pm 0.01$ &  $0.344  \pm 0.005$ & N/A & $3.399 \pm 0.002$
+\\
+\hline
+\end{tabular*}
+\end{table}
+%
+%
+\begin{figure*}
+\centerline{\includegraphics{chapter5Figs/microelast.eps}}
+\caption{\label{fig:Fig_7}%
+(Color online) Microcanonical results for 13mers with bond confinement ranges  (a)
+$R=0.3$, (b)
+$4.5$, and (c) $30$ as well as for 30mers (d)-(f). Shown are inverse
+temperature curves $\beta(E)$, their first derivatives
+$\gamma(E)=d\beta(E)/dE$, and (on arbitrary scale) the energy histograms
+$h(E)$ at the $\Theta$ transition temperature. The horizontal dashed line
+marks $\gamma=0$. The positive
+valued peaks of $\gamma (E)$ for values of $R > 4.5$ clearly indicate that
+the $\Theta$ transition is first order, but remains separate from the
+freezing transition. The absorption of the freezing
+transition by the $\Theta$ transition is apparent for large confinement ranges (c, f).}
+\end{figure*}
+%
+
+It is instructive to consider the effects of the bond
+confinement range on the ground-state structures. It was previously
+shown~\cite{Gross2013} that a decrease in the
+interaction range of the Lennard-Jones potential can lead to the
+disappearance
+of icosahedral ground-state structures in ``magic'' system sizes (such as
+$N=55$). In the present study, the ground state energy of the 13mer
+remained
+virtually constant and the structures retained their icosahedral geometry
+even for extremely high values of the parameter $R$. This suggests that the
+low-temperature behavior of flexible homopolymer chains is dominated by the
+Lennard-Jones interactions while the FENE potential influences only the
+particular orderings of monomers within the ground-state structures.
+However even this limited influence of the FENE potential has been shown to
+lead to significant effects such as the suppression of conformations
+with anti-Mackay, i.e., hcp-like overlayer~\cite{Schnabel2009}. 
+%
 \subsection{Microcanonical results}
 %
 As discussed in the previous section, the results obtained by means of
@@ -1223,76 +1311,6 @@ transition points and latent heat values were estimated by means of
 microcanonical Maxwell
 construction (for descriptions of both methods, see, e.g.,
 Ref.~\cite{Bachmann2014}).
-%
-
-%
-\begin{table}
-\caption{\label{tab:Tab_1}%
-Microcanonical transition temperatures $T_{\mathrm{f},\theta}$ and latent
-heats $\Delta q_{\mathrm{f},\theta}$ at the freezing and $\Theta$
-transition points, respectively, for 13mers with different 
-bond confinement ranges $R$.}
-\begin{tabular*}{\hsize}{@{\extracolsep{\fill}}rcccc@{}}
-$R$& $T_{\mathrm{f}}$ & $T_{\theta}$ & $\Delta q_{\mathrm{f}}$ & $\Delta
-q_{\mathrm{\theta}}$\\
-\hline
-$0.3$  &  $0.334 \pm 0.005$ &  $1.1 	\pm 0.1$ 	& $0.157 \pm 0.002$
-& N/A\\
-$1.5$  &  $0.306 \pm 0.005$ &  $0.9 	\pm 0.1$		& $0.090
-\pm 0.002$ & N/A\\
-$3.0$  &  $0.291 \pm 0.005$ &  $0.64	\pm 0.05$	& $0.208 \pm 0.002$
-& N/A\\
-$4.5$  &  $0.286 \pm 0.005$ &  $0.52	\pm 0.01$ 	& $0.228 \pm 0.002$
-& $1.132 \pm 0.005$\\
-$9.0$  &  $0.283 \pm 0.005$ &  $0.387	\pm 0.005$  	& $0.249 \pm 0.002$
-& $2.133 \pm 0.002$ \\
-$15.0$  &  $0.282 \pm 0.005$ &  $0.331  \pm 0.005$	& $0.254 \pm 0.002$
-& $2.485 \pm 0.002$ \\
-$30.0$  &  $0.282 \pm 0.005$ &  $0.284  \pm 0.005$ 	& $0.285 \pm 0.002$
-& $2.978 \pm 0.002$ \\
-\hline
-\end{tabular*}
-\end{table}
-%
-\begin{table}
-\caption{\label{tab:Tab_2}%
-Same as Table~\ref{tab:Tab_1}, but for 30mers.}
-\begin{tabular*}{\hsize}{@{\extracolsep{\fill}}rcccc@{}}
-$R$& $T_{\mathrm{f}}$ & $T_{\theta}$ & $\Delta q_{\mathrm{f}}$ & $\Delta
-q_{\mathrm{\theta}}$\\
-\hline
-$0.3$  &  $0.39 \pm 0.01$ &  $1.3 	\pm 0.1$ 	& N/A & N/A\\
-$1.5$  &  $0.39 \pm 0.01$ &  $1.2 	\pm 0.1$		& N/A &
-N/A\\
-$3.0$  &  $0.38 \pm 0.01$ &  $0.88	\pm 0.05$	& N/A & N/A\\
-$4.5$  &  $0.37 \pm 0.01$ &  $0.69	\pm 0.01$ 	& N/A & $1.650 \pm
-0.005$\\
-$9.0$  &  $0.36 \pm 0.01$ &  $0.496	\pm 0.005$  	& N/A & $2.647 \pm
-0.002$ \\
-$15.0$  &  $0.35 \pm 0.01$ &  $0.416  \pm 0.005$	& N/A & $3.057 \pm
-0.002$ \\
-$30.0$  &  $0.35 \pm 0.01$ &  $0.344  \pm 0.005$ & N/A & $3.399 \pm 0.002$
-\\
-\hline
-\end{tabular*}
-\end{table}
-%
-%
-\begin{figure*}
-\centerline{\includegraphics{chapter5Figs/microelast.eps}}
-\caption{\label{fig:Fig_7}%
-(Color online) Microcanonical results for 13mers with bond confinement ranges  (a)
-$R=0.3$, (b)
-$4.5$, and (c) $30$ as well as for 30mers (d)-(f). Shown are inverse
-temperature curves $\beta(E)$, their first derivatives
-$\gamma(E)=d\beta(E)/dE$, and (on arbitrary scale) the energy histograms
-$h(E)$ at the $\Theta$ transition temperature. The horizontal dashed line
-marks $\gamma=0$. The positive
-valued peaks of $\gamma (E)$ for values of $R > 4.5$ clearly indicate that
-the $\Theta$ transition is first order, but remains separate from the
-freezing transition. The absorption of the freezing
-transition by the $\Theta$ transition is apparent for large confinement ranges (c, f).}
-\end{figure*}
 %
 \section{Summary}
 \label{sec:sum}

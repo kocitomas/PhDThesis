@@ -33,18 +33,18 @@
 \contentsline {chapter}{\numberline {5}Confinement Effects upon Structural Transitions in Elastic Polymer Chains}{50}
 \contentsline {section}{\numberline {5.1}Model and simulation parameters}{51}
 \contentsline {section}{\numberline {5.2}Results}{53}
-\contentsline {subsection}{\numberline {5.2.1}Canonical statistical analysis of energetic and structural fluctuations}{53}
-\contentsline {subsection}{\numberline {5.2.2}Microcanonical results}{63}
-\contentsline {section}{\numberline {5.3}Summary}{65}
-\contentsline {chapter}{\numberline {6}Impact of Bonded Interactions on the Ground-State Geometries of Flexible Homopolymers}{67}
-\contentsline {section}{\numberline {6.1}Structural order parameters}{67}
-\contentsline {section}{\numberline {6.2}15-mer}{67}
-\contentsline {section}{\numberline {6.3}55-mer}{67}
-\contentsline {chapter}{\numberline {7}Aggregation of Flexible Elastic Homopolymers}{68}
-\contentsline {section}{\numberline {7.1}Introduction}{68}
-\contentsline {section}{\numberline {7.2}Microcanonical analysis}{68}
-\contentsline {subsection}{\numberline {7.2.1}Subphases and subphase transitions}{68}
-\contentsline {subsection}{\numberline {7.2.2}Missing subphases and translational entropy}{68}
-\contentsline {subsection}{\numberline {7.2.3}Density effects on the latent heat}{68}
-\contentsline {chapter}{\numberline {8}Summary and Outlook}{69}
-\contentsline {chapter}{Bibliography}{69}
+\contentsline {subsection}{\numberline {5.2.1}Canonical analysis of energetic and structural fluctuations}{53}
+\contentsline {subsection}{\numberline {5.2.2}Microcanonical results}{60}
+\contentsline {section}{\numberline {5.3}Summary}{61}
+\contentsline {chapter}{\numberline {6}Impact of Bonded Interactions on the Ground-State Geometries of Flexible Homopolymers}{65}
+\contentsline {section}{\numberline {6.1}Structural order parameters}{65}
+\contentsline {section}{\numberline {6.2}15-mer}{65}
+\contentsline {section}{\numberline {6.3}55-mer}{65}
+\contentsline {chapter}{\numberline {7}Aggregation of Flexible Elastic Homopolymers}{66}
+\contentsline {section}{\numberline {7.1}Introduction}{66}
+\contentsline {section}{\numberline {7.2}Microcanonical analysis}{66}
+\contentsline {subsection}{\numberline {7.2.1}Subphases and subphase transitions}{66}
+\contentsline {subsection}{\numberline {7.2.2}Missing subphases and translational entropy}{66}
+\contentsline {subsection}{\numberline {7.2.3}Density effects on the latent heat}{66}
+\contentsline {chapter}{\numberline {8}Summary and Outlook}{67}
+\contentsline {chapter}{Bibliography}{67}
