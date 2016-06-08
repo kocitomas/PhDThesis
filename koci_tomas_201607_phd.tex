@@ -200,6 +200,7 @@ A macrostate of a system is specified by a set of macroscopic variables and poss
 Divergences and singularities in thermodynamic observables and their derivatives are only found in systems which satisfy the thermodynamic limit. In mesoscopic systems\footnote{Typical length scales in  mesoscopic systems are of the order of $\sim 10  10^{3}$ nanometers. In this regime, exact quantum many-body interactions can be replaced by effective classical potentials, and cooperative effects dominate structure formation processes. Mesoscopic systems are distinct from macroscopic systems due to the presence of significant finite-size effects, which disallow the simplifying assumptions of the thermodynamic limit.}, due to finite size effects, divergences are replaced by peaks and discontinuities are smoothed over\cite{Bachmann2014}. For clarity, we designate the term \textit{pseudophase transition} to represent significant conformational changes in finite systems. Likewise, thermodynamic phases in finite systems shall be referred to as \textit{pseudophases}. In the following, we present a powerful formalism for the analysis of pseudophase transitions in the microcanonical ensemble; the microcanonical inflection point analysis.
 
 \subsubsection{Microcanonical inflection-point analysis}
+\label{subsubsec:InflectionPointAnalysis}
 Unlike its canonical counterpart~-- the heat-bath temperature~-- the
 microcanonical inverse temperature is an inherent property of the system, derived directly from the fundamental microcanonical quantities $S(E)$ and $E$. We assert that all essential information about energetically and entropically driven thermodynamic processes is contained in its curvature. Hence the microcanonical inverse temperature is an ideal starting point for a comprehensive analysis of pseudophase transitions\cite{Gross2001}.  
 
@@ -1144,94 +1145,39 @@ Structural phase diagrams for 13mers and 30mers, parametrized by the canonical t
 
 It is instructive to consider the effects of the bond confinement range on ground state conformations. It was previously shown~\cite{Gross2013} that a decrease in the interaction range of the Lennard-Jones potential can lead to the disappearance of icosahedral ground-state structures in ``magic'' system sizes (such as $N=55$). In the present study, the ground state energies remained virtually constant and the conformations of 13mers retained their icosahedral geometry even for extremely high values of the parameter $R$. This suggests that the low-temperature behavior of flexible homopolymer chains is dominated by Lennard-Jones interactions while the FENE potential influences only the particular orderings of monomers within the ground-state structures.
 
-\subsection{Microcanonical results}
+\subsection{Results of microcanonical inflection-point analysis}
 %
-As discussed in the previous section, the results obtained by means of
-canonical analysis suggest that the $\Theta$ transition acquires 
-first-order-like character in systems with large confinement range. 
-However,
-the
-analysis of structural transitions based on canonical quantities is
-often ambiguous. Canonical energy histograms are useful for determining the
-order of a transition only if their shape is clearly bimodal or unimodal.
-In this section, we turn to microcanonical analysis which offers a robust
-and unambiguous approach to the classification of structural transitions by
-means of inflection-point
-analysis~\cite{Bachmann2014,Bachmann2013,Schnabel2011}.
-Figure~\ref{fig:Fig_7} summarizes the results for chains of
-lengths with $N = 13$ and $30$ beads for values $R = 0.3, 
-4.5, 30.0$. In addition to
-the microcanonical temperature $\beta(E)$ and its first derivative
-$\gamma(E) = d\beta/dE$, we also plot the canonical energy histograms
-$h(E)$
-obtained at the transition temperature. 
+As discussed in the previous section, the results obtained by means of canonical analysis suggest that the $\Theta$ transition acquires first-order-like character in systems with large bond confinement range. However, the analysis of structural transitions based on canonical quantities is often ambiguous. Canonical energy histograms are useful for determining the order of a transition only if their shape is clearly bimodal or unimodal. In this section, we turn to microcanonical inflection-point analysis\footnote{See also section \ref{subsec: micro_analysis}} which offers a robust and unambiguous approach towards the classification of structural transitions~\cite{Bachmann2014,Bachmann2013,Schnabel2011}. 
 
-For $R = 0.3$, the negative valued peaks of $\gamma(E)$ indicate that the
-$\Theta$ transition is of second order, in agreement with the observation
-that the canonical energy histograms for both system sizes are clearly
-unimodal. At $R = 4.5$, the peaks of $\gamma(E)$ become positive and we
-conclude that the $\Theta$ transition turns to first order. The signals for 
-freezing transitions remain well outside of the back-bending region of the $\Theta$ 
-transition, confirming that the two transitions are well separated.
+In Fig.~\ref{fig:ElasPolyMicrocanonicalResults} we summarize the results for chains of lengths with $N = 13$ and $30$ monomers for values $R = 0.3, 4.5, 30.0$. In addition to the microcanonical temperature $\beta(E)$ and its first derivative $\gamma(E) = d\beta/dE$, we also plot the canonical energy histograms $h(E)$ obtained at the $\Theta$ transition temperature. 
 
-In the case $R = 30$, the multiple peaks in $\gamma(E)$ indicate that
-the $\Theta$ transition consists of a hierarchy of subphase
-transitions.
-This is particularly apparent in nucleation transitions with
-entropy reduction due to stepwise loss of translational entropy. Prominent
-examples are aggregation transition
-in systems consisting of multiple polymer
-chains~\cite{Bachmann2014,Junghans2008,Junghans2009,Junghans2011}. The
-system undergoes a
-direct transition from the solid phase into the gas phase through a series
-of subphase transitions consisting of individual monomers breaking away
-from the bulk. 
-This can be seen nicely in Fig.~\ref{fig:Fig_7}(c), where a distinct
-hierarchy of subphase transitions for the 13mer with bond elasticity $R=30$
-is noticeable. For the 30mer, at the same $R$ value
-[Fig.~\ref{fig:Fig_7}(f)], subphases overlap to an extent that only an
-accumulated effect upon $\beta(E)$ is visible. 
+%
+\begin{figure*}
+\center
+\includegraphics[width= 1.0\textwidth]{chapter5Figs/microelast.eps}
+\caption{\label{fig:ElasPolyMicrocanonicalResults}%
+Microcanonical results for 13mers with bond confinement ranges  (a) $R=0.3$, (b) $4.5$, and (c) $30$ as well as for 30mers (d)-(f). Shown are inverse temperature curves $\beta(E)$, their first derivatives $\gamma(E)=d\beta(E)/dE$, and (on arbitrary scale) the energy histograms $h(E)$ at the $\Theta$ transition temperature. The horizontal dashed line marks $\gamma=0$. The positive valued peaks of $\gamma (E)$ for values of $R > 4.5$ clearly indicate that the $\Theta$ transition is first order, but remains separate from the freezing transition. The absorption of the freezing transition by the $\Theta$ transition is apparent for large confinement ranges (c, f).}
+\end{figure*}
+%
 
-The freezing transition is no longer an autonomous
-transition but instead becomes one of the subphase transitions that make
-up the $\Theta$ transition. Eventually, this entails the absence of a
-separate
-liquid phase, which is in agreement with the overall picture
-obtained by the canonical analysis of fluctuating quantities.
+For $R = 0.3$, the negative valued peaks of $\gamma(E)$ indicate that the $\Theta$ transition is of second order, in agreement with the observation that the canonical energy histograms for both system sizes are clearly unimodal. At $R = 4.5$, the peaks of $\gamma(E)$ become positive and we conclude that the $\Theta$ transition turns to first order. The signals for freezing transitions remain well outside of the back-bending region of the $\Theta$ transition, confirming that the two transitions are well separated.
 
-The maximum $R$ value is, of course, limited by the boundary 
-of the simulation sphere that represents a steric constraint. The presence and 
-the stability of the individual structural phases depend on the particle 
-density. In the scenario presented here, where we investigate the disappearance 
-of the liquid phase, we fixed the density to $0.001$ particles per unit 
-volume, whereas additional simulations at a $10$ times larger density showed 
-that the liquid phase remained stable, even for bond confinement ranges as 
-large as $R=100$ (results not shown). In the unconstrained case of open boundaries (which for fixed 
-particle number means vanishing density) and $R\to\infty$, both liquid and solid 
-phase are supposed to disappear and the gas phase would remain as the only 
-stable phase. The disappearance of phases by reducing confinement
-has already been observed in atomic cluster systems some time 
-ago~\cite{calvo1,calvo2}.
+In the case $R = 30$, the multiple peaks in $\gamma(E)$ indicate that the $\Theta$ transition consists of a hierarchy of subphase transitions. This is particularly apparent in nucleation transitions with entropy reduction due to stepwise loss of translational entropy. Prominent examples are aggregation transition in systems consisting of multiple polymer chains~\cite{Bachmann2014,KociAgg2015,Junghans2008,Junghans2009,Junghans2011}, which will be discussed in detail in Chap.\,\,\ref{chap:Aggregation}. The system undergoes a direct transition from the solid phase into the gas phase through a series of subphase transitions consisting of individual monomers breaking away from the bulk.
+\newpage
+\noindent
+This can be seen nicely in the case of a 13mer with the confinement range $R = 30$. Shown in Fig.~\ref{fig:ElasPolyMicrocanonicalResults}(c), each of the 12 oscillations in the back-bending region of $\beta(E)$ corresponds to a subphase transitions. For a 30mer, at the same $R$ value [Fig.~\ref{fig:ElasPolyMicrocanonicalResults}(f)], subphases overlap to an extent that only an accumulated effect upon $\beta(E)$ is visible. 
 
-In Tables~\ref{tab:Tab_1} and~\ref{tab:Tab_2}, we have listed
-the microcanonical transition
-temperatures $T_{\mathrm{f},\theta}$ and latent-heat values per monomer
-$\Delta q_{\mathrm{f},\theta}$ for 13mers and 30mers with different bond
-confinement ranges $R$. Transition temperatures for the second-order transitions
-were obtained by microcanonical inflections-point analysis, whereas the
-transition points and latent heat values were estimated by means of   
-microcanonical Maxwell
-construction (for descriptions of both methods, see, e.g.,
-Ref.~\cite{Bachmann2014}).
+The freezing transition is no longer an autonomous transition but instead becomes one of the subphase transitions that make up the $\Theta$ transition. Eventually, this entails the absence of a separate liquid phase, which is in agreement with the overall picture obtained by the canonical analysis of fluctuating quantities.
+
+The maximum $R$ value is, of course, limited by the boundary of the simulation sphere that represents a steric constraint. The presence and the stability of the individual structural phases depend on the particle density. In the scenario presented here, where we investigate the disappearance of the liquid phase, we fixed the density to $0.001$ particles per unit volume, whereas additional simulations at a $10$ times larger density showed that the liquid phase remained stable, even for bond confinement ranges as large as $R=100$. In the unconstrained case of open boundaries (which for fixed particle number means vanishing density) and $R\to\infty$, both liquid and solid phase are supposed to disappear and the gas phase would remain as the only stable phase. The disappearance of phases by reducing confinement has already been observed in atomic cluster systems some time ago~\cite{calvo1,calvo2}.
+
+In Tables~\ref{tab:ElasPolyTab1} and~\ref{tab:ElasPolyTab2}, we have listed the transition temperatures $T_{\mathrm{f},\theta}$ and latent-heat values per monomer $\Delta q_{\mathrm{f},\theta}$ for 13mers and 30mers at various bond confinement ranges $R$. Transition temperatures for the second-order transitions were obtained by microcanonical inflections-point analysis, whereas the transition points and latent heat values were estimated by means of microcanonical Gibbs construction.\footnote{For a description of the microcanonical Gibbs construction please refer to section\,\,\ref{subsubsec:InflectionPointAnalysis}.}
 %
 
 %
 \begin{table}
-\caption{\label{tab:Tab_1}%
-Microcanonical transition temperatures $T_{\mathrm{f},\theta}$ and latent
-heats $\Delta q_{\mathrm{f},\theta}$ at the freezing and $\Theta$
-transition points, respectively, for 13mers with different 
-bond confinement ranges $R$.}
+\caption{\label{tab:ElasPolyTab1}%
+Microcanonical transition temperatures $T_{\mathrm{f},\theta}$ and latent heats $\Delta q_{\mathrm{f},\theta}$ at the freezing and $\Theta$ transition points, respectively, for 13mers with different bond confinement ranges $R$.}
 \begin{tabular*}{\hsize}{@{\extracolsep{\fill}}rcccc@{}}
 $R$& $T_{\mathrm{f}}$ & $T_{\theta}$ & $\Delta q_{\mathrm{f}}$ & $\Delta
 q_{\mathrm{\theta}}$\\
@@ -1255,8 +1201,8 @@ $30.0$  &  $0.282 \pm 0.005$ &  $0.284  \pm 0.005$ 	& $0.285 \pm 0.002$
 \end{table}
 %
 \begin{table}
-\caption{\label{tab:Tab_2}%
-Same as Table~\ref{tab:Tab_1}, but for 30mers.}
+\caption{\label{tab:ElasPolyTab2}%
+Same as Table~\ref{tab:ElasPolyTab1}, but for 30mers. \newline}
 \begin{tabular*}{\hsize}{@{\extracolsep{\fill}}rcccc@{}}
 $R$& $T_{\mathrm{f}}$ & $T_{\theta}$ & $\Delta q_{\mathrm{f}}$ & $\Delta
 q_{\mathrm{\theta}}$\\
@@ -1277,67 +1223,12 @@ $30.0$  &  $0.35 \pm 0.01$ &  $0.344  \pm 0.005$ & N/A & $3.399 \pm 0.002$
 \end{tabular*}
 \end{table}
 %
-%
-\begin{figure*}
-\centerline{\includegraphics{chapter5Figs/microelast.eps}}
-\caption{\label{fig:Fig_7}%
-(Color online) Microcanonical results for 13mers with bond confinement ranges  (a)
-$R=0.3$, (b)
-$4.5$, and (c) $30$ as well as for 30mers (d)-(f). Shown are inverse
-temperature curves $\beta(E)$, their first derivatives
-$\gamma(E)=d\beta(E)/dE$, and (on arbitrary scale) the energy histograms
-$h(E)$ at the $\Theta$ transition temperature. The horizontal dashed line
-marks $\gamma=0$. The positive
-valued peaks of $\gamma (E)$ for values of $R > 4.5$ clearly indicate that
-the $\Theta$ transition is first order, but remains separate from the
-freezing transition. The absorption of the freezing
-transition by the $\Theta$ transition is apparent for large confinement ranges (c, f).}
-\end{figure*}
-%
 \section{Summary}
 \label{sec:sum}
 %
-In this study, we have investigated the thermodynamic behavior of
-a linear chain of beads connected by confined bonds which resembles a polymer
-for a large range
-of values of the bond confinement range $R$. Advanced parallel
-replica-exchange Monte Carlo
-methods, such as the Multiple Gaussian modified ensemble (MGME), were
-utilized in order to overcome the computational difficulties posed by the
-strong first-order-like behavior associated with the $\Theta$ transition at
-large $R$ values. Using the results obtained from the specific heat and the
-thermal fluctuations of the radius of gyration, we have constructed and
-compared features of the
-structural hyperphase diagrams for 13mers and 30mers.
-For low and intermediate confinement ranges, three
-distinct structural phases separated by the freezing and the $\Theta$
-transitions can be identified, in agreement with the expected behavior. 
-With increasing values of the parameter $R$, however, the $\Theta$
-transition line shifts to lower temperatures and eventually merges with the
-freezing transition line, suggesting the absence of an independent liquid
-phase. Microcanonical inflection-point 
-analysis provides conclusive evidence that the $\Theta$
-transition turns from second order to first order if 
-the bond confinement range parameter $R$ exceeds a threshold value. This change
-in the character of the $\Theta$ transition is not influenced by the
-freezing transition, which in this part of the phase diagram is still well
-separated from the $\Theta$ point. Increasing the confinement range further,
-$\Theta$ and freezing transitions merge and exhibit clear indications of a
-hierarchical nucleation transition. In this regime, the beads 
-are quasi-free and interact likewise with others,
-bonded or nonbonded. The still coupled system behaves like an atomic
-cluster in a dilute regime. The general structure of the hyperphase diagrams can be expected
-to remain qualitatively intact even for substantially larger systems. The
-only anticipated change is that the freezing transition is of first order
-for all system sizes with more than about 40 monomers~\cite{Schnabel2011}.
+In this chapter, we have investigated the thermodynamic behavior of a linear chain of monomers connected by confined bonds which resembles a polymer for a large range of values of the bond confinement range $R$. Advanced parallel replica-exchange Monte Carlo methods, such as the Multiple Gaussian modified ensemble (MGME), were utilized in order to overcome the computational difficulties posed by the strong first-order-like behavior associated with the $\Theta$ transition at large $R$ values. Using the results obtained from the specific heat and the thermal fluctuations of the radius of gyration, we have constructed and compared features of the structural hyperphase diagrams for 13mers and 30mers. For low and intermediate confinement ranges, three distinct structural phases separated by the freezing and the $\Theta$ transitions can be identified, in agreement with the expected behavior. With increasing values of the parameter $R$, however, the $\Theta$ transition line shifts to lower temperatures and eventually merges with the freezing transition line, suggesting the absence of an independent liquid phase. Microcanonical inflection-point analysis provides conclusive evidence that the $\Theta$ transition turns from second order to first order if the bond confinement range parameter $R$ exceeds a threshold value. This change in the character of the $\Theta$ transition is not influenced by the freezing transition, which in this part of the phase diagram is still well separated from the $\Theta$ point. Increasing the confinement range further, $\Theta$ and freezing transitions merge and exhibit clear indications of a hierarchical nucleation transition. In this regime, the beads  are quasi-free and interact likewise with others, bonded or nonbonded. The still coupled system behaves like an atomic cluster in a dilute regime. The general structure of the hyperphase diagrams can be expected to remain qualitatively intact even for substantially larger systems. The only anticipated change is that the freezing transition is of first order for all system sizes with more than about 40 monomers~\cite{Schnabel2011}.
 
-Our systematic study covers the technologically and biologically
-interesting regime of polymer chains with bond elasticities ranging from
-stiff to highly elastic, which includes all realistic linear macromolecules, 
-and extends into the space of confined systems that behave like atomic clusters.
-Since our results are supposed to be generic, they allow for a
-classification of the expected transition behavior on the basis of the
-effective bond confinement range of these systems.
+Our systematic study covers the technologically and biologically interesting regime of polymer chains with bond elasticities ranging from stiff to highly elastic, which includes all realistic linear macromolecules,  and extends into the space of confined systems that behave like atomic clusters. Since our results are supposed to be generic, they allow for a classification of the expected transition behavior on the basis of the effective bond confinement range of these systems.
 %
 
 
@@ -1347,6 +1238,7 @@ effective bond confinement range of these systems.
 \section{55-mer}
 
 \chapter{Aggregation of Flexible Elastic Homopolymers}
+\label{chap:Aggregation}
 \section{Introduction}
 \section{Microcanonical analysis}
 \subsection{Subphases and subphase transitions}

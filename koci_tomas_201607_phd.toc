@@ -34,8 +34,8 @@
 \contentsline {section}{\numberline {5.1}Model and simulation parameters}{51}
 \contentsline {section}{\numberline {5.2}Results}{53}
 \contentsline {subsection}{\numberline {5.2.1}Canonical analysis of energetic and structural fluctuations}{53}
-\contentsline {subsection}{\numberline {5.2.2}Microcanonical results}{60}
-\contentsline {section}{\numberline {5.3}Summary}{61}
+\contentsline {subsection}{\numberline {5.2.2}Results of microcanonical inflection-point analysis}{60}
+\contentsline {section}{\numberline {5.3}Summary}{63}
 \contentsline {chapter}{\numberline {6}Impact of Bonded Interactions on the Ground-State Geometries of Flexible Homopolymers}{65}
 \contentsline {section}{\numberline {6.1}Structural order parameters}{65}
 \contentsline {section}{\numberline {6.2}15-mer}{65}
