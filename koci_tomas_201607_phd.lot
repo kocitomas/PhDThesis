@@ -7,5 +7,7 @@
 \contentsline {table}{\numberline {5.2}{\ignorespaces Same as Table\nobreakspace {}5.1\hbox {}, but for 30mers. \newline }}{63}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {7.1}{\ignorespaces Inverse aggregation temperature ($\beta _{\mathrm {agg}}$), energy per monomer in the aggregate phase ($e_{\mathrm {agg}}$), energy per monomer in the fragmented phase ($e_{\mathrm {frag}}$), and the latent heat per monomer ($\Delta q$). The uncertainty for all listed quantities is $\pm 0.5$ in the last decimal.}}{90}
+\contentsline {table}{\numberline {7.2}{\ignorespaces Theoretical number of subphases $(N_{\mathrm {sub}})$; not including the fully aggregated and fragmented phases, number of significantly represented subphases $(\mathaccentV {hat}05E{N}_{\mathrm {sub}})$, and the total contribution of the ``missing'' subphases towards the canonical distribution $h(E)$ at the inverse transition temperature $\beta _{\mathrm {agg}}$.}}{90}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {8.1}{\ignorespaces Example of a table.}}{77}
+\contentsline {table}{\numberline {8.1}{\ignorespaces Example of a table.}}{97}

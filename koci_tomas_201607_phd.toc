@@ -1,6 +1,6 @@
 \contentsline {chapter}{Acknowledgments}{iv}
-\contentsline {chapter}{List of Figures}{xiii}
-\contentsline {chapter}{List of Tables}{xiv}
+\contentsline {chapter}{List of Figures}{xv}
+\contentsline {chapter}{List of Tables}{xv}
 \contentsline {chapter}{\numberline {1}Introduction}{1}
 \contentsline {chapter}{\numberline {2}Elements of Statistical Mechanics}{2}
 \contentsline {section}{\numberline {2.1}The microcanonical ensemble}{3}
@@ -36,17 +36,22 @@
 \contentsline {subsection}{\numberline {5.2.1}Canonical analysis of energetic and structural fluctuations}{53}
 \contentsline {subsection}{\numberline {5.2.2}Results of microcanonical inflection-point analysis}{60}
 \contentsline {section}{\numberline {5.3}Summary}{63}
-\contentsline {chapter}{\numberline {6}Impact of Bonded Interactions on the Ground-State Geometries of Flexible Homopolymers}{65}
-\contentsline {section}{\numberline {6.1}Model and Methods}{65}
+\contentsline {chapter}{\numberline {6}Impact of Bonded Interactions on the Thermodynamic and Structural Properties of Flexible Homopolymers}{65}
+\contentsline {section}{\numberline {6.1}Model and Simulation Parameters}{66}
 \contentsline {section}{\numberline {6.2}Results}{68}
 \contentsline {subsection}{\numberline {6.2.1}Canonical and microcanonical analysis}{68}
 \contentsline {subsection}{\numberline {6.2.2}Structural analysis}{71}
-\contentsline {section}{\numberline {6.3}Summary}{73}
+\contentsline {section}{\numberline {6.3}Summary}{75}
 \contentsline {chapter}{\numberline {7}Aggregation of Flexible Elastic Homopolymers}{76}
 \contentsline {section}{\numberline {7.1}Introduction}{76}
-\contentsline {section}{\numberline {7.2}Microcanonical analysis}{76}
-\contentsline {subsection}{\numberline {7.2.1}Subphases and subphase transitions}{76}
-\contentsline {subsection}{\numberline {7.2.2}Missing subphases and translational entropy}{76}
-\contentsline {subsection}{\numberline {7.2.3}Density effects on the latent heat}{76}
-\contentsline {chapter}{\numberline {8}Summary and Outlook}{77}
-\contentsline {chapter}{Bibliography}{77}
+\contentsline {section}{\numberline {7.2}Model and Methods}{78}
+\contentsline {subsection}{\numberline {7.2.1}Standard model of interacting elastic chains}{78}
+\contentsline {subsection}{\numberline {7.2.2}Simulation methods}{80}
+\contentsline {subsection}{\numberline {7.2.3}Density of states and microcanonical analysis}{81}
+\contentsline {section}{\numberline {7.3}Results}{83}
+\contentsline {subsection}{\numberline {7.3.1}Microcanonical analysis of aggregation transitions}{85}
+\contentsline {subsection}{\numberline {7.3.2}Entropically suppressed subphases}{89}
+\contentsline {subsection}{\numberline {7.3.3}Scaling properties}{93}
+\contentsline {section}{\numberline {7.4}Summary}{95}
+\contentsline {chapter}{\numberline {8}Summary and Outlook}{97}
+\contentsline {chapter}{Bibliography}{97}
