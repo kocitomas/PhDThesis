@@ -10,6 +10,9 @@
 \usepackage{adjustbox}
 \usepackage{amsmath}
 \textfloatsep 0.75in                   % important with double spacing
+\usepackage{caption} 
+\captionsetup[table]{aboveskip=10pt}
+\captionsetup[table]{belowskip=2pt}
 
 \begin{document}
 
@@ -219,7 +222,7 @@ derivatives, respond least sensitively to variations in energy\cite{Schnabel2011
 %
 \begin{figure}
 \center
-\includegraphics[width = 0.7\textwidth]{chapter2Figs/maxwellConstruct.pdf}
+\includegraphics[width = 0.7\textwidth]{chapter2Figs/maxwellConstruct.eps}
 \caption{\label{fig:Fig_2}%
 The convex region of the microcanonical entropy $S(E)$ and the back-bending of the microcanonical inverse temperature $\beta(E)$ are prominent indicators of \textit{first-order} transitions. The slope of the double-tangent Gibbs hull $\mathcal{H}(E)$ defines the transition temperature $\beta_{\mathrm{tr}}$. The Maxwell construction, defined by equal areas of $s_{\mathrm{o}}$ and $s_{\mathrm{d}}$, is itself positioned at $\beta_{\mathrm{tr}}$. The transition energy $E_{\mathrm{tr}}$ indicates the location of the largest separation between $\mathcal{H}(E)$ and $S(E)$, which signifies maximal entropic suppression of the transition states. The latent heat $\Delta Q$ corresponds to the width of the transition region between $E_{\mathrm{d}}$ and $E_{\mathrm{o}}$.}
 \end{figure}
@@ -299,7 +302,7 @@ In the thermodynamic limit, it is generally possible to identify some property o
 
 \begin{figure}
 \center
-\includegraphics[width = 0.8\textwidth]{chapter2Figs/CanonicalFirstOrder.pdf}
+\includegraphics[width = 0.8\textwidth]{chapter2Figs/CanonicalFirstOrder.eps}
 \caption{\label{fig:Fig_3}% 
 (a) The jump discontinuity in the canonical entropy $S$, (b) and the delta peak in the specific heat $C_{V}$, are characteristic of a first order phase transition.}
 \end{figure} 
@@ -314,7 +317,7 @@ where $\Delta S$ is the height of the discontinuity and $T_{\mathrm{trans}}$ is 
 
 \begin{figure}
 \center
-\includegraphics[width = 0.75\textwidth]{chapter2Figs/CanonicalSecondOrder.pdf}
+\includegraphics[width = 0.75\textwidth]{chapter2Figs/CanonicalSecondOrder.eps}
 \caption{\label{fig:Fig_4}% 
 Second order transitions are characterized by discontinuities in response quantities, such as the specific heat. (a,b) In the case of a \textbf{critical} second order transition, the entropy $S$ attains an infinite slope at $T_{c}$ accompanied by a divergence in the specific heat $C_{V}$. (c,d) So called \textit{lambda} transitions are characterized by a jump discontinuity in $C_{V}$ and a cusp singularity in entropy.}
 \end{figure}
@@ -329,7 +332,7 @@ In the generalized formalism, peaks in the specific heat and other response quan
 
 \begin{figure}
 \center
-\includegraphics[width = 0.8\textwidth]{chapter2Figs/CanonicalAnalysisSample.pdf}
+\includegraphics[width = 0.8\textwidth]{chapter2Figs/CanonicalAnalysisSample.eps}
 \caption{\label{fig:Fig_5}% 
 (a) The peak in the specific heat $C_{V}$ indicates a region of heightened thermodynamic activity. (b) The two peaks in the bimodal canonical energy distribution correspond to the ordered and disordered pseudophases, energetically separated by the latent heat $\Delta Q$. Pseudophase coexistence and latent heat are reliable indicators of a first-order pseudophase transition. (c) Second-order transitions are marked by wide unimodal energy distributions at the transition point.}
 \end{figure}
@@ -692,7 +695,7 @@ Therefore each histogram yields an estimate of the density of states
 %
 \begin{figure}
 \center
-\includegraphics[width = 0.95\textwidth]{chapter3Figs/multipleHistogramReweighting.pdf}
+\includegraphics[width = 0.95\textwidth]{chapter3Figs/multipleHistogramReweighting.eps}
 \caption{\label{fig:MHR}%
 (a) Illustration of the canonical energy histograms $h(E,\beta_{i})$, (b) the individual estimates of the logarithm of the density of states $\bar{S}_{i}(E)$, (c) and the combined estimate of the logarithm of the density of states $\hat{S}(E)$ obtained by reweighting.}
 \end{figure}
@@ -774,7 +777,7 @@ The pivot update consists of rotating a portion of the polymer chain over a rand
 %
 \begin{figure}
 \center
-\includegraphics[width = 0.99\textwidth]{chapter3Figs/conformationalUpdatesNew.pdf}
+\includegraphics[width = 0.99\textwidth]{chapter3Figs/conformationalUpdates.eps}
 \caption{\label{fig:conformUpdate}%
 Schematic depiction of the single-displacement and the rotational pivot updates.
 In a displacement update, a randomly selected monomer is moved according to a randomly generated displacement vector $\Delta \mathbf{r_{i}}$. The pivot update consists of rotating a portion of the polymer chain over a randomly chosen axis $\mathbf{k}$ by a random angle $\Delta \phi$. 
@@ -798,7 +801,7 @@ It is hardly possible to overestimate the importance of defining an appropriate 
 %
 \begin{figure}
 \center
-\includegraphics[width = 1.01\textwidth]{chapter4Figs/coarseGraining.png}
+\includegraphics[width = 1.01\textwidth]{chapter4Figs/coarseGraining.eps}
 \caption{\label{fig:coarseGraining}%
 An example of a coarse-grained model of polyethylene. Methylene groups $(\mathrm{CH}_{2})$ are replaced by coarse-grained interaction sites which are depicted as transparent spheres. The interactions between the sites are described in terms of effective potentials.
 }
@@ -862,7 +865,7 @@ where $\epsilon$  sets the energy scale of the interaction while the relevant le
 %
 \begin{figure}
 \center
-\includegraphics[width = 1.01\textwidth]{chapter4Figs/potentialLarge.pdf}
+\includegraphics[width = 1.01\textwidth]{chapter4Figs/potentialLarge.eps}
 \caption{\label{fig:potentials}%
 (a) Non-bonded interactions in the generic model of an elastic homopolymer are represented by the Lennard-Jones potential. Interacting monomers experience strong repulsion below the equilibrium distance $r_{0}$, and are weakly attracted over the interval $(r_{0},r_{c})$ where $r_{c}$ marks the cutoff distance.\,\,(b) The nonlinear FENE potential (red) is a symmetric representation of the bonded interactions. As a possible variant, the symmetry of the bonded potential can be broken by combining the FENE and the Lennard-Jones potentials (green).}
 \end{figure}
@@ -883,7 +886,7 @@ U_{\mathrm{FENE}}(r_{ii+1})=-\frac{K}{2}R^2
 %
 \begin{figure}
 \center
-\includegraphics[width = 1.01\textwidth]{chapter4Figs/polymerModel.pdf}
+\includegraphics[width = 1.01\textwidth]{chapter4Figs/polymerModel.eps}
 \caption{\label{fig:singleChain}%
 (a) Generic model of a flexible elastic homopolymer. All monomers interact via a pairwise Lennard-Jones potential (LJ). Bonded interactions include an additional finitely extensible nonlinear elastic potential (FENE). (b) In a multi-chain system, the interactions between monomers belonging to different chains are also represented by the (LJ) potential.
 }
@@ -1011,7 +1014,7 @@ is the average of the real spherical harmonics\footnote{The real harmonics can b
 
 \begin{figure}
 \center
-\includegraphics[width = 1.01\textwidth]{chapter4Figs/q6.pdf}
+\includegraphics[width = 1.01\textwidth]{chapter4Figs/q6.eps}
 \caption{\label{fig:orderParameters}%
 Intensity plots of the rotationally invariant order parameter $Q_{6}$ for two variants of a coarse-grained model of an elastic $15$mer. The shading indicates the probability of detecting a configuration with a given value of the order parameter, red being the maximum probability and black being the lowest. In figure (a), the two prominent low energy branches reveal the existence of two solid pseudophases with distinct conformational geometries. Whereas in (b), only a single solid phase is detected.
 }
@@ -1152,12 +1155,13 @@ As discussed in the previous section, the results obtained by means of canonical
 In Fig.~\ref{fig:ElasPolyMicrocanonicalResults} we summarize the results for chains of lengths with $N = 13$ and $30$ monomers for values $R = 0.3, 4.5, 30.0$. In addition to the microcanonical temperature $\beta(E)$ and its first derivative $\gamma(E) = d\beta/dE$, we also plot the canonical energy histograms $h(E)$ obtained at the $\Theta$ transition temperature. 
 
 %
-\begin{figure*}
+\begin{figure}
 \center
-\includegraphics[width= 1.0\textwidth]{chapter5Figs/microelast.eps}
+\hspace*{-5mm}\includegraphics[width= 1.05\textwidth]{chapter5Figs/microelast.eps}
+\vspace{5mm}
 \caption{\label{fig:ElasPolyMicrocanonicalResults}%
 Microcanonical results for 13mers with bond confinement ranges  (a) $R=0.3$, (b) $4.5$, and (c) $30$ as well as for 30mers (d)-(f). Shown are inverse temperature curves $\beta(E)$, their first derivatives $\gamma(E)=d\beta(E)/dE$, and (on arbitrary scale) the energy histograms $h(E)$ at the $\Theta$ transition temperature. The horizontal dashed line marks $\gamma=0$. The positive valued peaks of $\gamma (E)$ for values of $R > 4.5$ clearly indicate that the $\Theta$ transition is first order, but remains separate from the freezing transition. The absorption of the freezing transition by the $\Theta$ transition is apparent for large confinement ranges (c, f).}
-\end{figure*}
+\end{figure}
 %
 
 For $R = 0.3$, the negative valued peaks of $\gamma(E)$ indicate that the $\Theta$ transition is of second order, in agreement with the observation that the canonical energy histograms for both system sizes are clearly unimodal. At $R = 4.5$, the peaks of $\gamma(E)$ become positive and we conclude that the $\Theta$ transition turns to first order. The signals for freezing transitions remain well outside of the back-bending region of the $\Theta$ transition, confirming that the two transitions are well separated.
@@ -1202,7 +1206,7 @@ $30.0$  &  $0.282 \pm 0.005$ &  $0.284  \pm 0.005$ 	& $0.285 \pm 0.002$
 %
 \begin{table}
 \caption{\label{tab:ElasPolyTab2}%
-Same as Table~\ref{tab:ElasPolyTab1}, but for 30mers. \newline}
+Same as Table~\ref{tab:ElasPolyTab1}, but for 30mers.}
 \begin{tabular*}{\hsize}{@{\extracolsep{\fill}}rcccc@{}}
 $R$& $T_{\mathrm{f}}$ & $T_{\theta}$ & $\Delta q_{\mathrm{f}}$ & $\Delta
 q_{\mathrm{\theta}}$\\
@@ -1860,7 +1864,7 @@ to a \textit{second-order} transition.}
 %
 \begin{figure}
 \center
-\includegraphics[width = 1.03\textwidth]{chapter7Figs/combinedMicro.pdf}
+\includegraphics[width = 1.03\textwidth]{chapter7Figs/combinedMicro.eps}
 \caption{\label{fig:Fig_2}Microcanonical temperature
 $\beta(E)$ and its energy derivative $\gamma(E)$ for systems with $M =
 2,3,5,11$ polymer chains with $N=5$ monomers each. 
@@ -1947,7 +1951,7 @@ data for each subphase and to determine their relative frequency.
 %
 \begin{figure}
 \center
-\includegraphics[width = 0.7\textwidth]{chapter7Figs/configurations.pdf}
+\includegraphics[width = 0.7\textwidth]{chapter7Figs/configurations.eps}
 \caption{\label{fig:Fig_3} Sample configurations of
 intermediate subphases found at the aggregation temperature in a system
 consisting of four chains with five monomers each. Due to entropic
@@ -1986,7 +1990,7 @@ where $S_{i}(E) = k_{\mathrm{B}}\mathrm{ln}\, g_{i}(E)$.
 %
 \begin{figure}
 \center
-\includegraphics[width = 0.7\textwidth]{chapter7Figs/entropyCombined.pdf}
+\includegraphics[width = 0.7\textwidth]{chapter7Figs/entropyCombined.eps}
 \caption{\label{fig:Fig_4} Microcanonical entropy per
 monomer $S(E)$ (solid)
 and the individual subphase entropies (dotted) for systems with 
@@ -2197,7 +2201,7 @@ probabilities remains linearly proportional to~$M$.
 %
 \begin{figure}
 \center
-\includegraphics[width = 0.7\textwidth]{chapter7Figs/scalingCombined.pdf}
+\includegraphics[width = 0.7\textwidth]{chapter7Figs/scalingCombined.eps}
 \caption{\label{fig:Fig_6} Scaling behavior of the aggregation transition temperature
 $T_{\mathrm{agg}}$ and the latent heat per monomer $\Delta q$, with respect
 to $M^{-1/3}$ where $M$ is the number of polymer chains. The latent heat
