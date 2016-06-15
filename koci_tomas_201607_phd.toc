@@ -30,17 +30,17 @@
 \contentsline {subsection}{\numberline {4.2.1}Single elastic chain}{45}
 \contentsline {subsection}{\numberline {4.2.2}Interacting elastic chains}{46}
 \contentsline {section}{\numberline {4.3}Structural order parameters}{47}
-\contentsline {chapter}{\numberline {5}Confinement Effects upon Structural Transitions in Elastic Polymer Chains}{50}
+\contentsline {chapter}{\numberline {5}Impact of the Bond Confinement Range on the Structural Transitions of Elastic Homopolymers}{50}
 \contentsline {section}{\numberline {5.1}Model and simulation parameters}{51}
 \contentsline {section}{\numberline {5.2}Results}{53}
 \contentsline {subsection}{\numberline {5.2.1}Canonical analysis of energetic and structural fluctuations}{53}
 \contentsline {subsection}{\numberline {5.2.2}Results of microcanonical inflection-point analysis}{60}
 \contentsline {section}{\numberline {5.3}Summary}{64}
-\contentsline {chapter}{\numberline {6}Impact of Bonded Interactions on the Thermodynamic and Structural Properties of Flexible Homopolymers}{66}
+\contentsline {chapter}{\numberline {6}Effects of Short Range Repulsion on the Structural Properties of Elastic Homopolymers}{66}
 \contentsline {section}{\numberline {6.1}Model and Simulation Parameters}{67}
 \contentsline {section}{\numberline {6.2}Results}{69}
 \contentsline {subsection}{\numberline {6.2.1}Canonical and microcanonical analysis}{69}
-\contentsline {subsection}{\numberline {6.2.2}Structural analysis}{72}
+\contentsline {subsection}{\numberline {6.2.2}Structural analysis}{73}
 \contentsline {section}{\numberline {6.3}Summary}{76}
 \contentsline {chapter}{\numberline {7}Aggregation of Flexible Elastic Homopolymers}{77}
 \contentsline {section}{\numberline {7.1}Introduction}{77}

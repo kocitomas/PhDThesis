@@ -11,8 +11,8 @@
 \usepackage{amsmath}
 \textfloatsep 0.75in                   % important with double spacing
 \usepackage{caption} 
-\captionsetup[table]{aboveskip=10pt}
-\captionsetup[table]{belowskip=2pt}
+\captionsetup[table]{aboveskip=20pt}
+\captionsetup[table]{belowskip=0pt}
 
 \begin{document}
 
@@ -1033,11 +1033,12 @@ Intensity plots of the rotationally invariant order parameter $Q_{6}$ for two va
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\chapter{Confinement Effects upon Structural Transitions in Elastic Polymer Chains}
+\chapter{Impact of the Bond Confinement Range on the Structural Transitions of Elastic Homopolymers}
+\label{chap:bondFluct}
 
 In chapter \ref{chap:HomopolymerModel}, we have suggested that the structural and thermodynamic properties of polymer systems can be investigated by the means of rather simple coarse-grained models. It is desirable that the general features of the model, such as the types of observed pseudophases and low energy conformational geometries, remain at least qualitatively similar over a range of model parameters. In recent studies, the effect of the interaction range between non-bonded monomers of a single elastic homopolymer has been addressed systematically~\cite{taylorRange1,taylorRange2,Gross2013}. It has been found that for sufficiently short interaction ranges, it is possible for the polymer to fold directly from random-coil structures (i.e., the gas phase) into solid and compact conformations. Under these conditions, no globular (or liquid) phase is present.
 
-In this chapter, we investigate the effects of restricting the fluctuation range of bonded interactions on the structural and thermodynamic properties of a single elastic polymer chain. The variation of the bond extension range allows us to bridge the gap between self-interacting polymers with stiff bonds (such as proteins) and bead-spring chains (elastic polymers) with bonds so floppy that these polymers behave similarly to a gas of interacting particles. For this purpose, we have performed extensive replica-exchange Monte Carlo simulations in extended multiple Gaussian modified ensembles~\cite{Neuhaus2006}, which help improve the efficiency of parallel tempering simulations near first-order transitions. Systematic studies of the structural phases in the space of the bond confinement parameter were made possible by employing standard canonical analyses of fluctuations in macroscopic thermodynamic quantities and also by careful analysis of the nature of inflection points in the microcanonical temperature curve~\cite{Bachmann2014,Schnabel2011}.
+In this chapter, we investigate the effects of restricting the fluctuation range of bonded interactions in a single elastic polymer chain. The variation of the bond extension range allows us to bridge the gap between self-interacting polymers with stiff bonds (such as proteins) and bead-spring chains (elastic polymers) with bonds so floppy that these polymers behave similarly to a gas of interacting particles. For this purpose, we have performed extensive replica-exchange Monte Carlo simulations in extended multiple Gaussian modified ensembles~\cite{Neuhaus2006}, which help improve the efficiency of parallel tempering simulations near first-order transitions. Systematic studies of the structural phases in the space of the bond confinement parameter were made possible by employing standard canonical analyses of fluctuations in macroscopic thermodynamic quantities and also by careful analysis of the nature of inflection points in the microcanonical temperature curve~\cite{Bachmann2014,Schnabel2011}.
 
 \section{Model and simulation parameters}
 In this study, we employ a coarse-grained model of an elastic homopolymer, in the same form as introduced in Sec.\,\,\ref{subsec:ElasticChain}. This model was originally introduced for investigations of general properties of elastic polymer chains. Due to the similarity in the transition behavior of atomic clusters and polymers, however, the scope of this model can be extended to investigate effects of bond confinement as well. As such, this model allows for the interpolation of systems ranging from polymers to an almost unconfined gas of atoms.
@@ -1166,7 +1167,8 @@ Microcanonical results for 13mers with bond confinement ranges  (a) $R=0.3$, (b)
 
 For $R = 0.3$, the negative valued peaks of $\gamma(E)$ indicate that the $\Theta$ transition is of second order, in agreement with the observation that the canonical energy histograms for both system sizes are clearly unimodal. At $R = 4.5$, the peaks of $\gamma(E)$ become positive and we conclude that the $\Theta$ transition turns to first order. The signals for freezing transitions remain well outside of the back-bending region of the $\Theta$ transition, confirming that the two transitions are well separated.
 
-In the case $R = 30$, the multiple peaks in $\gamma(E)$ indicate that the $\Theta$ transition consists of a hierarchy of subphase transitions. This is particularly apparent in nucleation transitions with entropy reduction due to stepwise loss of translational entropy. Prominent examples are aggregation transition in systems consisting of multiple polymer chains~\cite{Bachmann2014,KociAgg2015,Junghans2008,Junghans2009,Junghans2011}, which will be discussed in detail in Chap.\,\,\ref{chap:Aggregation}. The system undergoes a direct transition from the solid phase into the gas phase through a series of subphase transitions consisting of individual monomers breaking away from the bulk.
+In the case $R = 30$, the multiple peaks in $\gamma(E)$ indicate that the $\Theta$ transition consists of a hierarchy of subphase transitions. This interesting phenomena is characteristic of nucleation transitions with entropy reduction due to stepwise loss of translational entropy. One prominent example is the aggregation transition in systems consisting of multiple polymer chains~\cite{Bachmann2014,KociAgg2015,Junghans2008,Junghans2009,Junghans2011},
+which will be discussed in detail in Chap.\,\,\ref{chap:Aggregation}. Here, the system undergoes a direct transition from the solid phase into the gas phase through a series of subphase transitions consisting of individual monomers breaking away from the bulk.
 \newpage
 \noindent
 This can be seen nicely in the case of a 13mer with the confinement range $R = 30$. Shown in Fig.~\ref{fig:ElasPolyMicrocanonicalResults}(c), each of the 12 oscillations in the back-bending region of $\beta(E)$ corresponds to a subphase transitions. For a 30mer, at the same $R$ value [Fig.~\ref{fig:ElasPolyMicrocanonicalResults}(f)], subphases overlap to an extent that only an accumulated effect upon $\beta(E)$ is visible. 
@@ -1230,32 +1232,36 @@ $30.0$  &  $0.35 \pm 0.01$ &  $0.344  \pm 0.005$ & N/A & $3.399 \pm 0.002$
 \section{Summary}
 \label{sec:sum}
 %
-In this chapter, we have investigated the thermodynamic behavior of a linear chain of monomers connected by confined bonds which resembles a polymer for a large range of values of the bond confinement range $R$. Advanced parallel replica-exchange Monte Carlo methods, such as the Multiple Gaussian modified ensemble (MGME), were utilized in order to overcome the computational difficulties posed by the strong first-order-like behavior associated with the $\Theta$ transition at large $R$ values. Using the results obtained from the specific heat and the thermal fluctuations of the radius of gyration, we have constructed and compared features of the structural hyperphase diagrams for 13mers and 30mers. For low and intermediate confinement ranges, three distinct structural phases separated by the freezing and the $\Theta$ transitions can be identified, in agreement with the expected behavior. With increasing values of the parameter $R$, however, the $\Theta$ transition line shifts to lower temperatures and eventually merges with the freezing transition line, suggesting the absence of an independent liquid phase. Microcanonical inflection-point analysis provides conclusive evidence that the $\Theta$ transition turns from second order to first order if the bond confinement range parameter $R$ exceeds a threshold value. This change in the character of the $\Theta$ transition is not influenced by the freezing transition, which in this part of the phase diagram is still well separated from the $\Theta$ point. Increasing the confinement range further, $\Theta$ and freezing transitions merge and exhibit clear indications of a hierarchical nucleation transition. In this regime, the beads  are quasi-free and interact likewise with others, bonded or nonbonded. The still coupled system behaves like an atomic cluster in a dilute regime. The general structure of the hyperphase diagrams can be expected to remain qualitatively intact even for substantially larger systems. The only anticipated change is that the freezing transition is of first order for all system sizes with more than about 40 monomers~\cite{Schnabel2011}.
+In this chapter, we have investigated the thermodynamic behavior of a linear chain of monomers connected by confined bonds, which resembles a polymer for a large range of values of the bond confinement range $R$. Advanced parallel replica-exchange Monte Carlo methods, such as the Multiple Gaussian modified ensemble (MGME), were utilized in order to overcome the computational difficulties posed by the strong first-order-like behavior associated with the $\Theta$ transition at large $R$ values. Using the results obtained from the specific heat and the thermal fluctuations of the radius of gyration, we have constructed and compared features of the structural hyperphase diagrams for 13mers and 30mers. For low and intermediate confinement ranges, three distinct structural phases separated by the freezing and the $\Theta$ transitions can be identified, in agreement with the expected behavior. With increasing values of the parameter $R$, however, the $\Theta$ transition line shifts to lower temperatures and eventually merges with the freezing transition line, suggesting the absence of an independent liquid phase. Microcanonical inflection-point analysis provides conclusive evidence that the $\Theta$ transition turns from second order to first order if the bond confinement range parameter $R$ exceeds a threshold value. This change in the character of the $\Theta$ transition is not influenced by the freezing transition, which in this part of the phase diagram is still well separated from the $\Theta$ point. Increasing the confinement range further, $\Theta$ and freezing transitions merge and exhibit clear indications of a hierarchical nucleation transition. In this regime, the beads  are quasi-free and interact likewise with others, bonded or nonbonded. The still coupled system behaves like an atomic cluster in a dilute regime. The general structure of the hyperphase diagrams can be expected to remain qualitatively intact even for substantially larger systems. The only anticipated change is that the freezing transition is of first order for all system sizes with more than about 40 monomers~\cite{Schnabel2011}.
 
 Our systematic study covers the technologically and biologically interesting regime of polymer chains with bond elasticities ranging from stiff to highly elastic, which includes all realistic linear macromolecules,  and extends into the space of confined systems that behave like atomic clusters. Since our results are supposed to be generic, they allow for a classification of the expected transition behavior on the basis of the effective bond confinement range of these systems.
 %
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-%%%%%%%%%% 	     CHAPTER 6				   %%%%%%%%%%%%
+   %%%%%%%%%%%%%%%%%%%% 	     CHAPTER 6				   %%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Impact of Bonded Interactions on the Thermodynamic and Structural Properties of Flexible Homopolymers}
 
-Bonded interactions in coarse-grained models of elastic polymers are commonly represented by the symmetric, finitely extensible nonlinear elastic (FENE) potential. In chapter \ref{chap:HomopolymerModel}, we have introduced an alternative model which contained an additional Lennard-Jones (LJ) term in the bonded potential. As a result, the bonded potential becomes strongly repulsive at close range and the symmetry of the FENE potential is broken. In this chapter, we systematically investigate the effects of the width and asymmetry of the bonded potential on the structural and thermodynamic properties of short polymer chains. Utilizing the methods of canonical and microcanonical analysis we construct hyperphase diagrams for chains of length $N = 15,55$. Careful investigation of the geometries of low energy conformations is carried out with the help of structural order parameters which were introduced in section \ref{sec:orderParameters}.
+\chapter{Effects of Short Range Repulsion on the Structural Properties of Elastic Homopolymers}
+
+Bonded interactions in coarse-grained models of elastic polymers are commonly represented by the symmetric, finitely extensible nonlinear elastic (FENE) potential (Eq.~\ref{eq:FENE}). In Chap.~\ref{chap:HomopolymerModel}, we have introduced an alternative form of the bonded potential with an added Lennard-Jones (LJ) term. With the additional term, the bonded potential becomes strongly repulsive at close ranges, and the symmetry of the FENE potential is broken. However the maximum extension of the bond, also known as the bond confinement range, is controlled solely by the strongly diverging FENE potential.  The impact of the bond confinement range on the thermodynamic properties of short elastic homopolymer chains is discussed extensively in Chap.~\ref{chap:bondFluct}. In the following, we systematically investigate the effects of short range repulsion between bonded monomers on similar systems. 
+\newpage
+\noindent
+Hyperphase diagrams for chains of length $N = 15,55$ are constructed utilizing the methods of canonical and microcanonical analysis. The geometry of low energy conformations is examined with the aid of structural order parameters which were introduced in Sec.~\ref{sec:orderParameters}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-%%%%%%%%%% 	     MODEL AND METHODS		   %%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%	     MODEL AND METHODS		  %%%%%%% %%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Model and Simulation Parameters}
-The coarse-grained model of an elastic homopolymer has already been described in chapter \ref{chap:HomopolymerModel}.Non-bonded interactions are represented by the truncated and shifted Lennard-Jones (LJ) potential. The energy scale is set to $\epsilon=1$ and the van-der-Waals radius to $\sigma=r_0/2^{1/6}$, where $r_0 = 1.0$ is the location of the potential minimum. We select a cut-off radius at $r_c=2.5\,\sigma$ and introduce a shift $U_{\mathrm{LJ}}(r_{c}) \approx -0.0163169$, to avoid discontinuities in the potential.
+The coarse-grained model of an elastic homopolymer has already been introduced in Chap.~\ref{chap:HomopolymerModel}. In this study, the energy scale of the non-bonded Lennard-Jones potential is set to $\epsilon=1$ and the van-der-Waals radius to $\sigma=r_0/2^{1/6}$, where $r_0 = 1.0$ is the location of the potential minimum. We set a cut-off radius at $r_c=2.5\,\sigma$ and introduce a shift $U_{\mathrm{LJ}}(r_{c}) \approx -0.0163169$, to avoid discontinuities in the potential.
 
-In order to investigate the properties of the model over a whole range of widths and shapes of the bonded potential, it is introduced here in the modified form:
+In order to investigate the properties of the model over a whole range of strengths of the short range repulsion, we introduce the bonded potential in the modified form:
 %
 \begin{equation}
 \label{eq:BondedInteractionModified}
-U_{\mathrm{bonded}}(r_{ii+1}) = U_{\mathrm{FENE}}(r_{ii+1}) + \eta [U_{\mathrm{LJ}}(r_{ii=1}) + \epsilon] - [\epsilon + U_{\mathrm{LJ}}(r_{c})].
+U_{\mathrm{bonded}}(r_{ii+1}) = U_{\mathrm{FENE}}(r_{ii+1}) + \eta \left(U_{\mathrm{LJ}}(r_{ii+1}) + \epsilon\right) - \left(\epsilon + U_{\mathrm{LJ}}(r_{c})\right).
 \end{equation}
 %
-The first term consists of the anharmonic FENE potential in its standard form (Eq.\,\,\ref{eq:FENE}). The effective bond width and the strength of the short range repulsion is controlled by the parameter $\eta$. The entire potential is shifted by $(\epsilon+U_{\rm shift})$ in order to match the minimum energy of the non-bonded interactions. The maximum bond extension is limited by the FENE potential, which diverges as $r \rightarrow r_0 \pm R$. Increasing the value of $\eta$ introduces asymmetry to the bonded potential and the energy cost associated with non-optimal bond lengths is increased. In particular, compressed bonds result in high energy penalties as $\eta$ becomes large. The shapes and the widths of the bonded potential at different values of the $\eta$ control parameter are shown in Fig.~\ref{fig:modifiedBondedPotential}. 
+The maximum bond extension is limited by the FENE potential (Eq.\,\,\ref{eq:FENE}), which diverges as $r \rightarrow r_0 \pm R$. For the purpose of this study, the bond confinement range is fixed at $R = 3/7$. The entire potential is shifted by $(\epsilon+U_{\rm shift})$ in order to match the minimum energy of the non-bonded interactions. The strength of the short range repulsion is controlled by the parameter $\eta$. Increasing the value of $\eta$ introduces asymmetry to the bonded potential and raises the energy cost associated with non-optimal bond lengths. In particular, compressed bonds result in high energy penalties as $\eta$ becomes large. The shapes of the bonded potential corresponding to different values of the $\eta$ control parameter are shown in Fig.~\ref{fig:modifiedBondedPotential}. 
 %
 \begin{figure}
 \center
@@ -1263,6 +1269,7 @@ The first term consists of the anharmonic FENE potential in its standard form (E
 \caption{\label{fig:modifiedBondedPotential} The modified bonded potential $U_{\mathrm{bonded}}(r)$, modelled by the FENE and LJ interactions. The strength of the Lennard-Jones term is controlled by the bond flexibility parameter $\eta \in [0,1]$.}
 \end{figure}
 
+\newpage
 In order to enhance the sampling of low-energy configurations, a parallel version of multicanonical sampling \cite{muca1,muca2,Zierenberg2013} has been used in this study. The standard multicanonical runs are performed in $K$ replicas independently with the same initial weight functions but different random seeds. Displacement updates are proposed within a cubic box of edge lengths $d=0.3r_0$ and accepted according to the probability
 %
 \begin{equation}
@@ -1528,6 +1535,7 @@ choice of model parameters.
 
 
 \chapter{Aggregation of Flexible Elastic Homopolymers}
+\label{chap:Aggregation}
 \section{Introduction}
 %
 Deeper understanding of aggregation processes in the context
@@ -2299,11 +2307,6 @@ tends towards the thermodynamic limit.
 
 
 
-
-\begin{table}
-\caption{Example of a table.}
-\centerline{[The contents of the table would go here.]}
-\end{table}
 
 
 
