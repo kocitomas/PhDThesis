@@ -3,7 +3,7 @@ gnuplot -persist << PLOT
 ######################## Figure 1 #################################
 
 ## RANGE
-set xrange [0.2:1.5]
+set xrange [0.15:1.5]
 set yrange [-1.5:3.5]
 
 
@@ -18,6 +18,7 @@ set key left
 
 
 ## TICS
+set xtics ("0.2" 0.2,"0.4" 0.4, "$r_{0} - R$" 4.0/7.0,"0.8" 0.8,"$r_{0}$" 1.0, "1.2" 1.2,"$r_{0} + R$" 10.0/7.0)
 set mxtics 10
 set mytics 5
 set format y "%2.1f"
@@ -28,19 +29,16 @@ set xlabel '$r_{ii+1}$’
 set ylabel '$U_{\mathrm{bonded}}$’
 
 ## PLOT
-plot g(x) + 0.0*f(x) + shift title "$\eta = 0.00$",g(x) + 0.02*f(x) + shift title "$\eta = 0.02$",g(x) + 0.05*f(x) + shift title "$\eta = 0.05$",g(x) + 0.1*f(x) + shift title "$\eta = 0.10$",g(x) + 0.4*f(x) + shift title "$\eta = 0.40$",g(x) + 1.0*f(x) + shift title "$\eta = 1.00$"
+plot g(x) + 0.0*f(x) + shift lw 3 title '\footnotesize $\eta = 0.00$',g(x) + 0.02*f(x) + shift  lw 3 title '\footnotesize $\eta = 0.02$',g(x) + 0.05*f(x) + shift lw 3 title '\footnotesize $\eta = 0.05$',g(x) + 0.1*f(x) + shift lw 3 title '\footnotesize $\eta = 0.10$',g(x) + 0.4*f(x) + shift lw 3 title '\footnotesize $\eta = 0.40$',g(x) + 1.0*f(x) + shift lw 3 title '\footnotesize $\eta = 1.00$',-1 title ''
 
 
-
-set label 1 '$T_{\mathrm{freezing}}$' at 0.31,5.4
-set label 2 '$T_{\mathrm{collapse}}$' at 1.58,7.5
 
 
 set arrow 1 from 4.0/7.0,-1.5 to 4.0/7.0,3.5 nohead ls 0 lw 3
 set arrow 2 from 10.0/7.0,-1.5 to 10.0/7.0,3.5 nohead ls 0 lw 3
 
 
-set terminal epslatex size 4.0,2.45 standalone color colortext 9
+set terminal epslatex size 4,2.6 standalone color colortext 9
 
 set output 'bondedInter.tex'
 
