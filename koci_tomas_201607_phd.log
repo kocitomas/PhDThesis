@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.3.27)  16 JUN 2016 11:15
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.3.27)  16 JUN 2016 12:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -380,173 +380,159 @@ Chapter 6.
 
 ]
 File: chapter6Figs/bondedInter.eps Graphic file (type eps)
- <chapter6Figs/bondedInter.eps> [67]
-
-LaTeX Warning: Citation `muca1' on page 68 undefined on input line 1273.
-
-
-LaTeX Warning: Citation `Zierenberg2013' on page 68 undefined on input line 127
-3.
-
-[68]
-
-LaTeX Warning: Citation `muca1' on page 69 undefined on input line 1286.
-
-
-LaTeX Warning: Citation `Stevenson1981' on page 69 undefined on input line 1296
-.
-
+ <chapter6Figs/bondedInter.eps> [67] [68]
 File: chapter6Figs/Fig2.eps Graphic file (type eps)
-<chapter6Figs/Fig2.eps> [69] [70]
+ <chapter6Figs/Fig2.eps> [69]
+[70]
 File: chapter6Figs/Fig3.eps Graphic file (type eps)
  <chapter6Figs/Fig3.eps> [71] [72]
 File: chapter6Figs/structural_analysis.eps Graphic file (type eps)
-
-<chapter6Figs/structural_analysis.eps> [73]
+ <chapter6Figs/structural_analysis.eps>
+[73]
 File: chapter6Figs/configurations.eps Graphic file (type eps)
  <chapter6Figs/configurations.eps>
-Underfull \hbox (badness 1418) in paragraph at lines 1511--1511
+Underfull \hbox (badness 1418) in paragraph at lines 1492--1492
 \OT1/cmr/m/n/12 energy struc-tures of the elas-
  []
 
 [74] [75] [76]
 Chapter 7.
 
-LaTeX Warning: Citation `Selkoe' on page 77 undefined on input line 1547.
+LaTeX Warning: Citation `Selkoe' on page 77 undefined on input line 1528.
 
 
-LaTeX Warning: Citation `Chiti' on page 77 undefined on input line 1547.
+LaTeX Warning: Citation `Chiti' on page 77 undefined on input line 1528.
 
 
-LaTeX Warning: Citation `marinari' on page 77 undefined on input line 1557.
+LaTeX Warning: Citation `marinari' on page 77 undefined on input line 1538.
 
 
-LaTeX Warning: Citation `lyubartsev' on page 77 undefined on input line 1557.
+LaTeX Warning: Citation `lyubartsev' on page 77 undefined on input line 1538.
 
 
-LaTeX Warning: Citation `bf1' on page 77 undefined on input line 1566.
+LaTeX Warning: Citation `bf1' on page 77 undefined on input line 1547.
 
 
-LaTeX Warning: Citation `bf2' on page 77 undefined on input line 1566.
+LaTeX Warning: Citation `bf2' on page 77 undefined on input line 1547.
 
 
-LaTeX Warning: Citation `grass2' on page 77 undefined on input line 1566.
+LaTeX Warning: Citation `grass2' on page 77 undefined on input line 1547.
 
 
-LaTeX Warning: Citation `vbj1' on page 77 undefined on input line 1566.
+LaTeX Warning: Citation `vbj1' on page 77 undefined on input line 1547.
 
 
-LaTeX Warning: Citation `strauch1' on page 77 undefined on input line 1566.
+LaTeX Warning: Citation `strauch1' on page 77 undefined on input line 1547.
 
 
-LaTeX Warning: Citation `seaton3' on page 77 undefined on input line 1566.
+LaTeX Warning: Citation `seaton3' on page 77 undefined on input line 1547.
 
 
-LaTeX Warning: Citation `semisslb1' on page 77 undefined on input line 1566.
+LaTeX Warning: Citation `semisslb1' on page 77 undefined on input line 1547.
 
 
-LaTeX Warning: Citation `Koci2015' on page 77 undefined on input line 1566.
+LaTeX Warning: Citation `Koci2015' on page 77 undefined on input line 1547.
 
 
-LaTeX Warning: Citation `bj4' on page 77 undefined on input line 1568.
+LaTeX Warning: Citation `bj4' on page 77 undefined on input line 1549.
 
 
-LaTeX Warning: Citation `prellberg1' on page 77 undefined on input line 1568.
+LaTeX Warning: Citation `prellberg1' on page 77 undefined on input line 1549.
 
 
-LaTeX Warning: Citation `paul1' on page 77 undefined on input line 1568.
+LaTeX Warning: Citation `paul1' on page 77 undefined on input line 1549.
 
 
-LaTeX Warning: Citation `mbj1' on page 77 undefined on input line 1568.
+LaTeX Warning: Citation `mbj1' on page 77 undefined on input line 1549.
 
 
-LaTeX Warning: Citation `liang1' on page 77 undefined on input line 1568.
+LaTeX Warning: Citation `liang1' on page 77 undefined on input line 1549.
 
 
-LaTeX Warning: Citation `allen1' on page 77 undefined on input line 1568.
+LaTeX Warning: Citation `allen1' on page 77 undefined on input line 1549.
 
 
-LaTeX Warning: Citation `vb1' on page 77 undefined on input line 1568.
+LaTeX Warning: Citation `vb1' on page 77 undefined on input line 1549.
 
 
-LaTeX Warning: Citation `ywli1' on page 77 undefined on input line 1568.
+LaTeX Warning: Citation `ywli1' on page 77 undefined on input line 1549.
 
 
-LaTeX Warning: Citation `mjb4' on page 77 undefined on input line 1568.
+LaTeX Warning: Citation `mjb4' on page 77 undefined on input line 1549.
 
 
-LaTeX Warning: Citation `vgb1' on page 77 undefined on input line 1568.
+LaTeX Warning: Citation `vgb1' on page 77 undefined on input line 1549.
 
 
-LaTeX Warning: Citation `jbj1' on page 77 undefined on input line 1570.
+LaTeX Warning: Citation `jbj1' on page 77 undefined on input line 1551.
 
 
-LaTeX Warning: Citation `Zieren2014' on page 77 undefined on input line 1570.
+LaTeX Warning: Citation `Zieren2014' on page 77 undefined on input line 1551.
 
 
-LaTeX Warning: Citation `Zieren2015' on page 77 undefined on input line 1570.
+LaTeX Warning: Citation `Zieren2015' on page 77 undefined on input line 1551.
 
 
-LaTeX Warning: Citation `dill1' on page 77 undefined on input line 1573.
+LaTeX Warning: Citation `dill1' on page 77 undefined on input line 1554.
 
 
-LaTeX Warning: Citation `still1' on page 77 undefined on input line 1573.
+LaTeX Warning: Citation `still1' on page 77 undefined on input line 1554.
 
 
-LaTeX Warning: Citation `still2' on page 77 undefined on input line 1573.
+LaTeX Warning: Citation `still2' on page 77 undefined on input line 1554.
 
 
-LaTeX Warning: Citation `som1' on page 77 undefined on input line 1573.
+LaTeX Warning: Citation `som1' on page 77 undefined on input line 1554.
 
 
-LaTeX Warning: Citation `hsu1' on page 77 undefined on input line 1573.
+LaTeX Warning: Citation `hsu1' on page 77 undefined on input line 1554.
 
 
-LaTeX Warning: Citation `bj1' on page 77 undefined on input line 1573.
+LaTeX Warning: Citation `bj1' on page 77 undefined on input line 1554.
 
 
-LaTeX Warning: Citation `ssbj1' on page 77 undefined on input line 1573.
+LaTeX Warning: Citation `ssbj1' on page 77 undefined on input line 1554.
 
 [77
 
 ]
 
-LaTeX Warning: Citation `fisher1' on page 78 undefined on input line 1599.
+LaTeX Warning: Citation `fisher1' on page 78 undefined on input line 1580.
 
 
-LaTeX Warning: Citation `taylor1' on page 78 undefined on input line 1599.
+LaTeX Warning: Citation `taylor1' on page 78 undefined on input line 1580.
 
 
-LaTeX Warning: Citation `rslb1' on page 78 undefined on input line 1599.
+LaTeX Warning: Citation `rslb1' on page 78 undefined on input line 1580.
 
 
-LaTeX Warning: Citation `taylor2' on page 78 undefined on input line 1599.
+LaTeX Warning: Citation `taylor2' on page 78 undefined on input line 1580.
 
 
-LaTeX Warning: Citation `KaiQi2016' on page 78 undefined on input line 1601.
+LaTeX Warning: Citation `KaiQi2016' on page 78 undefined on input line 1582.
 
 [78] [79] [80] [81] [82]
 
-LaTeX Warning: Citation `KaiQi2016' on page 83 undefined on input line 1851.
+LaTeX Warning: Citation `KaiQi2016' on page 83 undefined on input line 1832.
 
 File: chapter7Figs/micro_example.eps Graphic file (type eps)
 <chapter7Figs/micro_example.eps>
 File: chapter7Figs/combinedMicro.eps Graphic file (type eps)
  <chapter7Figs/combinedMicro.eps>
-Overfull \hbox (14.09207pt too wide) in paragraph at lines 1875--1889
+Overfull \hbox (14.09207pt too wide) in paragraph at lines 1856--1870
  [] 
  []
 
 [83] [84] [85]
 
-LaTeX Warning: Citation `jbj1' on page 86 undefined on input line 1952.
+LaTeX Warning: Citation `jbj1' on page 86 undefined on input line 1933.
 
 File: chapter7Figs/configurations.eps Graphic file (type eps)
 <chapter7Figs/configurations.eps> [86] [87]
 File: chapter7Figs/entropyCombined.eps Graphic file (type eps)
  <chapter7Figs/entropyCombined.eps>
 [88] [89]
-Overfull \hbox (10.56522pt too wide) in paragraph at lines 2121--2128
+Overfull \hbox (10.56522pt too wide) in paragraph at lines 2102--2109
 \OML/cmm/m/it/12 h\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 E\OT1/cmr/m/n/12 ; \OML/cmm
 /m/it/12 ^^L[]\OT1/cmr/m/n/12 )$, shown along-side the mi-cro-canon-i-cal quan-
 ti-ties in Fig. 7.2[]. The his-togram $\OML/cmm/m/it/12 h\OT1/cmr/m/n/12 (\OML/
@@ -560,10 +546,10 @@ File: chapter7Figs/scalingCombined.eps Graphic file (type eps)
 
 <chapter7Figs/scalingCombined.eps>
 
-LaTeX Warning: Citation `Zieren2014' on page 94 undefined on input line 2227.
+LaTeX Warning: Citation `Zieren2014' on page 94 undefined on input line 2208.
 
 
-LaTeX Warning: Citation `Zieren2015' on page 94 undefined on input line 2227.
+LaTeX Warning: Citation `Zieren2015' on page 94 undefined on input line 2208.
 
 [94] [95] [96] [97]
 Chapter 8.
@@ -581,12 +567,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3410 strings out of 494986
- 51580 string characters out of 6180382
+ 3408 strings out of 494986
+ 51558 string characters out of 6180382
  120273 words of memory out of 5000000
- 6552 multiletter control sequences out of 15000+600000
+ 6550 multiletter control sequences out of 15000+600000
  12170 words of font info for 43 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  53i,11n,92p,2181b,444s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on koci_tomas_201607_phd.dvi (119 pages, 254436 bytes).
+Output written on koci_tomas_201607_phd.dvi (119 pages, 254536 bytes).

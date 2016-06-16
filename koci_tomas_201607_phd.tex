@@ -1237,20 +1237,20 @@ In this chapter, we have investigated the thermodynamic behavior of a linear cha
 Our systematic study covers the technologically and biologically interesting regime of polymer chains with bond elasticities ranging from stiff to highly elastic, which includes all realistic linear macromolecules,  and extends into the space of confined systems that behave like atomic clusters. Since our results are supposed to be generic, they allow for a classification of the expected transition behavior on the basis of the effective bond confinement range of these systems.
 %
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-   %%%%%%%%%%%%%%%%%%%% 	     CHAPTER 6				   %%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 	     
+%%%%%%%%%%%%%%%%%%%%   CHAPTER 6			   %%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{Effects of Short Range Repulsion on the Structural Properties of Elastic Homopolymers}
 
-Bonded interactions in coarse-grained models of elastic polymers are commonly represented by the symmetric, finitely extensible nonlinear elastic (FENE) potential (Eq.~\ref{eq:FENE}). In Chap.~\ref{chap:HomopolymerModel}, we have introduced an alternative form of the bonded potential with an added Lennard-Jones (LJ) term. With the additional term, the bonded potential becomes strongly repulsive at close ranges, and the symmetry of the FENE potential is broken. However the maximum extension of the bond, also known as the bond confinement range, is controlled solely by the strongly diverging FENE potential.  The impact of the bond confinement range on the thermodynamic properties of short elastic homopolymer chains is discussed extensively in Chap.~\ref{chap:bondFluct}. In the following, we systematically investigate the effects of short range repulsion between bonded monomers on similar systems. 
+Bonded interactions in coarse-grained models of elastic polymers are commonly represented by the symmetric, finitely extensible nonlinear elastic (FENE) potential (Eq.~\ref{eq:FENE}). In Chap.~\ref{chap:HomopolymerModel}, we have introduced an alternative form of the bonded potential with an added Lennard-Jones (LJ) term. With the additional term, the bonded potential becomes strongly repulsive at close ranges, and the symmetry of the FENE potential is broken. However the maximum extension of the bond, also known as the bond confinement range, is controlled solely by the strongly diverging FENE potential.  The impact of the bond confinement range on the thermodynamic properties of short elastic homopolymer chains is discussed extensively in Chap.~\ref{chap:bondFluct}. In the following, we systematically investigate the effects of short range repulsion between bonded monomers on a similar systems. 
 \newpage
 \noindent
 Hyperphase diagrams for chains of length $N = 15,55$ are constructed utilizing the methods of canonical and microcanonical analysis. The geometry of low energy conformations is examined with the aid of structural order parameters which were introduced in Sec.~\ref{sec:orderParameters}.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-%%%%%%%%%%%%%%%%%%	     MODEL AND METHODS		  %%%%%%% %%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 	     
+%%%%%%%%%%%%%%%%%%%%  MODEL AND METHODS		 %%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Model and Simulation Parameters}
 The coarse-grained model of an elastic homopolymer has already been introduced in Chap.~\ref{chap:HomopolymerModel}. In this study, the energy scale of the non-bonded Lennard-Jones potential is set to $\epsilon=1$ and the van-der-Waals radius to $\sigma=r_0/2^{1/6}$, where $r_0 = 1.0$ is the location of the potential minimum. We set a cut-off radius at $r_c=2.5\,\sigma$ and introduce a shift $U_{\mathrm{LJ}}(r_{c}) \approx -0.0163169$, to avoid discontinuities in the potential.
 
@@ -1270,44 +1270,26 @@ The maximum bond extension is limited by the FENE potential (Eq.\,\,\ref{eq:FENE
 \end{figure}
 
 \newpage
-In order to enhance the sampling of low-energy configurations, a parallel version of multicanonical sampling \cite{muca1,muca2,Zierenberg2013} has been used in this study. The standard multicanonical runs are performed in $K$ replicas independently with the same initial weight functions but different random seeds. Displacement updates are proposed within a cubic box of edge lengths $d=0.3r_0$ and accepted according to the probability
+In order to overcome the challenges associated with the simulation of polymers at very low energies, a parallel version of multicanonical sampling \cite{muca1a,muca2,Zierenberg2013} has been used in this study. In this method, $K$ independent multicanonical runs are performed in parallel. The initial estimates for the multicanonical weight functions are the same for all replicas. However, the random number generators are initialized with different seeds which allows each replica to perform a unique random walk in the energy space. Displacement updates are proposed within a cubic box of edge lengths $d=0.3r_0$ and accepted according to the probability
 %
 \begin{equation}
-P(X \rightarrow X')= \mathrm{min}[1,W(E(X'))/W(E(X))],
+P(\mathbf{{X}} \rightarrow \mathbf{X}')= \mathrm{min}[1,W(E( \mathbf{X}'))/W(E( \mathbf{X}))],
 \end{equation}
 %
-where $W(E(X))$ represents the multicanonical weight of a given configuration $X$. After the $i$th iteration, since the weights are identical in each thread, the energy histograms obtained for each replica can simply be summed up:
+where $W(E( \mathbf{X}))$ represents the multicanonical weight of a given configuration $ \mathbf{X}$. After the $i$th iteration, since the weights are identical in each thread, the energy histograms obtained for each replica can simply be summed up:
 %
 \begin{equation}
     H^i(E)=\sum^K_{k=1}H^i_k(E). 
 \end{equation}
 %
-The total histograms are combined with the current weights to calculate the weights for the subsequent iteration by utilizing the error-weighted recursive
-scheme~\cite{Bachmann2014,muca1,muca2}. 
-%
-%%%%%%%%%% Microcanonical inflection-point analysis %%%%%%%%%%%%%%
+The combined histogram is then used together with the current multicanonical weights to calculate the weights for the subsequent iteration by utilizing the error-weighted recursive
+scheme~\cite{Bachmann2014,muca1a,muca2}. 
 
-To construct the hyper-phase diagram, we use the
-generalized microcanonical inflection-point
-analysis~\cite{Bachmann2014,Schnabel2011}. This approach has
-the advantage of uniquely and systematically locating the transition
-energies and thus is commonly employed to study pseudophase transitions
-in finite-size systems. By applying the principle of minimal
-sensitivity~\cite{Stevenson1981} to the derivatives of microcanonical
-entropy $S(E)$, the $(2n+1)$th-order 
-transition ($n$ is a positive integer) is identified from the
-least sensitive inflection point of the $2n$th-derivative of entropy and
-the positive valley in the $(2n+1)$th-derivative curve. For a
-$2n$th-order transition, the least sensitive inflection point in the
-$(2n-1)$th-derivative of entropy together with the negative peak in the
-$2n$th-order derivative curve are utilized to locate the transition
-energy. The specialty of the first-order-like transition is that it can
-be distinguished from the back-bending region in the inverse temperature
-$\beta(E)\equiv T^{-1}(E)=d S(E)/d E$ and the corresponding positive
-peak in the $\gamma(E)=d \beta(E) / d E$ curve. 
+To analyze the transition behavior of the polymer chains for different values of the parameter $\eta$, we use the microcanonical inflection-point analysis~\cite{Bachmann2014,Schnabel2011} which has been introduced in Sec.~\ref{subsec: micro_analysis}. By applying the principle of minimal sensitivity~\cite{Stevenson} to the derivatives of the microcanonical entropy $S(E)$, we can extend the application of this method to higher order pseudophase transitions. The $(2n+1)$th-order transition ($n$ is a positive integer) is identified from the least sensitive inflection point of the $2n$th-derivative of entropy and the positive valley in the $(2n+1)$th-derivative curve. For a $2n$th-order transition, the least sensitive inflection point in the $(2n-1)$th-derivative of entropy together with the negative peak in the $2n$th-order derivative curve are utilized to locate the transition energy. 
 %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  			          RESULTS		               %%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 	     
+%%%%%%%%%%%%%%%%%%%%  RESULTS		         %%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Results}
 %
 %%%%%%%%%%%% CANONICAL AND MICROCANONICAL %%%%%%%%%%%%%%
