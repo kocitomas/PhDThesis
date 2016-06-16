@@ -40,18 +40,18 @@
 \contentsline {section}{\numberline {6.1}Model and Simulation Parameters}{67}
 \contentsline {section}{\numberline {6.2}Results}{69}
 \contentsline {subsection}{\numberline {6.2.1}Canonical and microcanonical analysis}{69}
-\contentsline {subsection}{\numberline {6.2.2}Structural analysis}{73}
-\contentsline {section}{\numberline {6.3}Summary}{76}
-\contentsline {chapter}{\numberline {7}Aggregation of Flexible Elastic Homopolymers}{77}
-\contentsline {section}{\numberline {7.1}Introduction}{77}
-\contentsline {section}{\numberline {7.2}Model and Methods}{79}
-\contentsline {subsection}{\numberline {7.2.1}Standard model of interacting elastic chains}{79}
-\contentsline {subsection}{\numberline {7.2.2}Simulation methods}{81}
-\contentsline {subsection}{\numberline {7.2.3}Density of states and microcanonical analysis}{82}
-\contentsline {section}{\numberline {7.3}Results}{84}
-\contentsline {subsection}{\numberline {7.3.1}Microcanonical analysis of aggregation transitions}{86}
-\contentsline {subsection}{\numberline {7.3.2}Entropically suppressed subphases}{90}
-\contentsline {subsection}{\numberline {7.3.3}Scaling properties}{94}
-\contentsline {section}{\numberline {7.4}Summary}{96}
-\contentsline {chapter}{\numberline {8}Summary and Outlook}{98}
-\contentsline {chapter}{Bibliography}{98}
+\contentsline {subsection}{\numberline {6.2.2}Structural analysis}{75}
+\contentsline {section}{\numberline {6.3}Summary}{79}
+\contentsline {chapter}{\numberline {7}Aggregation of Flexible Elastic Homopolymers}{80}
+\contentsline {section}{\numberline {7.1}Introduction}{80}
+\contentsline {section}{\numberline {7.2}Model and Methods}{82}
+\contentsline {subsection}{\numberline {7.2.1}Standard model of interacting elastic chains}{82}
+\contentsline {subsection}{\numberline {7.2.2}Simulation methods}{84}
+\contentsline {subsection}{\numberline {7.2.3}Density of states and microcanonical analysis}{85}
+\contentsline {section}{\numberline {7.3}Results}{87}
+\contentsline {subsection}{\numberline {7.3.1}Microcanonical analysis of aggregation transitions}{89}
+\contentsline {subsection}{\numberline {7.3.2}Entropically suppressed subphases}{93}
+\contentsline {subsection}{\numberline {7.3.3}Scaling properties}{97}
+\contentsline {section}{\numberline {7.4}Summary}{99}
+\contentsline {chapter}{\numberline {8}Summary and Outlook}{101}
+\contentsline {chapter}{Bibliography}{101}
