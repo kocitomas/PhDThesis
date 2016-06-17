@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=latex 2016.5.22)  16 JUN 2016 17:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=latex 2016.5.22)  17 JUN 2016 10:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -195,10 +195,10 @@ LaTeX Warning: Label `eq:15' multiply defined.
 LaTeX Warning: Label `intensity_plots' multiply defined.
 
 
-LaTeX Warning: Label `sec:res' multiply defined.
-
-
 LaTeX Warning: Label `fig:Fig_1' multiply defined.
+
+
+LaTeX Warning: Label `sec:res' multiply defined.
 
 
 LaTeX Warning: Label `fig:Fig_2' multiply defined.
@@ -256,11 +256,7 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
  [6] (./koci_tomas_201607_phd.lof
 [7
 
-] [8]
-
-LaTeX Warning: Reference `eq:approx1' on page 24 undefined on input line 10.
-
-[9] [10]
+] [8] [9] [10]
 Overfull \hbox (17.37787pt too wide) in paragraph at lines 24--24
  [][] []\OT1/cmr/m/n/12 Behavior of the com-bined bond po-ten-tial $\OML/cmm/m/
 it/12 U[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 r[]\OT1/cmr/m/n/12 ) = \OML/cmm/m/it
@@ -272,12 +268,7 @@ it/12 U[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 r[]\OT1/cmr/m/n/12 ) = \OML/cmm/m/it
 \tf@lof=\write4
 \openout4 = `koci_tomas_201607_phd.lof'.
 
- [14] (./koci_tomas_201607_phd.lot
-
-LaTeX Warning: Reference `tab:ElasPolyTab1' on page 63 undefined on input line 
-7.
-
-)
+ [14] (./koci_tomas_201607_phd.lot)
 \tf@lot=\write5
 \openout5 = `koci_tomas_201607_phd.lot'.
 
@@ -605,4 +596,4 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  53i,11n,92p,2181b,384s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on koci_tomas_201607_phd.dvi (122 pages, 256060 bytes).
+Output written on koci_tomas_201607_phd.dvi (122 pages, 256028 bytes).
