@@ -1,6 +1,6 @@
 \contentsline {chapter}{Acknowledgments}{iv}
 \contentsline {chapter}{List of Figures}{xv}
-\contentsline {chapter}{List of Tables}{xv}
+\contentsline {chapter}{List of Tables}{xvi}
 \contentsline {chapter}{\numberline {1}Introduction}{1}
 \contentsline {chapter}{\numberline {2}Elements of Statistical Mechanics}{2}
 \contentsline {section}{\numberline {2.1}The microcanonical ensemble}{3}
@@ -39,19 +39,20 @@
 \contentsline {chapter}{\numberline {6}Effects of Short Range Repulsion on the Structural Properties of Elastic Homopolymers}{66}
 \contentsline {section}{\numberline {6.1}Model and Simulation Parameters}{67}
 \contentsline {section}{\numberline {6.2}Results}{69}
-\contentsline {subsection}{\numberline {6.2.1}Canonical and microcanonical analysis}{69}
-\contentsline {subsection}{\numberline {6.2.2}Structural analysis}{75}
-\contentsline {section}{\numberline {6.3}Summary}{79}
-\contentsline {chapter}{\numberline {7}Aggregation of Flexible Elastic Homopolymers}{80}
-\contentsline {section}{\numberline {7.1}Introduction}{80}
-\contentsline {section}{\numberline {7.2}Model and Methods}{82}
-\contentsline {subsection}{\numberline {7.2.1}Standard model of interacting elastic chains}{82}
-\contentsline {subsection}{\numberline {7.2.2}Simulation methods}{84}
-\contentsline {subsection}{\numberline {7.2.3}Density of states and microcanonical analysis}{85}
-\contentsline {section}{\numberline {7.3}Results}{87}
-\contentsline {subsection}{\numberline {7.3.1}Microcanonical analysis of aggregation transitions}{89}
-\contentsline {subsection}{\numberline {7.3.2}Entropically suppressed subphases}{93}
-\contentsline {subsection}{\numberline {7.3.3}Scaling properties}{97}
-\contentsline {section}{\numberline {7.4}Summary}{99}
-\contentsline {chapter}{\numberline {8}Summary and Outlook}{101}
-\contentsline {chapter}{Bibliography}{101}
+\contentsline {subsection}{\numberline {6.2.1}Canonical results}{70}
+\contentsline {subsection}{\numberline {6.2.2}Microcanonical results and structural phase diagrams}{72}
+\contentsline {subsection}{\numberline {6.2.3}Structural analysis}{75}
+\contentsline {section}{\numberline {6.3}Summary}{80}
+\contentsline {chapter}{\numberline {7}Aggregation of Flexible Elastic Homopolymers}{82}
+\contentsline {section}{\numberline {7.1}Introduction}{82}
+\contentsline {section}{\numberline {7.2}Model and Methods}{84}
+\contentsline {subsection}{\numberline {7.2.1}Standard model of interacting elastic chains}{84}
+\contentsline {subsection}{\numberline {7.2.2}Simulation methods}{86}
+\contentsline {subsection}{\numberline {7.2.3}Density of states and microcanonical analysis}{87}
+\contentsline {section}{\numberline {7.3}Results}{89}
+\contentsline {subsection}{\numberline {7.3.1}Microcanonical analysis of aggregation transitions}{91}
+\contentsline {subsection}{\numberline {7.3.2}Entropically suppressed subphases}{95}
+\contentsline {subsection}{\numberline {7.3.3}Scaling properties}{99}
+\contentsline {section}{\numberline {7.4}Summary}{101}
+\contentsline {chapter}{\numberline {8}Summary and Outlook}{103}
+\contentsline {chapter}{Bibliography}{103}
