@@ -41,8 +41,8 @@
 \contentsline {section}{\numberline {6.2}Results}{69}
 \contentsline {subsection}{\numberline {6.2.1}Canonical results}{70}
 \contentsline {subsection}{\numberline {6.2.2}Microcanonical results and structural phase diagrams}{72}
-\contentsline {subsection}{\numberline {6.2.3}Structural analysis}{75}
-\contentsline {section}{\numberline {6.3}Summary}{80}
+\contentsline {subsection}{\numberline {6.2.3}Structural analysis}{76}
+\contentsline {section}{\numberline {6.3}Summary}{81}
 \contentsline {chapter}{\numberline {7}Aggregation of Flexible Elastic Homopolymers}{82}
 \contentsline {section}{\numberline {7.1}Introduction}{82}
 \contentsline {section}{\numberline {7.2}Model and Methods}{84}
