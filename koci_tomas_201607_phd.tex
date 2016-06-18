@@ -1354,88 +1354,30 @@ Using the signals obtained from microcanonical inflection-point analysis, we hav
 
 With further decrease in energy, the 15mer passes the second/third-order transition associated with the nucleation process, and enters the $S_{\rm ic}$ pseudophase in which icosahedral structures with unstable surface layer are dominant. At even lower energies $(E \approx -44)$, the thermal fluctuations of the polymer are suppressed and a stable surface layer is formed. The transition associated with the surface formation process is of fourth order. Visual inspection of low-energy structures reveals that icosahedral geometries are dominant. However, for $\eta \leq 0.1$, the additional solid-solid transition suggests the existence of low-energy conformations with unexpected bihexagonal geometries (Fig.~\ref{fig:coreStructures}).
 
-The transition behavior of the $55$mer is qualitatively similar to the $15$mer for the majority of values of the $\eta$ parameter. However, for $\eta < 0.1$ the two systems behave differently. The low-temperature and small-$\eta$ region of the structural phase diagram in Fig.~\ref{fig:phaseDiagram55}, contains multiple transition lines which were not detected for a $15$mer. The emergence of an additional third-order transition line at $T \approx 0.29$ for $\eta < 0.03$, marks the end of a clear distinction between the liquid and solid pseudophases. The nucleation process becomes extended over a wide temperature range and can't be associated with a single transition line. Instead, the polymer transitions between several conformational phases before it forms a stable ground state structure. We will identify and characterize the dominant conformational phases using the set of structural order parameters which we have introduced in Sec.~\ref{sec:orderParameters}.
+The transition behavior of the $55$mer is qualitatively similar to the $15$mer for the majority of values of the $\eta$ parameter. However, for $\eta < 0.1$ the two systems behave differently. The low-temperature and small-$\eta$ region of the structural phase diagram in Fig.~\ref{fig:phaseDiagram55}, contains additional transition lines which were not detected for the $15$mer. The emergence of the third-order transition line at $T \approx 0.29$ for $\eta < 0.03$, marks the end of a clear distinction between the liquid and solid pseudophases. The nucleation process becomes extended over a wide temperature range and can't be associated with a single transition line. Instead, the polymer transitions between several conformational phases before it forms a stable ground state structure. We will identify and characterize the dominant conformational phases using a set of suitable structural order parameters\footnote{See also section ~\ref{sec:orderParameters}}.
  
 
 %%%%%%%%%%%%%% STRUCTURAL ANALYSIS %%%%%%%%%%%%%%%%%%
 \subsection{Structural analysis}
-Various order parameters, such as the number of monomer-monomer
-contacts, radius of gyration, or radial and angular distributions, have
-proven to provide valuable insight into the thermodynamic and structural
-properties of polymer systems. Based on the microcanonical results in
-Fig.~\ref{phase_diagram}, we expect the existence of two solid phases
-when the strength of the bond flexibility parameter is sufficiently small
-$(\eta \leq 0.1)$. We aim to identify the dominant structures in the
-low-energy phases and to gather additional data supporting the existence of
-the
-solid-solid transition line. For this purpose, we employ a set of order
-parameters exploiting the symmetry properties of real spherical
-harmonics~\cite{Neirotti2000}.
+%
+The tools of microcanonical inflection-point analysis provide us with a systematic way of identifying and classifying all structural transitions in physical systems. Equally important is the identification of dominant configurations and their abundance in a relevant energy range. This can be accomplished either by visual inspection of sample structures, or more systematically, by introducing a suitable set of structural order parameters. Based on the microcanonical results, summarized in the structural phase diagrams in Figs.~\ref{fig:phaseDiagram15} and.~\ref{fig:phaseDiagram55}, we expect that for sufficiently small values of the parameter $\eta$, two distinct solid pseudophases should be detected. We aim to identify and characterize the dominant structures for each pseudophase and obtain a physical interpretation for the emergence of new conformational geometries when the short-range repulsion between bonded monomers becomes sufficiently weak. In Chap.~\ref{chap:HomopolymerModel}, we have introduced a set of structural order parameters $Q_{l}$ which are particularly suitable for the purpose of identification of low-energy solid-like structures with well-defined symmetries.
+%
 
-We define a polymer core to consist of monomers within a
-distance $r_{\mathrm{core}} < 1.25\sigma$ of the central monomer, which has
-been chosen to be nearest to the center of mass. Let $\mathcal{C} = \lbrace
-\vec{r}_{1},.....,\vec{r}_{M} \rbrace $ be the coordinates of a core with
-$M$ monomers. Various core geometries can be distinguished using the set of
-rotationally invariant order parameters
 %
-\begin{equation}
-Q_{l} =  \left[ \frac{4\pi}{2l + 1} \displaystyle\sum_{m =-l}^{l}
-|\rho_{l,m}|^{2} \right]^{1/2},	
-\end{equation}
-%
-where 
-\begin{equation}
-\rho _{l,m} = \frac{1}{M}\sum _{i = 0} ^{M} \mathrm{Y}_{l,m}(\vec{r}_{i})
-\label{eq:15}
-\end{equation}
-%
-is the average of the real spherical harmonics evaluated at the locations
-of the core monomers. The connection between the real and complex spherical
-harmonics is given by
-% 
-\begin{equation}
-	\mathrm{Y}_{lm} =  \left\{
-		\begin{array}{lr}
-		\frac{i}{\sqrt{2}}\left[\mathrm{Y}_{l}^{m} -
-(-1)^{m}\mathrm{Y}_{l}^{-m}\right] & \quad \mathrm{if} \quad  m < 0,
-\\[1.5ex]
-		{Y}_{l}^{m} & \quad \mathrm{if} \quad  m = 0, \\[1.5ex]
-		\frac{1}{\sqrt{2}}\left[\mathrm{Y}_{l}^{-m} +
-(-1)^{m}\mathrm{Y}_{l}^{m}\right] & \quad \mathrm{if} \quad  m > 0. \\
-		\end{array}
-	\right. 
-\end{equation}
-Using of the order of $10^{6}$ polymer structures per value of $\eta$, we
-computed $Q_{l}$ up to $l = 6$ and found that $Q_{6}$ can be used most
-effectively to resolve the geometries of the low-energy conformations. We
-present the results in the form of intensity plots in
-Fig.~\ref{intensity_plots}. The probability of detecting a structure with a
-specific value of the order parameter at an energy $E$ is represented by
-shading; red indicating the maximum probability and black corresponding to
-zero. 
+Preliminary investigation of low-energy structures, obtained from simulations of polymer chains of length $N =15,55$ with sufficiently weak bonded Lennard-Jones interactions $(\eta < 0.03)$, reveals the existence of two distinct solid pseudophases. In addition to structures with icosahedral cores, we have identified bihexagonal cores with six-fold dihedral symmetry. Examples of both core geometries are shown in Fig.~\ref{fig:coreStructures}.
 %
 \begin{figure}
 \center
-	\includegraphics[width=\textwidth]{chapter6Figs/structuralAnalysis15.eps}
-\caption{\label{intensity_plots}(a,b,c,d) Intensity plots of the
-$Q_{6}$ order parameter for a 15mer with $\eta = 0.00, 0.05, 0.10, 1.0$.
-The shading indicates the probability of detecting a configuration with a
-given value of the order parameter, red being the maximum probability and
-black being the lowest. The freezing and the solid-solid transitions are
-indicated by solid and dashed horizontal lines respectively. For $\eta \leq
-0.1$, the polymer has two distinct solid phases.  In addition to the
-icosahedral phase ($Q_{6} \approx 0.65$) the polymer is found in the
-bihexagonal phase at low energies ($Q_{6} \approx 0.41$).}
+	\includegraphics[width=0.9\textwidth]{chapter6Figs/configurationsMod.eps}			\caption{\label{fig:coreStructures} 
+	(a) Icosahedral cores are commonly found in the ground states of short polymer chains. (b) The unusual bihexagonal core is found in polymer chains of length $N =15,55$ with sufficiently weak bonded Lennard-Jones interactions.}
 \end{figure}
 %
+
 %
-\begin{figure}
-\center
-\includegraphics[width=\textwidth]{chapter6Figs/structuralAnalysis55.eps}
-	\caption{\label{intensity_plots}
-     sdfdf}
-\end{figure}
+Using $\sim 10^{6}$ polymer structures per value of $\eta$, we have computed $Q_{l}$ up to $l = 8$ and found that $Q_{6}$ is most effective in resolving the six-fold dihedral symmetry of the bihexagon and the icosahedral symmetry. For a perfect icosahedral core, $Q_{6} \approx 0.65$, whereas a bihexagonal core corresponds to $Q_{6} \approx 0.41$. The results are presented in the form of intensity plots in Figs.~\ref{fig:intensityPlots15} and~\ref{fig:intensityPlots55}, for the 15mer and the 55mer, respectively. The probability of detecting a conformation with a specific value of the order parameter $Q_{6}$ at an energy $E$ is represented by shading; black indicating the zero probability and red corresponding to the maximum probability.
+%
+
+
 %
 In agreement with the microcanonical and canonical results, we detect
 a single solid phase for $\eta > 0.1$, corresponding to the narrow funnel
@@ -1449,7 +1391,11 @@ bihexagonal geometry which has also been recently found in longer chains.
 The energy at which both phases coexist agrees well with the microcanonical
 estimates for the solid-solid transition. Representative structures of both
 solid phases are shown in Fig.~\ref{Structures}.
+%
 
+
+
+%
 The shape of the bonded potential has undoubtedly a strong effect on
 the geometry of the ground state. Having identified the two dominant
 structure types, we may ask why the additional LJ term in the bonded
@@ -1468,13 +1414,27 @@ penalty.
 %
 \begin{figure}
 \center
-	\includegraphics[width=0.9\textwidth]{chapter6Figs/configurations.eps}				        
-	\caption{\label{fig:coreStructures} Two distinct low-energy structures of
-the elastic 15-mer. (a) Compact structure with a stable icosahedral core
-and two monomers displaced onto the incomplete second layer. (b) The
-bihexagon is the preferred ground-state geometry for $\eta \leq 0.1$.}
+	\includegraphics[width=\textwidth]{chapter6Figs/structuralAnalysis15.eps}
+\caption{\label{fig:intensityPlots15}(a,b,c,d) Intensity plots of the
+$Q_{6}$ order parameter for a 15mer with $\eta = 0.00, 0.05, 0.10, 1.0$.
+The shading indicates the probability of detecting a configuration with a
+given value of the order parameter, red being the maximum probability and
+black being the lowest. The freezing and the solid-solid transitions are
+indicated by solid and dashed horizontal lines respectively. For $\eta \leq
+0.1$, the polymer has two distinct solid phases.  In addition to the
+icosahedral phase ($Q_{6} \approx 0.65$) the polymer is found in the
+bihexagonal phase at low energies ($Q_{6} \approx 0.41$).}
 \end{figure}
 %
+%
+\begin{figure}
+\center
+\includegraphics[width=\textwidth]{chapter6Figs/structuralAnalysis55.eps}
+	\caption{\label{fig:intensityPlots55}
+     sdfdf}
+\end{figure}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  			          SUMMARY		               %%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
