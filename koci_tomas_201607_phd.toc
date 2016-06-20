@@ -42,17 +42,17 @@
 \contentsline {subsection}{\numberline {6.2.1}Canonical results}{70}
 \contentsline {subsection}{\numberline {6.2.2}Microcanonical results and structural phase diagrams}{72}
 \contentsline {subsection}{\numberline {6.2.3}Structural analysis}{76}
-\contentsline {section}{\numberline {6.3}Summary}{81}
-\contentsline {chapter}{\numberline {7}Aggregation of Flexible Elastic Homopolymers}{82}
-\contentsline {section}{\numberline {7.1}Introduction}{82}
-\contentsline {section}{\numberline {7.2}Model and Methods}{84}
-\contentsline {subsection}{\numberline {7.2.1}Standard model of interacting elastic chains}{84}
-\contentsline {subsection}{\numberline {7.2.2}Simulation methods}{86}
-\contentsline {subsection}{\numberline {7.2.3}Density of states and microcanonical analysis}{87}
-\contentsline {section}{\numberline {7.3}Results}{89}
-\contentsline {subsection}{\numberline {7.3.1}Microcanonical analysis of aggregation transitions}{91}
-\contentsline {subsection}{\numberline {7.3.2}Entropically suppressed subphases}{95}
-\contentsline {subsection}{\numberline {7.3.3}Scaling properties}{99}
-\contentsline {section}{\numberline {7.4}Summary}{101}
-\contentsline {chapter}{\numberline {8}Summary and Outlook}{103}
-\contentsline {chapter}{Bibliography}{103}
+\contentsline {section}{\numberline {6.3}Summary}{82}
+\contentsline {chapter}{\numberline {7}Aggregation of Flexible Elastic Homopolymers}{83}
+\contentsline {section}{\numberline {7.1}Introduction}{83}
+\contentsline {section}{\numberline {7.2}Model and Methods}{85}
+\contentsline {subsection}{\numberline {7.2.1}Standard model of interacting elastic chains}{85}
+\contentsline {subsection}{\numberline {7.2.2}Simulation methods}{87}
+\contentsline {subsection}{\numberline {7.2.3}Density of states and microcanonical analysis}{88}
+\contentsline {section}{\numberline {7.3}Results}{90}
+\contentsline {subsection}{\numberline {7.3.1}Microcanonical analysis of aggregation transitions}{92}
+\contentsline {subsection}{\numberline {7.3.2}Entropically suppressed subphases}{96}
+\contentsline {subsection}{\numberline {7.3.3}Scaling properties}{100}
+\contentsline {section}{\numberline {7.4}Summary}{102}
+\contentsline {chapter}{\numberline {8}Summary and Outlook}{104}
+\contentsline {chapter}{Bibliography}{104}

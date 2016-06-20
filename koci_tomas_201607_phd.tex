@@ -1368,31 +1368,60 @@ Preliminary investigation of low-energy structures, obtained from simulations of
 %
 \begin{figure}
 \center
-	\includegraphics[width=0.9\textwidth]{chapter6Figs/configurationsMod.eps}			\caption{\label{fig:coreStructures} 
-	(a) Icosahedral cores are commonly found in the ground states of short polymer chains. (b) The unusual bihexagonal core is found in polymer chains of length $N =15,55$ with sufficiently weak bonded Lennard-Jones interactions.}
+	\includegraphics[width=0.9\textwidth]{chapter6Figs/configurationsMod.eps}			\caption{\label{fig:coreStructures} Two distinct core geometries found in the low-energy states of elastic polymer chains of lengths $N = 15,55$. (a) The 13-monomer icosahedral core is commonly observed in the ground state structures of short polymer chains. (b) The unusual bihexagonal core is found in polymer chains of length $N =15,55$ with sufficiently weak bonded Lennard-Jones interactions.}
 \end{figure}
 %
-
-%
-Using $\sim 10^{6}$ polymer structures per value of $\eta$, we have computed $Q_{l}$ up to $l = 8$ and found that $Q_{6}$ is most effective in resolving the six-fold dihedral symmetry of the bihexagon and the icosahedral symmetry. For a perfect icosahedral core, $Q_{6} \approx 0.65$, whereas a bihexagonal core corresponds to $Q_{6} \approx 0.41$. The results are presented in the form of intensity plots in Figs.~\ref{fig:intensityPlots15} and~\ref{fig:intensityPlots55}, for the 15mer and the 55mer, respectively. The probability of detecting a conformation with a specific value of the order parameter $Q_{6}$ at an energy $E$ is represented by shading; black indicating the zero probability and red corresponding to the maximum probability.
+Using $\sim 10^{6}$ polymer structures per value of $\eta$, we have computed $Q_{l}$ up to $l = 8$ and found that $Q_{6}$ is most effective in resolving the six-fold dihedral symmetry of the bihexagon and the icosahedral symmetry. For a bihexagonal core $Q_{6} \approx 0.41$, and the icosahedral core corresponds to $Q_{6} \approx 0.65$. The results are presented in the form of intensity plots in Figs.~\ref{fig:intensityPlots15} and~\ref{fig:intensityPlots55}, for the 15mer and the 55mer, respectively. The probability $p$ of detecting a conformation with a specific value of the order parameter $Q_{6}$ is represented by shading; red indicates the maximum probability $p=1$ and black corresponds to $p=0$.
 %
 
-
 %
-In agreement with the microcanonical and canonical results, we detect
-a single solid phase for $\eta > 0.1$, corresponding to the narrow funnel
-in $Q_{6}$ below the transition line at $E \approx -43$. The dominant
-structures in this region contain an icosahedral core which is typically
-found in the ground-state conformations of many short polymer chains.
-Below $\eta = 0.1$, the 15mer explores an additional solid phase, as
-indicated by the appearance of a second funnel centered around $Q_{6}
-\approx 0.41$. Structures which populate this phase possess an unusual
-bihexagonal geometry which has also been recently found in longer chains.
-The energy at which both phases coexist agrees well with the microcanonical
-estimates for the solid-solid transition. Representative structures of both
-solid phases are shown in Fig.~\ref{Structures}.
-%
+For $\eta > 0.1$, the 15mer has a single solid pseudophase which is predominantly populated by structures with stable icosahedral cores. In Fig.~\ref{fig:intensityPlots15} this corresponds to the narrow funnel centered at $Q_{6} \approx 0.65$, below the fourth-order transition line (purple) at $E \approx -43$. Additional solid pseudophase, where bihexagonal structures are dominant, emerges for $\eta \leq 0.1$, as indicated by the appearance of a second funnel centered at $Q_{6} \approx 0.41$. The region of coexistence between the two solid pseudophases marks the solid-solid transition and is in a good agreement with the microcanonical estimates. 
 
+
+
+
+At $\eta \approx 0.04$, the signal associated with the onset of 
+the icosahedral funnel becomes first order and can be unambiguously 
+identified as the freezing transition. Beyond $\eta\approx0.1$, the 
+structural and energetic properties of the polymer are virtually identical 
+to the standard model ($\eta=1$). 
+
+
+At low temperatures and $\eta = 0.005$, we observe a single dominant funnel 
+centered at $Q_{6}\approx 0.41$, containing structures with a bihexagonal core. 
+The adjacent secondary funnels all contain bihexagonal cores with 
+slightly modified inter-monomer distances. Structures with an 
+icosahedral core are found in the weakly populated funnel at 
+$Q_{6}\approx 0.65$. The low-temperature transition signal is 
+associated with the increase in the population of structures with 
+bihexagonal cores and is classified as of fourth order. This transition 
+signal is marked by violet transition lines 
+in Fig.~\ref{fig:intensity_plots}(a) and in the hyper-phase diagram 
+shown in Fig.~\ref{phase_diagram}(b). A small increase in the strength 
+of the bonded LJ potential leads to a sharp increase in the population 
+of icosahedral cores. If $\eta = 0.01$, the ground state of the 
+polymer is still found in the bihexagonal funnel, however the onset 
+of a significant population of icosahedral cores produces an additional 
+fourth-order transition signal at $T = 0.17$, see Fig.~\ref{phase_diagram}(b) 
+and Fig.~\ref{fig:intensity_plots}(b). Further increase leads to a sharp 
+decline in the population of the bihexagonal funnel. 
+
+
+This can be seen clearly for $\eta \geq 0.02$ 
+[Fig.~\ref{fig:intensity_plots}(c), (d)] where the energetic penalty 
+for non-optimal bond lengths becomes too large to accommodate structures 
+with bihexagonal cores. Indeed, their formation requires significant 
+variance in bond lengths, whereas icosahedral cores can be formed with 
+near-optimal values. For $\eta\approx 0$, the pure FENE potential permits 
+large bond fluctuations. However, with the introduction of the bonded LJ 
+potential these fluctuations cause an energetic penalty. This explains 
+why the bihexagonal funnel exists only if the bonded LJ potential is 
+sufficiently weak. In Fig.~\ref{fig:bond_length_variance}, we show the 
+bond-length variance as a function of energy for different values of the model 
+parameter $\eta$. With increasing values of $\eta$ the variance decreases, most 
+significantly in the low-energy region. Most striking is the difference 
+between the low-energy curves for $\eta = 0.01$ and $\eta = 0.02$, where 
+the former has a bihexagonal ground-state and the latter is icosahedral. 
 
 
 %
@@ -1410,6 +1439,9 @@ infeasible as $\eta$ increases. In contrast, we find near-optimal bond
 lengths in the icosahedron $(r_{\mathrm{bond}} \approx  r_{0})$, hence the
 ``narrowing'' of the bonded potential imposes no additional energetic
 penalty.
+
+
+
 
 %
 \begin{figure}
