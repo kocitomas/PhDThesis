@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.3.27)  20 JUN 2016 17:28
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.3.27)  21 JUN 2016 13:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1086,144 +1086,144 @@ Package pdftex.def Info: chapter6Figs/structuralAnalysis55-eps-converted-to.pdf
 er6Figs/structuralAnalysis15-eps-converted-to.pdf>] [80 <./chapter6Figs/structu
 ralAnalysis55-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <chapter6Figs/bondDistribution.eps>
-(epstopdf)                    date: 2016-06-20 17:24:52
-(epstopdf)                    size: 96803 bytes
+(epstopdf)                    date: 2016-06-21 11:50:27
+(epstopdf)                    size: 99689 bytes
 (epstopdf)             Output file: <chapter6Figs/bondDistribution-eps-converte
 d-to.pdf>
-(epstopdf)                    date: 2016-06-20 17:25:24
-(epstopdf)                    size: 12121 bytes
+(epstopdf)                    date: 2016-06-21 11:51:59
+(epstopdf)                    size: 13011 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter6Figs/bondDistribut
 ion-eps-converted-to.pdf chapter6Figs/bondDistribution.eps>
 (epstopdf)             \includegraphics on input line 1403.
 Package epstopdf Info: Output file is already uptodate.
 
-<chapter6Figs/bondDistribution-eps-converted-to.pdf, id=880, 286.06876pt x 174.
-6525pt>
+<chapter6Figs/bondDistribution-eps-converted-to.pdf, id=880, 264.99pt x 174.652
+5pt>
 File: chapter6Figs/bondDistribution-eps-converted-to.pdf Graphic file (type pdf
 )
  <use chapter6Figs/bondDistribution-eps-converted-to.pdf>
 Package pdftex.def Info: chapter6Figs/bondDistribution-eps-converted-to.pdf use
 d on input line 1403.
-(pdftex.def)             Requested size: 375.80544pt x 229.44136pt.
+(pdftex.def)             Requested size: 375.80544pt x 247.70714pt.
  [81 <./chapter6Figs/bondDistribution-eps-converted-to.pdf>] [82]
 Chapter 7.
 
-LaTeX Warning: Citation `Selkoe' on page 83 undefined on input line 1438.
+LaTeX Warning: Citation `Selkoe' on page 83 undefined on input line 1432.
 
 
-LaTeX Warning: Citation `Chiti' on page 83 undefined on input line 1438.
+LaTeX Warning: Citation `Chiti' on page 83 undefined on input line 1432.
 
 
-LaTeX Warning: Citation `marinari' on page 83 undefined on input line 1448.
+LaTeX Warning: Citation `marinari' on page 83 undefined on input line 1442.
 
 
-LaTeX Warning: Citation `lyubartsev' on page 83 undefined on input line 1448.
+LaTeX Warning: Citation `lyubartsev' on page 83 undefined on input line 1442.
 
 
-LaTeX Warning: Citation `bf1' on page 83 undefined on input line 1457.
+LaTeX Warning: Citation `bf1' on page 83 undefined on input line 1451.
 
 
-LaTeX Warning: Citation `bf2' on page 83 undefined on input line 1457.
+LaTeX Warning: Citation `bf2' on page 83 undefined on input line 1451.
 
 
-LaTeX Warning: Citation `grass2' on page 83 undefined on input line 1457.
+LaTeX Warning: Citation `grass2' on page 83 undefined on input line 1451.
 
 
-LaTeX Warning: Citation `vbj1' on page 83 undefined on input line 1457.
+LaTeX Warning: Citation `vbj1' on page 83 undefined on input line 1451.
 
 
-LaTeX Warning: Citation `strauch1' on page 83 undefined on input line 1457.
+LaTeX Warning: Citation `strauch1' on page 83 undefined on input line 1451.
 
 
-LaTeX Warning: Citation `seaton3' on page 83 undefined on input line 1457.
+LaTeX Warning: Citation `seaton3' on page 83 undefined on input line 1451.
 
 
-LaTeX Warning: Citation `semisslb1' on page 83 undefined on input line 1457.
+LaTeX Warning: Citation `semisslb1' on page 83 undefined on input line 1451.
 
 
-LaTeX Warning: Citation `Koci2015' on page 83 undefined on input line 1457.
+LaTeX Warning: Citation `Koci2015' on page 83 undefined on input line 1451.
 
 
-LaTeX Warning: Citation `bj4' on page 83 undefined on input line 1459.
+LaTeX Warning: Citation `bj4' on page 83 undefined on input line 1453.
 
 
-LaTeX Warning: Citation `prellberg1' on page 83 undefined on input line 1459.
+LaTeX Warning: Citation `prellberg1' on page 83 undefined on input line 1453.
 
 
-LaTeX Warning: Citation `paul1' on page 83 undefined on input line 1459.
+LaTeX Warning: Citation `paul1' on page 83 undefined on input line 1453.
 
 
-LaTeX Warning: Citation `mbj1' on page 83 undefined on input line 1459.
+LaTeX Warning: Citation `mbj1' on page 83 undefined on input line 1453.
 
 
-LaTeX Warning: Citation `liang1' on page 83 undefined on input line 1459.
+LaTeX Warning: Citation `liang1' on page 83 undefined on input line 1453.
 
 
-LaTeX Warning: Citation `allen1' on page 83 undefined on input line 1459.
+LaTeX Warning: Citation `allen1' on page 83 undefined on input line 1453.
 
 
-LaTeX Warning: Citation `vb1' on page 83 undefined on input line 1459.
+LaTeX Warning: Citation `vb1' on page 83 undefined on input line 1453.
 
 
-LaTeX Warning: Citation `ywli1' on page 83 undefined on input line 1459.
+LaTeX Warning: Citation `ywli1' on page 83 undefined on input line 1453.
 
 
-LaTeX Warning: Citation `mjb4' on page 83 undefined on input line 1459.
+LaTeX Warning: Citation `mjb4' on page 83 undefined on input line 1453.
 
 
-LaTeX Warning: Citation `vgb1' on page 83 undefined on input line 1459.
+LaTeX Warning: Citation `vgb1' on page 83 undefined on input line 1453.
 
 
-LaTeX Warning: Citation `jbj1' on page 83 undefined on input line 1461.
+LaTeX Warning: Citation `jbj1' on page 83 undefined on input line 1455.
 
 
-LaTeX Warning: Citation `Zieren2014' on page 83 undefined on input line 1461.
+LaTeX Warning: Citation `Zieren2014' on page 83 undefined on input line 1455.
 
 
-LaTeX Warning: Citation `Zieren2015' on page 83 undefined on input line 1461.
+LaTeX Warning: Citation `Zieren2015' on page 83 undefined on input line 1455.
 
 
-LaTeX Warning: Citation `dill1' on page 83 undefined on input line 1464.
+LaTeX Warning: Citation `dill1' on page 83 undefined on input line 1458.
 
 
-LaTeX Warning: Citation `still1' on page 83 undefined on input line 1464.
+LaTeX Warning: Citation `still1' on page 83 undefined on input line 1458.
 
 
-LaTeX Warning: Citation `still2' on page 83 undefined on input line 1464.
+LaTeX Warning: Citation `still2' on page 83 undefined on input line 1458.
 
 
-LaTeX Warning: Citation `som1' on page 83 undefined on input line 1464.
+LaTeX Warning: Citation `som1' on page 83 undefined on input line 1458.
 
 
-LaTeX Warning: Citation `hsu1' on page 83 undefined on input line 1464.
+LaTeX Warning: Citation `hsu1' on page 83 undefined on input line 1458.
 
 
-LaTeX Warning: Citation `bj1' on page 83 undefined on input line 1464.
+LaTeX Warning: Citation `bj1' on page 83 undefined on input line 1458.
 
 
-LaTeX Warning: Citation `ssbj1' on page 83 undefined on input line 1464.
+LaTeX Warning: Citation `ssbj1' on page 83 undefined on input line 1458.
 
 [83
 
 ]
 
-LaTeX Warning: Citation `fisher1' on page 84 undefined on input line 1490.
+LaTeX Warning: Citation `fisher1' on page 84 undefined on input line 1484.
 
 
-LaTeX Warning: Citation `taylor1' on page 84 undefined on input line 1490.
+LaTeX Warning: Citation `taylor1' on page 84 undefined on input line 1484.
 
 
-LaTeX Warning: Citation `rslb1' on page 84 undefined on input line 1490.
+LaTeX Warning: Citation `rslb1' on page 84 undefined on input line 1484.
 
 
-LaTeX Warning: Citation `taylor2' on page 84 undefined on input line 1490.
+LaTeX Warning: Citation `taylor2' on page 84 undefined on input line 1484.
 
 
-LaTeX Warning: Citation `KaiQi2016' on page 84 undefined on input line 1492.
+LaTeX Warning: Citation `KaiQi2016' on page 84 undefined on input line 1486.
 
 [84] [85] [86] [87] [88]
 
-LaTeX Warning: Citation `KaiQi2016' on page 89 undefined on input line 1742.
+LaTeX Warning: Citation `KaiQi2016' on page 89 undefined on input line 1736.
 
 Package epstopdf Info: Source file: <chapter7Figs/micro_example.eps>
 (epstopdf)                    date: 2015-07-07 10:41:12
@@ -1234,7 +1234,7 @@ o.pdf>
 (epstopdf)                    size: 93399 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter7Figs/micro_example
 -eps-converted-to.pdf chapter7Figs/micro_example.eps>
-(epstopdf)             \includegraphics on input line 1746.
+(epstopdf)             \includegraphics on input line 1740.
 Package epstopdf Info: Output file is already uptodate.
 
 <chapter7Figs/micro_example-eps-converted-to.pdf, id=927, 257.96375pt x 190.712
@@ -1242,7 +1242,7 @@ Package epstopdf Info: Output file is already uptodate.
 File: chapter7Figs/micro_example-eps-converted-to.pdf Graphic file (type pdf)
  <use chapter7Figs/micro_example-eps-converted-to.pdf>
 Package pdftex.def Info: chapter7Figs/micro_example-eps-converted-to.pdf used o
-n input line 1746.
+n input line 1740.
 (pdftex.def)             Requested size: 234.8775pt x 173.65048pt.
 Package epstopdf Info: Source file: <chapter7Figs/combinedMicro.eps>
 (epstopdf)                    date: 2016-06-14 11:39:15
@@ -1253,7 +1253,7 @@ o.pdf>
 (epstopdf)                    size: 174205 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter7Figs/combinedMicro
 -eps-converted-to.pdf chapter7Figs/combinedMicro.eps>
-(epstopdf)             \includegraphics on input line 1766.
+(epstopdf)             \includegraphics on input line 1760.
 Package epstopdf Info: Output file is already uptodate.
 
 <chapter7Figs/combinedMicro-eps-converted-to.pdf, id=928, 220.825pt x 148.555pt
@@ -1261,17 +1261,17 @@ Package epstopdf Info: Output file is already uptodate.
 File: chapter7Figs/combinedMicro-eps-converted-to.pdf Graphic file (type pdf)
  <use chapter7Figs/combinedMicro-eps-converted-to.pdf>
 Package pdftex.def Info: chapter7Figs/combinedMicro-eps-converted-to.pdf used o
-n input line 1766.
+n input line 1760.
 (pdftex.def)             Requested size: 483.84709pt x 325.51407pt.
 
-Overfull \hbox (14.09207pt too wide) in paragraph at lines 1766--1780
+Overfull \hbox (14.09207pt too wide) in paragraph at lines 1760--1774
  [] 
  []
 
 [89] [90 <./chapter7Figs/micro_example-eps-converted-to.pdf>] [91 <./chapter7Fi
 gs/combinedMicro-eps-converted-to.pdf>]
 
-LaTeX Warning: Citation `jbj1' on page 92 undefined on input line 1843.
+LaTeX Warning: Citation `jbj1' on page 92 undefined on input line 1837.
 
 Package epstopdf Info: Source file: <chapter7Figs/configurations.eps>
 (epstopdf)                    date: 2016-06-14 11:38:10
@@ -1282,7 +1282,7 @@ to.pdf>
 (epstopdf)                    size: 236674 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter7Figs/configuration
 s-eps-converted-to.pdf chapter7Figs/configurations.eps>
-(epstopdf)             \includegraphics on input line 1853.
+(epstopdf)             \includegraphics on input line 1847.
 Package epstopdf Info: Output file is already uptodate.
 
 <chapter7Figs/configurations-eps-converted-to.pdf, id=953, 842.14626pt x 1114.1
@@ -1290,7 +1290,7 @@ Package epstopdf Info: Output file is already uptodate.
 File: chapter7Figs/configurations-eps-converted-to.pdf Graphic file (type pdf)
  <use chapter7Figs/configurations-eps-converted-to.pdf>
 Package pdftex.def Info: chapter7Figs/configurations-eps-converted-to.pdf used 
-on input line 1853.
+on input line 1847.
 (pdftex.def)             Requested size: 328.82707pt x 435.04866pt.
  [92] [93 <./chapter7Figs/configurations-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <chapter7Figs/entropyCombined.eps>
@@ -1302,7 +1302,7 @@ Package epstopdf Info: Source file: <chapter7Figs/entropyCombined.eps>
 (epstopdf)                    size: 85296 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter7Figs/entropyCombin
 ed-eps-converted-to.pdf chapter7Figs/entropyCombined.eps>
-(epstopdf)             \includegraphics on input line 1892.
+(epstopdf)             \includegraphics on input line 1886.
 Package epstopdf Info: Output file is already uptodate.
 
 <chapter7Figs/entropyCombined-eps-converted-to.pdf, id=964, 120.45pt x 171.6412
@@ -1311,10 +1311,10 @@ File: chapter7Figs/entropyCombined-eps-converted-to.pdf Graphic file (type pdf)
 
  <use chapter7Figs/entropyCombined-eps-converted-to.pdf>
 Package pdftex.def Info: chapter7Figs/entropyCombined-eps-converted-to.pdf used
- on input line 1892.
+ on input line 1886.
 (pdftex.def)             Requested size: 328.82707pt x 468.62581pt.
  [94] [95 <./chapter7Figs/entropyCombined-eps-converted-to.pdf>]
-Overfull \hbox (10.56522pt too wide) in paragraph at lines 2012--2019
+Overfull \hbox (10.56522pt too wide) in paragraph at lines 2006--2013
 \OML/cmm/m/it/12 h\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 E\OT1/cmr/m/n/12 ; \OML/cmm
 /m/it/12 ^^L[]\OT1/cmr/m/n/12 )$, shown along-side the mi-cro-canon-i-cal quan-
 ti-ties in Fig. 7.2[]. The his-togram $\OML/cmm/m/it/12 h\OT1/cmr/m/n/12 (\OML/
@@ -1331,7 +1331,7 @@ Package epstopdf Info: Source file: <chapter7Figs/microEntropy.eps>
 (epstopdf)                    size: 89398 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter7Figs/microEntropy-
 eps-converted-to.pdf chapter7Figs/microEntropy.eps>
-(epstopdf)             \includegraphics on input line 2062.
+(epstopdf)             \includegraphics on input line 2056.
 Package epstopdf Info: Output file is already uptodate.
 
 <chapter7Figs/microEntropy-eps-converted-to.pdf, id=980, 817.0525pt x 565.11125
@@ -1339,7 +1339,7 @@ pt>
 File: chapter7Figs/microEntropy-eps-converted-to.pdf Graphic file (type pdf)
  <use chapter7Figs/microEntropy-eps-converted-to.pdf>
 Package pdftex.def Info: chapter7Figs/microEntropy-eps-converted-to.pdf used on
- input line 2062.
+ input line 2056.
 (pdftex.def)             Requested size: 328.82707pt x 227.42877pt.
  [98] [99 <./chapter7Figs/microEntropy-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <chapter7Figs/scalingCombined.eps>
@@ -1351,7 +1351,7 @@ Package epstopdf Info: Source file: <chapter7Figs/scalingCombined.eps>
 (epstopdf)                    size: 145321 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter7Figs/scalingCombin
 ed-eps-converted-to.pdf chapter7Figs/scalingCombined.eps>
-(epstopdf)             \includegraphics on input line 2103.
+(epstopdf)             \includegraphics on input line 2097.
 Package epstopdf Info: Output file is already uptodate.
 
 <chapter7Figs/scalingCombined-eps-converted-to.pdf, id=991, 247.92625pt x 314.1
@@ -1360,14 +1360,14 @@ File: chapter7Figs/scalingCombined-eps-converted-to.pdf Graphic file (type pdf)
 
  <use chapter7Figs/scalingCombined-eps-converted-to.pdf>
 Package pdftex.def Info: chapter7Figs/scalingCombined-eps-converted-to.pdf used
- on input line 2103.
+ on input line 2097.
 (pdftex.def)             Requested size: 328.82707pt x 416.72406pt.
 
 
-LaTeX Warning: Citation `Zieren2014' on page 100 undefined on input line 2118.
+LaTeX Warning: Citation `Zieren2014' on page 100 undefined on input line 2112.
 
 
-LaTeX Warning: Citation `Zieren2015' on page 100 undefined on input line 2118.
+LaTeX Warning: Citation `Zieren2015' on page 100 undefined on input line 2112.
 
 [100] [101 <./chapter7Figs/scalingCombined-eps-converted-to.pdf>] [102]
 [103]
@@ -1417,7 +1417,7 @@ msy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on koci_tomas_201607_phd.pdf (126 pages, 5950517 bytes).
+Output written on koci_tomas_201607_phd.pdf (126 pages, 5951836 bytes).
 PDF statistics:
  1092 PDF objects out of 1200 (max. 8388607)
  693 compressed objects within 7 object streams
