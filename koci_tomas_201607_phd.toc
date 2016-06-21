@@ -1,6 +1,6 @@
 \contentsline {chapter}{Acknowledgments}{iv}
-\contentsline {chapter}{List of Figures}{xii}
-\contentsline {chapter}{List of Tables}{xiii}
+\contentsline {chapter}{List of Figures}{xvi}
+\contentsline {chapter}{List of Tables}{xvi}
 \contentsline {chapter}{\numberline {1}Introduction}{1}
 \contentsline {chapter}{\numberline {2}Elements of Statistical Mechanics}{2}
 \contentsline {section}{\numberline {2.1}The microcanonical ensemble}{3}
@@ -19,7 +19,7 @@
 \contentsline {subsection}{\numberline {3.1.2}Parallel tempering}{30}
 \contentsline {subsection}{\numberline {3.1.3}Multiple Gaussian modified ensemble}{31}
 \contentsline {section}{\numberline {3.2}Histogram reweighting methods}{33}
-\contentsline {subsection}{\numberline {3.2.1}Multiple\tmspace +\thinmuskip {.1667em}-histogram reweighting}{33}
+\contentsline {subsection}{\numberline {3.2.1}Multiple histogram reweighting}{33}
 \contentsline {subsection}{\numberline {3.2.2}Beziere smoothing}{35}
 \contentsline {section}{\numberline {3.3}Simple Monte Carlo updates}{37}
 \contentsline {subsection}{\numberline {3.3.1}Single displacement update}{37}
@@ -30,21 +30,29 @@
 \contentsline {subsection}{\numberline {4.2.1}Single elastic chain}{45}
 \contentsline {subsection}{\numberline {4.2.2}Interacting elastic chains}{46}
 \contentsline {section}{\numberline {4.3}Structural order parameters}{47}
-\contentsline {chapter}{\numberline {5}Confinement Effects upon Structural Transitions in Elastic Polymer Chains}{50}
+\contentsline {chapter}{\numberline {5}Impact of the Bond Confinement Range on the Structural Transitions of Elastic Homopolymers}{50}
 \contentsline {section}{\numberline {5.1}Model and simulation parameters}{51}
 \contentsline {section}{\numberline {5.2}Results}{53}
 \contentsline {subsection}{\numberline {5.2.1}Canonical analysis of energetic and structural fluctuations}{53}
 \contentsline {subsection}{\numberline {5.2.2}Results of microcanonical inflection-point analysis}{60}
-\contentsline {section}{\numberline {5.3}Summary}{63}
-\contentsline {chapter}{\numberline {6}Impact of Bonded Interactions on the Ground-State Geometries of Flexible Homopolymers}{65}
-\contentsline {section}{\numberline {6.1}Structural order parameters}{65}
-\contentsline {section}{\numberline {6.2}15-mer}{65}
-\contentsline {section}{\numberline {6.3}55-mer}{65}
-\contentsline {chapter}{\numberline {7}Aggregation of Flexible Elastic Homopolymers}{66}
-\contentsline {section}{\numberline {7.1}Introduction}{66}
-\contentsline {section}{\numberline {7.2}Microcanonical analysis}{66}
-\contentsline {subsection}{\numberline {7.2.1}Subphases and subphase transitions}{66}
-\contentsline {subsection}{\numberline {7.2.2}Missing subphases and translational entropy}{66}
-\contentsline {subsection}{\numberline {7.2.3}Density effects on the latent heat}{66}
-\contentsline {chapter}{\numberline {8}Summary and Outlook}{67}
-\contentsline {chapter}{Bibliography}{67}
+\contentsline {section}{\numberline {5.3}Summary}{64}
+\contentsline {chapter}{\numberline {6}Effects of short range repulsion on the structural properties of elastic homopolymers}{66}
+\contentsline {section}{\numberline {6.1}Model and simulation parameters}{67}
+\contentsline {section}{\numberline {6.2}Results}{69}
+\contentsline {subsection}{\numberline {6.2.1}Canonical results}{70}
+\contentsline {subsection}{\numberline {6.2.2}Microcanonical results and structural phase diagrams}{72}
+\contentsline {subsection}{\numberline {6.2.3}Structural analysis}{76}
+\contentsline {section}{\numberline {6.3}Summary}{82}
+\contentsline {chapter}{\numberline {7}Aggregation of Flexible Elastic Homopolymers}{83}
+\contentsline {section}{\numberline {7.1}Introduction}{83}
+\contentsline {section}{\numberline {7.2}Model and Methods}{85}
+\contentsline {subsection}{\numberline {7.2.1}Standard model of interacting elastic chains}{85}
+\contentsline {subsection}{\numberline {7.2.2}Simulation methods}{87}
+\contentsline {subsection}{\numberline {7.2.3}Density of states and microcanonical analysis}{88}
+\contentsline {section}{\numberline {7.3}Results}{90}
+\contentsline {subsection}{\numberline {7.3.1}Microcanonical analysis of aggregation transitions}{92}
+\contentsline {subsection}{\numberline {7.3.2}Entropically suppressed subphases}{96}
+\contentsline {subsection}{\numberline {7.3.3}Scaling properties}{100}
+\contentsline {section}{\numberline {7.4}Summary}{102}
+\contentsline {chapter}{\numberline {8}Summary and Outlook}{104}
+\contentsline {chapter}{Bibliography}{104}
