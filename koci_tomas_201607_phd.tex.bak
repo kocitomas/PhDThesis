@@ -120,12 +120,29 @@ July 2016
 \addcontentsline{toc}{chapter}{\listfigurename}
 \listoftables % if any
 \addcontentsline{toc}{chapter}{\listtablename}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%   CHAPTER 1			   %%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Introduction}
 \pagenumbering{arabic}
 \setcounter{page}{1}
-Kickass intro...
+%
+The staggering complexity of even the simplest molecular systems precludes the possibility of investigating the relevant thermodynamic properties through direct analytical calculations~\cite{Bachmann2014}. Over the past two decades, the enormous increase in the availability of computational resources, together with significant progress in algorithmic developments, resulted in a vast number of computational studies on the thermodynamic and structural properties of complex microscopic systems. Among the most efficient simulation methods are the generalized-ensemble Monte Carlo algorithms, such as simulated tempering~\cite{marinari,lyubartsev}, replica-exchange parallel tempering~\cite{sw1,geyer1,huku1,huku2}, multiple Gaussian modified ensemble (MGME)~\cite{Neuhaus2006}, together with multicanonical~\cite{muca1a,muca1b,muca2,muca3,muca4,Bachmann2013} and Wang-Landau sampling~\cite{wl1,wl2,wl3}. These have been applied successfully in numerous studies of structural phases and transition properties~\cite{Schnabel2009,bf1,bf2,grass2,vbj1,strauch1,svbj1, taylorRange1, taylorRange2,seaton3,semisslb1,Koci2015}, surface adsorption~\cite{bj4,prellberg1,paul1,mbj1,liang1,allen1,vb1,ywli1, mjb4,vgb1}, and aggregation\cite{KociAgg2015,jbj1,Junghans2008,Junghans2009,Junghans2011, Zieren2014,Zieren2015} of generic off-lattice homopolymers and heteropolymers. The folding properties of coarse-grained protein models have also been examined extensively~\cite{dill1,still1,still2,som1,hsu1,bj1,ssbj1}.
+%
 
+%
+Importantly, despite the many advances in simulational methodologies, systematic studies of detailed atomistic models are well beyond current capabilities. However, it is a significant physical reality that many essential thermodynamic properties of complex systems are retained on larger than atomistic scales and can be well represented by coarse-grained models. In fact, coarse-graining is not just a concept to simplify modeling. It reflects inherent collective and cooperative behavior of constituents of systems on mesoscopic and macroscopic scales. This is intuitive since it is known that certain characteristic properties, such as the propensity towards aggregation, are often shared among diverse systems and hence cannot depend sensitively on microscopic details.
+%
 
+% 
+In mesoscopic systems, structure formation and phase-separation processes are fundamentally influenced by finite-size effects. Systematic statistical analysis approaches beyond the standard canonical methodology are needed to unravel the intricate details of the interplay between energy and entropy in finite systems. Due to the averaging process involved in the calculation of canonical quantities such as the ensemble energy or the heat capacity, specific features of structural transitions and phase properties are often lost~\cite{Bachmann2014}. This is remedied in more general approaches such as the Fisher partition zeros~\cite{fisher1,taylor1,rslb1,taylor2}, or the microcanonical inflection-point analysis~\cite{Schnabel2011,KaiQi2016}.
+%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%   CHAPTER 2		   %%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Elements of Statistical Mechanics}
 \label{chap:elements_of_stat_mech}
 Statistical mechanics aims at explaining the microscopic origins of macroscopic properties of systems with large numbers of degrees of freedom. The exact solution for the time evolution of every particle in a single complex system requires enormous computational efforts, and in most cases provides little insight. In contrast to the stochastic motion of microscopic particles in a thermal environment, collective system properties such as entropy, pressure, or temperature, for the most part exhibit relatively simple behavior. The formalism of statistical mechanics allows us to study these properties by considering the average behavior of a large number of identically prepared systems, i.e., the statistical ensemble. It is well established, that for very large systems near the thermodynamic limit, all ensembles become equivalent. However this is emphatically not true in the case of intrinsically finite systems for which the choice of an ensemble is non-trivial\cite{Bachmann2014}. Therefore, we shall briefly introduce several prominent statistical ensembles, starting with arguably the most fundamental one, the \textit{microcanonical ensemble}.
@@ -474,9 +491,9 @@ which clearly resembles the well known relationship between the canonical temper
 Comparison of the inverse microcanonical temperature $\beta(E)$ (red) and the conformational inverse temperature $\beta_{c}(\bar{E}_{p})$ (blue) evaluated at the most probable potential energy $\bar{E}_{p}$. The approximation introduced in equation \ref{eq:approx1} holds except in the back-bending region of the first-order pseudophase transition. The inverse transition temperature $\beta_{\mathrm{trans}}$ obtained from the two quantities is virtually identical.}
 \end{figure}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%% 			CHAPTER 3     		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%   CHAPTER 3		   %%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{Computational Methods}
 
@@ -786,9 +803,9 @@ In a displacement update, a randomly selected monomer is moved according to a ra
 % 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%% 			CHAPTER 4     		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%   CHAPTER 4			   %%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 
@@ -1067,7 +1084,6 @@ In our simulations, we have used the replica-exchange Monte Carlo\footnote{See a
 The results presented in this chapter are compared for classes of polymers with $N=13$ and $30$ monomers. For verification purposes, we have also studied polymers with up to $55$ monomers, which, for this kind of systematic study that covers the entire parameter space, represents the limit of currently feasible simulations. 
 
 \section{Results}
-\label{sec:res}
 %
 In this section, we investigate the influence of the confinement parameter $R$ on the structural transitions in elastic chains of lengths $N = 13$ and $30$ in the dilute regime. For this purpose, we first perform a conventional canonical statistical analysis of fluctuating quantities and compare with results of a corresponding microcanonical analysis.
 %
@@ -1237,9 +1253,9 @@ In this chapter, we have investigated the thermodynamic behavior of a linear cha
 Our systematic study covers the technologically and biologically interesting regime of polymer chains with bond elasticities ranging from stiff to highly elastic, which includes all realistic linear macromolecules,  and extends into the space of confined systems that behave like atomic clusters. Since our results are supposed to be generic, they allow for a classification of the expected transition behavior on the basis of the effective bond confinement range of these systems.
 %
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 	     
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%   CHAPTER 6			   %%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{Effects of short range repulsion on the structural properties of elastic homopolymers}
 
@@ -1248,9 +1264,9 @@ Bonded interactions in coarse-grained models of elastic polymers are commonly re
 \noindent
 Structural phase diagrams are constructed using the results of canonical and microcanonical analysis. The geometry of low energy conformations is examined with the aid of structural order parameters which were introduced in Sec.~\ref{sec:orderParameters}.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 	     
-%%%%%%%%%%%%%%%%%%%%  MODEL AND METHODS		 %%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+%%%%%%%%%%%%%%%%%%%%  MODEL AND METHODS		 %%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Model and simulation parameters}
 In this study, we simulate the coarse-grained model of an elastic homopolymer, in the same general form as introduced in Sec.\,\,\ref{subsec:ElasticChain}. The energy scale of the Lennard-Jones potential is set to $\epsilon=1$ and the van-der-Waals radius to $\sigma=r_0/2^{1/6}$, where $r_0 = 1.0$ is the location of the potential minimum. We set the cut-off radius at $r_c=2.5\,\sigma$, and introduce a shift $U_{\mathrm{LJ}}(r_{c}) \approx -0.0163169$ to avoid discontinuities in the potential.
 
@@ -1410,80 +1426,45 @@ Similarly, in the case of the 55mer, we detect a single solid pseudophase for $\
 We are now in the position to discuss the impact of the repulsive part of the LJ potential, between bonded monomers, on the geometry of low-energy polymer conformations. In particular, we wish to know the reason for the exclusion of the bihexagonal pseudophase for all but extremely low strengths of the control parameter $\eta$. The answer is readily obtained by comparing the bond length distributions between conformations with icosahedral and bihexagonal cores (Fig.~\ref{fig:bondDistribution}). In terms of the number of non-bonded interactions, bihexagonal conformations are energetically more optimal than icosahedra.  However the formation of a bihexagonal core results in a non-optimal distribution of bond lengths. In particular, the two six-monomer rings of the bihexagon contain significantly compressed bonds $(r_{\mathrm{bond}} \approx 0.88 r_{0})$. At very small values of $\eta$, the symmetric FENE potential allows for the existence of compressed bonds without a large energetic penalty; hence the bihexagonal conformations dominate. However, with increasing $\eta$, which controls the strength of the bonded LJ potential and the short-range repulsion between bonded monomers, the energetic penalty for the compressed bonds eventually prevents the formation of bihexagonal structures. 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  			          SUMMARY		               %%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 			          SUMMARY		               %%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Summary}
 %
-We have investigated the thermodynamic and structural properties of elastic homopolymer chains of lengths $N=15,55$, over a range of values of the model parameter $\eta$  which controls the strength of the LJ potential in bonded interactions. At very small values of $\eta$, conformations with bihexagonal cores form the ground state. Increase in the strength of the bonded LJ potential breaks the symmetry of the FENE potential and leads to additional short-range repulsion between pairs of bonded monomers. The compressed bonds found in bihexagonal conformations obtain large energetic penalties and only a single icosahedral solid phase remains. The results of this study show that the coarse-grained homopolymer model is robust over a wide range of values of the model parameter $\eta$. However, the striking behavior at very small values of $\eta$ illustrates the importance of a careful choice of model parameters.
+We have investigated the thermodynamic and structural properties of elastic homopolymer chains of lengths $N=15,55$, over a range of values of the model parameter $\eta$  which controls the strength of the LJ potential in bonded interactions. At very small values of $\eta$, conformations with bihexagonal cores form the ground state. Increasing the strength of the bonded LJ potential breaks the symmetry of the FENE potential and leads to additional short-range repulsion between pairs of bonded monomers. The compressed bonds found in bihexagonal conformations obtain large energetic penalties and only a single icosahedral solid phase remains. The results of this study show that the coarse-grained homopolymer model is robust over a wide range of values of the model parameter $\eta$. However, the striking behavior at very small values of $\eta$ illustrates the importance of a careful choice of model parameters.
 
 
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 			          CHAPTER 7		               %%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Aggregation of Flexible Elastic Homopolymers}
 \label{chap:Aggregation}
-\section{Introduction}
 %
-Deeper understanding of aggregation processes in the context
-of microscopic molecular systems is relevant for a number of 
-technological and biomedical applications. For example,
-protein aggregation is believed to play a critical role during
-the onset of many prominent pathological conditions, 
-such as cystic fibrosis, Alzheimer's and Parkinson's
-diseases~\cite{Selkoe,Chiti}. The staggering complexity of even the 
-simplest molecular systems precludes the possibility of obtaining 
-the relevant thermodynamic quantities through direct analytical 
-calculations~\cite{Bachmann2014}. Over the past two decades, 
-the enormous increase in the availability of computational resources, 
-together with significant progress in algorithmic developments, 
-resulted in a vast number of computational studies on the thermodynamic 
-and structural properties of complex microscopic systems. 
-Among the most efficient simulation methods are the
-generalized-ensemble Monte Carlo algorithms, such as
-simulated tempering~\cite{marinari,lyubartsev},
-replica-exchange parallel tempering~\cite{sw1,geyer1,huku1,huku2}, 
-multiple Gaussian modified ensemble (MGME)~\cite{Neuhaus2006}, 
-together with
-multicanonical~\cite{muca1a,muca1b,muca2,muca3,muca4,Bachmann2013}
-and Wang-Landau sampling~\cite{wl1,wl2,wl3}. 
-These have been applied successfully in numerous studies of 
-structural phases and transition
-properties~\cite{Schnabel2009,bf1,bf2,grass2,vbj1,strauch1,svbj1,%
-taylorRange1, taylorRange2,seaton3,semisslb1,Koci2015}, surface
-adsorption~\cite{bj4,prellberg1,paul1,mbj1,liang1,allen1,vb1,ywli1,%
-mjb4,vgb1}, and
-aggregation~\cite{jbj1,Junghans2008,Junghans2009,Junghans2011,%
-Zieren2014,Zieren2015} of generic off-lattice homopolymers and
-heteropolymers. The folding properties of coarse-grained protein models
-have also been examined
-extensively~\cite{dill1,still1,still2,som1,hsu1,bj1,ssbj1}.
- 
-Importantly, despite the many advances in simulational
-methodologies, systematic studies of detailed atomistic
-models are well beyond current capabilities. 
-However, it is a significant physical reality that many 
-essential thermodynamic properties of complex systems are 
-retained on larger than atomistic scales and can be well represented 
-by coarse-grained models. In fact, coarse-graining is not just a concept
-to simplify modeling. It reflects inherent collective and cooperative
-behavior of constituents of systems on mesoscopic and macroscopic scales. 
-This is intuitive since it is known that certain characteristic
-properties, such as the propensity towards aggregation, are often shared
-among diverse systems and hence cannot depend sensitively on microscopic
-details.
- 
-In mesoscopic systems, structure formation and phase-separation
-processes are fundamentally influenced by finite-size effects.
-Systematic statistical analysis approaches beyond the standard
-canonical methodology are needed to unravel the intricate details
-of the interplay between energy and entropy in finite systems.
-Due to the averaging process involved in the calculation of 
-canonical quantities such as the ensemble energy or the heat capacity,
-specific features of structural transitions and phase properties 
-are often lost~\cite{Bachmann2014}. This is remedied in more general 
-approaches such as the Fisher partition 
-zeros~\cite{fisher1,taylor1,rslb1,taylor2}, 
-or the microcanonical inflection-point 
-analysis~\cite{Schnabel2011,KaiQi2016}.
+%
+
+In this study, we investigate the properties of aggregation
+transitions in the context of generic coarse-grained 
+homopolymer systems. By means of parallel replica-exchange 
+Monte Carlo methods, we perform extensive simulations of systems
+consisting of up to $20$ individual polymer chains with $5$ monomers
+each. Using the tools of the versatile microcanonical 
+inflection-point analysis, we show that the aggregation 
+transition is a first-order process consisting of a sequence of 
+subtransitions between intermediate structural phases.
+We unravel the properties of these intermediate phases by collecting
+and analyzing their individual contributions towards the density 
+of states of the system. The central theme of this systematic study 
+revolves around translational entropy and its role in the striking phenomena 
+of \textit{missing} intermediate phases.
+We conclude with a brief discussion of the scaling properties of the
+transition temperature and the latent heat.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%    INTRO    %%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+Deeper understanding of aggregation processes in the context of microscopic molecular systems is relevant for a number of technological and biomedical applications. For example, protein aggregation is believed to play a critical role during the onset of many prominent pathological conditions, such as cystic fibrosis, Alzheimer's and Parkinson's diseases~\cite{Selkoe,Chiti}. 
 
 This paper is organized as follows: In Sect.~\ref{sec:modmeth},
 we introduce a coarse-grained model for interacting flexible
@@ -1735,30 +1716,16 @@ shown in Fig.~\ref{fig:Fig_1}.
 The extension of this method towards the identification of higher-order 
 transitions is possible and will be described elsewhere~\cite{KaiQi2016}.
 %
-\begin{figure}
-\centering
-\includegraphics[width = 0.5\textwidth]{chapter7Figs/micro_example.eps}
-\caption{\label{fig:Fig_1}%
-Microcanonical inflection-point analysis of the
-inverse microcanonical temperature $\beta(E)$. The prominent
-back-bending region in $\beta(E)$, together with the positive-valued peak 
-in its energy derivative $\gamma(E)$ at $E \approx -15$, indicates a 
-\textit{first-order}
-transition. The negative-valued peak at $E\approx -24$ corresponds
-to a \textit{second-order} transition.}
-\end{figure}
-%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%% RESULTS %%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Results}
-\label{sec:res}
 %
 %
-\begin{figure}
-\center
-\includegraphics[width = 1.03\textwidth]{chapter7Figs/combinedMicro.eps}
-\caption{\label{fig:Fig_2}Microcanonical temperature
+\begin{figure*}
+\centering
+\includegraphics[width = \textwidth]{chapter7Figs/combinedMicro.eps}
+\caption{\label{fig:Fig_2} (Color online) Microcanonical temperature
 $\beta(E)$ and its energy derivative $\gamma(E)$ for systems with $M =
 2,3,5,11$ polymer chains with $N=5$ monomers each. 
 The dashed vertical lines $e_{\mathrm{agg}}$ and $e_{\mathrm{frag}}$
@@ -1772,7 +1739,7 @@ The unimodal canonical energy histograms of the subphases
 $h_{i}(\beta_{\mathrm{agg}};E)$ are shown together with the combined
 histogram $h(\beta_{\mathrm{agg}};E)$. The absolute scale of these
 distributions is arbitrary.}
-\end{figure}
+\end{figure*}
 %
 Previous studies of single flexible elastic homopolymers reveal the
 existence
@@ -1843,9 +1810,8 @@ partially formed aggregates. This allows us to collect separate statistical
 data for each subphase and to determine their relative frequency.
 %
 \begin{figure}
-\center
-\includegraphics[width = 0.7\textwidth]{chapter7Figs/configurations.eps}
-\caption{\label{fig:Fig_3} Sample configurations of
+\includegraphics[width = 0.45\textwidth]{chapter7Figs/configurations.eps}
+\caption{\label{fig:Fig_3} (Color online) Sample configurations of
 intermediate subphases found at the aggregation temperature in a system
 consisting of four chains with five monomers each. Due to entropic
 suppression, the $\{2,2\}$ subphase has an unexpectedly small canonical
@@ -1882,9 +1848,8 @@ S(E) = k_{\mathrm{B}}\mathrm{ln}\sum_{i}e^{S_{i}(E)/k_{\mathrm{B}}},
 where $S_{i}(E) = k_{\mathrm{B}}\mathrm{ln}\, g_{i}(E)$.
 %
 \begin{figure}
-\center
-\includegraphics[width = 0.7\textwidth]{chapter7Figs/entropyCombined.eps}
-\caption{\label{fig:Fig_4} Microcanonical entropy per
+\includegraphics[width = 0.5\textwidth]{chapter7Figs/entropyCombined.eps}
+\caption{\label{fig:Fig_4} (Color online) Microcanonical entropy per
 monomer $S(E)$ (solid)
 and the individual subphase entropies (dotted) for systems with 
 $M = 2,3$ polymer chains. The double-tangent $\Gamma (E)$
@@ -2052,11 +2017,24 @@ in energy and cannot be associated with individual oscillations of
 $\beta(E)$.
 %
 \begin{figure}
-\center
-\includegraphics[width = 0.7\textwidth]{chapter7Figs/microEntropy.eps}
-\caption{\label{fig:Fig_5} Subphase entropy curves (patterned) in the aggregation
-transition region for a system of $M=4$ polymer chains. The entropically suppressed 
+\includegraphics[width = 0.5\textwidth, angle
+=0]{chapter7Figs/microEntropy.eps}
+\caption{\label{fig:Fig_5}%
+(Color online) Subphase entropy curves (patterned) in the aggregation
+transition
+region for a system of $M=4$ chains. The entropically suppressed 
 \textit{missing} subphase $\{2,2\}$ is highlighted in red (solid).}
+\end{figure}
+%
+\begin{figure}
+\includegraphics[width = 0.5\textwidth]{chapter7Figs/scalingCombined.eps}
+\caption{\label{fig:Fig_6}%
+(Color online) Scaling behavior of the aggregation transition temperature
+$T_{\mathrm{agg}}$ and the latent heat per monomer $\Delta q$, with respect
+to $M^{-1/3}$ where $M$ is the number of polymer chains. The latent heat
+increases with system size, providing further evidence that the transition
+remains of 
+first order even for large $M$. }
 \end{figure}
 %
 In order to better understand the reason behind the \textit{missing}
@@ -2091,17 +2069,6 @@ probabilities remains linearly proportional to~$M$.
 %
 %%%%%%%%% Scaling Properties %%%%%%%%%%%%%
 \subsection{Scaling properties}
-%
-\begin{figure}
-\center
-\includegraphics[width = 0.7\textwidth]{chapter7Figs/scalingCombined.eps}
-\caption{\label{fig:Fig_6} Scaling behavior of the aggregation transition temperature
-$T_{\mathrm{agg}}$ and the latent heat per monomer $\Delta q$, with respect
-to $M^{-1/3}$ where $M$ is the number of polymer chains. The latent heat
-increases with system size, providing further evidence that the transition
-remains of 
-first order even for large $M$. }
-\end{figure}
 %
 It is also interesting to discuss the dependence of the aggregation
 temperature $ T_{\mathrm{agg}} = \beta_{\mathrm{agg}}^{-1}$, and the
