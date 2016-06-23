@@ -1450,25 +1450,7 @@ Deeper understanding of aggregation processes in the context of microscopic mole
 \section{Model and Methods}
 \label{sec:modmeth}
 %
-In the following, we introduce a generic coarse-grained model
-for a system of interacting, flexible homopolymers. Coarse-grained models,
-with a suitably chosen set of
-parameters, drastically reduce computational complexity while
-preserving the essential structural and thermodynamic properties
-that are typically found in more complex
-models~\cite{Schmid2011}.
-%
-\subsection{Standard model of interacting elastic chains}
-%
-In this study, we investigate the aggregation of
-$M$ interacting flexible homopolymers, each composed of
-$N = 5$ monomers. During the simulations, the system is constrained
-inside of a steric sphere at a constant density of $10^{-3}$
-monomers per unit volume. At this density the radius of the
-constraining sphere is larger than the length of the fully
-extended polymer chains under investigation. The total energy of
-the system can be separated into intra-chain and inter-chain
-pairwise interactions
+Employing the generic coarse-grained model for a system of interacting, flexible homopolymers, we investigate the aggregation of $M$ interacting chains, each composed of $N = 5$ monomers. During the simulations, the system is constrained inside of a steric sphere at a constant density of $10^{-3}$ monomers per unit volume. At this density the radius of the constraining sphere is larger than the length of the fully extended polymer chains under investigation. The total energy of the system can be separated into intra-chain and inter-chain pairwise interactions
 %%%%%%     Total Energy      %%%%%%
 \begin{equation}
 E_{\mathrm{total}} = E_{\mathrm{intra}} + E_{\mathrm{inter}}.
@@ -1483,55 +1465,14 @@ U_{\mathrm{FENE}}(r\,^{(k)}_{ii+1}) +
 U_{\mathrm{LJ}}^{\mathrm{trunc}}(r\,^{(k)}_{ij})
 \end{equation}
 %
-consists of both bonded and non-bonded interactions, where
-$r\,^{(k)}_{ij}$ is the distance between the pair of monomers
-($i$,$j$) of the $k$-th chain. The first term contains the anharmonic
-finitely extensible nonlinear elastic (FENE)
-potential~\cite{Bird1987, Kremer1990, Milchev2001}
-%%%%%% FENE Potential %%%%%%
-\begin{equation}
-U_{\mathrm{FENE}}(r_{ii+1})=-\frac{K}{2}R^2 
-\mathrm{ln}\left[1-\left(\frac{r_{ii+1}-r_0}{R}\right)^2\right],	
-\label{FENE}
-\end{equation}
+consists of both bonded and non-bonded interactions, where $r\,^{(k)}_{ij}$ is the distance between the pair of monomers ($i$,$j$) of the $k$-th chain. The first term contains the FENE potential (\ref{eq:FENE}), with parameter values $K=40$ and $R=0.3$.The second term represents the truncated and shifted Lennard-Jones (LJ) potential (\ref{eq:LJTruncated}) with the energy scale $\epsilon$ set to unity and the length scale to $\sigma=r_0/2^{1/6}$, where $r_0 = 0.7$ is the location of the LJ potential minimum. The cutoff radius is set to $r_c=2.5\,\sigma$. The inter-chain contribution
 %
-with parameter values $K=40$ and $R=0.3$ as used in~\cite{Gross2013}.
-The second term represents 
-the truncated and shifted Lennard-Jones (LJ) potential
-%%%%%% LJ Potential %%%%%%
-\begin{equation}
-U_{\mathrm{LJ}}^{\mathrm{trunc}}(r_{ij}) = \left\{
-\begin{array}{lr}
-U_{\mathrm{LJ}}(r_{ij}) - U_{\mathrm{LJ}}(r_{c}), & \quad
-\mathrm{if} \,\, r_{ij} \leq r_{c},\\
-0, &  \quad \mathrm{if} \,\,r_{ij} > r_{c},
-\end{array}
-\right.
-\end{equation}
-%
-where
-%%%%%% LJ Potential %%%%%%
-\begin{equation}
-U_{\mathrm{LJ}}(r_{ij})= 4\epsilon \left[ \left(
-\frac{\sigma}{r_{ij}} \right)^{12} - \left(
-\frac{\sigma}{r_{ij}} \right)^{6} \right].
-\end{equation}
-%
-We set the energy scale $\epsilon$ to unity and the length scale
-to $\sigma=r_0/2^{1/6}$, where $r_0 = 0.7$ is the location of
-the LJ potential minimum. The cutoff radius is set to
-$r_c=2.5\,\sigma$.
-The inter-chain contribution
 %%%%%% Inter-Chain Energy %%%%%% 
 \begin{equation}
-E_{\mathrm{inter}} = \sum^{M}_{k < l}
-\sum^{N}_{i,j}U_{\mathrm{LJ}}^{\mathrm{trunc}}(|\textbf{r}^{(k)}_{i}
-- \textbf{r}^{(l)}_{j}|),
+E_{\mathrm{inter}} = \sum^{M}_{k < l} \sum^{N}_{i,j}U_{\mathrm{LJ}}^{\mathrm{trunc}}(|\textbf{r}^{(k)}_{i} - \textbf{r}^{(l)}_{j}|),
 \end{equation}
 %
-consists solely of non-bonded LJ interactions. For the purpose
-of this study, all LJ interactions (intra- and inter-chain) have
-their parameters set to identical values.
+consists solely of LJ interactions. For the purpose of this study, all LJ interactions (intra- and inter-chain) have their parameters set to identical values.
 %
 \subsection{Simulation methods}
 %

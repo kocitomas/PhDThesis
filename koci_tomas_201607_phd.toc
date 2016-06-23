@@ -45,11 +45,10 @@
 \contentsline {section}{\numberline {6.3}Summary}{83}
 \contentsline {chapter}{\numberline {7}Aggregation of Flexible Elastic Homopolymers}{84}
 \contentsline {section}{\numberline {7.1}Model and Methods}{85}
-\contentsline {subsection}{\numberline {7.1.1}Standard model of interacting elastic chains}{85}
-\contentsline {subsection}{\numberline {7.1.2}Simulation methods}{86}
-\contentsline {subsection}{\numberline {7.1.3}Density of states and microcanonical analysis}{87}
+\contentsline {subsection}{\numberline {7.1.1}Simulation methods}{86}
+\contentsline {subsection}{\numberline {7.1.2}Density of states and microcanonical analysis}{87}
 \contentsline {section}{\numberline {7.2}Results}{89}
-\contentsline {subsection}{\numberline {7.2.1}Microcanonical analysis of aggregation transitions}{91}
+\contentsline {subsection}{\numberline {7.2.1}Microcanonical analysis of aggregation transitions}{89}
 \contentsline {subsection}{\numberline {7.2.2}Entropically suppressed subphases}{96}
 \contentsline {subsection}{\numberline {7.2.3}Scaling properties}{99}
 \contentsline {section}{\numberline {7.3}Summary}{100}
