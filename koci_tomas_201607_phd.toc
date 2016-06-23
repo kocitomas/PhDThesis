@@ -45,12 +45,10 @@
 \contentsline {section}{\numberline {6.3}Summary}{83}
 \contentsline {chapter}{\numberline {7}Aggregation of Flexible Elastic Homopolymers}{84}
 \contentsline {section}{\numberline {7.1}Model and Methods}{85}
-\contentsline {subsection}{\numberline {7.1.1}Simulation methods}{86}
-\contentsline {subsection}{\numberline {7.1.2}Density of states and microcanonical analysis}{87}
-\contentsline {section}{\numberline {7.2}Results}{89}
-\contentsline {subsection}{\numberline {7.2.1}Microcanonical analysis of aggregation transitions}{89}
-\contentsline {subsection}{\numberline {7.2.2}Entropically suppressed subphases}{96}
-\contentsline {subsection}{\numberline {7.2.3}Scaling properties}{99}
-\contentsline {section}{\numberline {7.3}Summary}{100}
-\contentsline {chapter}{\numberline {8}Summary and Outlook}{102}
-\contentsline {chapter}{Bibliography}{102}
+\contentsline {section}{\numberline {7.2}Results}{87}
+\contentsline {subsection}{\numberline {7.2.1}Microcanonical analysis of aggregation transitions}{87}
+\contentsline {subsection}{\numberline {7.2.2}Entropically suppressed subphases}{94}
+\contentsline {subsection}{\numberline {7.2.3}Scaling properties}{97}
+\contentsline {section}{\numberline {7.3}Summary}{98}
+\contentsline {chapter}{\numberline {8}Summary and Outlook}{100}
+\contentsline {chapter}{Bibliography}{100}

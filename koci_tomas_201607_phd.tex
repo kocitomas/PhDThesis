@@ -695,6 +695,7 @@ The direct product of GME ensembles defines the multiple Gaussian modified ensem
 In chapter \ref{chap:elements_of_stat_mech}, we have introduced the microcanonical inflection point analysis as the means for the systematic study of pseudophase transitions in the microcanonical ensemble. Application of this method however presumes the precise knowledge of the microcanonical density of states $g(E)$ [Eq \ref{eq:densitOfStatesExplicit}]. Previously introduced sampling methods do not directly measure $g(E)$ but rather generate canonical energy histograms $h(E,\beta_{i})$. Hence, it is necessary to introduce a general method for estimating the density of states from energy histograms.
 
 \subsection{Multiple histogram reweighting}
+\label{subsec:MultipleHistogramRew}
 Canonical histogram $h(E,\beta_{i})$ provides an approximation for the Boltzmann distribution $p_{\mathrm{can}}(E, \beta_{i})$, which is itself proportional to the microcanonical density of states
 %
 \begin{equation}
@@ -1465,7 +1466,7 @@ U_{\mathrm{FENE}}(r\,^{(k)}_{ii+1}) +
 U_{\mathrm{LJ}}^{\mathrm{trunc}}(r\,^{(k)}_{ij})
 \end{equation}
 %
-consists of both bonded and non-bonded interactions, where $r\,^{(k)}_{ij}$ is the distance between the pair of monomers ($i$,$j$) of the $k$-th chain. The first term contains the FENE potential (\ref{eq:FENE}), with parameter values $K=40$ and $R=0.3$.The second term represents the truncated and shifted Lennard-Jones (LJ) potential (\ref{eq:LJTruncated}) with the energy scale $\epsilon$ set to unity and the length scale to $\sigma=r_0/2^{1/6}$, where $r_0 = 0.7$ is the location of the LJ potential minimum. The cutoff radius is set to $r_c=2.5\,\sigma$. The inter-chain contribution
+consists of both bonded and non-bonded interactions, where $r\,^{(k)}_{ij}$ is the distance between the pair of monomers ($i$,$j$) of the $k$-th chain. The first term contains the FENE potential (\ref{eq:FENE}), with parameter values $K=40$ and $R=0.3$. The second term represents the truncated and shifted Lennard-Jones (LJ) potential (\ref{eq:LJTruncated}) with the energy scale $\epsilon$ set to unity and the length scale to $\sigma=r_0/2^{1/6}$, where $r_0 = 0.7$ is the location of the LJ potential minimum. The cutoff radius is set to $r_c=2.5\,\sigma$. The inter-chain contribution
 %
 %%%%%% Inter-Chain Energy %%%%%% 
 \begin{equation}
@@ -1474,152 +1475,22 @@ E_{\mathrm{inter}} = \sum^{M}_{k < l} \sum^{N}_{i,j}U_{\mathrm{LJ}}^{\mathrm{tru
 %
 consists solely of LJ interactions. For the purpose of this study, all LJ interactions (intra- and inter-chain) have their parameters set to identical values.
 %
-\subsection{Simulation methods}
-%
-Relatively small polymer systems, consisting of $N < 100$
-monomers, can be conveniently simulated using parallel tempering, which is
-a generalized-ensemble
-replica-exchange Monte Carlo method~\cite{sw1,geyer1,huku1,huku2} that can
-be easily implemented on parallel
-computer architectures. In larger systems, 
-the density of states typically spans several
-thousand orders of magnitude, in which case the application of more
-sophisticated methods such as multicanonical
-sampling~\cite{muca1a,muca1b,muca2,muca3,muca4,Bachmann2013} or 
-Wang-Landau~\cite{wl1,wl2,wl3} is more efficient. In this study we restrict
-our attention to systems consisting of up to $20$ individual chains with $5$
-monomers each.
-The number of monomers per chain has been intentionally kept very low 
-in order to enhance translational entropic effects which become more 
-obscured by the impact of inherent conformational
-entropies as chain length is increased.
 
-In a typical simulation, $R \approx 80$ replicas of the system were
-simulated in parallel at different temperatures in the range 
-$T \in \left[0.1,2.0\right]$.
-Single-monomer random displacement moves, restricted to a box of size $l$,
-were used to perform conformational updates for individual replicas.
-The proposed update was then accepted with the Metropolis probability
-%%%%%% Metropolis Acceptance Probability %%%%%%
-\begin{equation}
-A_\mathrm{M}\left(\mathbf{X}_{\mathrm{old}} \rightarrow
-\mathbf{X}_{\mathrm{new}}\right) = 			
-\mathrm{min}\left(1,e^{ -\beta\left[E
-(\mathbf{X}_{\mathrm{new}}) -
-E(\mathbf{X}_{\mathrm{old}})\right]} \right),
-\end{equation}
+\newpage
+
 %
-where $\beta = 1/k_{\mathrm{B}}T$ and $k_{\mathrm{B}} \equiv 1$ in the
-simulation.
-The maximum magnitude of the displacement update $l$ was adjusted
-individually
-for each temperature thread to achieve an average acceptance rate of
-$40-60\%$.
-Approximately every $100$ Monte Carlo sweeps, an exchange of conformations 
-between adjacent replicas $i$ and $j$ was proposed with the acceptance
-probability
-%%%%%% Replica-Exchange Acceptance Probability %%%%%%
-\begin{equation}
-A_\mathrm{PT}\left(\mathbf{X}_{i} \leftrightarrow \mathbf{X}_{j};
-\beta _{i}, \beta_{j} \right) =
-\mathrm{min}\left(1,e^{\left[\beta_{j} -
-\beta _{i} \right] \left[E (\mathbf{X}_{j}) -
-E(\mathbf{X}_{i})\right]} \right).
-\end{equation}
+Relatively small polymer systems, consisting of $N < 100$ monomers, can be conveniently simulated using parallel tempering, which is a generalized-ensemble replica-exchange Monte Carlo method\footnote{See also section~\ref{subsec:ParallelTempering}}~\cite{sw1,geyer1,huku1,huku2} that can be easily implemented on parallel computer architectures. In larger systems, the density of states typically spans several thousand orders of magnitude, in which case the application of more sophisticated methods, such as the multicanonical~\cite{muca1a,muca1b,muca2,muca3,muca4,Bachmann2013} or Wang-Landau~\cite{wl1,wl2,wl3} sampling, becomes more efficient. In this study we restrict our attention to systems consisting of up to $20$ polymer chains with $5$ monomers each. The lengths of the individual chains have been restricted to ensure that the translational entropies of the polymers dominate over their inherent conformational entropies.
 %
-The temperature spacing between adjacent replicas was chosen to achieve
-an exchange probability exceeding $20\%$. This results in a higher density of
-replicas in the low-temperature region as well as near the locations of phase
-transitions.
-On average, $10^7$ replica exchanges were performed, allowing for a total of 
+
+%
+In a typical simulation, $R \approx 80$ replicas of the system were simulated in parallel at different temperatures in the range $T \in \left[0.1,2.0\right]$. Single-monomer random displacement moves, restricted to a box of size $l$, were used to perform conformational updates for individual replicas. The maximum magnitude of the displacement update $l$ was adjusted individually for each temperature thread to achieve an average acceptance rate of $40-60\%$. An exchange of conformations between adjacent replicas was proposed approximately every $100$ Monte Carlo sweeps. The temperature spacing between adjacent replicas was chosen to achieve an exchange probability exceeding $20\%$. This results in a higher density of replicas in the low-temperature region as well as near the locations of phase transitions. On average, $10^7$ replica exchanges were performed, allowing for a total of 
 $10^9$ Monte Carlo sweeps per simulation. 
 %
-\subsection{Density of states and microcanonical analysis}
-As a result of parallel tempering simulations, each replica generates 
-a canonical energy histogram $h(E,\beta_{i})$,
-which is then used to calculate an estimate for the microcanonical density 
-of states $g_{i}(E) \approx h(E,\beta_{i})\exp{(\beta _{i} E)}$.
-Individual estimates $g_{i}(E)$ are only reliable for energies in the
-neighborhood 
-of the peak of the canonical distribution obtained at the temperature
-$\beta _{i}$.
-Therefore a sufficient overlap between the histograms of
-neighboring replicas 
-is necessary to ensure that an accurate estimate of the density of states 
-can be
-obtained for the entire energetic range. To combine the histograms obtained
-from the individual temperature threads, we have used the weighted
-multiple-histogram 
-method~\cite{Ferrenberg1989,Kumar1992}, where the system of equations
-%%%%%% Weighted Histogram Reweighting %%%%%%
-\begin{eqnarray}
-\hat{g}(E)&= &\frac{\sum_{i=1}^{R} h(E,\beta _{i})}{\sum_{i=1}^{R} M_i
-\hat{Z}_i^{-1} e^{-\beta_i E}}, \\
-\hat{Z}_i &= &\sum_E \hat{g}(E) e^{-\beta_i E},
-\end{eqnarray}
-%
-must be solved iteratively until $\hat{g}(E)$ has converged.
 
-The standard approach towards obtaining the thermodynamic properties of a
-polymer system is to perform a conventional analysis of energetic and
-structural 
-fluctuating quantities in the canonical ensemble. Generally, peaks in the 
-temperature derivative of a canonical expectation value 
-%%%%%% Temperature Derivative of Fluctuating Quantity %%%%%%
-\begin{eqnarray}
-\frac{d}{dT}(O(\mathbf{X})(T)& = &\frac{1}{k_\mathrm{B}T^{2}}[\langle
-O(\mathbf{X})
-E(\mathbf{X})\rangle (T)\nonumber\\
-&& - \langle O(\mathbf{X}) \rangle \langle E(\mathbf{X})\rangle (T)],
-\end{eqnarray}
 %
-indicate extremal thermal activity in the system. However, the precise
-location
-of the transition points depends on the choice of the thermodynamic 
-observables
-and cannot be determined uniquely. If finite-size effects are significant,
-the identification of a structural transition can be difficult and
-underlying cooperative effects may entirely be smeared out in the
-averaging process.
+As a result of parallel tempering simulations, each replica generates a canonical energy histogram $h(E,\beta_{i})$, which serves as an estimate for the microcanonical density of states $g_{i}(E) \approx h(E,\beta_{i})\exp{(\beta _{i} E)}$. We have used the weighted multiple-histogram method\footnote{See also section \ref{subsec:MultipleHistogramRew}}~\cite{Ferrenberg1989,Kumar1992} to combine the individual estimates and obtain an estimate of $g(E)$ valid over the entire relevant energy range.
+%
 
-It is therefore imperative to employ a more systematic approach towards the
-analysis of thermodynamic properties of finite systems, which is capable 
-of uniquely identifying and classifying structural transitions of
-all orders. 
-This is accomplished utilizing the inflection-point analysis in the 
-microcanonical
-ensemble~\cite{Bachmann2014,Schnabel2011}. The central quantity,
-containing virtually all information about the intricate interplay between 
-entropy and energy, is the microcanonical inverse temperature 
-defined as
-%%%%%%%%% Microcanonical Temperature %%%%%%%%%%%%%
-\begin{equation}
-\beta(E) = \frac{dS(E)}{dE},
-\end{equation}
-%
-where
-\begin{equation}
-S(E) = k_\mathrm{B}\, \mathrm{ln}\, g(E)
-\end{equation}
-is the microcanonical entropy and $g(E)$ is the density of states. 
-In analogy to the principle of minimal 
-sensitivity~\cite{Stevenson},
-structural transitions occur if $\beta (E)$, or one of its energy
-derivatives,
-responds least sensitively to variations in energy. 
-In particular, \textit{first-order} transitions are associated 
-with inflection points in $\beta (E)$ that have a positive slope.
-Therefore, it can easily be identified by a positive-valued peak in the 
-energy derivative $\gamma(E)=d\beta(E)/dE$. Similarly, a 
-\textit{second-order}
-transition occurs if $\gamma(E)$ attains a negative-valued peak. 
-Examples of microcanonical \textit{first-} and \textit{second-order}
-transition signals 
-are 
-shown in Fig.~\ref{fig:Fig_1}.
-The extension of this method towards the identification of higher-order 
-transitions is possible and will be described elsewhere~\cite{KaiQi2016}.
-%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%% RESULTS %%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

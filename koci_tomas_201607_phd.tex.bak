@@ -695,6 +695,7 @@ The direct product of GME ensembles defines the multiple Gaussian modified ensem
 In chapter \ref{chap:elements_of_stat_mech}, we have introduced the microcanonical inflection point analysis as the means for the systematic study of pseudophase transitions in the microcanonical ensemble. Application of this method however presumes the precise knowledge of the microcanonical density of states $g(E)$ [Eq \ref{eq:densitOfStatesExplicit}]. Previously introduced sampling methods do not directly measure $g(E)$ but rather generate canonical energy histograms $h(E,\beta_{i})$. Hence, it is necessary to introduce a general method for estimating the density of states from energy histograms.
 
 \subsection{Multiple histogram reweighting}
+\label{subsec:MultipleHistogramRew}
 Canonical histogram $h(E,\beta_{i})$ provides an approximation for the Boltzmann distribution $p_{\mathrm{can}}(E, \beta_{i})$, which is itself proportional to the microcanonical density of states
 %
 \begin{equation}
@@ -1438,74 +1439,19 @@ We have investigated the thermodynamic and structural properties of elastic homo
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Aggregation of Flexible Elastic Homopolymers}
 \label{chap:Aggregation}
-%
-%
-
-In this study, we investigate the properties of aggregation
-transitions in the context of generic coarse-grained 
-homopolymer systems. By means of parallel replica-exchange 
-Monte Carlo methods, we perform extensive simulations of systems
-consisting of up to $20$ individual polymer chains with $5$ monomers
-each. Using the tools of the versatile microcanonical 
-inflection-point analysis, we show that the aggregation 
-transition is a first-order process consisting of a sequence of 
-subtransitions between intermediate structural phases.
-We unravel the properties of these intermediate phases by collecting
-and analyzing their individual contributions towards the density 
-of states of the system. The central theme of this systematic study 
-revolves around translational entropy and its role in the striking phenomena 
-of \textit{missing} intermediate phases.
-We conclude with a brief discussion of the scaling properties of the
-transition temperature and the latent heat.
-
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%    INTRO    %%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-Deeper understanding of aggregation processes in the context of microscopic molecular systems is relevant for a number of technological and biomedical applications. For example, protein aggregation is believed to play a critical role during the onset of many prominent pathological conditions, such as cystic fibrosis, Alzheimer's and Parkinson's diseases~\cite{Selkoe,Chiti}. 
+Deeper understanding of aggregation processes in the context of microscopic molecular systems is relevant for a number of technological and biomedical applications. For example, protein aggregation is believed to play a critical role during the onset of many prominent pathological conditions, such Alzheimer's and Parkinson's diseases~\cite{Selkoe,Chiti}. In this chapter, we investigate the properties of aggregation transitions in the context of generic coarse-grained homopolymer systems. By means of parallel replica-exchange Monte Carlo methods, we perform extensive simulations of systems consisting of up to $20$ short polymer chains. Using the results of the  microcanonical inflection-point analysis, we argue that the aggregation transition is a first-order process consisting of a sequence of subtransitions between intermediate structural phases. We unravel the properties of these intermediate phases by collecting and analyzing their individual contributions towards the density of states of the system. The central theme of this systematic study revolves around translational entropy and its role in the striking phenomena of \textit{missing} intermediate phases. We conclude with a brief discussion of the scaling properties of the transition temperature and the latent heat.
 
-This paper is organized as follows: In Sect.~\ref{sec:modmeth},
-we introduce a coarse-grained model for interacting flexible
-elastic homopolymers, describe the employed computational methods, 
-and briefly outline the methodologies of the microcanonical 
-inflection-point analysis. In Sect.~\ref{sec:res}, we present
-the simulational results for polymer systems of up to $M =20$
-chains. Based on the outcome of inflection-point analysis,
-we argue that the aggregation transition is a first-order process 
-consisting of a sequence of subtransitions between intermediate 
-structural phases. Next, we discuss why certain subphases
-are entropically more suppressed than others, and conclude
-with a brief excursion into the scaling properties of the aggregation
-transition temperature and the latent heat. Summary is provided
-in Sect.~\ref{sec:sum}.
-%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%% METHODS %%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Model and Methods}
 \label{sec:modmeth}
 %
-In the following, we introduce a generic coarse-grained model
-for a system of interacting, flexible homopolymers. Coarse-grained models,
-with a suitably chosen set of
-parameters, drastically reduce computational complexity while
-preserving the essential structural and thermodynamic properties
-that are typically found in more complex
-models~\cite{Schmid2011}.
-%
-\subsection{Standard model of interacting elastic chains}
-%
-In this study, we investigate the aggregation of
-$M$ interacting flexible homopolymers, each composed of
-$N = 5$ monomers. During the simulations, the system is constrained
-inside of a steric sphere at a constant density of $10^{-3}$
-monomers per unit volume. At this density the radius of the
-constraining sphere is larger than the length of the fully
-extended polymer chains under investigation. The total energy of
-the system can be separated into intra-chain and inter-chain
-pairwise interactions
+Employing the generic coarse-grained model for a system of interacting, flexible homopolymers, we investigate the aggregation of $M$ interacting chains, each composed of $N = 5$ monomers. During the simulations, the system is constrained inside of a steric sphere at a constant density of $10^{-3}$ monomers per unit volume. At this density the radius of the constraining sphere is larger than the length of the fully extended polymer chains under investigation. The total energy of the system can be separated into intra-chain and inter-chain pairwise interactions
 %%%%%%     Total Energy      %%%%%%
 \begin{equation}
 E_{\mathrm{total}} = E_{\mathrm{intra}} + E_{\mathrm{inter}}.
@@ -1520,131 +1466,29 @@ U_{\mathrm{FENE}}(r\,^{(k)}_{ii+1}) +
 U_{\mathrm{LJ}}^{\mathrm{trunc}}(r\,^{(k)}_{ij})
 \end{equation}
 %
-consists of both bonded and non-bonded interactions, where
-$r\,^{(k)}_{ij}$ is the distance between the pair of monomers
-($i$,$j$) of the $k$-th chain. The first term contains the anharmonic
-finitely extensible nonlinear elastic (FENE)
-potential~\cite{Bird1987, Kremer1990, Milchev2001}
-%%%%%% FENE Potential %%%%%%
-\begin{equation}
-U_{\mathrm{FENE}}(r_{ii+1})=-\frac{K}{2}R^2 
-\mathrm{ln}\left[1-\left(\frac{r_{ii+1}-r_0}{R}\right)^2\right],	
-\label{FENE}
-\end{equation}
+consists of both bonded and non-bonded interactions, where $r\,^{(k)}_{ij}$ is the distance between the pair of monomers ($i$,$j$) of the $k$-th chain. The first term contains the FENE potential (\ref{eq:FENE}), with parameter values $K=40$ and $R=0.3$. The second term represents the truncated and shifted Lennard-Jones (LJ) potential (\ref{eq:LJTruncated}) with the energy scale $\epsilon$ set to unity and the length scale to $\sigma=r_0/2^{1/6}$, where $r_0 = 0.7$ is the location of the LJ potential minimum. The cutoff radius is set to $r_c=2.5\,\sigma$. The inter-chain contribution
 %
-with parameter values $K=40$ and $R=0.3$ as used in~\cite{Gross2013}.
-The second term represents 
-the truncated and shifted Lennard-Jones (LJ) potential
-%%%%%% LJ Potential %%%%%%
-\begin{equation}
-U_{\mathrm{LJ}}^{\mathrm{trunc}}(r_{ij}) = \left\{
-\begin{array}{lr}
-U_{\mathrm{LJ}}(r_{ij}) - U_{\mathrm{LJ}}(r_{c}), & \quad
-\mathrm{if} \,\, r_{ij} \leq r_{c},\\
-0, &  \quad \mathrm{if} \,\,r_{ij} > r_{c},
-\end{array}
-\right.
-\end{equation}
-%
-where
-%%%%%% LJ Potential %%%%%%
-\begin{equation}
-U_{\mathrm{LJ}}(r_{ij})= 4\epsilon \left[ \left(
-\frac{\sigma}{r_{ij}} \right)^{12} - \left(
-\frac{\sigma}{r_{ij}} \right)^{6} \right].
-\end{equation}
-%
-We set the energy scale $\epsilon$ to unity and the length scale
-to $\sigma=r_0/2^{1/6}$, where $r_0 = 0.7$ is the location of
-the LJ potential minimum. The cutoff radius is set to
-$r_c=2.5\,\sigma$.
-The inter-chain contribution
 %%%%%% Inter-Chain Energy %%%%%% 
 \begin{equation}
-E_{\mathrm{inter}} = \sum^{M}_{k < l}
-\sum^{N}_{i,j}U_{\mathrm{LJ}}^{\mathrm{trunc}}(|\textbf{r}^{(k)}_{i}
-- \textbf{r}^{(l)}_{j}|),
+E_{\mathrm{inter}} = \sum^{M}_{k < l} \sum^{N}_{i,j}U_{\mathrm{LJ}}^{\mathrm{trunc}}(|\textbf{r}^{(k)}_{i} - \textbf{r}^{(l)}_{j}|),
 \end{equation}
 %
-consists solely of non-bonded LJ interactions. For the purpose
-of this study, all LJ interactions (intra- and inter-chain) have
-their parameters set to identical values.
+consists solely of LJ interactions. For the purpose of this study, all LJ interactions (intra- and inter-chain) have their parameters set to identical values.
 %
-\subsection{Simulation methods}
-%
-Relatively small polymer systems, consisting of $N < 100$
-monomers, can be conveniently simulated using parallel tempering, which is
-a generalized-ensemble
-replica-exchange Monte Carlo method~\cite{sw1,geyer1,huku1,huku2} that can
-be easily implemented on parallel
-computer architectures. In larger systems, 
-the density of states typically spans several
-thousand orders of magnitude, in which case the application of more
-sophisticated methods such as multicanonical
-sampling~\cite{muca1a,muca1b,muca2,muca3,muca4,Bachmann2013} or 
-Wang-Landau~\cite{wl1,wl2,wl3} is more efficient. In this study we restrict
-our attention to systems consisting of up to $20$ individual chains with $5$
-monomers each.
-The number of monomers per chain has been intentionally kept very low 
-in order to enhance translational entropic effects which become more 
-obscured by the impact of inherent conformational
-entropies as chain length is increased.
 
-In a typical simulation, $R \approx 80$ replicas of the system were
-simulated in parallel at different temperatures in the range 
-$T \in \left[0.1,2.0\right]$.
-Single-monomer random displacement moves, restricted to a box of size $l$,
-were used to perform conformational updates for individual replicas.
-The proposed update was then accepted with the Metropolis probability
-%%%%%% Metropolis Acceptance Probability %%%%%%
-\begin{equation}
-A_\mathrm{M}\left(\mathbf{X}_{\mathrm{old}} \rightarrow
-\mathbf{X}_{\mathrm{new}}\right) = 			
-\mathrm{min}\left(1,e^{ -\beta\left[E
-(\mathbf{X}_{\mathrm{new}}) -
-E(\mathbf{X}_{\mathrm{old}})\right]} \right),
-\end{equation}
+\newpage
+
 %
-where $\beta = 1/k_{\mathrm{B}}T$ and $k_{\mathrm{B}} \equiv 1$ in the
-simulation.
-The maximum magnitude of the displacement update $l$ was adjusted
-individually
-for each temperature thread to achieve an average acceptance rate of
-$40-60\%$.
-Approximately every $100$ Monte Carlo sweeps, an exchange of conformations 
-between adjacent replicas $i$ and $j$ was proposed with the acceptance
-probability
-%%%%%% Replica-Exchange Acceptance Probability %%%%%%
-\begin{equation}
-A_\mathrm{PT}\left(\mathbf{X}_{i} \leftrightarrow \mathbf{X}_{j};
-\beta _{i}, \beta_{j} \right) =
-\mathrm{min}\left(1,e^{\left[\beta_{j} -
-\beta _{i} \right] \left[E (\mathbf{X}_{j}) -
-E(\mathbf{X}_{i})\right]} \right).
-\end{equation}
+Relatively small polymer systems, consisting of $N < 100$ monomers, can be conveniently simulated using parallel tempering, which is a generalized-ensemble replica-exchange Monte Carlo method\footnote{See also section~\ref{subsec:ParallelTempering}}~\cite{sw1,geyer1,huku1,huku2} that can be easily implemented on parallel computer architectures. In larger systems, the density of states typically spans several thousand orders of magnitude, in which case the application of more sophisticated methods, such as the multicanonical~\cite{muca1a,muca1b,muca2,muca3,muca4,Bachmann2013} or Wang-Landau~\cite{wl1,wl2,wl3} sampling, becomes more efficient. In this study we restrict our attention to systems consisting of up to $20$ polymer chains with $5$ monomers each. The lengths of the individual chains have been restricted to ensure that the translational entropies of the polymers dominate over their inherent conformational entropies.
 %
-The temperature spacing between adjacent replicas was chosen to achieve
-an exchange probability exceeding $20\%$. This results in a higher density of
-replicas in the low-temperature region as well as near the locations of phase
-transitions.
-On average, $10^7$ replica exchanges were performed, allowing for a total of 
+
+%
+In a typical simulation, $R \approx 80$ replicas of the system were simulated in parallel at different temperatures in the range $T \in \left[0.1,2.0\right]$. Single-monomer random displacement moves, restricted to a box of size $l$, were used to perform conformational updates for individual replicas. The maximum magnitude of the displacement update $l$ was adjusted individually for each temperature thread to achieve an average acceptance rate of $40-60\%$. An exchange of conformations between adjacent replicas was proposed approximately every $100$ Monte Carlo sweeps. The temperature spacing between adjacent replicas was chosen to achieve an exchange probability exceeding $20\%$. This results in a higher density of replicas in the low-temperature region as well as near the locations of phase transitions. On average, $10^7$ replica exchanges were performed, allowing for a total of 
 $10^9$ Monte Carlo sweeps per simulation. 
 %
-\subsection{Density of states and microcanonical analysis}
-As a result of parallel tempering simulations, each replica generates 
-a canonical energy histogram $h(E,\beta_{i})$,
-which is then used to calculate an estimate for the microcanonical density 
-of states $g_{i}(E) \approx h(E,\beta_{i})\exp{(\beta _{i} E)}$.
-Individual estimates $g_{i}(E)$ are only reliable for energies in the
-neighborhood 
-of the peak of the canonical distribution obtained at the temperature
-$\beta _{i}$.
-Therefore a sufficient overlap between the histograms of
-neighboring replicas 
-is necessary to ensure that an accurate estimate of the density of states 
-can be
-obtained for the entire energetic range. To combine the histograms obtained
-from the individual temperature threads, we have used the weighted
+
+%
+As a result of parallel tempering simulations, each replica generates a canonical energy histogram $h(E,\beta_{i})$. We have used the weighted multiple-histogram method\footnote{See also section \ref{subsec:MultipleHistogramRew}}~\cite{Ferrenberg1989,Kumar1992} to combine the individual histograms to estimate the density of states $g(E)$  which is then used to calculate an estimate for the  we have used the weighted
 multiple-histogram 
 method~\cite{Ferrenberg1989,Kumar1992}, where the system of equations
 %%%%%% Weighted Histogram Reweighting %%%%%%
