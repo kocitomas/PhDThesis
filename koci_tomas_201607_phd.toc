@@ -24,7 +24,7 @@
 \contentsline {section}{\numberline {3.3}Simple Monte Carlo updates}{38}
 \contentsline {subsection}{\numberline {3.3.1}Single displacement update}{38}
 \contentsline {subsection}{\numberline {3.3.2}Pivot update}{39}
-\contentsline {chapter}{\numberline {4}Off-Lattice Polymer Models}{41}
+\contentsline {chapter}{\numberline {4}Coarse-grained off-lattice polymer models}{41}
 \contentsline {section}{\numberline {4.1}Coarse-grained models}{42}
 \contentsline {section}{\numberline {4.2}Flexible elastic homopolymer}{44}
 \contentsline {subsection}{\numberline {4.2.1}Single elastic chain}{46}

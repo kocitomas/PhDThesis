@@ -810,7 +810,7 @@ In a displacement update, a randomly selected monomer is moved according to a ra
 
 
 
-\chapter{Off-Lattice Polymer Models}
+\chapter{Coarse-grained off-lattice polymer models}
 \label{chap:HomopolymerModel}
 It is hardly possible to overestimate the importance of defining an appropriate model to represent a real physical system in a computational study. What constitutes an `appropriate' model depends largely on the system under investigation and on the level of detail which is needed to correctly capture the properties of a given physical phenomena. For example, the study of chemical reaction kinetics, ground-state geometries of molecules, or the optical and electronic properties of semiconductors, requires detailed knowledge of the electronic structure and interactions. In such cases, Density functional theory (DFT)\cite{Sholl2009} or other quantum mechanical modelling methods need to be employed. On the other hand, a wide range of interesting physical phenomena, such as protein folding, polymer collapse, adsorption, and aggregation, are driven by cooperative structure forming processes and as such are not expected to depend sensitively on the precise electronic or even atomic structures. In principle, it is possible to gain insight into these processes by the means of simplified models with a reduced number of effective parameters\cite{Bachmann2014,Schmid2011}. In this chapter we shall briefly discuss the concept of \textit{coarse-graining} and introduce the model for the flexible elastic homopolymer together with a set of structural order parameters which are particularly effective at characterizing the conformational geometries of polymers in the solid pseudophase.
 
@@ -1495,209 +1495,84 @@ As a result of parallel tempering simulations, each replica generates a canonica
 %%%%%%%%%%% RESULTS %%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Results}
+
 %
+\begin{figure}
+\center
+\includegraphics[width = 1.02\textwidth]{chapter7Figs/combinedMicro.eps}
+\vspace{3mm}
+\caption{\label{fig:agg_microSummary} Microcanonical temperature $\beta(E)$ and its energy derivative $\gamma(E)$ for systems with $M = 2,3,5,11$ polymer chains with $N=5$ monomers each. The dashed vertical lines $e_{\mathrm{agg}}$ and $e_{\mathrm{frag}}$ outline the aggregation transition region. The upper horizontal dashed line provides an estimate for the inverse aggregation temperature $\beta_{\mathrm{agg}}$. The oscillations in $\beta(E)$ reveal the sequential nature of the transition and correspond to individual subtransitions. The unimodal canonical energy histograms of the subphases $h_{i}(\beta_{\mathrm{agg}};E)$ are shown together with the combined histogram $h(\beta_{\mathrm{agg}};E)$. The absolute scale of these distributions is arbitrary.}
+\end{figure}
 %
-\begin{figure*}
-\centering
-\includegraphics[width = \textwidth]{chapter7Figs/combinedMicro.eps}
-\caption{\label{fig:Fig_2} (Color online) Microcanonical temperature
-$\beta(E)$ and its energy derivative $\gamma(E)$ for systems with $M =
-2,3,5,11$ polymer chains with $N=5$ monomers each. 
-The dashed vertical lines $e_{\mathrm{agg}}$ and $e_{\mathrm{frag}}$
-outline the aggregation transition region. The upper horizontal dashed line
-provides an estimate for the inverse 
-aggregation temperature $\beta_{\mathrm{agg}}$. 
-The oscillations in $\beta(E)$ reveal the sequential nature of the
-transition 
-and correspond to individual subtransitions.
-The unimodal canonical energy histograms of the subphases
-$h_{i}(\beta_{\mathrm{agg}};E)$ are shown together with the combined
-histogram $h(\beta_{\mathrm{agg}};E)$. The absolute scale of these
-distributions is arbitrary.}
-\end{figure*}
-%
-Previous studies of single flexible elastic homopolymers reveal the
-existence
-of three distinct structural phases~\cite{Schnabel2009,svbj1}. 
-In the high-temperature gas-like regime, typical
-conformations resemble extended, random coils. With decreasing temperature,
-the system
-first undergoes the $\Theta$ collapse transition into the liquid-like
-compact globular phase,
-and finally freezes into the solid ``crystalline'' phase. From our
-simulations of the
-multi-chain model employed in this study, we find that the prominent
-aggregation transition is accompanied by the 
-collapse of the individual chains, and the two transitions are not
-separate processes. This has also
-been observed in the case of semi-flexible 
-homopolymers~\cite{Junghans2009}. 
-However, in contrast to heteropolymer systems~\cite{Junghans2011}, the
-freezing
-transition occurs at temperatures well below the aggregation transition.
-In fact, at low
-temperatures, the thermodynamic properties of a multi-chain system
-are very similar to those
-of a single polymer chain with identical (total) number of monomers
-$M\cdot N$. 
+
+Previous studies of single flexible elastic homopolymers have revealed the existence of three distinct structural phases~\cite{Schnabel2009,svbj1}. In the high-temperature gas-like regime, typical conformations resemble extended, random coils. With decreasing temperature, the system first undergoes the $\Theta$ collapse transition into the liquid-like compact globular phase, and finally freezes into the solid ``crystalline'' phase. From our simulations of the multi-chain model employed in this study, we find that the prominent aggregation transition is accompanied by the collapse of the individual chains, and the two transitions are not separate processes. This has also been observed in the case of semi-flexible homopolymers~\cite{Junghans2009}. However, in contrast to heteropolymer systems~\cite{Junghans2011}, the freezing transition occurs at temperatures well below the aggregation transition. In fact, at low temperatures, the thermodynamic properties of a multi-chain system are very similar to those of a single polymer chain with identical (total) number of monomers $M\cdot N$.
+ 
 %%%%%%%%% Microcanonical Analysis %%%%%%%%%%%%%
 \subsection{Microcanonical analysis of aggregation transitions}
 %
-In this section, we discuss the properties of aggregation transitions from
-the perspective
-of microcanonical analysis. We systematically examine systems consisting
-of up to 
-$M = 20$ individual chains with fixed length of $N = 5$ monomers. Brief
-inspection of 
-the microcanonical quantities for four system sizes in Fig.~\ref{fig:Fig_2}
-suggests 
-that for finite systems the aggregation transition is a first-order
-process, as expected. 
-The microcanonical inverse temperature curves $\beta(E)$ show a prominent
-back-bending 
-region accompanied by positive-valued peaks in $\gamma(E)$. The low-energy
-aggregate phase is energetically separated from the disordered fragmented 
-phase by an amount corresponding to the latent heat 
-$\Delta q = e_{\mathrm{frag}} - e_{\mathrm{agg}}$, 
-represented in Fig.~\ref{fig:Fig_2} by the separation between the two
-dashed vertical lines. Finally, the combined canonical histograms $h(E)$,
-also shown in Fig.~\ref{fig:Fig_2}, exhibit bimodality which is
-characteristic of first-order transitions in finite systems.
+In this section, we discuss the properties of aggregation transitions from the perspective of microcanonical analysis, and examine systems consisting of up to $M = 20$ individual chains with fixed length of $N = 5$ monomers. Brief inspection of the microcanonical quantities in Fig.~\ref{fig:agg_microSummary} suggests that for all investigated systems the aggregation transition is a first-order process, as expected. The microcanonical inverse temperature curves $\beta(E)$ have prominent back-bending features accompanied by positive-valued peaks in $\gamma(E)$. The low-energy aggregate phase is energetically separated from the disordered fragmented phase by an amount corresponding to the latent heat $\Delta q = e_{\mathrm{frag}} - e_{\mathrm{agg}}$, represented in Fig.~\ref{fig:agg_microSummary} by the separation between two dashed vertical lines. Finally, the combined canonical histograms $h(E)$, also shown in Fig.~\ref{fig:agg_microSummary}, exhibit bimodality characteristic of first-order transitions in finite systems.
+%
 
-Closer inspection of the back-bending region of $\beta (E)$ reveals 
-additional oscillations. It is evident that their number is
-proportional to the number of 
-individual chains in the system. This observation motivates the description
-of the aggregation transition as a series of subtransitions between
-intermediate structural phases. Here we define the term ``subphase'' to
-represent a distinct grouping of partially formed aggregates. As shown in
-Fig.~\ref{fig:Fig_3}, a system of $M =4$ chains can form three intermediate
-subphases $\{\{3,1\},\{2,2\},\{2,1,1\}\}$, where the number of elements in
-each set corresponds to the number of non-interacting partial clusters, and
-the numerical values represent the number of chains in each cluster.
-Previous studies suggest that subtransitions occur between these partially 
-fragmented subphases~\cite{jbj1,Junghans2008,Junghans2009,Junghans2011}.
-However, this analysis was performed mostly on the level of 
-visual inspection of individual system configurations. For a more
-quantitative approach, we have implemented a structure-detection algorithm
-capable of classifying configurations based on the number and size of
-partially formed aggregates. This allows us to collect separate statistical
-data for each subphase and to determine their relative frequency.
+%
+Closer inspection of the back-bending regions of $\beta (E)$ reveals additional oscillations. It is evident that their number is proportional to the number of individual chains in the system. This observation motivates the description of the aggregation transition as a series of subtransitions between intermediate structural phases. Here we define the term ``subphase'' to represent a distinct grouping of partially formed aggregates. As shown in Fig.~\ref{fig:agg_structures}, a system of $M =4$ chains can form three intermediate subphases $\{\{3,1\},\{2,2\},\{2,1,1\}\}$, where the number of elements in each set corresponds to the number of non-interacting partial clusters, and the numerical values represent the number of chains in each cluster. Previous studies suggest that subtransitions occur between these partially fragmented subphases~\cite{jbj1,Junghans2008,Junghans2009,Junghans2011}. However, this analysis was performed mostly on the level of visual inspection of individual system configurations. For a more quantitative approach, we have implemented a structure-detection algorithm capable of classifying configurations based on the number and size of partially formed aggregates. This allows us to collect separate statistical data for each subphase and to determine their relative frequency.
 %
 \begin{figure}
-\includegraphics[width = 0.45\textwidth]{chapter7Figs/configurations.eps}
-\caption{\label{fig:Fig_3} (Color online) Sample configurations of
-intermediate subphases found at the aggregation temperature in a system
-consisting of four chains with five monomers each. Due to entropic
-suppression, the $\{2,2\}$ subphase has an unexpectedly small canonical
-probability 
-$p_{\{2,2\}}(\beta_{\mathrm{agg}}) < 0.007$, and is the first example of a
-\textit{missing} (or entropically strongly suppressed) subphase in the
-aggregation process of the multi-chain system.}
+\center
+\includegraphics[width = 0.7\textwidth]{chapter7Figs/configurations.eps}
+\vspace{3mm}
+\caption{\label{fig:agg_structures} Sample configurations of intermediate subphases found at the aggregation temperature in a system consisting of four chains with five monomers each. Due to entropic suppression, the $\{2,2\}$ subphase has an unexpectedly small canonical probability $p_{\{2,2\}}(\beta_{\mathrm{agg}}) < 0.007$, and is the first example of a \textit{missing} (or entropically strongly suppressed) subphase in the aggregation process of the multi-chain system.}
 \end{figure}
 %
-The total density of states of a system in the transition region can be
-expressed as the sum of contributions from individual subphases
+
+In the region of the aggregation transition, the total density of states of a system can be expressed as the sum of contributions from individual subphases
 %
 \begin{equation}
-g(E) = \sum_{i} g_{i}(E).
+g(E) = \sum_{i} g_{i}(E),
 \label{eq:densOfStates}
 \end{equation}
 %
-The probability of finding a system in the $i$-th subphase at a fixed
-energy $E$ can then be written as
+The probability of finding a system in the $i$-th subphase at a fixed energy $E$ can then be written as
 %
 \begin{equation}
 p_{i}(E) = \frac{g_{i}(E)}{g(E)}.
 \label{eq:multProb}
 \end{equation}
 %
-The logarithm of the density of states, the microcanonical entropy $S(E)$,
-cannot be expressed as a sum of individual subphase entropies. Instead
+
+\newpage
+\noindent
+%
+The logarithm of the density of states, the microcanonical entropy $S(E)$, cannot be expressed as a sum of individual subphase entropies. Instead
 %
 \begin{equation}
 S(E) = k_{\mathrm{B}}\mathrm{ln}\sum_{i}e^{S_{i}(E)/k_{\mathrm{B}}},
 \label{eq:micEntropy}
 \end{equation}
 %
-where $S_{i}(E) = k_{\mathrm{B}}\mathrm{ln}\, g_{i}(E)$.
-%
-\begin{figure}
-\includegraphics[width = 0.5\textwidth]{chapter7Figs/entropyCombined.eps}
-\caption{\label{fig:Fig_4} (Color online) Microcanonical entropy per
-monomer $S(E)$ (solid)
-and the individual subphase entropies (dotted) for systems with 
-$M = 2,3$ polymer chains. The double-tangent $\Gamma (E)$
-represents the Gibbs hull, the slope of which provides an estimate
-for the inverse transition temperature $\beta_{\mathrm{agg}}$.}
-\end{figure}
-%
-In Fig.~\ref{fig:Fig_4}, the microcanonical entropy $S(E)$~(solid) and
-the individual subphase entropy curves (dashed) are shown
-for systems of $M = 2$ and $M = 3$ chains. For $M=2$, aggregation 
-is a single-step transition between the fragmented and the aggregate 
-phase. When the aggregate is dissociated into two weakly 
-interacting chains, the system gains an amount of entropy approximately
-equal to the translational entropy of a single chain 
-$S_{\mathrm{trans}} \sim \mathrm{ln}\,V$, where $V$ is the 
-volume of the simulation sphere. This increase in entropy is apparent 
-from the vertical separation between $S_{\mathrm{agg}}$ 
-and $S_{\mathrm{frag}}$. The changes in conformational entropy
-are negligible in comparison to the translational entropy and will
-not be discussed here.  When $M = 3$, in addition to the aggregate and 
-fragmented phases, a single subphase $\{2,1\}$ can be formed. As a result, 
-aggregation becomes a two-step process, each decreasing the entropy
-by an amount $\sim S_{\mathrm{trans}}$. We note that the entropy
-curves of the individual subphases 
-are strictly concave. It is the vertical displacement between the curves,
-due to changes in translational entropy, that is ultimately responsible for
-the origin 
-of the convex intruder in the microcanonical entropy $S(E)$ and
-consequently for the back-bending feature in $\beta(E)$, signaling the
-first-order character of the aggregation transition. 
-
-Differentiating Eq.~\eqref{eq:micEntropy} with respect to energy gives
-a simple expression for the microcanonical inverse temperature $\beta(E)$ 
-in terms of the inverse temperatures of the individual subphases:
+where 
 %
 \begin{equation}
-\beta(E) = \frac{\sum_{i}\beta_{i}e^{S_{i}(E)/k_{\mathrm{B}}}}{
-\sum_{i}e^{S_{i}(E)/k_{\mathrm{B}}}}
-= \sum_{i} p_{i}(E)\beta_{i}(E).
+S_{i}(E) = k_{\mathrm{B}}\mathrm{ln}\, g_{i}(E).
 \end{equation}
 %
-Hence in the transition region, $\beta(E)$ can be interpreted as the 
-weighted sum of the inverse subphase temperatures with respect
-to the multicanonical probabilities from Eq.~\eqref{eq:multProb}.
-At a fixed energy $E$, the system can be found in one of the distinct
-subphases with a respective inverse temperature $\beta_{i}(E)$. 
-In general, $\beta_{i}(E) \neq \beta(E)$. However setting the energy
-derivative of Eq.~\eqref{eq:multProb} to zero, we find that
-$\beta_{i}(E) = \beta(E)$ precisely when the probability of a given
-subphase 
-$p_{i}(E)$ attains its maximum value. The oscillations in $\beta(E)$ 
-arise from the changes in the relative weights $p_{i}(E)$ in
-the back-bending region.
 
-In Fig.~\ref{fig:Fig_4}, we also show the double-tangent (Gibbs hull)
-$\Gamma(E)$. Its slope is the appropriate quantity for 
-the estimation of the aggregation transition temperature 
-$\beta_{\mathrm{agg}}$. In Table~\ref{tab:Tab_1}, $\beta_{\mathrm{agg}}$
-is listed for
-system sizes of up to $M = 20$ chains. In single-step first-order
-transitions, 
-the slope of $\Gamma(E)$ coincides with the inverse temperature obtained
-by Maxwell construction. However, in composite multi-step 
-transitions, the location of the Maxwell construction becomes
-ambiguous due to multiple oscillations of $\beta(E)$. 
+%
+In Fig.~\ref{fig:agg_entropies}, the microcanonical entropy $S(E)$~(solid) and the individual subphase entropy curves (dashed) are shown for systems of $M = 2$ and $M = 3$ chains. For $M=2$, aggregation is a single-step transition between the fragmented and the aggregate phase. When the aggregate is dissociated into two weakly interacting chains, the system gains an amount of entropy approximately equal to the translational entropy of a single chain $S_{\mathrm{trans}} \sim \mathrm{ln}\,V$, where $V$ is the volume of the simulation sphere. This increase in entropy is apparent from the vertical separation between $S_{\mathrm{agg}}$ and $S_{\mathrm{frag}}$. The changes in conformational entropy are negligible in comparison to the translational entropy and are not relevant to our discussion.  When $M = 3$, in addition to the aggregate and fragmented phases, a single subphase $\{2,1\}$ can be formed. As a result, aggregation becomes a two-step process, each decreasing the entropy by an amount $\sim S_{\mathrm{trans}}$. We note that the entropy curves of the individual subphases are strictly concave. It is the vertical displacement between the curves, due to changes in translational entropy, that is ultimately responsible for the origin  of the convex intruder in the microcanonical entropy $S(E)$ and consequently for the back-bending feature in $\beta(E)$, signaling the first-order character of the aggregation transition. 
+%
+%
+\begin{figure}
+\center
+\includegraphics[width = 0.75\textwidth]{chapter7Figs/entropyCombined.eps}
+\vspace{3mm}
+\caption{\label{fig:agg_entropies} Microcanonical entropy per monomer $S(E)$ (solid) and the individual subphase entropies (dotted) for systems with $M = 2,3$ polymer chains. The double-tangent $\Gamma (E)$ represents the Gibbs hull, the slope of which provides an estimate for the inverse transition temperature $\beta_{\mathrm{agg}}$.}
+\end{figure}
+%
+
+\newpage
 %
 \begin{table}
-\caption{\label{tab:Tab_1}%
-Inverse aggregation temperature ($\beta_{\mathrm{agg}}$), energy per
-monomer in the aggregate phase ($e_{\mathrm{agg}}$), energy per monomer in
-the fragmented phase ($e_{\mathrm{frag}}$), and the latent heat per monomer
-($\Delta q$). The uncertainty for all listed quantities is $\pm 0.5$ in
-the last decimal.}
+\caption{\label{tab:agg_Tab_1}%
+Inverse aggregation temperature ($\beta_{\mathrm{agg}}$), energy per monomer in the aggregate phase ($e_{\mathrm{agg}}$), energy per monomer in the fragmented phase ($e_{\mathrm{frag}}$), and the latent heat per monomer ($\Delta q$). The uncertainty for all listed quantities is $\pm 0.5$ in the last decimal.}
 \begin{tabular*}{\hsize}{@{\extracolsep{\fill}}ccccc@{}}
 \hline
 \hline
@@ -1717,29 +1592,23 @@ $20 \times 5$  &  1.35 &  -2.80 & -0.85 & 1.95\\
 \end{tabular*}
 \end{table}
 %
-\begin{table}
-\caption{\label{tab:Tab_2}%
-Theoretical number of subphases $(N_{\mathrm{sub}})$; not including the
-fully aggregated and fragmented phases, number of significantly
-represented subphases $(\hat{N}_{\mathrm{sub}})$, and the total contribution
-of the ``missing'' subphases towards the canonical distribution $h(E)$ at the
-inverse transition temperature $\beta_{\mathrm{agg}}$.}
-\begin{tabular*}{\hsize}{@{\extracolsep{\fill}}cccc@{}}
-\hline
-\hline
-System $(M \times N)$ & $N_{\mathrm{sub}}$ &$\hat{N}_{\mathrm{sub}}$ & $\sum p_{\mathrm{miss}}$\\
-\hline
-$3  \times 5$	&	1 	&	1  	& N/A\\
-$4  \times 5$	&	3 	&	2  	&  $< 0.007$\\
-$5  \times 5$	&	5 	&	3  	&  $< 0.014$\\
-$11 \times 5$	&	54 	&	9  	&  $< 0.026$\\
-$20 \times 5$	&	625 	& 	18	&  $< 0.028$\\
-\\
-\hline
-\hline
-\end{tabular*}
-\end{table}
+
 %
+The differentiation of Eq.~\eqref{eq:micEntropy} with respect to energy gives a simple expression for the microcanonical inverse temperature $\beta(E)$ in terms of the inverse temperatures of the individual subphases:
+%
+\begin{equation}
+\beta(E) = \frac{\sum_{i}\beta_{i}e^{S_{i}(E)/k_{\mathrm{B}}}}{
+\sum_{i}e^{S_{i}(E)/k_{\mathrm{B}}}}
+= \sum_{i} p_{i}(E)\beta_{i}(E).
+\end{equation}
+%
+Hence in the transition region, $\beta(E)$ can be interpreted as the weighted sum of the inverse subphase temperatures with respect to the multicanonical probabilities from Eq.~\eqref{eq:multProb}. At a fixed energy $E$, the system can be found in one of the distinct subphases with a respective inverse temperature $\beta_{i}(E)$. In general, $\beta_{i}(E) \neq \beta(E)$. However setting the energy derivative of Eq.~\eqref{eq:multProb} to zero, we find that $\beta_{i}(E) = \beta(E)$ precisely when the probability of a given subphase $p_{i}(E)$ attains its maximum value. The oscillations in $\beta(E)$ arise from the changes in the relative weights $p_{i}(E)$ in the back-bending region.
+%
+
+%
+In Fig.~\ref{fig:agg_entropies}, we also show the double-tangent (Gibbs hull) $\Gamma(E)$. The slope of $\Gamma(E)$ is the appropriate quantity for the estimation of the aggregation transition temperature. In Table~\ref{tab:agg_Tab_1}, $\beta_{\mathrm{agg}}$ is listed for system sizes of up to $M = 20$. In single-step first-order transitions, the slope of $\Gamma(E)$ coincides with the inverse temperature obtained by Maxwell construction. However, in composite multi-step  transitions, the location of the Maxwell construction becomes ambiguous due to multiple oscillations of $\beta(E)$. 
+%
+
 %%%%%%%%% Missing Subphases %%%%%%%%%%%%%
 \subsection{Entropically suppressed subphases}
 %
@@ -1764,6 +1633,31 @@ At all system sizes, the aggregate and fragmented phases have the
 largest canonical probability and are energetically well separated.
 The intermediate subphases have overlapping energy distributions
 and occur with lower probabilities due to entropic suppression.
+
+\begin{table}
+\caption{\label{tab:Tab_2}%
+Theoretical number of subphases $(N_{\mathrm{sub}})$; not including the
+fully aggregated and fragmented phases, number of significantly
+represented subphases $(\hat{N}_{\mathrm{sub}})$, and the total contribution
+of the ``missing'' subphases towards the canonical distribution $h(E)$ at the
+inverse transition temperature $\beta_{\mathrm{agg}}$.}
+\begin{tabular*}{\hsize}{@{\extracolsep{\fill}}cccc@{}}
+\hline
+\hline
+System $(M \times N)$ & $N_{\mathrm{sub}}$ &$\hat{N}_{\mathrm{sub}}$ & $\sum p_{\mathrm{miss}}$\\
+\hline
+$3  \times 5$	&	1 	&	1  	& N/A\\
+$4  \times 5$	&	3 	&	2  	&  $< 0.007$\\
+$5  \times 5$	&	5 	&	3  	&  $< 0.014$\\
+$11 \times 5$	&	54 	&	9  	&  $< 0.026$\\
+$20 \times 5$	&	625 	& 	18	&  $< 0.028$\\
+\\
+\hline
+\hline
+\end{tabular*}
+\end{table}
+%
+
 
 A striking feature emerges for systems with $M > 3$ chains.
 Already for $M = 4$ (see Fig.~\ref{fig:Fig_5}), we notice that the

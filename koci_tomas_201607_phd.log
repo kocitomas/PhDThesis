@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  23 JUN 2016 15:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  23 JUN 2016 16:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -194,15 +194,6 @@ Package caption3 Info: TeX engine: e-TeX on input line 67.
 )
 (./koci_tomas_201607_phd.aux
 
-LaTeX Warning: Label `fig:Fig_2' multiply defined.
-
-
-LaTeX Warning: Label `fig:Fig_3' multiply defined.
-
-
-LaTeX Warning: Label `fig:Fig_4' multiply defined.
-
-
 LaTeX Warning: Label `fig:Fig_5' multiply defined.
 
 
@@ -319,13 +310,7 @@ it/12 U[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 r[]\OT1/cmr/m/n/12 ) = \OML/cmm/m/it
 2 U[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 r[]\OT1/cmr/m/n/12 )$ 
  []
 
-[11] [12] [13]
-Overfull \hbox (11.59837pt too wide) in paragraph at lines 41--41
- \OT1/cmr/m/n/12 ag-gre-ga-tion tem-per-a-ture in a sys-tem con-sist-ing of fou
-r chains with five monomers 
- []
-
-[14])
+[11] [12] [13] [14])
 \tf@lof=\write4
 \openout4 = `koci_tomas_201607_phd.lof'.
 
@@ -667,6 +652,9 @@ f used on input line 798.
 
 [40 <./chapter3Figs/conformationalUpdates-eps-converted-to.pdf>]
 Chapter 4.
+[41
+
+]
 Package epstopdf Info: Source file: <chapter4Figs/coarseGraining.eps>
 (epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 114275 bytes
@@ -679,7 +667,7 @@ g-eps-converted-to.pdf chapter4Figs/coarseGraining.eps>
 (epstopdf)             \includegraphics on input line 822.
 Package epstopdf Info: Output file is already uptodate.
 
-<chapter4Figs/coarseGraining-eps-converted-to.pdf, id=457, 715.67375pt x 283.05
+<chapter4Figs/coarseGraining-eps-converted-to.pdf, id=460, 715.67375pt x 283.05
 75pt>
 File: chapter4Figs/coarseGraining-eps-converted-to.pdf Graphic file (type pdf)
  <use chapter4Figs/coarseGraining-eps-converted-to.pdf>
@@ -691,9 +679,7 @@ Overfull \hbox (4.69496pt too wide) in paragraph at lines 822--825
  [] 
  []
 
-[41
-
-] [42 <./chapter4Figs/coarseGraining-eps-converted-to.pdf>] [43] [44]
+[42 <./chapter4Figs/coarseGraining-eps-converted-to.pdf>] [43] [44]
 Package epstopdf Info: Source file: <chapter4Figs/potentialLarge.eps>
 (epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 140551 bytes
@@ -1129,8 +1115,13 @@ File: chapter7Figs/combinedMicro-eps-converted-to.pdf Graphic file (type pdf)
  <use chapter7Figs/combinedMicro-eps-converted-to.pdf>
 Package pdftex.def Info: chapter7Figs/combinedMicro-eps-converted-to.pdf used o
 n input line 1502.
-(pdftex.def)             Requested size: 469.75502pt x 316.0322pt.
- [86] [87] [88 <./chapter7Figs/combinedMicro-eps-converted-to.pdf>]
+(pdftex.def)             Requested size: 479.15211pt x 322.35419pt.
+
+Overfull \hbox (9.3971pt too wide) in paragraph at lines 1502--1504
+ [] 
+ []
+
+[86]
 Package epstopdf Info: Source file: <chapter7Figs/configurations.eps>
 (epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 1491662 bytes
@@ -1140,16 +1131,18 @@ to.pdf>
 (epstopdf)                    size: 236674 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter7Figs/configuration
 s-eps-converted-to.pdf chapter7Figs/configurations.eps>
-(epstopdf)             \includegraphics on input line 1588.
+(epstopdf)             \includegraphics on input line 1521.
 Package epstopdf Info: Output file is already uptodate.
 
-<chapter7Figs/configurations-eps-converted-to.pdf, id=931, 842.14626pt x 1114.1
+<chapter7Figs/configurations-eps-converted-to.pdf, id=922, 842.14626pt x 1114.1
 625pt>
 File: chapter7Figs/configurations-eps-converted-to.pdf Graphic file (type pdf)
  <use chapter7Figs/configurations-eps-converted-to.pdf>
 Package pdftex.def Info: chapter7Figs/configurations-eps-converted-to.pdf used 
-on input line 1588.
-(pdftex.def)             Requested size: 211.38832pt x 279.66199pt.
+on input line 1521.
+(pdftex.def)             Requested size: 328.82707pt x 435.04866pt.
+ [87] [88 <./chapter7Figs/combinedMicro-eps-converted-to.pdf>] [89] [90 <./chap
+ter7Figs/configurations-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <chapter7Figs/entropyCombined.eps>
 (epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 351861 bytes
@@ -1159,27 +1152,25 @@ Package epstopdf Info: Source file: <chapter7Figs/entropyCombined.eps>
 (epstopdf)                    size: 85296 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter7Figs/entropyCombin
 ed-eps-converted-to.pdf chapter7Figs/entropyCombined.eps>
-(epstopdf)             \includegraphics on input line 1626.
+(epstopdf)             \includegraphics on input line 1565.
 Package epstopdf Info: Output file is already uptodate.
 
-<chapter7Figs/entropyCombined-eps-converted-to.pdf, id=932, 120.45pt x 171.6412
+<chapter7Figs/entropyCombined-eps-converted-to.pdf, id=941, 120.45pt x 171.6412
 5pt>
 File: chapter7Figs/entropyCombined-eps-converted-to.pdf Graphic file (type pdf)
 
  <use chapter7Figs/entropyCombined-eps-converted-to.pdf>
 Package pdftex.def Info: chapter7Figs/entropyCombined-eps-converted-to.pdf used
- on input line 1626.
-(pdftex.def)             Requested size: 234.8775pt x 334.7331pt.
- [89] [90 <./chapter7Figs/configurations-eps-converted-to.pdf>] [91 <./chapter7
-Figs/entropyCombined-eps-converted-to.pdf>]
-Overfull \hbox (10.56522pt too wide) in paragraph at lines 1746--1753
+ on input line 1565.
+(pdftex.def)             Requested size: 352.31625pt x 502.09964pt.
+ [91] [92 <./chapter7Figs/entropyCombined-eps-converted-to.pdf>] [93]
+Overfull \hbox (10.56522pt too wide) in paragraph at lines 1615--1622
 \OML/cmm/m/it/12 h\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 E\OT1/cmr/m/n/12 ; \OML/cmm
 /m/it/12 ^^L[]\OT1/cmr/m/n/12 )$, shown along-side the mi-cro-canon-i-cal quan-
-ti-ties in Fig. 7.1[]. The his-togram $\OML/cmm/m/it/12 h\OT1/cmr/m/n/12 (\OML/
+ti-ties in Fig. 2.2[]. The his-togram $\OML/cmm/m/it/12 h\OT1/cmr/m/n/12 (\OML/
 cmm/m/it/12 E\OT1/cmr/m/n/12 ; \OML/cmm/m/it/12 ^^L[]\OT1/cmr/m/n/12 )$,
  []
 
-[92] [93]
 Package epstopdf Info: Source file: <chapter7Figs/microEntropy.eps>
 (epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 96640 bytes
@@ -1189,7 +1180,7 @@ Package epstopdf Info: Source file: <chapter7Figs/microEntropy.eps>
 (epstopdf)                    size: 89398 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter7Figs/microEntropy-
 eps-converted-to.pdf chapter7Figs/microEntropy.eps>
-(epstopdf)             \includegraphics on input line 1796.
+(epstopdf)             \includegraphics on input line 1690.
 Package epstopdf Info: Output file is already uptodate.
 
 <chapter7Figs/microEntropy-eps-converted-to.pdf, id=955, 817.0525pt x 565.11125
@@ -1197,7 +1188,7 @@ pt>
 File: chapter7Figs/microEntropy-eps-converted-to.pdf Graphic file (type pdf)
  <use chapter7Figs/microEntropy-eps-converted-to.pdf>
 Package pdftex.def Info: chapter7Figs/microEntropy-eps-converted-to.pdf used on
- input line 1796.
+ input line 1690.
 (pdftex.def)             Requested size: 234.8775pt x 162.44666pt.
 Package epstopdf Info: Source file: <chapter7Figs/scalingCombined.eps>
 (epstopdf)                    date: 2016-06-21 16:16:09
@@ -1208,7 +1199,7 @@ Package epstopdf Info: Source file: <chapter7Figs/scalingCombined.eps>
 (epstopdf)                    size: 145321 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter7Figs/scalingCombin
 ed-eps-converted-to.pdf chapter7Figs/scalingCombined.eps>
-(epstopdf)             \includegraphics on input line 1805.
+(epstopdf)             \includegraphics on input line 1699.
 Package epstopdf Info: Output file is already uptodate.
 
 <chapter7Figs/scalingCombined-eps-converted-to.pdf, id=956, 247.92625pt x 314.1
@@ -1217,10 +1208,19 @@ File: chapter7Figs/scalingCombined-eps-converted-to.pdf Graphic file (type pdf)
 
  <use chapter7Figs/scalingCombined-eps-converted-to.pdf>
 Package pdftex.def Info: chapter7Figs/scalingCombined-eps-converted-to.pdf used
- on input line 1805.
+ on input line 1699.
 (pdftex.def)             Requested size: 234.8775pt x 297.63881pt.
- [94] [95 <./chapter7Figs/microEntropy-eps-converted-to.pdf>] [96 <./chapter7Fi
-gs/scalingCombined-eps-converted-to.pdf>] [97] [98] [99]
+ [94] [95]
+[96 <./chapter7Figs/microEntropy-eps-converted-to.pdf> <./chapter7Figs/scalingC
+ombined-eps-converted-to.pdf>]
+
+LaTeX Warning: Reference `tab:Tab_1' on page 97 undefined on input line 1754.
+
+[97]
+
+LaTeX Warning: Reference `tab:Tab_1' on page 98 undefined on input line 1777.
+
+[98] [99]
 Chapter 8.
 [100
 
@@ -1229,17 +1229,20 @@ Chapter 8.
 ] [102] [103] [104] [105] [106]) [107]
 (./koci_tomas_201607_phd.aux)
 
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4507 strings out of 493014
- 74863 string characters out of 6133351
- 138061 words of memory out of 5000000
- 7921 multiletter control sequences out of 15000+600000
+ 4511 strings out of 493014
+ 74939 string characters out of 6133351
+ 138093 words of memory out of 5000000
+ 7925 multiletter control sequences out of 15000+600000
  12170 words of font info for 43 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 53i,11n,92p,2181b,384s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 53i,10n,92p,2181b,380s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></
@@ -1266,7 +1269,7 @@ ts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2016/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2016/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2016/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmti12.pfb>
-Output written on koci_tomas_201607_phd.pdf (124 pages, 5862406 bytes).
+Output written on koci_tomas_201607_phd.pdf (124 pages, 5862808 bytes).
 PDF statistics:
  1073 PDF objects out of 1200 (max. 8388607)
  677 compressed objects within 7 object streams
