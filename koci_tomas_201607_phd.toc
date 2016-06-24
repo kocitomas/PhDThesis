@@ -2,7 +2,7 @@
 \contentsline {chapter}{List of Figures}{xv}
 \contentsline {chapter}{List of Tables}{xvi}
 \contentsline {chapter}{\numberline {1}Introduction}{1}
-\contentsline {chapter}{\numberline {2}Elements of Statistical Mechanics}{3}
+\contentsline {chapter}{\numberline {2}Elements of statistical mechanics}{3}
 \contentsline {section}{\numberline {2.1}The microcanonical ensemble}{4}
 \contentsline {subsection}{\numberline {2.1.1}Microcanonical temperature}{5}
 \contentsline {subsection}{\numberline {2.1.2}Microcanonical analysis of phase transitions}{7}
@@ -49,6 +49,6 @@
 \contentsline {subsection}{\numberline {7.2.1}Microcanonical analysis of aggregation transitions}{87}
 \contentsline {subsection}{\numberline {7.2.2}Entropically suppressed subphases}{94}
 \contentsline {subsection}{\numberline {7.2.3}Scaling properties}{97}
-\contentsline {section}{\numberline {7.3}Summary}{98}
-\contentsline {chapter}{\numberline {8}Summary and Outlook}{100}
-\contentsline {chapter}{Bibliography}{100}
+\contentsline {section}{\numberline {7.3}Summary}{99}
+\contentsline {chapter}{\numberline {8}Summary and Outlook}{101}
+\contentsline {chapter}{Bibliography}{101}
