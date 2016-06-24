@@ -120,16 +120,37 @@ July 2016
 \addcontentsline{toc}{chapter}{\listfigurename}
 \listoftables % if any
 \addcontentsline{toc}{chapter}{\listtablename}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%   CHAPTER 1			   %%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Introduction}
 \pagenumbering{arabic}
 \setcounter{page}{1}
-Kickass intro...
+%
+The staggering complexity of even the simplest molecular systems precludes the possibility of investigating the relevant thermodynamic properties through direct analytical calculations~\cite{Bachmann2014}. Over the past two decades, the enormous increase in the availability of computational resources, together with significant progress in algorithmic developments, resulted in a vast number of computational studies on the thermodynamic and structural properties of complex microscopic systems. Among the most efficient simulation methods are the generalized-ensemble Monte Carlo algorithms, such as simulated tempering~\cite{marinari,lyubartsev}, replica-exchange parallel tempering~\cite{sw1,geyer1,huku1,huku2}, multiple Gaussian modified ensemble (MGME)~\cite{Neuhaus2006}, together with multicanonical~\cite{muca1a,muca1b,muca2,muca3,muca4,Bachmann2013} and Wang-Landau sampling~\cite{wl1,wl2,wl3}. These have been applied successfully in numerous studies of structural phases and transition properties~\cite{Schnabel2009,bf1,bf2,grass2,vbj1,strauch1,svbj1, taylorRange1, taylorRange2,seaton3,semisslb1,Koci2015}, surface adsorption~\cite{bj4,prellberg1,paul1,mbj1,liang1,allen1,vb1,ywli1, mjb4,vgb1}, and aggregation\cite{KociAgg2015,jbj1,Junghans2008,Junghans2009,Junghans2011, Zieren2014,Zieren2015} of generic off-lattice homopolymers and heteropolymers. The folding properties of coarse-grained protein models have also been examined extensively~\cite{dill1,still1,still2,som1,hsu1,bj1,ssbj1}.
+%
 
+%
+Importantly, despite the many advances in simulational methodologies, systematic studies of detailed atomistic models are well beyond current capabilities. However, it is a significant physical reality that many essential thermodynamic properties of complex systems are retained on larger than atomistic scales and can be well represented by coarse-grained models. In fact, coarse-graining is not just a concept to simplify modeling. It reflects inherent collective and cooperative behavior of constituents of systems on mesoscopic and macroscopic scales. This is intuitive since it is known that certain characteristic properties, such as the propensity towards aggregation, are often shared among diverse systems and hence cannot depend sensitively on microscopic details.
+%
 
-\chapter{Elements of Statistical Mechanics}
+% 
+In mesoscopic systems, structure formation and phase-separation processes are fundamentally influenced by finite-size effects. Systematic statistical analysis approaches beyond the standard canonical methodology are needed to unravel the intricate details of the interplay between energy and entropy in finite systems. Due to the averaging process involved in the calculation of canonical quantities such as the ensemble energy or the heat capacity, specific features of structural transitions and phase properties are often lost~\cite{Bachmann2014}. This is remedied in more general approaches such as the Fisher partition zeros~\cite{fisher1,taylor1,rslb1,taylor2}, or the microcanonical inflection-point analysis~\cite{Schnabel2011,KaiQi2016}.
+%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%   CHAPTER 2		   %%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Elements of statistical mechanics}
 \label{chap:elements_of_stat_mech}
 Statistical mechanics aims at explaining the microscopic origins of macroscopic properties of systems with large numbers of degrees of freedom. The exact solution for the time evolution of every particle in a single complex system requires enormous computational efforts, and in most cases provides little insight. In contrast to the stochastic motion of microscopic particles in a thermal environment, collective system properties such as entropy, pressure, or temperature, for the most part exhibit relatively simple behavior. The formalism of statistical mechanics allows us to study these properties by considering the average behavior of a large number of identically prepared systems, i.e., the statistical ensemble. It is well established, that for very large systems near the thermodynamic limit, all ensembles become equivalent. However this is emphatically not true in the case of intrinsically finite systems for which the choice of an ensemble is non-trivial\cite{Bachmann2014}. Therefore, we shall briefly introduce several prominent statistical ensembles, starting with arguably the most fundamental one, the \textit{microcanonical ensemble}.
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% MICROCANONICAL ENSEMBLE %%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{The microcanonical ensemble}
 \label{sec:mic_ensemble}
 Let us consider a mechanically and adiabatically isolated system with a constant number of particles $(N)$, volume $(V)$, and energy $(E)$. At any given moment, the system is to be found in a particular microstate $\mu$, which is represented by a point in a $6N$ dimensional phase-space. At a fixed energy $E$, the accessible microstates are constrained to the surface of constant energy $\mathcal{H}(\mu) = E$, where $\mathcal{H}$ is the Hamiltonian of the system. The total number of microstates corresponding to a macrostate with a fixed energy $E$ is obtained by calculating the density of states\footnote{Please refer to section 2.3 for detailed discussion of alternative definitions of the density of states.}
@@ -249,7 +270,9 @@ With the exception of composite multi-step transitions, characterized by additio
 The formalism of the microcanonical inflection-point analysis makes no reference to the thermodynamic limit. In fact, it is equally suitable for analysis of macroscopic and mesoscopic systems alike. This is in stark contrast to the more traditional canonical analysis which is defined under the assumption of the thermodynamic limit and has to be modified for the treatment of finite systems.
 
  
- 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%CANONICAL ENSEMBLE%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{The canonical ensemble}
 \label{sec:canonicalEnsemble}
 The canonical ensemble describes the behavior of a closed system which is in thermal equilibrium with a large external heat bath at a fixed temperature $T$. In analogy to the density of states in the microcanonical ensemble, the partition function $Z(T)$ contains all the essential information about the thermodynamic properties of the system under consideration\cite{Landau2000}. It can be defined directly as a Laplace transform\footnote{Here we assume that the system under investigation has discrete energy levels, which is always true in the context of computational studies. In the case of a continuous energy spectrum, the discrete sum is replaced by the integral $Z(T) = \int dE \:\:  g(E) e^{-\frac{E}{k_{\mathrm{B}}T}}$.} of the microcanical density of states $g(E)$
@@ -339,6 +362,10 @@ In the generalized formalism, peaks in the specific heat and other response quan
 
 It should be mentioned that second-order pseudophase transitions do not always produce peaks in the specific heat. In general, it is necessary to investigate the behavior of several response quantities in order to obtain an accurate picture of the transition properties of the system under investigation. However, due to finite size effects, the signals obtained from different quantities will in general not coincide at a single transition temperature. This reality further fortifies the argument that the microcanonical inflection-point analysis\footnote{Introduced in Sec. \ref{subsec: micro_analysis}}, which defines a unique transition temperature in mesoscopic and macroscopic systems alike, is the preferred formalism for the analysis of finite systems.
 \newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%  DOS  %%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Alternative definitions of the density of states}
 In section \ref{sec:mic_ensemble} we have defined the microcanonical density of states $g(E)$ as an integral over the surface of constant energy in the $6N$-dimensional phase space. We have argued that $g(E)$ contains all the essential information about the thermodynamic properties of the system under consideration, and introduced the formalism of the microcanonical inflection-point analysis which uses the logarithm of $g(E)$ as its starting point. In section \ref{sec:canonicalEnsemble} we have shown that the canonical partition function $Z(T)$ can be obtained by performing a Laplace transform of $g(E)$. Clearly, the microcanonical density of states plays a fundamental role in equilibrium statistical mechanics, and as such needs to be carefully defined. 
@@ -474,9 +501,9 @@ which clearly resembles the well known relationship between the canonical temper
 Comparison of the inverse microcanonical temperature $\beta(E)$ (red) and the conformational inverse temperature $\beta_{c}(\bar{E}_{p})$ (blue) evaluated at the most probable potential energy $\bar{E}_{p}$. The approximation introduced in equation \ref{eq:approx1} holds except in the back-bending region of the first-order pseudophase transition. The inverse transition temperature $\beta_{\mathrm{trans}}$ obtained from the two quantities is virtually identical.}
 \end{figure}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%% 			CHAPTER 3     		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%   CHAPTER 3		   %%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{Computational Methods}
 
@@ -486,6 +513,9 @@ In fact, only a handful of systems with large number of degrees of freedom are e
 Two complementary classes of computational algorithms have been particularly successful in unravelling the thermodynamic properties of physical systems. \textit{Molecular dynamics} simulations generate a single phase space trajectory by updating the positions and momenta of every particle in a system according to Hamilton's equations \cite{Rapaport2004,Tuckerman2010}. Alternatively, carrying out a stochastic sampling of the phase space, \textit{Monte Carlo} simulations estimate the equilibrium properties without an explicit consideration of the system's dynamics \cite{Bachmann2014, Landau2000}. In this chapter, we shall focus our attention to Markov chain Monte Carlo methods. We will briefly discuss the essential theory and introduce the well established Metropolis and Parallel Tempering algorithms as well as the lesser known Multiple Gaussian modified ensemble method.
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%% MC MONTE CARLO %%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Markov chain Monte Carlo}
 The aim of all Monte Carlo methods is to extract the equilibrium thermodynamic properties of physical systems by performing an efficient stochastic sampling of the phase space. For this purpose, a set of random microstates $\{\mu_{1},\mu_{2},...,\mu_{M}\}$ is generated according to some previously known probability distribution $p(\mu_{i})$, and the expectation value for any observable $O({\mu})$ is estimated by calculating the average
@@ -672,12 +702,15 @@ E_{G,i}\right)^{2}-\left(E_{\mu} - E_{G,i}\right)^{2}}{\Delta E_{G,i}^{2}}.
 
 The direct product of GME ensembles defines the multiple Gaussian modified ensemble (MGME). With a proper choice of ensemble parameters $(E_{G},\Delta E_{G})$ it is possible to achieve a significantly enhanced sampling of previously inaccessible states. This can be further improved by allowing for exchanges between GME ensembles at different temperatures. However, previous knowledge of the system under consideration is usually needed to make a reasonable estimate for the ensemble parameters. Therefore other more systematic methods, such as the multicanonical \cite{muca1a,muca1b,muca2,muca3,muca4,Bachmann2013} and Wang-Landau sampling \cite{wl1,wl2,wl3}, are often used.    
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% MULTIPLE HISTOGRAM REWEIGHTING  %%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Histogram reweighting methods}
 
 In chapter \ref{chap:elements_of_stat_mech}, we have introduced the microcanonical inflection point analysis as the means for the systematic study of pseudophase transitions in the microcanonical ensemble. Application of this method however presumes the precise knowledge of the microcanonical density of states $g(E)$ [Eq \ref{eq:densitOfStatesExplicit}]. Previously introduced sampling methods do not directly measure $g(E)$ but rather generate canonical energy histograms $h(E,\beta_{i})$. Hence, it is necessary to introduce a general method for estimating the density of states from energy histograms.
 
 \subsection{Multiple histogram reweighting}
+\label{subsec:MultipleHistogramRew}
 Canonical histogram $h(E,\beta_{i})$ provides an approximation for the Boltzmann distribution $p_{\mathrm{can}}(E, \beta_{i})$, which is itself proportional to the microcanonical density of states
 %
 \begin{equation}
@@ -757,6 +790,12 @@ Comparison between the noisy derivative of the microcanonical inverse temperatur
 }
 \end{figure}
 % 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%  MC UPDATES  %%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section{Simple Monte Carlo updates}
 The efficiency of Monte Carlo simulations depends in equal measure on the choice of  the sampling algorithm and on the selection of appropriate conformational updates. All update sets must be ergodic, i.e., it must be in principle possible to connect any two arbitrary states through a finite number of updates. Additionally, all updates must preserve the constraints of the model, such as volume exclusion and boundary conditions. The efficiency of individual updates depends strongly on the model to which they are being applied. Hence, there is no general set of updates that guarantees good performance across different physical models. In the following, we shall briefly discuss conformational updates which are suitable for simulations of off-lattice polymers and proteins. 
 
@@ -786,16 +825,18 @@ In a displacement update, a randomly selected monomer is moved according to a ra
 % 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%% 			CHAPTER 4     		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%   CHAPTER 4			   %%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-
-\chapter{Off-Lattice Polymer Models}
+\chapter{Coarse-grained off-lattice polymer models}
 \label{chap:HomopolymerModel}
 It is hardly possible to overestimate the importance of defining an appropriate model to represent a real physical system in a computational study. What constitutes an `appropriate' model depends largely on the system under investigation and on the level of detail which is needed to correctly capture the properties of a given physical phenomena. For example, the study of chemical reaction kinetics, ground-state geometries of molecules, or the optical and electronic properties of semiconductors, requires detailed knowledge of the electronic structure and interactions. In such cases, Density functional theory (DFT)\cite{Sholl2009} or other quantum mechanical modelling methods need to be employed. On the other hand, a wide range of interesting physical phenomena, such as protein folding, polymer collapse, adsorption, and aggregation, are driven by cooperative structure forming processes and as such are not expected to depend sensitively on the precise electronic or even atomic structures. In principle, it is possible to gain insight into these processes by the means of simplified models with a reduced number of effective parameters\cite{Bachmann2014,Schmid2011}. In this chapter we shall briefly discuss the concept of \textit{coarse-graining} and introduce the model for the flexible elastic homopolymer together with a set of structural order parameters which are particularly effective at characterizing the conformational geometries of polymers in the solid pseudophase.
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%% COARSE-GRAINED MODELS  %%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Coarse-grained models}
 %
@@ -843,6 +884,10 @@ Z_{\mathrm{can}} = \int \mathcal{DQ}e^{-\beta \tilde{V}(\mathbf{Q})}.
 In principle, $\tilde{V}(\mathbf{X})$ contains the combined effects of the exact inter-atomic potentials and hence should allow for an accurate description of the thermodynamic and structural properties of the original system. However in reality, effective potentials are often only crude approximations to the definition introduced in Eq. \ref{eq:EffectivePotential}. The perhaps surprising fact, that a wide range of physical phenomena can be studied by the means of drastically simplified models, suggests that physical properties that arise through cooperative behaviors do not depend sensitively on microscopic details.
 
 \newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%  HOMOPOLYMER %%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Flexible elastic homopolymer}
 The generic model of a flexible, elastic, homopolymer is suitable for the investigation of the thermodynamic properties of polymer chains on a coarse-grained level. The polymer is represented by a linear chain of elastically bonded coarse-grained interaction sites, i.e., monomers [Fig.\,\,\ref{fig:singleChain}]. Individual monomers have neutral electric charges and do not interact via Coulomb forces. Instead, all structure forming processes are primarily driven by effective dipole-dipole interactions represented by the van Der Waals forces. 
@@ -946,6 +991,10 @@ E_{\mathrm{inter}} = \sum^{M}_{k < l}
 %
 consists solely of non-bonded Lennard-Jones interactions. Schematic depiction of the model is provided in Fig.\,\,\ref{fig:singleChain}\,\,(b).
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% ORDER PARAMETERS  %%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section{Structural order parameters}
 \label{sec:orderParameters}
 The formalism of the microcanonical inflection-point analysis, as introduced in section \ref{subsec: micro_analysis}, provides a systematic approach for the identification and classification of pseudophase transitions in mesoscopic systems. Further insight into the thermodynamic and structural properties of polymer systems can be obtained by identifying the set of conformations which are dominant in a given pseudophase. This can be accomplished either by visual inspection of sample structures, or more systematically, by introducing a suitable set of structural order parameters. 
@@ -1040,6 +1089,10 @@ In chapter \ref{chap:HomopolymerModel}, we have suggested that the structural an
 
 In this chapter, we investigate the effects of restricting the fluctuation range of bonded interactions in a single elastic polymer chain. The variation of the bond extension range allows us to bridge the gap between self-interacting polymers with stiff bonds (such as proteins) and bead-spring chains (elastic polymers) with bonds so floppy that these polymers behave similarly to a gas of interacting particles. For this purpose, we have performed extensive replica-exchange Monte Carlo simulations in extended multiple Gaussian modified ensembles~\cite{Neuhaus2006}, which help improve the efficiency of parallel tempering simulations near first-order transitions. Systematic studies of the structural phases in the space of the bond confinement parameter were made possible by employing standard canonical analyses of fluctuations in macroscopic thermodynamic quantities and also by careful analysis of the nature of inflection points in the microcanonical temperature curve~\cite{Bachmann2014,Schnabel2011}.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%  MODEL & METHODS %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section{Model and simulation parameters}
 In this study, we employ a coarse-grained model of an elastic homopolymer, in the same form as introduced in Sec.\,\,\ref{subsec:ElasticChain}. This model was originally introduced for investigations of general properties of elastic polymer chains. Due to the similarity in the transition behavior of atomic clusters and polymers, however, the scope of this model can be extended to investigate effects of bond confinement as well. As such, this model allows for the interpolation of systems ranging from polymers to an almost unconfined gas of atoms.
 
@@ -1066,8 +1119,11 @@ In our simulations, we have used the replica-exchange Monte Carlo\footnote{See a
 
 The results presented in this chapter are compared for classes of polymers with $N=13$ and $30$ monomers. For verification purposes, we have also studied polymers with up to $55$ monomers, which, for this kind of systematic study that covers the entire parameter space, represents the limit of currently feasible simulations. 
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%  RESULTS  %%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Results}
-\label{sec:res}
 %
 In this section, we investigate the influence of the confinement parameter $R$ on the structural transitions in elastic chains of lengths $N = 13$ and $30$ in the dilute regime. For this purpose, we first perform a conventional canonical statistical analysis of fluctuating quantities and compare with results of a corresponding microcanonical analysis.
 %
@@ -1229,6 +1285,10 @@ $30.0$  &  $0.35 \pm 0.01$ &  $0.344  \pm 0.005$ & N/A & $3.399 \pm 0.002$
 \end{tabular*}
 \end{table}
 %
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%  SUMMARY  %%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Summary}
 \label{sec:sum}
 %
@@ -1237,9 +1297,9 @@ In this chapter, we have investigated the thermodynamic behavior of a linear cha
 Our systematic study covers the technologically and biologically interesting regime of polymer chains with bond elasticities ranging from stiff to highly elastic, which includes all realistic linear macromolecules,  and extends into the space of confined systems that behave like atomic clusters. Since our results are supposed to be generic, they allow for a classification of the expected transition behavior on the basis of the effective bond confinement range of these systems.
 %
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 	     
-%%%%%%%%%%%%%%%%%%%%   CHAPTER 6			   %%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%   CHAPTER 6			   %%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{Effects of short range repulsion on the structural properties of elastic homopolymers}
 
@@ -1248,9 +1308,10 @@ Bonded interactions in coarse-grained models of elastic polymers are commonly re
 \noindent
 Structural phase diagrams are constructed using the results of canonical and microcanonical analysis. The geometry of low energy conformations is examined with the aid of structural order parameters which were introduced in Sec.~\ref{sec:orderParameters}.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 	     
-%%%%%%%%%%%%%%%%%%%%  MODEL AND METHODS		 %%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+%%%%%%%%%%%%%  MODEL AND METHODS		 %%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section{Model and simulation parameters}
 In this study, we simulate the coarse-grained model of an elastic homopolymer, in the same general form as introduced in Sec.\,\,\ref{subsec:ElasticChain}. The energy scale of the Lennard-Jones potential is set to $\epsilon=1$ and the van-der-Waals radius to $\sigma=r_0/2^{1/6}$, where $r_0 = 1.0$ is the location of the potential minimum. We set the cut-off radius at $r_c=2.5\,\sigma$, and introduce a shift $U_{\mathrm{LJ}}(r_{c}) \approx -0.0163169$ to avoid discontinuities in the potential.
 
@@ -1287,14 +1348,16 @@ scheme~\cite{Bachmann2014,muca1a,muca2}.
 
 To analyze the transition behavior of the polymer chains for different values of the parameter $\eta$, we use the microcanonical inflection-point analysis\footnote{See also section~\ref{subsec: micro_analysis}}~\cite{Bachmann2014,Schnabel2011}. By applying the principle of minimal sensitivity~\cite{Stevenson} to the derivatives of the microcanonical entropy $S(E)$, the application of this method can be extended to higher order pseudophase transitions. The $(2n+1)$th-order transition ($n$ is a positive integer) is identified from the least sensitive inflection point of the $2n$th-derivative of entropy and the positive valley in the $(2n+1)$th-derivative curve. For a $2n$th-order transition, the least sensitive inflection point in the $(2n-1)$th-derivative of entropy together with the negative peak in the $2n$th-order derivative curve are utilized to locate the transition energy. 
 %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
-%%%%%%%%%%%%%%%%%%%%  RESULTS		         %%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%  RESULTS	%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section{Results}
 %
 In the following, we investigate the effects of bond asymmetry and short range repulsion on the thermodynamic and structural properties of elastic polymers of length $N=15,55$.  We begin with a discussion of the results of canonical analysis which provides a general picture of the transition behavior. The order and the exact location of each pseudophase transition are obtained by the means of the microcanonical inflection point analysis, and the combined results are used to construct pseudophase diagrams. 
 
-%%%%%%%%%%%% CANONICAL RESULTS %%%%%%%%%%%%%%
+%%%%% CANONICAL RESULTS %%%%%%%%%%
 
 \subsection{Canonical results}
 In canonical analysis, extremal thermal fluctuations of some thermodynamic observable $O$, defined as
@@ -1319,7 +1382,7 @@ The freezing transition of a 55mer at $\eta = 1$ is a prominent example of a fir
 \end{figure}
 %
 
-%%%%%%%%%%%% MICROCANONICAL RESULTS %%%%%%%%%%%%%%
+%%%%%%%% MICROCANONICAL RESULTS %%%%%%%%%%
 \subsection{Microcanonical results and structural phase diagrams}
 
 Here we examine in detail the transition behavior of the polymer chains for representative values of the $\eta$ parameter in the interval $\eta\in[0,1]$. The combined microcanonical results are shown in Fig.~\ref{fig:microcanonicalAnalysis} for the $15$mer (a,c,e) and the $55$mer (b,d,f). For the 15mer, closer inspection of the derivatives of the microcanonical inverse temperature $\beta(E)$ reveals two distinct transition signals inside the energy interval $E\in[-44,-38]$. At $E\approx -44$, the least sensitive point of $\delta(E)$ indicates a fourth-order transition. The second transition, located at $E\approx -38$, is of the second-order for $\eta > 0.2$ and third-order for $\eta < 0.2$. In the canonical picture, both signals would be enclosed within the broad peaks of the heat capacity $C_{\mathrm{V}}$ (Fig.~\ref{fig:canonicalAnalysis}), concealing the fact that the freezing transition is a two step process. The two-step freezing transition is also observed in the case of the $55$mer, for $\eta=0.05, 0.2$, and $1$. The prominent back-bending features in the microcanonical inverse temperature $\beta(E)$ of the 55mer, accompanied by the positive-valued peaks in $\gamma$ are clear indicators of a first-order transition. The peaks in $\gamma(E)$ are accompanied by inflection points located at $E \approx -247, -242, -235,$ and $-229$ for $\eta= 0.05, 0.20,$ and $1.00$ respectively. Together with the corresponding positive valleys in $\delta(E)$, these inflection points indicate additional third-order transitions. For $\eta < 0.03$, the properties of the freezing transition change as additional pseudophases emerge and the transition is extended over a wide energy region. 
@@ -1357,7 +1420,7 @@ With further decrease in energy, the 15mer passes the second/third-order transit
 The transition behavior of the $55$mer is qualitatively similar to the $15$mer for the majority of values of the $\eta$ parameter. However, for $\eta < 0.1$ the two systems behave differently. The low-temperature and small-$\eta$ region of the structural phase diagram in Fig.~\ref{fig:phaseDiagram55}, contains additional transition lines which were not detected for the $15$mer. The emergence of the third-order transition line at $T \approx 0.29$ for $\eta < 0.03$, marks the end of a clear distinction between the liquid and solid pseudophases. The nucleation process becomes extended over a wide temperature range and can't be associated with a single transition line. Instead, the polymer transitions between several conformational phases before it forms a stable ground state structure. We will identify and characterize the dominant conformational phases using a set of suitable structural order parameters\footnote{See also section ~\ref{sec:orderParameters}}.
  
 
-%%%%%%%%%%%%%% STRUCTURAL ANALYSIS %%%%%%%%%%%%%%%%%%
+%%%%%%%%% STRUCTURAL ANALYSIS %%%%%%%%%%
 \subsection{Structural analysis}
 %
 The tools of microcanonical inflection-point analysis provide us with a systematic way of identifying and classifying all structural transitions in physical systems. Equally important is the identification of dominant configurations and their abundance in a relevant energy range. This can be accomplished either by visual inspection of sample structures, or more systematically, by introducing a suitable set of structural order parameters. Based on the microcanonical results, summarized in the structural phase diagrams in Figs.~\ref{fig:phaseDiagram15} and.~\ref{fig:phaseDiagram55}, we expect that for sufficiently small values of the parameter $\eta$, two distinct solid pseudophases should be detected. We aim to identify and characterize the dominant structures for each pseudophase and obtain a physical interpretation for the emergence of new conformational geometries when the short-range repulsion between bonded monomers becomes sufficiently weak. In Chap.~\ref{chap:HomopolymerModel}, we have introduced a set of structural order parameters $Q_{l}$ which are particularly suitable for the identification of low-energy solid-like structures with well-defined symmetries.
@@ -1410,121 +1473,36 @@ Similarly, in the case of the 55mer, we detect a single solid pseudophase for $\
 We are now in the position to discuss the impact of the repulsive part of the LJ potential, between bonded monomers, on the geometry of low-energy polymer conformations. In particular, we wish to know the reason for the exclusion of the bihexagonal pseudophase for all but extremely low strengths of the control parameter $\eta$. The answer is readily obtained by comparing the bond length distributions between conformations with icosahedral and bihexagonal cores (Fig.~\ref{fig:bondDistribution}). In terms of the number of non-bonded interactions, bihexagonal conformations are energetically more optimal than icosahedra.  However the formation of a bihexagonal core results in a non-optimal distribution of bond lengths. In particular, the two six-monomer rings of the bihexagon contain significantly compressed bonds $(r_{\mathrm{bond}} \approx 0.88 r_{0})$. At very small values of $\eta$, the symmetric FENE potential allows for the existence of compressed bonds without a large energetic penalty; hence the bihexagonal conformations dominate. However, with increasing $\eta$, which controls the strength of the bonded LJ potential and the short-range repulsion between bonded monomers, the energetic penalty for the compressed bonds eventually prevents the formation of bihexagonal structures. 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  			          SUMMARY		               %%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% 		SUMMARY		%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section{Summary}
 %
 We have investigated the thermodynamic and structural properties of elastic homopolymer chains of lengths $N=15,55$, over a range of values of the model parameter $\eta$  which controls the strength of the LJ potential in bonded interactions. At very small values of $\eta$, conformations with bihexagonal cores form the ground state. Increasing the strength of the bonded LJ potential breaks the symmetry of the FENE potential and leads to additional short-range repulsion between pairs of bonded monomers. The compressed bonds found in bihexagonal conformations obtain large energetic penalties and only a single icosahedral solid phase remains. The results of this study show that the coarse-grained homopolymer model is robust over a wide range of values of the model parameter $\eta$. However, the striking behavior at very small values of $\eta$ illustrates the importance of a careful choice of model parameters.
 
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%% CHAPTER 7 %%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{Aggregation of Flexible Elastic Homopolymers}
 \label{chap:Aggregation}
-\section{Introduction}
-%
-Deeper understanding of aggregation processes in the context
-of microscopic molecular systems is relevant for a number of 
-technological and biomedical applications. For example,
-protein aggregation is believed to play a critical role during
-the onset of many prominent pathological conditions, 
-such as cystic fibrosis, Alzheimer's and Parkinson's
-diseases~\cite{Selkoe,Chiti}. The staggering complexity of even the 
-simplest molecular systems precludes the possibility of obtaining 
-the relevant thermodynamic quantities through direct analytical 
-calculations~\cite{Bachmann2014}. Over the past two decades, 
-the enormous increase in the availability of computational resources, 
-together with significant progress in algorithmic developments, 
-resulted in a vast number of computational studies on the thermodynamic 
-and structural properties of complex microscopic systems. 
-Among the most efficient simulation methods are the
-generalized-ensemble Monte Carlo algorithms, such as
-simulated tempering~\cite{marinari,lyubartsev},
-replica-exchange parallel tempering~\cite{sw1,geyer1,huku1,huku2}, 
-multiple Gaussian modified ensemble (MGME)~\cite{Neuhaus2006}, 
-together with
-multicanonical~\cite{muca1a,muca1b,muca2,muca3,muca4,Bachmann2013}
-and Wang-Landau sampling~\cite{wl1,wl2,wl3}. 
-These have been applied successfully in numerous studies of 
-structural phases and transition
-properties~\cite{Schnabel2009,bf1,bf2,grass2,vbj1,strauch1,svbj1,%
-taylorRange1, taylorRange2,seaton3,semisslb1,Koci2015}, surface
-adsorption~\cite{bj4,prellberg1,paul1,mbj1,liang1,allen1,vb1,ywli1,%
-mjb4,vgb1}, and
-aggregation~\cite{jbj1,Junghans2008,Junghans2009,Junghans2011,%
-Zieren2014,Zieren2015} of generic off-lattice homopolymers and
-heteropolymers. The folding properties of coarse-grained protein models
-have also been examined
-extensively~\cite{dill1,still1,still2,som1,hsu1,bj1,ssbj1}.
- 
-Importantly, despite the many advances in simulational
-methodologies, systematic studies of detailed atomistic
-models are well beyond current capabilities. 
-However, it is a significant physical reality that many 
-essential thermodynamic properties of complex systems are 
-retained on larger than atomistic scales and can be well represented 
-by coarse-grained models. In fact, coarse-graining is not just a concept
-to simplify modeling. It reflects inherent collective and cooperative
-behavior of constituents of systems on mesoscopic and macroscopic scales. 
-This is intuitive since it is known that certain characteristic
-properties, such as the propensity towards aggregation, are often shared
-among diverse systems and hence cannot depend sensitively on microscopic
-details.
- 
-In mesoscopic systems, structure formation and phase-separation
-processes are fundamentally influenced by finite-size effects.
-Systematic statistical analysis approaches beyond the standard
-canonical methodology are needed to unravel the intricate details
-of the interplay between energy and entropy in finite systems.
-Due to the averaging process involved in the calculation of 
-canonical quantities such as the ensemble energy or the heat capacity,
-specific features of structural transitions and phase properties 
-are often lost~\cite{Bachmann2014}. This is remedied in more general 
-approaches such as the Fisher partition 
-zeros~\cite{fisher1,taylor1,rslb1,taylor2}, 
-or the microcanonical inflection-point 
-analysis~\cite{Schnabel2011,KaiQi2016}.
 
-This paper is organized as follows: In Sect.~\ref{sec:modmeth},
-we introduce a coarse-grained model for interacting flexible
-elastic homopolymers, describe the employed computational methods, 
-and briefly outline the methodologies of the microcanonical 
-inflection-point analysis. In Sect.~\ref{sec:res}, we present
-the simulational results for polymer systems of up to $M =20$
-chains. Based on the outcome of inflection-point analysis,
-we argue that the aggregation transition is a first-order process 
-consisting of a sequence of subtransitions between intermediate 
-structural phases. Next, we discuss why certain subphases
-are entropically more suppressed than others, and conclude
-with a brief excursion into the scaling properties of the aggregation
-transition temperature and the latent heat. Summary is provided
-in Sect.~\ref{sec:sum}.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%    INTRO    %%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
+Deeper understanding of aggregation processes in the context of microscopic molecular systems is relevant for a number of technological and biomedical applications. For example, protein aggregation is believed to play a critical role during the onset of many prominent pathological conditions, such Alzheimer's and Parkinson's diseases~\cite{Selkoe,Chiti}. In this chapter, we investigate the properties of aggregation transitions in the context of generic coarse-grained homopolymer systems. By means of parallel replica-exchange Monte Carlo methods, we perform extensive simulations of systems consisting of up to $20$ short polymer chains. Using the results of the  microcanonical inflection-point analysis, we argue that the aggregation transition is a first-order process consisting of a sequence of subtransitions between intermediate structural phases. We unravel the properties of these intermediate phases by collecting and analyzing their individual contributions towards the density of states of the system. The central theme of this systematic study revolves around translational entropy and its role in the striking phenomena of \textit{missing} intermediate phases. We conclude with a brief discussion of the scaling properties of the transition temperature and the latent heat.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%% METHODS %%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Model and Methods}
 \label{sec:modmeth}
 %
-In the following, we introduce a generic coarse-grained model
-for a system of interacting, flexible homopolymers. Coarse-grained models,
-with a suitably chosen set of
-parameters, drastically reduce computational complexity while
-preserving the essential structural and thermodynamic properties
-that are typically found in more complex
-models~\cite{Schmid2011}.
-%
-\subsection{Standard model of interacting elastic chains}
-%
-In this study, we investigate the aggregation of
-$M$ interacting flexible homopolymers, each composed of
-$N = 5$ monomers. During the simulations, the system is constrained
-inside of a steric sphere at a constant density of $10^{-3}$
-monomers per unit volume. At this density the radius of the
-constraining sphere is larger than the length of the fully
-extended polymer chains under investigation. The total energy of
-the system can be separated into intra-chain and inter-chain
-pairwise interactions
+Employing the generic coarse-grained model for a system of interacting, flexible homopolymers, we investigate the aggregation of $M$ interacting chains, each composed of $N = 5$ monomers. During the simulations, the system is constrained inside of a steric sphere at a constant density of $10^{-3}$ monomers per unit volume. At this density the radius of the constraining sphere is larger than the length of the fully extended polymer chains under investigation. The total energy of the system can be separated into intra-chain and inter-chain pairwise interactions
 %%%%%%     Total Energy      %%%%%%
 \begin{equation}
 E_{\mathrm{total}} = E_{\mathrm{intra}} + E_{\mathrm{inter}}.
@@ -1539,425 +1517,113 @@ U_{\mathrm{FENE}}(r\,^{(k)}_{ii+1}) +
 U_{\mathrm{LJ}}^{\mathrm{trunc}}(r\,^{(k)}_{ij})
 \end{equation}
 %
-consists of both bonded and non-bonded interactions, where
-$r\,^{(k)}_{ij}$ is the distance between the pair of monomers
-($i$,$j$) of the $k$-th chain. The first term contains the anharmonic
-finitely extensible nonlinear elastic (FENE)
-potential~\cite{Bird1987, Kremer1990, Milchev2001}
-%%%%%% FENE Potential %%%%%%
-\begin{equation}
-U_{\mathrm{FENE}}(r_{ii+1})=-\frac{K}{2}R^2 
-\mathrm{ln}\left[1-\left(\frac{r_{ii+1}-r_0}{R}\right)^2\right],	
-\label{FENE}
-\end{equation}
+consists of both bonded and non-bonded interactions, where $r\,^{(k)}_{ij}$ is the distance between the pair of monomers ($i$,$j$) of the $k$-th chain. The first term contains the FENE potential (\ref{eq:FENE}), with parameter values $K=40$ and $R=0.3$. The second term represents the truncated and shifted Lennard-Jones (LJ) potential (\ref{eq:LJTruncated}) with the energy scale $\epsilon$ set to unity and the length scale to $\sigma=r_0/2^{1/6}$, where $r_0 = 0.7$ is the location of the LJ potential minimum. The cutoff radius is set to $r_c=2.5\,\sigma$. The inter-chain contribution
 %
-with parameter values $K=40$ and $R=0.3$ as used in~\cite{Gross2013}.
-The second term represents 
-the truncated and shifted Lennard-Jones (LJ) potential
-%%%%%% LJ Potential %%%%%%
-\begin{equation}
-U_{\mathrm{LJ}}^{\mathrm{trunc}}(r_{ij}) = \left\{
-\begin{array}{lr}
-U_{\mathrm{LJ}}(r_{ij}) - U_{\mathrm{LJ}}(r_{c}), & \quad
-\mathrm{if} \,\, r_{ij} \leq r_{c},\\
-0, &  \quad \mathrm{if} \,\,r_{ij} > r_{c},
-\end{array}
-\right.
-\end{equation}
-%
-where
-%%%%%% LJ Potential %%%%%%
-\begin{equation}
-U_{\mathrm{LJ}}(r_{ij})= 4\epsilon \left[ \left(
-\frac{\sigma}{r_{ij}} \right)^{12} - \left(
-\frac{\sigma}{r_{ij}} \right)^{6} \right].
-\end{equation}
-%
-We set the energy scale $\epsilon$ to unity and the length scale
-to $\sigma=r_0/2^{1/6}$, where $r_0 = 0.7$ is the location of
-the LJ potential minimum. The cutoff radius is set to
-$r_c=2.5\,\sigma$.
-The inter-chain contribution
 %%%%%% Inter-Chain Energy %%%%%% 
 \begin{equation}
-E_{\mathrm{inter}} = \sum^{M}_{k < l}
-\sum^{N}_{i,j}U_{\mathrm{LJ}}^{\mathrm{trunc}}(|\textbf{r}^{(k)}_{i}
-- \textbf{r}^{(l)}_{j}|),
+E_{\mathrm{inter}} = \sum^{M}_{k < l} \sum^{N}_{i,j}U_{\mathrm{LJ}}^{\mathrm{trunc}}(|\textbf{r}^{(k)}_{i} - \textbf{r}^{(l)}_{j}|),
 \end{equation}
 %
-consists solely of non-bonded LJ interactions. For the purpose
-of this study, all LJ interactions (intra- and inter-chain) have
-their parameters set to identical values.
+consists solely of LJ interactions. For the purpose of this study, all LJ interactions (intra- and inter-chain) have their parameters set to identical values.
 %
-\subsection{Simulation methods}
-%
-Relatively small polymer systems, consisting of $N < 100$
-monomers, can be conveniently simulated using parallel tempering, which is
-a generalized-ensemble
-replica-exchange Monte Carlo method~\cite{sw1,geyer1,huku1,huku2} that can
-be easily implemented on parallel
-computer architectures. In larger systems, 
-the density of states typically spans several
-thousand orders of magnitude, in which case the application of more
-sophisticated methods such as multicanonical
-sampling~\cite{muca1a,muca1b,muca2,muca3,muca4,Bachmann2013} or 
-Wang-Landau~\cite{wl1,wl2,wl3} is more efficient. In this study we restrict
-our attention to systems consisting of up to $20$ individual chains with $5$
-monomers each.
-The number of monomers per chain has been intentionally kept very low 
-in order to enhance translational entropic effects which become more 
-obscured by the impact of inherent conformational
-entropies as chain length is increased.
 
-In a typical simulation, $R \approx 80$ replicas of the system were
-simulated in parallel at different temperatures in the range 
-$T \in \left[0.1,2.0\right]$.
-Single-monomer random displacement moves, restricted to a box of size $l$,
-were used to perform conformational updates for individual replicas.
-The proposed update was then accepted with the Metropolis probability
-%%%%%% Metropolis Acceptance Probability %%%%%%
-\begin{equation}
-A_\mathrm{M}\left(\mathbf{X}_{\mathrm{old}} \rightarrow
-\mathbf{X}_{\mathrm{new}}\right) = 			
-\mathrm{min}\left(1,e^{ -\beta\left[E
-(\mathbf{X}_{\mathrm{new}}) -
-E(\mathbf{X}_{\mathrm{old}})\right]} \right),
-\end{equation}
+\newpage
+
 %
-where $\beta = 1/k_{\mathrm{B}}T$ and $k_{\mathrm{B}} \equiv 1$ in the
-simulation.
-The maximum magnitude of the displacement update $l$ was adjusted
-individually
-for each temperature thread to achieve an average acceptance rate of
-$40-60\%$.
-Approximately every $100$ Monte Carlo sweeps, an exchange of conformations 
-between adjacent replicas $i$ and $j$ was proposed with the acceptance
-probability
-%%%%%% Replica-Exchange Acceptance Probability %%%%%%
-\begin{equation}
-A_\mathrm{PT}\left(\mathbf{X}_{i} \leftrightarrow \mathbf{X}_{j};
-\beta _{i}, \beta_{j} \right) =
-\mathrm{min}\left(1,e^{\left[\beta_{j} -
-\beta _{i} \right] \left[E (\mathbf{X}_{j}) -
-E(\mathbf{X}_{i})\right]} \right).
-\end{equation}
+Relatively small polymer systems, consisting of $N < 100$ monomers, can be conveniently simulated using parallel tempering, which is a generalized-ensemble replica-exchange Monte Carlo method\footnote{See also section~\ref{subsec:ParallelTempering}}~\cite{sw1,geyer1,huku1,huku2} that can be easily implemented on parallel computer architectures. In larger systems, the density of states typically spans several thousand orders of magnitude, in which case the application of more sophisticated methods, such as the multicanonical~\cite{muca1a,muca1b,muca2,muca3,muca4,Bachmann2013} or Wang-Landau~\cite{wl1,wl2,wl3} sampling, becomes more efficient. In this study we restrict our attention to systems consisting of up to $20$ polymer chains with $5$ monomers each. The lengths of the individual chains have been restricted to ensure that the translational entropies of the polymers dominate over their inherent conformational entropies.
 %
-The temperature spacing between adjacent replicas was chosen to achieve
-an exchange probability exceeding $20\%$. This results in a higher density of
-replicas in the low-temperature region as well as near the locations of phase
-transitions.
-On average, $10^7$ replica exchanges were performed, allowing for a total of 
+
+%
+In a typical simulation, $R \approx 80$ replicas of the system were simulated in parallel at different temperatures in the range $T \in \left[0.1,2.0\right]$. Single-monomer random displacement moves, restricted to a box of size $l$, were used to perform conformational updates for individual replicas. The maximum magnitude of the displacement update $l$ was adjusted individually for each temperature thread to achieve an average acceptance rate of $40-60\%$. An exchange of conformations between adjacent replicas was proposed approximately every $100$ Monte Carlo sweeps. The temperature spacing between adjacent replicas was chosen to achieve an exchange probability exceeding $20\%$. This results in a higher density of replicas in the low-temperature region as well as near the locations of phase transitions. On average, $10^7$ replica exchanges were performed, allowing for a total of 
 $10^9$ Monte Carlo sweeps per simulation. 
 %
-\subsection{Density of states and microcanonical analysis}
-As a result of parallel tempering simulations, each replica generates 
-a canonical energy histogram $h(E,\beta_{i})$,
-which is then used to calculate an estimate for the microcanonical density 
-of states $g_{i}(E) \approx h(E,\beta_{i})\exp{(\beta _{i} E)}$.
-Individual estimates $g_{i}(E)$ are only reliable for energies in the
-neighborhood 
-of the peak of the canonical distribution obtained at the temperature
-$\beta _{i}$.
-Therefore a sufficient overlap between the histograms of
-neighboring replicas 
-is necessary to ensure that an accurate estimate of the density of states 
-can be
-obtained for the entire energetic range. To combine the histograms obtained
-from the individual temperature threads, we have used the weighted
-multiple-histogram 
-method~\cite{Ferrenberg1989,Kumar1992}, where the system of equations
-%%%%%% Weighted Histogram Reweighting %%%%%%
-\begin{eqnarray}
-\hat{g}(E)&= &\frac{\sum_{i=1}^{R} h(E,\beta _{i})}{\sum_{i=1}^{R} M_i
-\hat{Z}_i^{-1} e^{-\beta_i E}}, \\
-\hat{Z}_i &= &\sum_E \hat{g}(E) e^{-\beta_i E},
-\end{eqnarray}
-%
-must be solved iteratively until $\hat{g}(E)$ has converged.
 
-The standard approach towards obtaining the thermodynamic properties of a
-polymer system is to perform a conventional analysis of energetic and
-structural 
-fluctuating quantities in the canonical ensemble. Generally, peaks in the 
-temperature derivative of a canonical expectation value 
-%%%%%% Temperature Derivative of Fluctuating Quantity %%%%%%
-\begin{eqnarray}
-\frac{d}{dT}(O(\mathbf{X})(T)& = &\frac{1}{k_\mathrm{B}T^{2}}[\langle
-O(\mathbf{X})
-E(\mathbf{X})\rangle (T)\nonumber\\
-&& - \langle O(\mathbf{X}) \rangle \langle E(\mathbf{X})\rangle (T)],
-\end{eqnarray}
 %
-indicate extremal thermal activity in the system. However, the precise
-location
-of the transition points depends on the choice of the thermodynamic 
-observables
-and cannot be determined uniquely. If finite-size effects are significant,
-the identification of a structural transition can be difficult and
-underlying cooperative effects may entirely be smeared out in the
-averaging process.
+As a result of parallel tempering simulations, each replica generates a canonical energy histogram $h(E,\beta_{i})$, which serves as an estimate for the microcanonical density of states $g_{i}(E) \approx h(E,\beta_{i})\exp{(\beta _{i} E)}$. We have used the weighted multiple-histogram method\footnote{See also section \ref{subsec:MultipleHistogramRew}}~\cite{Ferrenberg1989,Kumar1992} to combine the individual estimates and obtain an estimate of $g(E)$ valid over the entire relevant energy range.
+%
 
-It is therefore imperative to employ a more systematic approach towards the
-analysis of thermodynamic properties of finite systems, which is capable 
-of uniquely identifying and classifying structural transitions of
-all orders. 
-This is accomplished utilizing the inflection-point analysis in the 
-microcanonical
-ensemble~\cite{Bachmann2014,Schnabel2011}. The central quantity,
-containing virtually all information about the intricate interplay between 
-entropy and energy, is the microcanonical inverse temperature 
-defined as
-%%%%%%%%% Microcanonical Temperature %%%%%%%%%%%%%
-\begin{equation}
-\beta(E) = \frac{dS(E)}{dE},
-\end{equation}
-%
-where
-\begin{equation}
-S(E) = k_\mathrm{B}\, \mathrm{ln}\, g(E)
-\end{equation}
-is the microcanonical entropy and $g(E)$ is the density of states. 
-In analogy to the principle of minimal 
-sensitivity~\cite{Stevenson},
-structural transitions occur if $\beta (E)$, or one of its energy
-derivatives,
-responds least sensitively to variations in energy. 
-In particular, \textit{first-order} transitions are associated 
-with inflection points in $\beta (E)$ that have a positive slope.
-Therefore, it can easily be identified by a positive-valued peak in the 
-energy derivative $\gamma(E)=d\beta(E)/dE$. Similarly, a 
-\textit{second-order}
-transition occurs if $\gamma(E)$ attains a negative-valued peak. 
-Examples of microcanonical \textit{first-} and \textit{second-order}
-transition signals 
-are 
-shown in Fig.~\ref{fig:Fig_1}.
-The extension of this method towards the identification of higher-order 
-transitions is possible and will be described elsewhere~\cite{KaiQi2016}.
-%
-\begin{figure}
-\centering
-\includegraphics[width = 0.5\textwidth]{chapter7Figs/micro_example.eps}
-\caption{\label{fig:Fig_1}%
-Microcanonical inflection-point analysis of the
-inverse microcanonical temperature $\beta(E)$. The prominent
-back-bending region in $\beta(E)$, together with the positive-valued peak 
-in its energy derivative $\gamma(E)$ at $E \approx -15$, indicates a 
-\textit{first-order}
-transition. The negative-valued peak at $E\approx -24$ corresponds
-to a \textit{second-order} transition.}
-\end{figure}
-%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%% RESULTS %%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Results}
-\label{sec:res}
-%
+
 %
 \begin{figure}
 \center
-\includegraphics[width = 1.03\textwidth]{chapter7Figs/combinedMicro.eps}
-\caption{\label{fig:Fig_2}Microcanonical temperature
-$\beta(E)$ and its energy derivative $\gamma(E)$ for systems with $M =
-2,3,5,11$ polymer chains with $N=5$ monomers each. 
-The dashed vertical lines $e_{\mathrm{agg}}$ and $e_{\mathrm{frag}}$
-outline the aggregation transition region. The upper horizontal dashed line
-provides an estimate for the inverse 
-aggregation temperature $\beta_{\mathrm{agg}}$. 
-The oscillations in $\beta(E)$ reveal the sequential nature of the
-transition 
-and correspond to individual subtransitions.
-The unimodal canonical energy histograms of the subphases
-$h_{i}(\beta_{\mathrm{agg}};E)$ are shown together with the combined
-histogram $h(\beta_{\mathrm{agg}};E)$. The absolute scale of these
-distributions is arbitrary.}
+\includegraphics[width = 1.02\textwidth]{chapter7Figs/combinedMicro.eps}
+\vspace{3mm}
+\caption{\label{fig:agg_microSummary} Microcanonical temperature $\beta(E)$ and its energy derivative $\gamma(E)$ for systems with $M = 2,3,5,11$ polymer chains with $N=5$ monomers each. The dashed vertical lines $e_{\mathrm{agg}}$ and $e_{\mathrm{frag}}$ outline the aggregation transition region. The upper horizontal dashed line provides an estimate for the inverse aggregation temperature $\beta_{\mathrm{agg}}$. The oscillations in $\beta(E)$ reveal the sequential nature of the transition and correspond to individual subtransitions. The unimodal canonical energy histograms of the subphases $h_{i}(\beta_{\mathrm{agg}};E)$ are shown together with the combined histogram $h(\beta_{\mathrm{agg}};E)$. The absolute scale of these distributions is arbitrary.}
 \end{figure}
 %
-Previous studies of single flexible elastic homopolymers reveal the
-existence
-of three distinct structural phases~\cite{Schnabel2009,svbj1}. 
-In the high-temperature gas-like regime, typical
-conformations resemble extended, random coils. With decreasing temperature,
-the system
-first undergoes the $\Theta$ collapse transition into the liquid-like
-compact globular phase,
-and finally freezes into the solid ``crystalline'' phase. From our
-simulations of the
-multi-chain model employed in this study, we find that the prominent
-aggregation transition is accompanied by the 
-collapse of the individual chains, and the two transitions are not
-separate processes. This has also
-been observed in the case of semi-flexible 
-homopolymers~\cite{Junghans2009}. 
-However, in contrast to heteropolymer systems~\cite{Junghans2011}, the
-freezing
-transition occurs at temperatures well below the aggregation transition.
-In fact, at low
-temperatures, the thermodynamic properties of a multi-chain system
-are very similar to those
-of a single polymer chain with identical (total) number of monomers
-$M\cdot N$. 
+
+Previous studies of single flexible elastic homopolymers have revealed the existence of three distinct structural phases~\cite{Schnabel2009,svbj1}. In the high-temperature gas-like regime, typical conformations resemble extended, random coils. With decreasing temperature, the system first undergoes the $\Theta$ collapse transition into the liquid-like compact globular phase, and finally freezes into the solid ``crystalline'' phase. From our simulations of the multi-chain model employed in this study, we find that the prominent aggregation transition is accompanied by the collapse of the individual chains, and the two transitions are not separate processes. This has also been observed in the case of semi-flexible homopolymers~\cite{Junghans2009}. However, in contrast to heteropolymer systems~\cite{Junghans2011}, the freezing transition occurs at temperatures well below the aggregation transition. In fact, at low temperatures, the thermodynamic properties of a multi-chain system are very similar to those of a single polymer chain with identical (total) number of monomers $M\cdot N$.
+ 
 %%%%%%%%% Microcanonical Analysis %%%%%%%%%%%%%
 \subsection{Microcanonical analysis of aggregation transitions}
 %
-In this section, we discuss the properties of aggregation transitions from
-the perspective
-of microcanonical analysis. We systematically examine systems consisting
-of up to 
-$M = 20$ individual chains with fixed length of $N = 5$ monomers. Brief
-inspection of 
-the microcanonical quantities for four system sizes in Fig.~\ref{fig:Fig_2}
-suggests 
-that for finite systems the aggregation transition is a first-order
-process, as expected. 
-The microcanonical inverse temperature curves $\beta(E)$ show a prominent
-back-bending 
-region accompanied by positive-valued peaks in $\gamma(E)$. The low-energy
-aggregate phase is energetically separated from the disordered fragmented 
-phase by an amount corresponding to the latent heat 
-$\Delta q = e_{\mathrm{frag}} - e_{\mathrm{agg}}$, 
-represented in Fig.~\ref{fig:Fig_2} by the separation between the two
-dashed vertical lines. Finally, the combined canonical histograms $h(E)$,
-also shown in Fig.~\ref{fig:Fig_2}, exhibit bimodality which is
-characteristic of first-order transitions in finite systems.
+In this section, we discuss the properties of aggregation transitions from the perspective of microcanonical analysis, and examine systems consisting of up to $M = 20$ individual chains with fixed length of $N = 5$ monomers. Brief inspection of the microcanonical quantities in Fig.~\ref{fig:agg_microSummary} suggests that for all investigated systems the aggregation transition is a first-order process, as expected. The microcanonical inverse temperature curves $\beta(E)$ have prominent back-bending features accompanied by positive-valued peaks in $\gamma(E)$. The low-energy aggregate phase is energetically separated from the disordered fragmented phase by an amount corresponding to the latent heat $\Delta q = e_{\mathrm{frag}} - e_{\mathrm{agg}}$, represented in Fig.~\ref{fig:agg_microSummary} by the separation between two dashed vertical lines. Finally, the combined canonical histograms $h(E)$, also shown in Fig.~\ref{fig:agg_microSummary}, exhibit bimodality characteristic of first-order transitions in finite systems.
+%
 
-Closer inspection of the back-bending region of $\beta (E)$ reveals 
-additional oscillations. It is evident that their number is
-proportional to the number of 
-individual chains in the system. This observation motivates the description
-of the aggregation transition as a series of subtransitions between
-intermediate structural phases. Here we define the term ``subphase'' to
-represent a distinct grouping of partially formed aggregates. As shown in
-Fig.~\ref{fig:Fig_3}, a system of $M =4$ chains can form three intermediate
-subphases $\{\{3,1\},\{2,2\},\{2,1,1\}\}$, where the number of elements in
-each set corresponds to the number of non-interacting partial clusters, and
-the numerical values represent the number of chains in each cluster.
-Previous studies suggest that subtransitions occur between these partially 
-fragmented subphases~\cite{jbj1,Junghans2008,Junghans2009,Junghans2011}.
-However, this analysis was performed mostly on the level of 
-visual inspection of individual system configurations. For a more
-quantitative approach, we have implemented a structure-detection algorithm
-capable of classifying configurations based on the number and size of
-partially formed aggregates. This allows us to collect separate statistical
-data for each subphase and to determine their relative frequency.
+%
+Closer inspection of the back-bending regions of $\beta (E)$ reveals additional oscillations. It is evident that their number is proportional to the number of individual chains in the system. This observation motivates the description of the aggregation transition as a series of subtransitions between intermediate structural phases. Here we define the term ``subphase'' to represent a distinct grouping of partially formed aggregates. As shown in Fig.~\ref{fig:agg_structures}, a system of $M =4$ chains can form three intermediate subphases $\{\{3,1\},\{2,2\},\{2,1,1\}\}$, where the number of elements in each set corresponds to the number of non-interacting partial clusters, and the numerical values represent the number of chains in each cluster. Previous studies suggest that subtransitions occur between these partially fragmented subphases~\cite{jbj1,Junghans2008,Junghans2009,Junghans2011}. However, this analysis was performed mostly on the level of visual inspection of individual system configurations. For a more quantitative approach, we have implemented a structure-detection algorithm capable of classifying configurations based on the number and size of partially formed aggregates. This allows us to collect separate statistical data for each subphase and to determine their relative frequency.
 %
 \begin{figure}
 \center
 \includegraphics[width = 0.7\textwidth]{chapter7Figs/configurations.eps}
-\caption{\label{fig:Fig_3} Sample configurations of
-intermediate subphases found at the aggregation temperature in a system
-consisting of four chains with five monomers each. Due to entropic
-suppression, the $\{2,2\}$ subphase has an unexpectedly small canonical
-probability 
-$p_{\{2,2\}}(\beta_{\mathrm{agg}}) < 0.007$, and is the first example of a
-\textit{missing} (or entropically strongly suppressed) subphase in the
-aggregation process of the multi-chain system.}
+\vspace{3mm}
+\caption{\label{fig:agg_structures} Sample configurations of intermediate subphases found at the aggregation temperature in a system consisting of four chains with five monomers each. Due to entropic suppression, the $\{2,2\}$ subphase has an unexpectedly small canonical probability $p_{\{2,2\}}(\beta_{\mathrm{agg}}) < 0.007$, and is the first example of a \textit{missing} (or entropically strongly suppressed) subphase in the aggregation process of the multi-chain system.}
 \end{figure}
 %
-The total density of states of a system in the transition region can be
-expressed as the sum of contributions from individual subphases
+
+In the region of the aggregation transition, the total density of states of a system can be expressed as the sum of contributions from individual subphases
 %
 \begin{equation}
-g(E) = \sum_{i} g_{i}(E).
+g(E) = \sum_{i} g_{i}(E),
 \label{eq:densOfStates}
 \end{equation}
 %
-The probability of finding a system in the $i$-th subphase at a fixed
-energy $E$ can then be written as
+The probability of finding a system in the $i$-th subphase at a fixed energy $E$ can then be written as
 %
 \begin{equation}
 p_{i}(E) = \frac{g_{i}(E)}{g(E)}.
 \label{eq:multProb}
 \end{equation}
 %
-The logarithm of the density of states, the microcanonical entropy $S(E)$,
-cannot be expressed as a sum of individual subphase entropies. Instead
+
+\newpage
+\noindent
+%
+The logarithm of the density of states, the microcanonical entropy $S(E)$, cannot be expressed as a sum of individual subphase entropies. Instead
 %
 \begin{equation}
 S(E) = k_{\mathrm{B}}\mathrm{ln}\sum_{i}e^{S_{i}(E)/k_{\mathrm{B}}},
 \label{eq:micEntropy}
 \end{equation}
 %
-where $S_{i}(E) = k_{\mathrm{B}}\mathrm{ln}\, g_{i}(E)$.
+where 
+%
+\begin{equation}
+S_{i}(E) = k_{\mathrm{B}}\mathrm{ln}\, g_{i}(E).
+\end{equation}
+%
+
+%
+In Fig.~\ref{fig:agg_entropies}, the microcanonical entropy $S(E)$~(solid) and the individual subphase entropy curves (dashed) are shown for systems of $M = 2$ and $M = 3$ chains. For $M=2$, aggregation is a single-step transition between the fragmented and the aggregate phase. When the aggregate is dissociated into two weakly interacting chains, the system gains an amount of entropy approximately equal to the translational entropy of a single chain $S_{\mathrm{trans}} \sim \mathrm{ln}\,V$, where $V$ is the volume of the simulation sphere. This increase in entropy is apparent from the vertical separation between $S_{\mathrm{agg}}$ and $S_{\mathrm{frag}}$. The changes in conformational entropy are negligible in comparison to the translational entropy and are not relevant to our discussion.  When $M = 3$, in addition to the aggregate and fragmented phases, a single subphase $\{2,1\}$ can be formed. As a result, aggregation becomes a two-step process, each decreasing the entropy by an amount $\sim S_{\mathrm{trans}}$. We note that the entropy curves of the individual subphases are strictly concave. It is the vertical displacement between the curves, due to changes in translational entropy, that is ultimately responsible for the origin  of the convex intruder in the microcanonical entropy $S(E)$ and consequently for the back-bending feature in $\beta(E)$, signaling the first-order character of the aggregation transition. 
+%
 %
 \begin{figure}
 \center
-\includegraphics[width = 0.7\textwidth]{chapter7Figs/entropyCombined.eps}
-\caption{\label{fig:Fig_4} Microcanonical entropy per
-monomer $S(E)$ (solid)
-and the individual subphase entropies (dotted) for systems with 
-$M = 2,3$ polymer chains. The double-tangent $\Gamma (E)$
-represents the Gibbs hull, the slope of which provides an estimate
-for the inverse transition temperature $\beta_{\mathrm{agg}}$.}
+\includegraphics[width = 0.70\textwidth]{chapter7Figs/entropyCombined.eps}
+\vspace{3mm}
+\caption{\label{fig:agg_entropies} Microcanonical entropy per monomer $S(E)$ (solid) and the individual subphase entropies (dotted) for systems with $M = 2,3$ polymer chains. The double-tangent $\Gamma (E)$ represents the Gibbs hull, the slope of which provides an estimate for the inverse transition temperature $\beta_{\mathrm{agg}}$.}
 \end{figure}
 %
-In Fig.~\ref{fig:Fig_4}, the microcanonical entropy $S(E)$~(solid) and
-the individual subphase entropy curves (dashed) are shown
-for systems of $M = 2$ and $M = 3$ chains. For $M=2$, aggregation 
-is a single-step transition between the fragmented and the aggregate 
-phase. When the aggregate is dissociated into two weakly 
-interacting chains, the system gains an amount of entropy approximately
-equal to the translational entropy of a single chain 
-$S_{\mathrm{trans}} \sim \mathrm{ln}\,V$, where $V$ is the 
-volume of the simulation sphere. This increase in entropy is apparent 
-from the vertical separation between $S_{\mathrm{agg}}$ 
-and $S_{\mathrm{frag}}$. The changes in conformational entropy
-are negligible in comparison to the translational entropy and will
-not be discussed here.  When $M = 3$, in addition to the aggregate and 
-fragmented phases, a single subphase $\{2,1\}$ can be formed. As a result, 
-aggregation becomes a two-step process, each decreasing the entropy
-by an amount $\sim S_{\mathrm{trans}}$. We note that the entropy
-curves of the individual subphases 
-are strictly concave. It is the vertical displacement between the curves,
-due to changes in translational entropy, that is ultimately responsible for
-the origin 
-of the convex intruder in the microcanonical entropy $S(E)$ and
-consequently for the back-bending feature in $\beta(E)$, signaling the
-first-order character of the aggregation transition. 
 
-Differentiating Eq.~\eqref{eq:micEntropy} with respect to energy gives
-a simple expression for the microcanonical inverse temperature $\beta(E)$ 
-in terms of the inverse temperatures of the individual subphases:
-%
-\begin{equation}
-\beta(E) = \frac{\sum_{i}\beta_{i}e^{S_{i}(E)/k_{\mathrm{B}}}}{
-\sum_{i}e^{S_{i}(E)/k_{\mathrm{B}}}}
-= \sum_{i} p_{i}(E)\beta_{i}(E).
-\end{equation}
-%
-Hence in the transition region, $\beta(E)$ can be interpreted as the 
-weighted sum of the inverse subphase temperatures with respect
-to the multicanonical probabilities from Eq.~\eqref{eq:multProb}.
-At a fixed energy $E$, the system can be found in one of the distinct
-subphases with a respective inverse temperature $\beta_{i}(E)$. 
-In general, $\beta_{i}(E) \neq \beta(E)$. However setting the energy
-derivative of Eq.~\eqref{eq:multProb} to zero, we find that
-$\beta_{i}(E) = \beta(E)$ precisely when the probability of a given
-subphase 
-$p_{i}(E)$ attains its maximum value. The oscillations in $\beta(E)$ 
-arise from the changes in the relative weights $p_{i}(E)$ in
-the back-bending region.
-
-In Fig.~\ref{fig:Fig_4}, we also show the double-tangent (Gibbs hull)
-$\Gamma(E)$. Its slope is the appropriate quantity for 
-the estimation of the aggregation transition temperature 
-$\beta_{\mathrm{agg}}$. In Table~\ref{tab:Tab_1}, $\beta_{\mathrm{agg}}$
-is listed for
-system sizes of up to $M = 20$ chains. In single-step first-order
-transitions, 
-the slope of $\Gamma(E)$ coincides with the inverse temperature obtained
-by Maxwell construction. However, in composite multi-step 
-transitions, the location of the Maxwell construction becomes
-ambiguous due to multiple oscillations of $\beta(E)$. 
+\newpage
 %
 \begin{table}
-\caption{\label{tab:Tab_1}%
-Inverse aggregation temperature ($\beta_{\mathrm{agg}}$), energy per
-monomer in the aggregate phase ($e_{\mathrm{agg}}$), energy per monomer in
-the fragmented phase ($e_{\mathrm{frag}}$), and the latent heat per monomer
-($\Delta q$). The uncertainty for all listed quantities is $\pm 0.5$ in
-the last decimal.}
+\caption{\label{tab:agg_Tab_1}%
+Inverse aggregation temperature ($\beta_{\mathrm{agg}}$), energy per monomer in the aggregate phase ($e_{\mathrm{agg}}$), energy per monomer in the fragmented phase ($e_{\mathrm{frag}}$), and the latent heat per monomer ($\Delta q$). The uncertainty for all listed quantities is $\pm 0.5$ in the last decimal.}
 \begin{tabular*}{\hsize}{@{\extracolsep{\fill}}ccccc@{}}
 \hline
 \hline
@@ -1977,13 +1643,62 @@ $20 \times 5$  &  1.35 &  -2.80 & -0.85 & 1.95\\
 \end{tabular*}
 \end{table}
 %
+
+%
+The differentiation of Eq.~\eqref{eq:micEntropy} with respect to energy gives a simple expression for the microcanonical inverse temperature $\beta(E)$ in terms of the inverse temperatures of the individual subphases:
+%
+\begin{equation}
+\beta(E) = \frac{\sum_{i}\beta_{i}e^{S_{i}(E)/k_{\mathrm{B}}}}{
+\sum_{i}e^{S_{i}(E)/k_{\mathrm{B}}}}
+= \sum_{i} p_{i}(E)\beta_{i}(E).
+\end{equation}
+%
+Hence in the transition region, $\beta(E)$ can be interpreted as the weighted sum of the inverse subphase temperatures with respect to the multicanonical probabilities from Eq.~\eqref{eq:multProb}. At a fixed energy $E$, the system can be found in one of the distinct subphases with a respective inverse temperature $\beta_{i}(E)$. In general, $\beta_{i}(E) \neq \beta(E)$. However setting the energy derivative of Eq.~\eqref{eq:multProb} to zero, we find that $\beta_{i}(E) = \beta(E)$ precisely when the probability of a given subphase $p_{i}(E)$ attains its maximum value. The oscillations in $\beta(E)$ arise from the changes in the relative weights $p_{i}(E)$ in the back-bending region.
+%
+
+\newpage
+
+%
+In Fig.~\ref{fig:agg_entropies}, we also show the double-tangent (Gibbs hull) $\Gamma(E)$. The slope of $\Gamma(E)$ is the appropriate quantity for estimating the aggregation transition temperatures. In single-step first-order transitions, the slope of $\Gamma(E)$ coincides with the inverse temperature obtained by Maxwell construction. However, in composite multi-step  transitions, the location of the Maxwell construction becomes ambiguous due to multiple oscillations of $\beta(E)$. Estimated aggregation temperatures for system sizes of up to $M=20$ are listed in Table~\ref{tab:agg_Tab_1}.
+%
+
+%%%%%%%%% Missing Subphases %%%%%%%%%%%%%
+\subsection{Entropically suppressed subphases}
+%
+In the following, we discuss the results of the analysis of canonical energy histograms $h(E;\beta_{\mathrm{agg}})$, shown alongside the microcanonical quantities in Fig.~\ref{fig:agg_microSummary}. The histogram $h(E;\beta_{\mathrm{agg}})$, collected at the inverse aggregation temperature $\beta_{\mathrm{agg}}$, can be expressed as a sum
+of contributions from individual subphases
+%
+\begin{equation}
+h(E;\beta_{\mathrm{agg}}) = \sum_{i}h_{i}(E;\beta_{\mathrm{agg}}),
+\end{equation}  
+%
+where the canonical histograms of the subphases are related to their contributions towards the density of states via
+%
+\begin{equation}
+h_{i}(E;\beta_{\mathrm{agg}}) \propto g_{i}(E)e^{-\beta_{\mathrm{agg}}E}.
+\end{equation}
+%
+At all system sizes, the aggregate and fragmented phases have the largest canonical probability and are energetically well separated. The intermediate subphases have overlapping energy distributions and occur with lower probabilities due to entropic suppression.
+%
+
+%
+\begin{figure}
+\center
+\includegraphics[width = 0.75\textwidth, angle
+=0]{chapter7Figs/microEntropy.eps}
+\caption{\label{fig:agg_entropyMissing}% 
+Subphase entropy curves (patterned) in the aggregation transition region for a system of $M=4$ chains. The entropically suppressed \textit{missing} subphase $\{2,2\}$ is highlighted in red (solid).}
+\end{figure}
+%
+
+%
+A striking feature emerges for systems with $M > 3$ chains. Already for $M = 4$ (see Fig.~\ref{fig:agg_entropyMissing}), we notice that the subphase consisting of two clusters $\{2,2\}$ appears with unexpectedly small canonical probability $p_{\{2,2\}}(\beta_{\mathrm{agg}}) < 0.007$. That only certain subphases contribute significantly towards the canonical energy histograms, becomes even more apparent for larger systems. In Table~\ref{tab:agg_Tab_2}, we list the theoretical values for the number of possible subphases $(N_{\mathrm{sub}})$ alongside the number of subphases that were detected with non-negligible probability $(\hat{N}_{\mathrm{sub}})$. The total contribution of the \textit{missing} subphases towards the canonical energy histograms $h(E)$ is less then $\approx 3\%$ despite the fact that the number of the subphases grows rapidly with system size. The observed results suggest that a system of $M$ chains is most often found in a small subset of $(M-2)$ subphases, each consisting of $K$ individual chains and a cluster of $(M - K)$ chains. In fact, for $M<8$ we observe $(M-1)$ oscillations in the inverse microcanonical temperature $\beta(E)$, showing that the aggregation transition consists of a sequence of $(M-1)$ distinct subtransitions, each corresponding to a single chain breaking off the main aggregate. However in larger systems, some of the subtransitions overlap in energy and cannot be associated with individual oscillations of $\beta(E)$.
+%
+
+%
 \begin{table}
-\caption{\label{tab:Tab_2}%
-Theoretical number of subphases $(N_{\mathrm{sub}})$; not including the
-fully aggregated and fragmented phases, number of significantly
-represented subphases $(\hat{N}_{\mathrm{sub}})$, and the total contribution
-of the ``missing'' subphases towards the canonical distribution $h(E)$ at the
-inverse transition temperature $\beta_{\mathrm{agg}}$.}
+\caption{\label{tab:agg_Tab_2}%
+Theoretical number of subphases $(N_{\mathrm{sub}})$; not including the fully aggregated and fragmented phases, number of significantly represented subphases $(\hat{N}_{\mathrm{sub}})$, and the total contribution of the ``missing'' subphases towards the canonical distribution $h(E)$ at the inverse transition temperature $\beta_{\mathrm{agg}}$.}
 \begin{tabular*}{\hsize}{@{\extracolsep{\fill}}cccc@{}}
 \hline
 \hline
@@ -2000,190 +1715,70 @@ $20 \times 5$	&	625 	& 	18	&  $< 0.028$\\
 \end{tabular*}
 \end{table}
 %
-%%%%%%%%% Missing Subphases %%%%%%%%%%%%%
-\subsection{Entropically suppressed subphases}
-%
-In the following, we discuss the results of the analysis of canonical 
-energy histograms $h(E;\beta_{\mathrm{agg}})$, shown alongside 
-the microcanonical quantities in Fig.~\ref{fig:Fig_2}. The histogram 
-$h(E;\beta_{\mathrm{agg}})$, collected at the inverse aggregation
-temperature $\beta_{\mathrm{agg}}$, can be expressed as a sum
-of contributions from individual subphases
-%
-\begin{equation}
-h(E;\beta_{\mathrm{agg}}) = \sum_{i}h_{i}(E;\beta_{\mathrm{agg}}),
-\end{equation}  
-%
-where the canonical histograms of the subphases are
-related to their contributions towards the density of states via
-\begin{equation}
-h_{i}(E;\beta_{\mathrm{agg}}) \propto g_{i}(E)e^{-\beta_{\mathrm{agg}}E}.
-\end{equation}
-%
-At all system sizes, the aggregate and fragmented phases have the 
-largest canonical probability and are energetically well separated.
-The intermediate subphases have overlapping energy distributions
-and occur with lower probabilities due to entropic suppression.
 
-A striking feature emerges for systems with $M > 3$ chains.
-Already for $M = 4$ (see Fig.~\ref{fig:Fig_5}), we notice that the
-subphase consisting of 
-two clusters $\{2,2\}$ appears with unexpectedly small canonical
-probability $p_{\{2,2\}}(\beta_{\mathrm{agg}}) < 0.007$.
-That only certain subphases contribute significantly 
-towards the canonical energy histograms, becomes even more apparent
-for larger systems. In Table~\ref{tab:Tab_2}, we list the theoretical
-values for the number of possible subphases $(N_{\mathrm{sub}})$
-alongside the number of subphases that were detected 
-with non-negligible probability $(\hat{N}_{\mathrm{sub}})$.
-The total contribution of the \textit{missing} subphases towards the
-canonical
-energy histograms $h(E)$ is less then $\approx 3\%$ despite 
-the fact that the number of the subphases grows rapidly with system size.
-The observed results suggest that a system of $M$ chains 
-is most often found in a small subset of $(M-2)$ subphases, 
-each consisting of $K$ individual chains and a cluster of $(M - K)$ chains.
-In fact, for $M<8$ we observe $(M-1)$ oscillations in the inverse
-microcanonical temperature $\beta(E)$, showing that the aggregation
-transition consists of a sequence of $(M-1)$ distinct subtransitions,
-each corresponding to a single chain breaking off the main aggregate. 
-However in larger systems, some of the subtransitions overlap
-in energy and cannot be associated with individual oscillations of 
-$\beta(E)$.
+\newpage
 %
-\begin{figure}
-\center
-\includegraphics[width = 0.7\textwidth]{chapter7Figs/microEntropy.eps}
-\caption{\label{fig:Fig_5} Subphase entropy curves (patterned) in the aggregation
-transition region for a system of $M=4$ polymer chains. The entropically suppressed 
-\textit{missing} subphase $\{2,2\}$ is highlighted in red (solid).}
-\end{figure}
+In order to better understand the origins of the \textit{missing} subphases, let us consider the effects of energy and translational entropy on the relative positions of individual subphase entropy curves $S_{i}(E)$. A reduction in the number of intra-chain interactions leads to the increase in energy, and as a result, subphases with a higher degree of fragmentation have their entropy curves shifted to higher energies. The number of independent fragments in a subphase determines its translational entropy and largely the vertical position of its entropy curve. 
 %
-In order to better understand the reason behind the \textit{missing}
-subphases,
-we first consider the effects of energy and translational entropy 
-on the relative positions of subphase entropy curves $S_{i}(E)$. 
-A reduction in the number of intra-chain interactions leads to the increase
-in energy, and as a result, subphases with a higher degree of 
-fragmentation have their entropy curves shifted to higher energies. 
-The number of independent fragments in a subphase determines its
-translational entropy and largely the vertical position of its entropy
-curve. 
 
-Closer look at Eq.~\eqref{eq:micEntropy} 
-reveals that only those subphases whose entropy curves 
-are closest to the total entropy $S(E)$, contribute significantly. 
-Therefore an increase in energy of a subphase must be 
-compensated by a sufficient increase in its translational entropy.
-Not surprisingly, the $(M-2)$ most frequent subphases 
-consist of $K$ individual chains and a single cluster of $(M - K)$ chains,
-maximizing translational entropy while maintaining a relatively high number
-of 
-inter-chain interactions. In Fig.~\ref{fig:Fig_5}, we provide an example
-of the first missing subphase in a system of $M=4$ chains. 
-It is clear that except for a very narrow energy interval,
-the $\{2,2\}$ subphase is depleted by the lower-energy $\{3,1\}$ 
-and the higher-entropy $\{2,1,1\}$ subphases (see Fig.~\ref{fig:Fig_3}). As
-the system size
-increases, the number of \textit{missing} subphases increases
-rapidly, while the number of subphases with substantial canonical 
-probabilities remains linearly proportional to~$M$. 
 %
+Closer look at Eq.~\eqref{eq:micEntropy} reveals that only those subphases whose entropy curves are closest to the total entropy $S(E)$, contribute significantly. Therefore an increase in energy of a dominant subphase must be compensated by a sufficient increase in its translational entropy. Not surprisingly, the $(M-2)$ most significantly represented subphases consist of $K$ individual chains and a single cluster of $(M - K)$ chains, and arrangement which maximizes the translational entropy while maintaining a relatively high number of inter-chain interactions. 
+\newpage
+\noindent
+In Fig.~\ref{fig:agg_entropyMissing}, we provide an example of the first missing subphase in a system of $M=4$ chains. It is clear that except for a very narrow energy interval, the $\{2,2\}$ subphase is depleted by the lower-energy $\{3,1\}$ and the higher-entropy $\{2,1,1\}$ subphases (see Fig.~\ref{fig:agg_structures}). As the system size increases, the number of \textit{missing} subphases increases rapidly, while the number of subphases with substantial canonical probabilities remains linearly proportional to~$M$. 
+%
+
 %%%%%%%%% Scaling Properties %%%%%%%%%%%%%
 \subsection{Scaling properties}
 %
-\begin{figure}
-\center
-\includegraphics[width = 0.7\textwidth]{chapter7Figs/scalingCombined.eps}
-\caption{\label{fig:Fig_6} Scaling behavior of the aggregation transition temperature
-$T_{\mathrm{agg}}$ and the latent heat per monomer $\Delta q$, with respect
-to $M^{-1/3}$ where $M$ is the number of polymer chains. The latent heat
-increases with system size, providing further evidence that the transition
-remains of 
-first order even for large $M$. }
-\end{figure}
-%
-It is also interesting to discuss the dependence of the aggregation
-temperature $ T_{\mathrm{agg}} = \beta_{\mathrm{agg}}^{-1}$, and the
-associated latent heat per monomer
-$\Delta q = e_{\mathrm{frag}} - e_{\mathrm{agg}}$, on the system size $M$. 
-Previous studies have addressed in detail the effects of system size
-and the particle density $\rho$ on the transition
-temperature~\cite{Zieren2014,Zieren2015}.
-Here we keep the monomer density constant at $\rho = 10^{-3}$ and consider
-the scaling properties of $T_{\mathrm{agg}}$ and $\Delta q$ only to obtain
-further
-evidence that the aggregation transition
-remains
-first-order-like with increasing system size. In Table~\ref{tab:Tab_1}, we
-have listed the values of $\beta_{\mathrm{agg}}$ 
-and $\Delta q$ for system sizes of up to $M = 20$ chains. 
-Assuming that the finite-size corrections to the aggregation transition
-temperature
-are mainly due to volume effects, we start with the ansatz
+It is also interesting to discuss the dependence of the aggregation temperature $ T_{\mathrm{agg}} = \beta_{\mathrm{agg}}^{-1}$, and the associated latent heat per monomer $\Delta q = e_{\mathrm{frag}} - e_{\mathrm{agg}}$, on the system size $M$. Previous studies have addressed in detail the effects of system size and the particle density $\rho$ on the transition temperature~\cite{Zieren2014,Zieren2015}. Here we keep the monomer density constant at $\rho = 10^{-3}$ and consider the scaling properties of $T_{\mathrm{agg}}$ and $\Delta q$ only to obtain further evidence that the aggregation transition remains first-order-like with increasing system size. In Table~\ref{tab:agg_Tab_1}, we have listed the values of $\beta_{\mathrm{agg}}$ and $\Delta q$ for system sizes of up to $M = 20$ chains. Assuming that the finite-size corrections to the aggregation transition temperature are mainly due to volume effects, we start with the ansatz
 %
 \begin{equation}
 T_{\mathrm{agg}} \propto \alpha_{0} + \alpha_{1}M^{-1/3}
 +\mathcal{O}(M^{-2/3}).
 \end{equation}
 %
-Due to the difference in the number of nearest-neighbor interactions
-between 
-surface and bulk monomers, we expect the specific heat $\Delta q$ to depend
-not only on the bulk volume occupied by the system, but also on its
-surface. Hence,
+Due to the difference in the number of nearest-neighbor interactions between  surface and bulk monomers, we expect the specific heat $\Delta q$ to depend not only on the bulk volume occupied by the system, but also on its surface. Hence,
 %
 \begin{equation}
 \Delta q \propto \delta_{0} + \delta_{1}M^{-1/3} + \delta_{1}M^{-2/3} + 
 \mathcal{O}(M^{-1}).
 \end{equation}
 %
-Data fits of the values from Table~\ref{tab:Tab_1} are shown in
-Fig.~\ref{fig:Fig_6}. We observe
-that the transition temperature is reduced for small system sizes
-as finite-size effects become more prominent. For very large system sizes,
-it converges to a fixed
-value ($T_\mathrm{agg}^{M\to \infty}\approx 0.95$). The latent heat per
-monomer approaches the estimated value $\Delta q^{M\to \infty}\approx 2.56$
-in the thermodynamic limit, providing further evidence that the aggregation
-transition
-is a first-order phase-separation process.
+
 %
+\begin{figure}
+\center
+\includegraphics[width = 0.7\textwidth]{chapter7Figs/scalingCombined.eps}
+\caption{\label{fig:agg_scaling}%
+Scaling behavior of the aggregation transition temperature $T_{\mathrm{agg}}$ and the latent heat per monomer $\Delta q$, with respect to $M^{-1/3}$ where $M$ is the number of polymer chains. The latent heat increases with system size, providing further evidence that the transition remains of first order even for large $M$. }
+\end{figure}
+%
+\newpage
+
+%
+Data fits of the values from Table~\ref{tab:agg_Tab_1} are shown in Fig.~\ref{fig:agg_scaling}. We observe that the transition temperature is reduced for small system sizes as finite-size effects become more prominent. For very large system sizes, it converges to a fixed value ($T_\mathrm{agg}^{M\to \infty}\approx 0.95$). The latent heat per monomer approaches the estimated value $\Delta q_{M\to \infty}\approx 2.56$ in the thermodynamic limit, providing further evidence that the aggregation transition is a first-order phase-separation process.
+%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% SUMMARY %%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section{Summary}
 \label{sec:sum}
 %
-In this study, we have investigated the properties of the aggregation
-transition for systems consisting of up to $M = 20$ short flexible elastic
-homopolymer chains. Utilizing the powerful tools of microcanonical
-inflection point analysis, we have confirmed that the aggregation
-transition is a sequential process consisting of $M-1$ subtransitions
-between intermediate, partially fragmented structural phases. Each
-oscillation in the microcanonical inverse temperature curve indicates a
-single transition between two adjacent subphases. We have established the
-relationship between the microcanonical density of states $g(E)$ and the
-densities of states $g_{i}(E)$ corresponding to the individual subphases.
-From this, we have further derived similar expressions for the
-microcanonical entropy $S(E)$ and its energy derivative, the microcanonical
-inverse temperature $\beta(E)$. We have used those relationships to
-motivate the origins of the convex intruder in $S(E)$ and the prominent
-back-bending region in $\beta(E)$, both of which are indicators of a
-first-order process.
+In this chapter, we have investigated the properties of the aggregation transition for systems consisting of up to $M = 20$ short flexible elastic homopolymer chains. Utilizing the tools of the microcanonical inflection point analysis, we have found that the aggregation transition is a sequential process consisting of $M-1$ subtransitions between intermediate, partially fragmented structural phases. Each oscillation in the microcanonical inverse temperature curve indicates a transition between two adjacent subphases. We have established the relationship between the microcanonical density of states $g(E)$ and the densities of states $g_{i}(E)$ corresponding to the individual subphases. From this, we have further derived similar expressions for the microcanonical entropy $S(E)$ and its energy derivative, the microcanonical inverse temperature $\beta(E)$. We have used those relationships to motivate the origins of the convex intruder in $S(E)$ and the prominent back-bending region in $\beta(E)$, both of which are indicators of a first-order process.
+%
 
-Canonical energy histograms $h_{i}(\beta;E)$, collected at the transition
-temperature $\beta_{\mathrm{agg}}$ for each individual subphase, confirm
-that certain subphases contribute only negligibly to the total canonical
-distribution. The origin of these \textit{missing} subphases can be
-explained on the basis of the effects of translational entropy on the 
-relative positions of the subphase entropy curves $S_{i}(E)$. The results
-of this study show that with increasing system size, the number of possible
-subphases increases rapidly, whereas their relevant subset increases only
-linearly. 
+%
+Canonical energy histograms $h_{i}(\beta;E)$, collected at the transition temperature $\beta_{\mathrm{agg}}$ for each individual subphase, confirm that certain subphases contribute only negligibly to the total canonical distribution. The origin of these \textit{missing} subphases can be explained on the basis of the effects of translational entropy on the relative positions of the subphase entropy curves $S_{i}(E)$. The results of this study show that with increasing system size, the number of possible subphases increases rapidly, whereas their relevant subset increases only linearly. Finally, we have discussed the scaling properties of $\beta_{\mathrm{agg}}$ and the latent heat per monomer $\Delta q$. The increasing values of $\Delta q$ with system size provide further evidence that the aggregation transition remains a first-order process even as $M$ tends towards the thermodynamic limit. 
 
-Finally, we have discussed the scaling properties of 
-$\beta_{\mathrm{agg}}$ and the latent heat per monomer $\Delta q$. The
-increasing values of $\Delta q$ with system size provide further evidence
-that the aggregation transition remains a first-order process even as $M$
-tends towards the thermodynamic limit. 
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% 	SUMMARY	AND OUTLOOK	               %%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{Summary and Outlook}
 

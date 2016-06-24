@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  21 JUN 2016 16:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  24 JUN 2016 16:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -194,27 +194,6 @@ Package caption3 Info: TeX engine: e-TeX on input line 67.
 )
 (./koci_tomas_201607_phd.aux
 
-LaTeX Warning: Label `fig:Fig_1' multiply defined.
-
-
-LaTeX Warning: Label `sec:res' multiply defined.
-
-
-LaTeX Warning: Label `fig:Fig_2' multiply defined.
-
-
-LaTeX Warning: Label `fig:Fig_3' multiply defined.
-
-
-LaTeX Warning: Label `fig:Fig_4' multiply defined.
-
-
-LaTeX Warning: Label `fig:Fig_5' multiply defined.
-
-
-LaTeX Warning: Label `fig:Fig_6' multiply defined.
-
-
 LaTeX Warning: Label `sec:sum' multiply defined.
 
 )
@@ -339,456 +318,457 @@ it/12 U[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 r[]\OT1/cmr/m/n/12 ) = \OML/cmm/m/it
 Chapter 1.
 [1
 
-]
+] [2]
 Chapter 2.
-[2
+[3
 
-] [3] [4] [5] [6]
+] [4] [5] [6] [7]
 Package epstopdf Info: Source file: <chapter2Figs/MicroAnalysisExample.eps>
 (epstopdf)                    date: 2016-06-03 18:13:05
 (epstopdf)                    size: 179402 bytes
 (epstopdf)             Output file: <chapter2Figs/MicroAnalysisExample-eps-conv
 erted-to.pdf>
-(epstopdf)                    date: 2016-06-17 10:53:57
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 93399 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter2Figs/MicroAnalysis
 Example-eps-converted-to.pdf chapter2Figs/MicroAnalysisExample.eps>
-(epstopdf)             \includegraphics on input line 213.
+(epstopdf)             \includegraphics on input line 234.
 Package epstopdf Info: Output file is already uptodate.
 
-<chapter2Figs/MicroAnalysisExample-eps-converted-to.pdf, id=93, 257.96375pt x 1
+<chapter2Figs/MicroAnalysisExample-eps-converted-to.pdf, id=96, 257.96375pt x 1
 90.7125pt>
 File: chapter2Figs/MicroAnalysisExample-eps-converted-to.pdf Graphic file (type
  pdf)
  <use chapter2Figs/MicroAnalysisExample-eps-converted-to.pdf>
 Package pdftex.def Info: chapter2Figs/MicroAnalysisExample-eps-converted-to.pdf
- used on input line 213.
+ used on input line 234.
 (pdftex.def)             Requested size: 328.82707pt x 243.12465pt.
 
-[7 <./chapter2Figs/MicroAnalysisExample-eps-converted-to.pdf>]
+[8 <./chapter2Figs/MicroAnalysisExample-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <chapter2Figs/maxwellConstruct.eps>
-(epstopdf)                    date: 2016-06-15 11:58:32
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 201820 bytes
 (epstopdf)             Output file: <chapter2Figs/maxwellConstruct-eps-converte
 d-to.pdf>
-(epstopdf)                    date: 2016-06-17 10:53:58
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 126663 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter2Figs/maxwellConstr
 uct-eps-converted-to.pdf chapter2Figs/maxwellConstruct.eps>
-(epstopdf)             \includegraphics on input line 225.
+(epstopdf)             \includegraphics on input line 246.
 Package epstopdf Info: Output file is already uptodate.
 
-<chapter2Figs/maxwellConstruct-eps-converted-to.pdf, id=119, 320.19624pt x 237.
+<chapter2Figs/maxwellConstruct-eps-converted-to.pdf, id=123, 320.19624pt x 237.
 88875pt>
 File: chapter2Figs/maxwellConstruct-eps-converted-to.pdf Graphic file (type pdf
 )
  <use chapter2Figs/maxwellConstruct-eps-converted-to.pdf>
 Package pdftex.def Info: chapter2Figs/maxwellConstruct-eps-converted-to.pdf use
-d on input line 225.
+d on input line 246.
 (pdftex.def)             Requested size: 328.82707pt x 244.30579pt.
- [8 <./chapter2Figs/maxwellConstruct-eps-converted-to.pdf>] [9] [10] [11] [12]
+ [9 <./chapter2Figs/maxwellConstruct-eps-converted-to.pdf>] [10] [11] [12] [13]
 Package epstopdf Info: Source file: <chapter2Figs/CanonicalFirstOrder.eps>
-(epstopdf)                    date: 2016-06-15 11:58:32
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 19272 bytes
 (epstopdf)             Output file: <chapter2Figs/CanonicalFirstOrder-eps-conve
 rted-to.pdf>
-(epstopdf)                    date: 2016-06-17 10:53:59
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 8348 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter2Figs/CanonicalFirs
 tOrder-eps-converted-to.pdf chapter2Figs/CanonicalFirstOrder.eps>
-(epstopdf)             \includegraphics on input line 305.
+(epstopdf)             \includegraphics on input line 328.
 Package epstopdf Info: Output file is already uptodate.
 
-<chapter2Figs/CanonicalFirstOrder-eps-converted-to.pdf, id=142, 615.29875pt x 2
+<chapter2Figs/CanonicalFirstOrder-eps-converted-to.pdf, id=145, 615.29875pt x 2
 31.86626pt>
 File: chapter2Figs/CanonicalFirstOrder-eps-converted-to.pdf Graphic file (type 
 pdf)
  <use chapter2Figs/CanonicalFirstOrder-eps-converted-to.pdf>
 Package pdftex.def Info: chapter2Figs/CanonicalFirstOrder-eps-converted-to.pdf 
-used on input line 305.
+used on input line 328.
 (pdftex.def)             Requested size: 375.80544pt x 141.61864pt.
 
-[13 <./chapter2Figs/CanonicalFirstOrder-eps-converted-to.pdf>]
+[14 <./chapter2Figs/CanonicalFirstOrder-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <chapter2Figs/CanonicalSecondOrder.eps>
-(epstopdf)                    date: 2016-06-15 11:58:32
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 16694 bytes
 (epstopdf)             Output file: <chapter2Figs/CanonicalSecondOrder-eps-conv
 erted-to.pdf>
-(epstopdf)                    date: 2016-06-17 10:53:59
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 7998 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter2Figs/CanonicalSeco
 ndOrder-eps-converted-to.pdf chapter2Figs/CanonicalSecondOrder.eps>
-(epstopdf)             \includegraphics on input line 320.
+(epstopdf)             \includegraphics on input line 343.
 Package epstopdf Info: Output file is already uptodate.
 
-<chapter2Figs/CanonicalSecondOrder-eps-converted-to.pdf, id=148, 580.1675pt x 4
+<chapter2Figs/CanonicalSecondOrder-eps-converted-to.pdf, id=152, 580.1675pt x 4
 27.5975pt>
 File: chapter2Figs/CanonicalSecondOrder-eps-converted-to.pdf Graphic file (type
  pdf)
  <use chapter2Figs/CanonicalSecondOrder-eps-converted-to.pdf>
 Package pdftex.def Info: chapter2Figs/CanonicalSecondOrder-eps-converted-to.pdf
- used on input line 320.
+ used on input line 343.
 (pdftex.def)             Requested size: 352.31625pt x 259.66618pt.
 
-[14 <./chapter2Figs/CanonicalSecondOrder-eps-converted-to.pdf>]
+[15 <./chapter2Figs/CanonicalSecondOrder-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <chapter2Figs/CanonicalAnalysisSample.eps>
-(epstopdf)                    date: 2016-06-15 11:58:32
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 20122 bytes
 (epstopdf)             Output file: <chapter2Figs/CanonicalAnalysisSample-eps-c
 onverted-to.pdf>
-(epstopdf)                    date: 2016-06-17 10:53:59
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 8466 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter2Figs/CanonicalAnal
 ysisSample-eps-converted-to.pdf chapter2Figs/CanonicalAnalysisSample.eps>
-(epstopdf)             \includegraphics on input line 335.
+(epstopdf)             \includegraphics on input line 358.
 Package epstopdf Info: Output file is already uptodate.
 
-<chapter2Figs/CanonicalAnalysisSample-eps-converted-to.pdf, id=159, 623.32875pt
+<chapter2Figs/CanonicalAnalysisSample-eps-converted-to.pdf, id=162, 623.32875pt
  x 302.12875pt>
 File: chapter2Figs/CanonicalAnalysisSample-eps-converted-to.pdf Graphic file (t
 ype pdf)
 
 <use chapter2Figs/CanonicalAnalysisSample-eps-converted-to.pdf>
 Package pdftex.def Info: chapter2Figs/CanonicalAnalysisSample-eps-converted-to.
-pdf used on input line 335.
+pdf used on input line 358.
 (pdftex.def)             Requested size: 375.80544pt x 182.15456pt.
- [15] [16 <./chapter2Figs/CanonicalAnalysisSample-eps-converted-to.pdf>] [17] [
-18]
+ [16] [17 <./chapter2Figs/CanonicalAnalysisSample-eps-converted-to.pdf>] [18] [
+19]
 Package epstopdf Info: Source file: <chapter2Figs/N13Energy.eps>
 (epstopdf)                    date: 2016-06-03 18:13:05
 (epstopdf)                    size: 112697 bytes
 (epstopdf)             Output file: <chapter2Figs/N13Energy-eps-converted-to.pd
 f>
-(epstopdf)                    date: 2016-06-17 10:54:00
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 16045 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter2Figs/N13Energy-eps
 -converted-to.pdf chapter2Figs/N13Energy.eps>
-(epstopdf)             \includegraphics on input line 399.
+(epstopdf)             \includegraphics on input line 426.
 Package epstopdf Info: Output file is already uptodate.
 
-<chapter2Figs/N13Energy-eps-converted-to.pdf, id=174, 230.8625pt x 173.64874pt>
+<chapter2Figs/N13Energy-eps-converted-to.pdf, id=177, 230.8625pt x 173.64874pt>
 File: chapter2Figs/N13Energy-eps-converted-to.pdf Graphic file (type pdf)
 <use chapter2Figs/N13Energy-eps-converted-to.pdf>
 Package pdftex.def Info: chapter2Figs/N13Energy-eps-converted-to.pdf used on in
-put line 399.
+put line 426.
 (pdftex.def)             Requested size: 230.18253pt x 173.13692pt.
 Package epstopdf Info: Source file: <chapter2Figs/N13Spec.eps>
 (epstopdf)                    date: 2016-06-03 18:13:05
 (epstopdf)                    size: 99394 bytes
 (epstopdf)             Output file: <chapter2Figs/N13Spec-eps-converted-to.pdf>
 
-(epstopdf)                    date: 2016-06-17 10:54:00
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 14344 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter2Figs/N13Spec-eps-c
 onverted-to.pdf chapter2Figs/N13Spec.eps>
-(epstopdf)             \includegraphics on input line 400.
+(epstopdf)             \includegraphics on input line 427.
 Package epstopdf Info: Output file is already uptodate.
 
-<chapter2Figs/N13Spec-eps-converted-to.pdf, id=175, 230.8625pt x 173.64874pt>
+<chapter2Figs/N13Spec-eps-converted-to.pdf, id=178, 230.8625pt x 173.64874pt>
 File: chapter2Figs/N13Spec-eps-converted-to.pdf Graphic file (type pdf)
 
 <use chapter2Figs/N13Spec-eps-converted-to.pdf>
 Package pdftex.def Info: chapter2Figs/N13Spec-eps-converted-to.pdf used on inpu
-t line 400.
+t line 427.
 (pdftex.def)             Requested size: 230.18253pt x 173.13692pt.
- [19] [20 <./chapter2Figs/N13Energy-eps-converted-to.pdf> <./chapter2Figs/N13Sp
+ [20] [21 <./chapter2Figs/N13Energy-eps-converted-to.pdf> <./chapter2Figs/N13Sp
 ec-eps-converted-to.pdf>]
-[21] [22]
+[22] [23]
 Package epstopdf Info: Source file: <chapter2Figs/N55Entropy.eps>
 (epstopdf)                    date: 2016-06-03 18:13:05
 (epstopdf)                    size: 120911 bytes
 (epstopdf)             Output file: <chapter2Figs/N55Entropy-eps-converted-to.p
 df>
-(epstopdf)                    date: 2016-06-17 10:54:00
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 30124 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter2Figs/N55Entropy-ep
 s-converted-to.pdf chapter2Figs/N55Entropy.eps>
-(epstopdf)             \includegraphics on input line 454.
+(epstopdf)             \includegraphics on input line 481.
 Package epstopdf Info: Output file is already uptodate.
 
-<chapter2Figs/N55Entropy-eps-converted-to.pdf, id=243, 261.97874pt x 196.735pt>
+<chapter2Figs/N55Entropy-eps-converted-to.pdf, id=246, 261.97874pt x 196.735pt>
 File: chapter2Figs/N55Entropy-eps-converted-to.pdf Graphic file (type pdf)
 <use chapter2Figs/N55Entropy-eps-converted-to.pdf>
 Package pdftex.def Info: chapter2Figs/N55Entropy-eps-converted-to.pdf used on i
-nput line 454.
+nput line 481.
 (pdftex.def)             Requested size: 230.18253pt x 172.86314pt.
 Package epstopdf Info: Source file: <chapter2Figs/N55Beta.eps>
 (epstopdf)                    date: 2016-06-03 18:13:05
 (epstopdf)                    size: 104283 bytes
 (epstopdf)             Output file: <chapter2Figs/N55Beta-eps-converted-to.pdf>
 
-(epstopdf)                    date: 2016-06-17 10:54:01
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 25980 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter2Figs/N55Beta-eps-c
 onverted-to.pdf chapter2Figs/N55Beta.eps>
-(epstopdf)             \includegraphics on input line 455.
+(epstopdf)             \includegraphics on input line 482.
 Package epstopdf Info: Output file is already uptodate.
 
-<chapter2Figs/N55Beta-eps-converted-to.pdf, id=244, 261.97874pt x 196.735pt>
+<chapter2Figs/N55Beta-eps-converted-to.pdf, id=247, 261.97874pt x 196.735pt>
 File: chapter2Figs/N55Beta-eps-converted-to.pdf Graphic file (type pdf)
 
 <use chapter2Figs/N55Beta-eps-converted-to.pdf>
 Package pdftex.def Info: chapter2Figs/N55Beta-eps-converted-to.pdf used on inpu
-t line 455.
+t line 482.
 (pdftex.def)             Requested size: 230.18253pt x 172.86314pt.
- [23 <./chapter2Figs/N55Entropy-eps-converted-to.pdf> <./chapter2Figs/N55Beta-e
+ [24 <./chapter2Figs/N55Entropy-eps-converted-to.pdf> <./chapter2Figs/N55Beta-e
 ps-converted-to.pdf>]
 Package epstopdf Info: Source file: <chapter2Figs/N55BetaComp.eps>
 (epstopdf)                    date: 2016-06-03 18:13:05
 (epstopdf)                    size: 124742 bytes
 (epstopdf)             Output file: <chapter2Figs/N55BetaComp-eps-converted-to.
 pdf>
-(epstopdf)                    date: 2016-06-17 10:54:01
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 22099 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter2Figs/N55BetaComp-e
 ps-converted-to.pdf chapter2Figs/N55BetaComp.eps>
-(epstopdf)             \includegraphics on input line 472.
+(epstopdf)             \includegraphics on input line 499.
 Package epstopdf Info: Output file is already uptodate.
 
-<chapter2Figs/N55BetaComp-eps-converted-to.pdf, id=293, 261.97874pt x 196.735pt
+<chapter2Figs/N55BetaComp-eps-converted-to.pdf, id=296, 261.97874pt x 196.735pt
 >
 File: chapter2Figs/N55BetaComp-eps-converted-to.pdf Graphic file (type pdf)
  <use chapter2Figs/N55BetaComp-eps-converted-to.pdf>
 Package pdftex.def Info: chapter2Figs/N55BetaComp-eps-converted-to.pdf used on 
-input line 472.
+input line 499.
 (pdftex.def)             Requested size: 328.82707pt x 246.94177pt.
- [24 <./chapter2Figs/N55BetaComp-eps-converted-to.pdf>]
+ [25 <./chapter2Figs/N55BetaComp-eps-converted-to.pdf>]
 Chapter 3.
-[25
+[26
 
-] [26] [27] [28] [29] [30]
+] [27] [28] [29] [30] [31]
 Package epstopdf Info: Source file: <chapter3Figs/mgme.eps>
 (epstopdf)                    date: 2016-06-03 18:13:05
 (epstopdf)                    size: 107578 bytes
 (epstopdf)             Output file: <chapter3Figs/mgme-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-06-17 10:54:01
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 12396 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter3Figs/mgme-eps-conv
 erted-to.pdf chapter3Figs/mgme.eps>
-(epstopdf)             \includegraphics on input line 649.
+(epstopdf)             \includegraphics on input line 679.
 Package epstopdf Info: Output file is already uptodate.
 
-<chapter3Figs/mgme-eps-converted-to.pdf, id=340, 257.96375pt x 190.7125pt>
+<chapter3Figs/mgme-eps-converted-to.pdf, id=343, 257.96375pt x 190.7125pt>
 File: chapter3Figs/mgme-eps-converted-to.pdf Graphic file (type pdf)
 
 <use chapter3Figs/mgme-eps-converted-to.pdf>
 Package pdftex.def Info: chapter3Figs/mgme-eps-converted-to.pdf used on input l
-ine 649.
+ine 679.
 (pdftex.def)             Requested size: 328.82707pt x 243.12465pt.
- [31] [32 <./chapter3Figs/mgme-eps-converted-to.pdf>]
+ [32] [33 <./chapter3Figs/mgme-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <chapter3Figs/multipleHistogramReweighting.
 eps>
-(epstopdf)                    date: 2016-06-15 11:58:32
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 66400 bytes
 (epstopdf)             Output file: <chapter3Figs/multipleHistogramReweighting-
 eps-converted-to.pdf>
-(epstopdf)                    date: 2016-06-17 10:54:02
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 24816 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter3Figs/multipleHisto
 gramReweighting-eps-converted-to.pdf chapter3Figs/multipleHistogramReweighting.
 eps>
-(epstopdf)             \includegraphics on input line 698.
+(epstopdf)             \includegraphics on input line 731.
 Package epstopdf Info: Output file is already uptodate.
 
-<chapter3Figs/multipleHistogramReweighting-eps-converted-to.pdf, id=356, 771.88
+<chapter3Figs/multipleHistogramReweighting-eps-converted-to.pdf, id=359, 771.88
 374pt x 329.23pt>
 File: chapter3Figs/multipleHistogramReweighting-eps-converted-to.pdf Graphic fi
 le (type pdf)
 
 <use chapter3Figs/multipleHistogramReweighting-eps-converted-to.pdf>
 Package pdftex.def Info: chapter3Figs/multipleHistogramReweighting-eps-converte
-d-to.pdf used on input line 698.
+d-to.pdf used on input line 731.
 (pdftex.def)             Requested size: 446.26582pt x 190.34566pt.
- [33]
-[34 <./chapter3Figs/multipleHistogramReweighting-eps-converted-to.pdf>]
-[35]
+ [34]
+[35 <./chapter3Figs/multipleHistogramReweighting-eps-converted-to.pdf>]
+[36]
 Package epstopdf Info: Source file: <chapter3Figs/bezierComparison.eps>
 (epstopdf)                    date: 2016-06-03 18:13:05
 (epstopdf)                    size: 113859 bytes
 (epstopdf)             Output file: <chapter3Figs/bezierComparison-eps-converte
 d-to.pdf>
-(epstopdf)                    date: 2016-06-17 10:54:02
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 52544 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter3Figs/bezierCompari
 son-eps-converted-to.pdf chapter3Figs/bezierComparison.eps>
-(epstopdf)             \includegraphics on input line 754.
+(epstopdf)             \includegraphics on input line 787.
 Package epstopdf Info: Output file is already uptodate.
 
-<chapter3Figs/bezierComparison-eps-converted-to.pdf, id=368, 321.2pt x 237.8887
+<chapter3Figs/bezierComparison-eps-converted-to.pdf, id=371, 321.2pt x 237.8887
 5pt>
 File: chapter3Figs/bezierComparison-eps-converted-to.pdf Graphic file (type pdf
 )
  <use chapter3Figs/bezierComparison-eps-converted-to.pdf>
 Package pdftex.def Info: chapter3Figs/bezierComparison-eps-converted-to.pdf use
-d on input line 754.
+d on input line 787.
 (pdftex.def)             Requested size: 328.82707pt x 243.5435pt.
- [36 <./chapter3Figs/bezierComparison-eps-converted-to.pdf>]
+ [37 <./chapter3Figs/bezierComparison-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <chapter3Figs/acceptanceRates.eps>
 (epstopdf)                    date: 2016-06-03 18:13:05
 (epstopdf)                    size: 118885 bytes
 (epstopdf)             Output file: <chapter3Figs/acceptanceRates-eps-converted
 -to.pdf>
-(epstopdf)                    date: 2016-06-17 10:54:02
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 20044 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter3Figs/acceptanceRat
 es-eps-converted-to.pdf chapter3Figs/acceptanceRates.eps>
-(epstopdf)             \includegraphics on input line 768.
+(epstopdf)             \includegraphics on input line 807.
 Package epstopdf Info: Output file is already uptodate.
 
-<chapter3Figs/acceptanceRates-eps-converted-to.pdf, id=392, 356.33125pt x 237.8
+<chapter3Figs/acceptanceRates-eps-converted-to.pdf, id=395, 356.33125pt x 237.8
 8875pt>
 File: chapter3Figs/acceptanceRates-eps-converted-to.pdf Graphic file (type pdf)
 
  <use chapter3Figs/acceptanceRates-eps-converted-to.pdf>
 Package pdftex.def Info: chapter3Figs/acceptanceRates-eps-converted-to.pdf used
- on input line 768.
+ on input line 807.
 (pdftex.def)             Requested size: 352.31625pt x 235.21655pt.
- [37] [38 <./chapter3Figs/acceptanceRates-eps-converted-to.pdf>]
+ [38] [39 <./chapter3Figs/acceptanceRates-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <chapter3Figs/conformationalUpdates.eps>
-(epstopdf)                    date: 2016-06-15 11:58:32
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 37985 bytes
 (epstopdf)             Output file: <chapter3Figs/conformationalUpdates-eps-con
 verted-to.pdf>
-(epstopdf)                    date: 2016-06-17 10:54:03
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 14033 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter3Figs/conformationa
 lUpdates-eps-converted-to.pdf chapter3Figs/conformationalUpdates.eps>
-(epstopdf)             \includegraphics on input line 780.
+(epstopdf)             \includegraphics on input line 819.
 Package epstopdf Info: Output file is already uptodate.
 
-<chapter3Figs/conformationalUpdates-eps-converted-to.pdf, id=448, 656.4525pt x 
+<chapter3Figs/conformationalUpdates-eps-converted-to.pdf, id=451, 656.4525pt x 
 284.06125pt>
 File: chapter3Figs/conformationalUpdates-eps-converted-to.pdf Graphic file (typ
 e pdf)
  <use chapter3Figs/conformationalUpdates-eps-converted-to.pdf>
 Package pdftex.def Info: chapter3Figs/conformationalUpdates-eps-converted-to.pd
-f used on input line 780.
+f used on input line 819.
 (pdftex.def)             Requested size: 465.06004pt x 201.24277pt.
 
-[39 <./chapter3Figs/conformationalUpdates-eps-converted-to.pdf>]
+[40 <./chapter3Figs/conformationalUpdates-eps-converted-to.pdf>]
 Chapter 4.
+[41
+
+]
 Package epstopdf Info: Source file: <chapter4Figs/coarseGraining.eps>
-(epstopdf)                    date: 2016-06-15 11:58:32
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 114275 bytes
 (epstopdf)             Output file: <chapter4Figs/coarseGraining-eps-converted-
 to.pdf>
-(epstopdf)                    date: 2016-06-17 10:54:03
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 51256 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter4Figs/coarseGrainin
 g-eps-converted-to.pdf chapter4Figs/coarseGraining.eps>
-(epstopdf)             \includegraphics on input line 804.
+(epstopdf)             \includegraphics on input line 845.
 Package epstopdf Info: Output file is already uptodate.
 
-<chapter4Figs/coarseGraining-eps-converted-to.pdf, id=454, 715.67375pt x 283.05
+<chapter4Figs/coarseGraining-eps-converted-to.pdf, id=460, 715.67375pt x 283.05
 75pt>
 File: chapter4Figs/coarseGraining-eps-converted-to.pdf Graphic file (type pdf)
  <use chapter4Figs/coarseGraining-eps-converted-to.pdf>
 Package pdftex.def Info: chapter4Figs/coarseGraining-eps-converted-to.pdf used 
-on input line 804.
+on input line 845.
 (pdftex.def)             Requested size: 474.44998pt x 187.6521pt.
 
-Overfull \hbox (4.69496pt too wide) in paragraph at lines 804--807
+Overfull \hbox (4.69496pt too wide) in paragraph at lines 845--848
  [] 
  []
 
-[40
-
-] [41 <./chapter4Figs/coarseGraining-eps-converted-to.pdf>] [42] [43]
+[42 <./chapter4Figs/coarseGraining-eps-converted-to.pdf>] [43] [44]
 Package epstopdf Info: Source file: <chapter4Figs/potentialLarge.eps>
-(epstopdf)                    date: 2016-06-15 11:58:32
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 140551 bytes
 (epstopdf)             Output file: <chapter4Figs/potentialLarge-eps-converted-
 to.pdf>
-(epstopdf)                    date: 2016-06-17 10:54:04
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 139098 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter4Figs/potentialLarg
 e-eps-converted-to.pdf chapter4Figs/potentialLarge.eps>
-(epstopdf)             \includegraphics on input line 868.
+(epstopdf)             \includegraphics on input line 913.
 Package epstopdf Info: Output file is already uptodate.
 
-<chapter4Figs/potentialLarge-eps-converted-to.pdf, id=470, 770.88pt x 319.1925p
+<chapter4Figs/potentialLarge-eps-converted-to.pdf, id=474, 770.88pt x 319.1925p
 t>
 File: chapter4Figs/potentialLarge-eps-converted-to.pdf Graphic file (type pdf)
  <use chapter4Figs/potentialLarge-eps-converted-to.pdf>
 Package pdftex.def Info: chapter4Figs/potentialLarge-eps-converted-to.pdf used 
-on input line 868.
+on input line 913.
 (pdftex.def)             Requested size: 474.44998pt x 196.45076pt.
 
-Overfull \hbox (4.69496pt too wide) in paragraph at lines 868--870
+Overfull \hbox (4.69496pt too wide) in paragraph at lines 913--915
  [] 
  []
 
 Package epstopdf Info: Source file: <chapter4Figs/polymerModel.eps>
-(epstopdf)                    date: 2016-06-15 11:58:32
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 316683 bytes
 (epstopdf)             Output file: <chapter4Figs/polymerModel-eps-converted-to
 .pdf>
-(epstopdf)                    date: 2016-06-17 10:54:04
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 194540 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter4Figs/polymerModel-
 eps-converted-to.pdf chapter4Figs/polymerModel.eps>
-(epstopdf)             \includegraphics on input line 889.
+(epstopdf)             \includegraphics on input line 934.
 Package epstopdf Info: Output file is already uptodate.
-<chapter4Figs/polymerModel-eps-converted-to.pdf, id=471, 738.76pt x 289.08pt>
+<chapter4Figs/polymerModel-eps-converted-to.pdf, id=475, 738.76pt x 289.08pt>
 File: chapter4Figs/polymerModel-eps-converted-to.pdf Graphic file (type pdf)
 
 <use chapter4Figs/polymerModel-eps-converted-to.pdf>
 Package pdftex.def Info: chapter4Figs/polymerModel-eps-converted-to.pdf used on
- input line 889.
+ input line 934.
 (pdftex.def)             Requested size: 474.44998pt x 185.65457pt.
 
-Overfull \hbox (4.69496pt too wide) in paragraph at lines 889--892
+Overfull \hbox (4.69496pt too wide) in paragraph at lines 934--937
  [] 
  []
 
-[44 <./chapter4Figs/potentialLarge-eps-converted-to.pdf>] [45 <./chapter4Figs/p
-olymerModel-eps-converted-to.pdf>] [46]
+[45 <./chapter4Figs/potentialLarge-eps-converted-to.pdf>] [46 <./chapter4Figs/p
+olymerModel-eps-converted-to.pdf>] [47]
 Package epstopdf Info: Source file: <chapter4Figs/rogFluct.eps>
 (epstopdf)                    date: 2016-06-03 18:13:25
 (epstopdf)                    size: 107182 bytes
 (epstopdf)             Output file: <chapter4Figs/rogFluct-eps-converted-to.pdf
 >
-(epstopdf)                    date: 2016-06-17 10:54:05
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 15173 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter4Figs/rogFluct-eps-
 converted-to.pdf chapter4Figs/rogFluct.eps>
-(epstopdf)             \includegraphics on input line 955.
+(epstopdf)             \includegraphics on input line 1004.
 Package epstopdf Info: Output file is already uptodate.
 
-<chapter4Figs/rogFluct-eps-converted-to.pdf, id=490, 252.945pt x 158.99399pt>
+<chapter4Figs/rogFluct-eps-converted-to.pdf, id=493, 252.945pt x 158.99399pt>
 File: chapter4Figs/rogFluct-eps-converted-to.pdf Graphic file (type pdf)
 
 <use chapter4Figs/rogFluct-eps-converted-to.pdf>
 Package pdftex.def Info: chapter4Figs/rogFluct-eps-converted-to.pdf used on inp
-ut line 955.
+ut line 1004.
 (pdftex.def)             Requested size: 305.33789pt x 191.92963pt.
- [47] [48 <./chapter4Figs/rogFluct-eps-converted-to.pdf>]
+ [48] [49 <./chapter4Figs/rogFluct-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <chapter4Figs/q6.eps>
-(epstopdf)                    date: 2016-06-15 11:58:32
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 1770689 bytes
 (epstopdf)             Output file: <chapter4Figs/q6-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-06-17 10:54:05
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 1506682 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter4Figs/q6-eps-conver
 ted-to.pdf chapter4Figs/q6.eps>
-(epstopdf)             \includegraphics on input line 1017.
+(epstopdf)             \includegraphics on input line 1066.
 Package epstopdf Info: Output file is already uptodate.
 
-<chapter4Figs/q6-eps-converted-to.pdf, id=507, 886.31125pt x 434.62375pt>
+<chapter4Figs/q6-eps-converted-to.pdf, id=510, 886.31125pt x 434.62375pt>
 File: chapter4Figs/q6-eps-converted-to.pdf Graphic file (type pdf)
 
 <use chapter4Figs/q6-eps-converted-to.pdf>
 Package pdftex.def Info: chapter4Figs/q6-eps-converted-to.pdf used on input lin
-e 1017.
+e 1066.
 (pdftex.def)             Requested size: 474.44998pt x 232.66399pt.
 
-Overfull \hbox (4.69496pt too wide) in paragraph at lines 1017--1020
+Overfull \hbox (4.69496pt too wide) in paragraph at lines 1066--1069
  [] 
  []
 
-[49 <./chapter4Figs/q6-eps-converted-to.pdf>]
+[50 <./chapter4Figs/q6-eps-converted-to.pdf>]
 Chapter 5.
-[50
+[51
 
 ]
 Package epstopdf Info: Source file: <chapter5Figs/bond_potential.eps>
@@ -796,604 +776,455 @@ Package epstopdf Info: Source file: <chapter5Figs/bond_potential.eps>
 (epstopdf)                    size: 129756 bytes
 (epstopdf)             Output file: <chapter5Figs/bond_potential-eps-converted-
 to.pdf>
-(epstopdf)                    date: 2016-06-17 10:54:06
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 16189 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter5Figs/bond_potentia
 l-eps-converted-to.pdf chapter5Figs/bond_potential.eps>
-(epstopdf)             \includegraphics on input line 1058.
+(epstopdf)             \includegraphics on input line 1111.
 Package epstopdf Info: Output file is already uptodate.
 
-<chapter5Figs/bond_potential-eps-converted-to.pdf, id=520, 278.03876pt x 190.71
+<chapter5Figs/bond_potential-eps-converted-to.pdf, id=523, 278.03876pt x 190.71
 25pt>
 File: chapter5Figs/bond_potential-eps-converted-to.pdf Graphic file (type pdf)
  <use chapter5Figs/bond_potential-eps-converted-to.pdf>
 Package pdftex.def Info: chapter5Figs/bond_potential-eps-converted-to.pdf used 
-on input line 1058.
+on input line 1111.
 (pdftex.def)             Requested size: 375.80544pt x 257.77667pt.
- [51] [52 <./chapter5Figs/bond_potential-eps-converted-to.pdf>] [53]
+ [52] [53 <./chapter5Figs/bond_potential-eps-converted-to.pdf>] [54]
 Package epstopdf Info: Source file: <chapter5Figs/canon13.eps>
 (epstopdf)                    date: 2016-06-08 17:23:12
 (epstopdf)                    size: 778270 bytes
 (epstopdf)             Output file: <chapter5Figs/canon13-eps-converted-to.pdf>
 
-(epstopdf)                    date: 2016-06-17 10:54:06
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 40586 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter5Figs/canon13-eps-c
 onverted-to.pdf chapter5Figs/canon13.eps>
-(epstopdf)             \includegraphics on input line 1115.
+(epstopdf)             \includegraphics on input line 1171.
 Package epstopdf Info: Output file is already uptodate.
 
-<chapter5Figs/canon13-eps-converted-to.pdf, id=557, 262.9825pt x 384.43625pt>
+<chapter5Figs/canon13-eps-converted-to.pdf, id=560, 262.9825pt x 384.43625pt>
 File: chapter5Figs/canon13-eps-converted-to.pdf Graphic file (type pdf)
 
 <use chapter5Figs/canon13-eps-converted-to.pdf>
 Package pdftex.def Info: chapter5Figs/canon13-eps-converted-to.pdf used on inpu
-t line 1115.
+t line 1171.
 (pdftex.def)             Requested size: 230.18253pt x 336.50407pt.
 Package epstopdf Info: Source file: <chapter5Figs/canon30.eps>
 (epstopdf)                    date: 2016-06-08 17:23:12
 (epstopdf)                    size: 779176 bytes
 (epstopdf)             Output file: <chapter5Figs/canon30-eps-converted-to.pdf>
 
-(epstopdf)                    date: 2016-06-17 10:54:07
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 43994 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter5Figs/canon30-eps-c
 onverted-to.pdf chapter5Figs/canon30.eps>
-(epstopdf)             \includegraphics on input line 1116.
+(epstopdf)             \includegraphics on input line 1172.
 Package epstopdf Info: Output file is already uptodate.
 
-<chapter5Figs/canon30-eps-converted-to.pdf, id=558, 262.9825pt x 384.43625pt>
+<chapter5Figs/canon30-eps-converted-to.pdf, id=561, 262.9825pt x 384.43625pt>
 File: chapter5Figs/canon30-eps-converted-to.pdf Graphic file (type pdf)
 
 <use chapter5Figs/canon30-eps-converted-to.pdf>
 Package pdftex.def Info: chapter5Figs/canon30-eps-converted-to.pdf used on inpu
-t line 1116.
+t line 1172.
 (pdftex.def)             Requested size: 230.18253pt x 336.50407pt.
- [54] [55 <./chapter5Figs/canon13-eps-converted-to.pdf> <./chapter5Figs/canon30
+ [55] [56 <./chapter5Figs/canon13-eps-converted-to.pdf> <./chapter5Figs/canon30
 -eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <chapter5Figs/hist13.eps>
 (epstopdf)                    date: 2016-06-08 17:23:12
 (epstopdf)                    size: 123216 bytes
 (epstopdf)             Output file: <chapter5Figs/hist13-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-06-17 10:54:07
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 35444 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter5Figs/hist13-eps-co
 nverted-to.pdf chapter5Figs/hist13.eps>
-(epstopdf)             \includegraphics on input line 1132.
+(epstopdf)             \includegraphics on input line 1188.
 Package epstopdf Info: Output file is already uptodate.
 
-<chapter5Figs/hist13-eps-converted-to.pdf, id=600, 257.96375pt x 190.7125pt>
+<chapter5Figs/hist13-eps-converted-to.pdf, id=604, 257.96375pt x 190.7125pt>
 File: chapter5Figs/hist13-eps-converted-to.pdf Graphic file (type pdf)
 
 <use chapter5Figs/hist13-eps-converted-to.pdf>
 Package pdftex.def Info: chapter5Figs/hist13-eps-converted-to.pdf used on input
- line 1132.
+ line 1188.
 (pdftex.def)             Requested size: 328.82707pt x 243.12465pt.
- [56] [57 <./chapter5Figs/hist13-eps-converted-to.pdf>]
+ [57] [58 <./chapter5Figs/hist13-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <chapter5Figs/pd1330.eps>
 (epstopdf)                    date: 2016-06-08 17:23:12
 (epstopdf)                    size: 311672 bytes
 (epstopdf)             Output file: <chapter5Figs/pd1330-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-06-17 10:54:07
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 24559 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter5Figs/pd1330-eps-co
 nverted-to.pdf chapter5Figs/pd1330.eps>
-(epstopdf)             \includegraphics on input line 1144.
+(epstopdf)             \includegraphics on input line 1200.
 Package epstopdf Info: Output file is already uptodate.
 
-<chapter5Figs/pd1330-eps-converted-to.pdf, id=626, 256.96pt x 384.43625pt>
+<chapter5Figs/pd1330-eps-converted-to.pdf, id=629, 256.96pt x 384.43625pt>
 File: chapter5Figs/pd1330-eps-converted-to.pdf Graphic file (type pdf)
 
 <use chapter5Figs/pd1330-eps-converted-to.pdf>
 Package pdftex.def Info: chapter5Figs/pd1330-eps-converted-to.pdf used on input
- line 1144.
+ line 1200.
 (pdftex.def)             Requested size: 328.82707pt x 491.99458pt.
- [58] [59 <./chapter5Figs/pd1330-eps-converted-to.pdf>]
+ [59] [60 <./chapter5Figs/pd1330-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <chapter5Figs/microelast.eps>
 (epstopdf)                    date: 2016-06-08 17:23:12
 (epstopdf)                    size: 1690818 bytes
 (epstopdf)             Output file: <chapter5Figs/microelast-eps-converted-to.p
 df>
-(epstopdf)                    date: 2016-06-17 10:54:08
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 898640 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter5Figs/microelast-ep
 s-converted-to.pdf chapter5Figs/microelast.eps>
-(epstopdf)             \includegraphics on input line 1161.
+(epstopdf)             \includegraphics on input line 1217.
 Package epstopdf Info: Output file is already uptodate.
 
-<chapter5Figs/microelast-eps-converted-to.pdf, id=672, 489.83pt x 354.32375pt>
+<chapter5Figs/microelast-eps-converted-to.pdf, id=675, 489.83pt x 354.32375pt>
 File: chapter5Figs/microelast-eps-converted-to.pdf Graphic file (type pdf)
 
 <use chapter5Figs/microelast-eps-converted-to.pdf>
 Package pdftex.def Info: chapter5Figs/microelast-eps-converted-to.pdf used on i
-nput line 1161.
+nput line 1217.
 (pdftex.def)             Requested size: 493.2442pt x 356.80447pt.
 
-Overfull \hbox (9.26282pt too wide) in paragraph at lines 1161--1164
+Overfull \hbox (9.26282pt too wide) in paragraph at lines 1217--1220
  | [] 
  []
 
-[60] [61 <./chapter5Figs/microelast-eps-converted-to.pdf>] [62] [63] [64]
-[65]
+[61] [62 <./chapter5Figs/microelast-eps-converted-to.pdf>] [63] [64] [65]
+[66]
 Chapter 6.
-[66
+[67
 
 ]
 Package epstopdf Info: Source file: <chapter6Figs/bondedInter.eps>
-(epstopdf)                    date: 2016-06-16 14:49:18
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 141239 bytes
 (epstopdf)             Output file: <chapter6Figs/bondedInter-eps-converted-to.
 pdf>
-(epstopdf)                    date: 2016-06-17 10:54:09
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 16037 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter6Figs/bondedInter-e
 ps-converted-to.pdf chapter6Figs/bondedInter.eps>
-(epstopdf)             \includegraphics on input line 1268.
+(epstopdf)             \includegraphics on input line 1329.
 Package epstopdf Info: Output file is already uptodate.
 
-<chapter6Figs/bondedInter-eps-converted-to.pdf, id=755, 299.1175pt x 189.70876p
+<chapter6Figs/bondedInter-eps-converted-to.pdf, id=758, 299.1175pt x 189.70876p
 t>
 File: chapter6Figs/bondedInter-eps-converted-to.pdf Graphic file (type pdf)
  <use chapter6Figs/bondedInter-eps-converted-to.pdf>
 Package pdftex.def Info: chapter6Figs/bondedInter-eps-converted-to.pdf used on 
-input line 1268.
+input line 1329.
 (pdftex.def)             Requested size: 399.29463pt x 253.26183pt.
- [67] [68 <./chapter6Figs/bondedInter-eps-converted-to.pdf>] [69]
+ [68] [69 <./chapter6Figs/bondedInter-eps-converted-to.pdf>] [70]
 Package epstopdf Info: Source file: <chapter6Figs/canonicalAnalysisRough.eps>
-(epstopdf)                    date: 2016-06-16 15:27:41
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 504819 bytes
 (epstopdf)             Output file: <chapter6Figs/canonicalAnalysisRough-eps-co
 nverted-to.pdf>
-(epstopdf)                    date: 2016-06-17 10:54:09
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 39554 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter6Figs/canonicalAnal
 ysisRough-eps-converted-to.pdf chapter6Figs/canonicalAnalysisRough.eps>
-(epstopdf)             \includegraphics on input line 1316.
+(epstopdf)             \includegraphics on input line 1379.
 Package epstopdf Info: Output file is already uptodate.
 
-<chapter6Figs/canonicalAnalysisRough-eps-converted-to.pdf, id=792, 124.465pt x 
+<chapter6Figs/canonicalAnalysisRough-eps-converted-to.pdf, id=795, 124.465pt x 
 170.6375pt>
 File: chapter6Figs/canonicalAnalysisRough-eps-converted-to.pdf Graphic file (ty
 pe pdf)
  <use chapter6Figs/canonicalAnalysisRough-eps-converted-to.pdf>
 Package pdftex.def Info: chapter6Figs/canonicalAnalysisRough-eps-converted-to.p
-df used on input line 1316.
+df used on input line 1379.
 (pdftex.def)             Requested size: 281.85587pt x 386.49806pt.
 
-[70] [71 <./chapter6Figs/canonicalAnalysisRough-eps-converted-to.pdf>]
+[71] [72 <./chapter6Figs/canonicalAnalysisRough-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <chapter6Figs/microcanonicalAnalysis.eps>
-(epstopdf)                    date: 2016-06-16 16:51:59
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 1106461 bytes
 (epstopdf)             Output file: <chapter6Figs/microcanonicalAnalysis-eps-co
 nverted-to.pdf>
-(epstopdf)                    date: 2016-06-17 10:54:10
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 295260 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter6Figs/microcanonica
 lAnalysis-eps-converted-to.pdf chapter6Figs/microcanonicalAnalysis.eps>
-(epstopdf)             \includegraphics on input line 1332.
+(epstopdf)             \includegraphics on input line 1395.
 Package epstopdf Info: Output file is already uptodate.
 
-<chapter6Figs/microcanonicalAnalysis-eps-converted-to.pdf, id=809, 260.975pt x 
+<chapter6Figs/microcanonicalAnalysis-eps-converted-to.pdf, id=812, 260.975pt x 
 256.96pt>
 File: chapter6Figs/microcanonicalAnalysis-eps-converted-to.pdf Graphic file (ty
 pe pdf)
  <use chapter6Figs/microcanonicalAnalysis-eps-converted-to.pdf>
 Package pdftex.def Info: chapter6Figs/microcanonicalAnalysis-eps-converted-to.p
-df used on input line 1332.
+df used on input line 1395.
 (pdftex.def)             Requested size: 469.75502pt x 462.53548pt.
 
-[72] [73 <./chapter6Figs/microcanonicalAnalysis-eps-converted-to.pdf>]
+[73] [74 <./chapter6Figs/microcanonicalAnalysis-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <chapter6Figs/phaseDiag15.eps>
-(epstopdf)                    date: 2016-06-16 14:49:18
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 368356 bytes
 (epstopdf)             Output file: <chapter6Figs/phaseDiag15-eps-converted-to.
 pdf>
-(epstopdf)                    date: 2016-06-17 10:54:10
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 15219 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter6Figs/phaseDiag15-e
 ps-converted-to.pdf chapter6Figs/phaseDiag15.eps>
-(epstopdf)             \includegraphics on input line 1344.
+(epstopdf)             \includegraphics on input line 1407.
 Package epstopdf Info: Output file is already uptodate.
 
-<chapter6Figs/phaseDiag15-eps-converted-to.pdf, id=822, 250.9375pt x 87.32625pt
+<chapter6Figs/phaseDiag15-eps-converted-to.pdf, id=826, 250.9375pt x 87.32625pt
 >
 File: chapter6Figs/phaseDiag15-eps-converted-to.pdf Graphic file (type pdf)
  <use chapter6Figs/phaseDiag15-eps-converted-to.pdf>
 Package pdftex.def Info: chapter6Figs/phaseDiag15-eps-converted-to.pdf used on 
-input line 1344.
+input line 1407.
 (pdftex.def)             Requested size: 469.75502pt x 163.49379pt.
 Package epstopdf Info: Source file: <chapter6Figs/phaseDiag55.eps>
-(epstopdf)                    date: 2016-05-03 16:52:16
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 1467970 bytes
 (epstopdf)             Output file: <chapter6Figs/phaseDiag55-eps-converted-to.
 pdf>
-(epstopdf)                    date: 2016-06-17 10:54:13
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 35601 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter6Figs/phaseDiag55-e
 ps-converted-to.pdf chapter6Figs/phaseDiag55.eps>
-(epstopdf)             \includegraphics on input line 1351.
+(epstopdf)             \includegraphics on input line 1414.
 Package epstopdf Info: Output file is already uptodate.
 
-<chapter6Figs/phaseDiag55-eps-converted-to.pdf, id=823, 124.465pt x 176.66pt>
+<chapter6Figs/phaseDiag55-eps-converted-to.pdf, id=827, 124.465pt x 176.66pt>
 File: chapter6Figs/phaseDiag55-eps-converted-to.pdf Graphic file (type pdf)
 
 <use chapter6Figs/phaseDiag55-eps-converted-to.pdf>
 Package pdftex.def Info: chapter6Figs/phaseDiag55-eps-converted-to.pdf used on 
-input line 1351.
+input line 1414.
 (pdftex.def)             Requested size: 328.82707pt x 466.82321pt.
- [74 <./chapter6Figs/phaseDiag15-eps-converted-to.pdf>] [75 <./chapter6Figs/pha
-seDiag55-eps-converted-to.pdf>] [76]
+ [75 <./chapter6Figs/phaseDiag15-eps-converted-to.pdf>] [76 <./chapter6Figs/pha
+seDiag55-eps-converted-to.pdf>] [77]
 Package epstopdf Info: Source file: <chapter6Figs/configurationsMod.eps>
-(epstopdf)                    date: 2016-06-20 14:00:28
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 933508 bytes
 (epstopdf)             Output file: <chapter6Figs/configurationsMod-eps-convert
 ed-to.pdf>
-(epstopdf)                    date: 2016-06-20 14:00:28
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 151150 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter6Figs/configuration
 sMod-eps-converted-to.pdf chapter6Figs/configurationsMod.eps>
-(epstopdf)             \includegraphics on input line 1371.
+(epstopdf)             \includegraphics on input line 1434.
 Package epstopdf Info: Output file is already uptodate.
 
-<chapter6Figs/configurationsMod-eps-converted-to.pdf, id=855, 1475.5125pt x 727
+<chapter6Figs/configurationsMod-eps-converted-to.pdf, id=858, 1475.5125pt x 727
 .71875pt>
 File: chapter6Figs/configurationsMod-eps-converted-to.pdf Graphic file (type pd
 f)
  <use chapter6Figs/configurationsMod-eps-converted-to.pdf>
 Package pdftex.def Info: chapter6Figs/configurationsMod-eps-converted-to.pdf us
-ed on input line 1371.
+ed on input line 1434.
 (pdftex.def)             Requested size: 422.77664pt x 208.5124pt.
 Package epstopdf Info: Source file: <chapter6Figs/structuralAnalysis15.eps>
-(epstopdf)                    date: 2016-06-16 14:49:18
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 1695266 bytes
 (epstopdf)             Output file: <chapter6Figs/structuralAnalysis15-eps-conv
 erted-to.pdf>
-(epstopdf)                    date: 2016-06-17 10:54:15
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 249079 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter6Figs/structuralAna
 lysis15-eps-converted-to.pdf chapter6Figs/structuralAnalysis15.eps>
-(epstopdf)             \includegraphics on input line 1379.
+(epstopdf)             \includegraphics on input line 1442.
 Package epstopdf Info: Output file is already uptodate.
 
-<chapter6Figs/structuralAnalysis15-eps-converted-to.pdf, id=856, 717.68124pt x 
+<chapter6Figs/structuralAnalysis15-eps-converted-to.pdf, id=859, 717.68124pt x 
 679.53876pt>
 File: chapter6Figs/structuralAnalysis15-eps-converted-to.pdf Graphic file (type
  pdf)
  <use chapter6Figs/structuralAnalysis15-eps-converted-to.pdf>
 Package pdftex.def Info: chapter6Figs/structuralAnalysis15-eps-converted-to.pdf
- used on input line 1379.
+ used on input line 1442.
 (pdftex.def)             Requested size: 469.75502pt x 444.79527pt.
 Package epstopdf Info: Source file: <chapter6Figs/structuralAnalysis55.eps>
-(epstopdf)                    date: 2016-06-16 14:49:18
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 2726610 bytes
 (epstopdf)             Output file: <chapter6Figs/structuralAnalysis55-eps-conv
 erted-to.pdf>
-(epstopdf)                    date: 2016-06-17 10:54:15
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 559164 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter6Figs/structuralAna
 lysis55-eps-converted-to.pdf chapter6Figs/structuralAnalysis55.eps>
-(epstopdf)             \includegraphics on input line 1387.
+(epstopdf)             \includegraphics on input line 1450.
 Package epstopdf Info: Output file is already uptodate.
 
-<chapter6Figs/structuralAnalysis55-eps-converted-to.pdf, id=857, 578.16pt x 578
+<chapter6Figs/structuralAnalysis55-eps-converted-to.pdf, id=860, 578.16pt x 578
 .16pt>
 File: chapter6Figs/structuralAnalysis55-eps-converted-to.pdf Graphic file (type
  pdf)
  <use chapter6Figs/structuralAnalysis55-eps-converted-to.pdf>
 Package pdftex.def Info: chapter6Figs/structuralAnalysis55-eps-converted-to.pdf
- used on input line 1387.
+ used on input line 1450.
 (pdftex.def)             Requested size: 469.75502pt x 469.75385pt.
- [77 <./chapter6Figs/configurationsMod-eps-converted-to.pdf>] [78] [79 <./chapt
-er6Figs/structuralAnalysis15-eps-converted-to.pdf>] [80 <./chapter6Figs/structu
+ [78 <./chapter6Figs/configurationsMod-eps-converted-to.pdf>] [79] [80 <./chapt
+er6Figs/structuralAnalysis15-eps-converted-to.pdf>] [81 <./chapter6Figs/structu
 ralAnalysis55-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <chapter6Figs/bondDistribution.eps>
-(epstopdf)                    date: 2016-06-21 14:50:12
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 99689 bytes
 (epstopdf)             Output file: <chapter6Figs/bondDistribution-eps-converte
 d-to.pdf>
-(epstopdf)                    date: 2016-06-21 14:50:12
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 13011 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter6Figs/bondDistribut
 ion-eps-converted-to.pdf chapter6Figs/bondDistribution.eps>
-(epstopdf)             \includegraphics on input line 1403.
+(epstopdf)             \includegraphics on input line 1466.
 Package epstopdf Info: Output file is already uptodate.
 
-<chapter6Figs/bondDistribution-eps-converted-to.pdf, id=880, 264.99pt x 174.652
+<chapter6Figs/bondDistribution-eps-converted-to.pdf, id=883, 264.99pt x 174.652
 5pt>
 File: chapter6Figs/bondDistribution-eps-converted-to.pdf Graphic file (type pdf
 )
  <use chapter6Figs/bondDistribution-eps-converted-to.pdf>
 Package pdftex.def Info: chapter6Figs/bondDistribution-eps-converted-to.pdf use
-d on input line 1403.
+d on input line 1466.
 (pdftex.def)             Requested size: 375.80544pt x 247.70714pt.
- [81 <./chapter6Figs/bondDistribution-eps-converted-to.pdf>] [82]
+ [82 <./chapter6Figs/bondDistribution-eps-converted-to.pdf>] [83]
 Chapter 7.
+[84
 
-LaTeX Warning: Citation `Selkoe' on page 83 undefined on input line 1432.
-
-
-LaTeX Warning: Citation `Chiti' on page 83 undefined on input line 1432.
-
-
-LaTeX Warning: Citation `marinari' on page 83 undefined on input line 1442.
-
-
-LaTeX Warning: Citation `lyubartsev' on page 83 undefined on input line 1442.
-
-
-LaTeX Warning: Citation `bf1' on page 83 undefined on input line 1451.
-
-
-LaTeX Warning: Citation `bf2' on page 83 undefined on input line 1451.
-
-
-LaTeX Warning: Citation `grass2' on page 83 undefined on input line 1451.
-
-
-LaTeX Warning: Citation `vbj1' on page 83 undefined on input line 1451.
-
-
-LaTeX Warning: Citation `strauch1' on page 83 undefined on input line 1451.
-
-
-LaTeX Warning: Citation `seaton3' on page 83 undefined on input line 1451.
-
-
-LaTeX Warning: Citation `semisslb1' on page 83 undefined on input line 1451.
-
-
-LaTeX Warning: Citation `Koci2015' on page 83 undefined on input line 1451.
-
-
-LaTeX Warning: Citation `bj4' on page 83 undefined on input line 1453.
-
-
-LaTeX Warning: Citation `prellberg1' on page 83 undefined on input line 1453.
-
-
-LaTeX Warning: Citation `paul1' on page 83 undefined on input line 1453.
-
-
-LaTeX Warning: Citation `mbj1' on page 83 undefined on input line 1453.
-
-
-LaTeX Warning: Citation `liang1' on page 83 undefined on input line 1453.
-
-
-LaTeX Warning: Citation `allen1' on page 83 undefined on input line 1453.
-
-
-LaTeX Warning: Citation `vb1' on page 83 undefined on input line 1453.
-
-
-LaTeX Warning: Citation `ywli1' on page 83 undefined on input line 1453.
-
-
-LaTeX Warning: Citation `mjb4' on page 83 undefined on input line 1453.
-
-
-LaTeX Warning: Citation `vgb1' on page 83 undefined on input line 1453.
-
-
-LaTeX Warning: Citation `jbj1' on page 83 undefined on input line 1455.
-
-
-LaTeX Warning: Citation `Zieren2014' on page 83 undefined on input line 1455.
-
-
-LaTeX Warning: Citation `Zieren2015' on page 83 undefined on input line 1455.
-
-
-LaTeX Warning: Citation `dill1' on page 83 undefined on input line 1458.
-
-
-LaTeX Warning: Citation `still1' on page 83 undefined on input line 1458.
-
-
-LaTeX Warning: Citation `still2' on page 83 undefined on input line 1458.
-
-
-LaTeX Warning: Citation `som1' on page 83 undefined on input line 1458.
-
-
-LaTeX Warning: Citation `hsu1' on page 83 undefined on input line 1458.
-
-
-LaTeX Warning: Citation `bj1' on page 83 undefined on input line 1458.
-
-
-LaTeX Warning: Citation `ssbj1' on page 83 undefined on input line 1458.
-
-[83
-
-]
-
-LaTeX Warning: Citation `fisher1' on page 84 undefined on input line 1484.
-
-
-LaTeX Warning: Citation `taylor1' on page 84 undefined on input line 1484.
-
-
-LaTeX Warning: Citation `rslb1' on page 84 undefined on input line 1484.
-
-
-LaTeX Warning: Citation `taylor2' on page 84 undefined on input line 1484.
-
-
-LaTeX Warning: Citation `KaiQi2016' on page 84 undefined on input line 1486.
-
-[84] [85] [86] [87] [88]
-
-LaTeX Warning: Citation `KaiQi2016' on page 89 undefined on input line 1736.
-
-Package epstopdf Info: Source file: <chapter7Figs/micro_example.eps>
-(epstopdf)                    date: 2016-06-15 11:58:32
-(epstopdf)                    size: 179402 bytes
-(epstopdf)             Output file: <chapter7Figs/micro_example-eps-converted-t
-o.pdf>
-(epstopdf)                    date: 2016-06-17 10:54:17
-(epstopdf)                    size: 93399 bytes
-(epstopdf)             Command: <repstopdf --outfile=chapter7Figs/micro_example
--eps-converted-to.pdf chapter7Figs/micro_example.eps>
-(epstopdf)             \includegraphics on input line 1740.
-Package epstopdf Info: Output file is already uptodate.
-
-<chapter7Figs/micro_example-eps-converted-to.pdf, id=927, 257.96375pt x 190.712
-5pt>
-File: chapter7Figs/micro_example-eps-converted-to.pdf Graphic file (type pdf)
- <use chapter7Figs/micro_example-eps-converted-to.pdf>
-Package pdftex.def Info: chapter7Figs/micro_example-eps-converted-to.pdf used o
-n input line 1740.
-(pdftex.def)             Requested size: 234.8775pt x 173.65048pt.
+] [85]
 Package epstopdf Info: Source file: <chapter7Figs/combinedMicro.eps>
-(epstopdf)                    date: 2016-06-15 11:58:32
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 646209 bytes
 (epstopdf)             Output file: <chapter7Figs/combinedMicro-eps-converted-t
 o.pdf>
-(epstopdf)                    date: 2016-06-17 10:54:17
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 174205 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter7Figs/combinedMicro
 -eps-converted-to.pdf chapter7Figs/combinedMicro.eps>
-(epstopdf)             \includegraphics on input line 1760.
+(epstopdf)             \includegraphics on input line 1553.
 Package epstopdf Info: Output file is already uptodate.
 
-<chapter7Figs/combinedMicro-eps-converted-to.pdf, id=928, 220.825pt x 148.555pt
+<chapter7Figs/combinedMicro-eps-converted-to.pdf, id=917, 220.825pt x 148.555pt
 >
 File: chapter7Figs/combinedMicro-eps-converted-to.pdf Graphic file (type pdf)
  <use chapter7Figs/combinedMicro-eps-converted-to.pdf>
 Package pdftex.def Info: chapter7Figs/combinedMicro-eps-converted-to.pdf used o
-n input line 1760.
-(pdftex.def)             Requested size: 483.84709pt x 325.51407pt.
+n input line 1553.
+(pdftex.def)             Requested size: 479.15211pt x 322.35419pt.
 
-Overfull \hbox (14.09207pt too wide) in paragraph at lines 1760--1774
+Overfull \hbox (9.3971pt too wide) in paragraph at lines 1553--1555
  [] 
  []
 
-[89] [90 <./chapter7Figs/micro_example-eps-converted-to.pdf>] [91 <./chapter7Fi
-gs/combinedMicro-eps-converted-to.pdf>]
-
-LaTeX Warning: Citation `jbj1' on page 92 undefined on input line 1837.
-
+[86]
 Package epstopdf Info: Source file: <chapter7Figs/configurations.eps>
-(epstopdf)                    date: 2016-06-15 11:58:32
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 1491662 bytes
 (epstopdf)             Output file: <chapter7Figs/configurations-eps-converted-
 to.pdf>
-(epstopdf)                    date: 2016-06-17 10:54:18
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 236674 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter7Figs/configuration
 s-eps-converted-to.pdf chapter7Figs/configurations.eps>
-(epstopdf)             \includegraphics on input line 1847.
+(epstopdf)             \includegraphics on input line 1572.
 Package epstopdf Info: Output file is already uptodate.
 
-<chapter7Figs/configurations-eps-converted-to.pdf, id=953, 842.14626pt x 1114.1
+<chapter7Figs/configurations-eps-converted-to.pdf, id=922, 842.14626pt x 1114.1
 625pt>
 File: chapter7Figs/configurations-eps-converted-to.pdf Graphic file (type pdf)
  <use chapter7Figs/configurations-eps-converted-to.pdf>
 Package pdftex.def Info: chapter7Figs/configurations-eps-converted-to.pdf used 
-on input line 1847.
+on input line 1572.
 (pdftex.def)             Requested size: 328.82707pt x 435.04866pt.
- [92] [93 <./chapter7Figs/configurations-eps-converted-to.pdf>]
+ [87] [88 <./chapter7Figs/combinedMicro-eps-converted-to.pdf>] [89] [90 <./chap
+ter7Figs/configurations-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <chapter7Figs/entropyCombined.eps>
-(epstopdf)                    date: 2016-06-15 11:58:32
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 351861 bytes
 (epstopdf)             Output file: <chapter7Figs/entropyCombined-eps-converted
 -to.pdf>
-(epstopdf)                    date: 2016-06-17 10:54:18
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 85296 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter7Figs/entropyCombin
 ed-eps-converted-to.pdf chapter7Figs/entropyCombined.eps>
-(epstopdf)             \includegraphics on input line 1886.
+(epstopdf)             \includegraphics on input line 1616.
 Package epstopdf Info: Output file is already uptodate.
 
-<chapter7Figs/entropyCombined-eps-converted-to.pdf, id=964, 120.45pt x 171.6412
+<chapter7Figs/entropyCombined-eps-converted-to.pdf, id=941, 120.45pt x 171.6412
 5pt>
 File: chapter7Figs/entropyCombined-eps-converted-to.pdf Graphic file (type pdf)
 
  <use chapter7Figs/entropyCombined-eps-converted-to.pdf>
 Package pdftex.def Info: chapter7Figs/entropyCombined-eps-converted-to.pdf used
- on input line 1886.
+ on input line 1616.
 (pdftex.def)             Requested size: 328.82707pt x 468.62581pt.
- [94] [95 <./chapter7Figs/entropyCombined-eps-converted-to.pdf>]
-Overfull \hbox (10.56522pt too wide) in paragraph at lines 2006--2013
+ [91] [92 <./chapter7Figs/entropyCombined-eps-converted-to.pdf>] [93]
+Overfull \hbox (10.56522pt too wide) in paragraph at lines 1668--1671
 \OML/cmm/m/it/12 h\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 E\OT1/cmr/m/n/12 ; \OML/cmm
 /m/it/12 ^^L[]\OT1/cmr/m/n/12 )$, shown along-side the mi-cro-canon-i-cal quan-
-ti-ties in Fig. 7.2[]. The his-togram $\OML/cmm/m/it/12 h\OT1/cmr/m/n/12 (\OML/
+ti-ties in Fig. 7.1[]. The his-togram $\OML/cmm/m/it/12 h\OT1/cmr/m/n/12 (\OML/
 cmm/m/it/12 E\OT1/cmr/m/n/12 ; \OML/cmm/m/it/12 ^^L[]\OT1/cmr/m/n/12 )$,
  []
 
-[96] [97]
 Package epstopdf Info: Source file: <chapter7Figs/microEntropy.eps>
-(epstopdf)                    date: 2016-06-15 11:58:32
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 96640 bytes
 (epstopdf)             Output file: <chapter7Figs/microEntropy-eps-converted-to
 .pdf>
-(epstopdf)                    date: 2016-06-17 10:54:19
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 89398 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter7Figs/microEntropy-
 eps-converted-to.pdf chapter7Figs/microEntropy.eps>
-(epstopdf)             \includegraphics on input line 2056.
+(epstopdf)             \includegraphics on input line 1688.
 Package epstopdf Info: Output file is already uptodate.
 
-<chapter7Figs/microEntropy-eps-converted-to.pdf, id=980, 817.0525pt x 565.11125
+<chapter7Figs/microEntropy-eps-converted-to.pdf, id=955, 817.0525pt x 565.11125
 pt>
 File: chapter7Figs/microEntropy-eps-converted-to.pdf Graphic file (type pdf)
  <use chapter7Figs/microEntropy-eps-converted-to.pdf>
 Package pdftex.def Info: chapter7Figs/microEntropy-eps-converted-to.pdf used on
- input line 2056.
-(pdftex.def)             Requested size: 328.82707pt x 227.42877pt.
- [98] [99 <./chapter7Figs/microEntropy-eps-converted-to.pdf>]
+ input line 1688.
+(pdftex.def)             Requested size: 352.31625pt x 243.68292pt.
+ [94] [95 <./chapter7Figs/microEntropy-eps-converted-to.pdf>] [96]
 Package epstopdf Info: Source file: <chapter7Figs/scalingCombined.eps>
-(epstopdf)                    date: 2016-06-15 11:58:32
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 394622 bytes
 (epstopdf)             Output file: <chapter7Figs/scalingCombined-eps-converted
 -to.pdf>
-(epstopdf)                    date: 2016-06-17 10:54:20
+(epstopdf)                    date: 2016-06-21 16:16:09
 (epstopdf)                    size: 145321 bytes
 (epstopdf)             Command: <repstopdf --outfile=chapter7Figs/scalingCombin
 ed-eps-converted-to.pdf chapter7Figs/scalingCombined.eps>
-(epstopdf)             \includegraphics on input line 2097.
+(epstopdf)             \includegraphics on input line 1752.
 Package epstopdf Info: Output file is already uptodate.
 
-<chapter7Figs/scalingCombined-eps-converted-to.pdf, id=991, 247.92625pt x 314.1
+<chapter7Figs/scalingCombined-eps-converted-to.pdf, id=968, 247.92625pt x 314.1
 7375pt>
 File: chapter7Figs/scalingCombined-eps-converted-to.pdf Graphic file (type pdf)
 
  <use chapter7Figs/scalingCombined-eps-converted-to.pdf>
 Package pdftex.def Info: chapter7Figs/scalingCombined-eps-converted-to.pdf used
- on input line 2097.
+ on input line 1752.
 (pdftex.def)             Requested size: 328.82707pt x 416.72406pt.
-
-
-LaTeX Warning: Citation `Zieren2014' on page 100 undefined on input line 2112.
-
-
-LaTeX Warning: Citation `Zieren2015' on page 100 undefined on input line 2112.
-
-[100] [101 <./chapter7Figs/scalingCombined-eps-converted-to.pdf>] [102]
-[103]
+ [97] [98 <./chapter7Figs/scalingCombined-eps-converted-to.pdf>] [99] [100]
 Chapter 8.
-[104
+[101
 
-] (./References.tex [105
+] (./References.tex [102
 
-] [106] [107] [108]) [109]
+] [103] [104] [105] [106] [107]) [108]
 (./koci_tomas_201607_phd.aux)
-
-LaTeX Warning: There were undefined references.
-
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
  4512 strings out of 493014
- 75065 string characters out of 6133351
- 137927 words of memory out of 5000000
- 7925 multiletter control sequences out of 15000+600000
+ 74973 string characters out of 6133351
+ 138115 words of memory out of 5000000
+ 7926 multiletter control sequences out of 15000+600000
  12170 words of font info for 43 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 53i,11n,92p,2181b,384s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 53i,10n,92p,2181b,380s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></
@@ -1420,10 +1251,10 @@ ts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2016/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2016/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2016/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmti12.pfb>
-Output written on koci_tomas_201607_phd.pdf (126 pages, 5951691 bytes).
+Output written on koci_tomas_201607_phd.pdf (125 pages, 5862729 bytes).
 PDF statistics:
- 1092 PDF objects out of 1200 (max. 8388607)
- 693 compressed objects within 7 object streams
+ 1076 PDF objects out of 1200 (max. 8388607)
+ 679 compressed objects within 7 object streams
  0 named destinations out of 1000 (max. 500000)
- 206 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 201 words of extra memory for PDF output out of 10000 (max. 10000000)
 
