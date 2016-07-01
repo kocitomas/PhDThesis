@@ -35,20 +35,17 @@
 \contentsline {section}{\numberline {5.2}Results}{55}
 \contentsline {subsection}{\numberline {5.2.1}Canonical analysis of energetic and structural fluctuations}{55}
 \contentsline {subsection}{\numberline {5.2.2}Results of microcanonical inflection-point analysis}{62}
-\contentsline {section}{\numberline {5.3}Summary}{66}
-\contentsline {chapter}{\numberline {6}Effects of short range repulsion on the structural properties of elastic homopolymers}{68}
-\contentsline {section}{\numberline {6.1}Model and simulation parameters}{69}
-\contentsline {section}{\numberline {6.2}Results}{71}
-\contentsline {subsection}{\numberline {6.2.1}Canonical results}{72}
-\contentsline {subsection}{\numberline {6.2.2}Microcanonical results and structural phase diagrams}{74}
-\contentsline {subsection}{\numberline {6.2.3}Structural analysis}{78}
-\contentsline {section}{\numberline {6.3}Summary}{84}
-\contentsline {chapter}{\numberline {7}Aggregation of Flexible Elastic Homopolymers}{85}
-\contentsline {section}{\numberline {7.1}Model and Methods}{86}
-\contentsline {section}{\numberline {7.2}Results}{88}
-\contentsline {subsection}{\numberline {7.2.1}Microcanonical analysis of aggregation transitions}{88}
-\contentsline {subsection}{\numberline {7.2.2}Entropically suppressed subphases}{95}
-\contentsline {subsection}{\numberline {7.2.3}Scaling properties}{98}
-\contentsline {section}{\numberline {7.3}Summary}{100}
-\contentsline {chapter}{\numberline {8}Summary and Outlook}{102}
-\contentsline {chapter}{Bibliography}{103}
+\contentsline {chapter}{\numberline {6}Effects of short range repulsion on the structural properties of elastic homopolymers}{66}
+\contentsline {section}{\numberline {6.1}Model and simulation parameters}{67}
+\contentsline {section}{\numberline {6.2}Results}{69}
+\contentsline {subsection}{\numberline {6.2.1}Canonical results}{70}
+\contentsline {subsection}{\numberline {6.2.2}Microcanonical results and structural phase diagrams}{72}
+\contentsline {subsection}{\numberline {6.2.3}Structural analysis}{76}
+\contentsline {chapter}{\numberline {7}Aggregation of Flexible Elastic Homopolymers}{83}
+\contentsline {section}{\numberline {7.1}Model and Methods}{84}
+\contentsline {section}{\numberline {7.2}Results}{86}
+\contentsline {subsection}{\numberline {7.2.1}Microcanonical analysis of aggregation transitions}{86}
+\contentsline {subsection}{\numberline {7.2.2}Entropically suppressed subphases}{93}
+\contentsline {subsection}{\numberline {7.2.3}Scaling properties}{96}
+\contentsline {chapter}{\numberline {8}Summary and Outlook}{99}
+\contentsline {chapter}{Bibliography}{101}
