@@ -20,7 +20,7 @@
 \contentsline {subsection}{\numberline {3.1.3}Multiple Gaussian modified ensemble}{33}
 \contentsline {section}{\numberline {3.2}Histogram reweighting methods}{35}
 \contentsline {subsection}{\numberline {3.2.1}Multiple histogram reweighting}{35}
-\contentsline {subsection}{\numberline {3.2.2}Beziere smoothing}{37}
+\contentsline {subsection}{\numberline {3.2.2}Bezi\'{e}r smoothing}{37}
 \contentsline {section}{\numberline {3.3}Simple Monte Carlo updates}{39}
 \contentsline {subsection}{\numberline {3.3.1}Single displacement update}{39}
 \contentsline {subsection}{\numberline {3.3.2}Pivot update}{40}
