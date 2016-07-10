@@ -124,10 +124,10 @@ Finally, I would like to extend my deepest gratitude to my wonderful family and 
 
 \setcounter{tocdepth}{1}
 \tableofcontents
-\listoffigures  % if any
 \addcontentsline{toc}{chapter}{\listfigurename}
-\listoftables % if any
+\listoffigures  % if any
 \addcontentsline{toc}{chapter}{\listtablename}
+\listoftables % if any
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -174,7 +174,7 @@ Protein misfolding and aggregation are at the root of a number of pathological c
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%   CHAPTER 2		   %%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Elements of statistical mechanics}
+\chapter{Elements of Statistical Mechanics}
 \label{chap:elements_of_stat_mech}
 Statistical mechanics aims at explaining the microscopic origins of macroscopic properties of systems with large numbers of degrees of freedom. The exact solution for the time evolution of every particle in a single complex system requires enormous computational efforts, and in most cases provides little insight. In contrast to the stochastic motion of microscopic particles in a thermal environment, collective system properties such as entropy, pressure, or temperature, for the most part exhibit relatively simple behavior. The formalism of statistical mechanics allows us to study these properties by considering the average behavior of a large number of identically prepared systems, i.e., the statistical ensemble. It is well established, that for very large systems near the thermodynamic limit, all ensembles become equivalent. However this is emphatically not true in the case of intrinsically finite systems for which the choice of an ensemble is non-trivial\cite{Bachmann2014}. Therefore, we shall briefly introduce several prominent statistical ensembles, starting with arguably the most fundamental one, the \textit{microcanonical ensemble}.
 
@@ -858,7 +858,7 @@ In a displacement update, a randomly selected monomer is moved according to a ra
 %%%%%%%%%%%%%%%%   CHAPTER 4			   %%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\chapter{Coarse-grained off-lattice polymer models}
+\chapter{Coarse-grained Off-lattice Polymer Models}
 \label{chap:HomopolymerModel}
 It is hardly possible to overestimate the importance of defining an appropriate model to represent a real physical system in a computational study. What constitutes an `appropriate' model depends largely on the system under investigation and on the level of detail which is needed to correctly capture the properties of a given physical phenomenon. For example, the study of chemical reaction kinetics, ground-state geometries of molecules, or the optical and electronic properties of semiconductors, requires detailed knowledge of the electronic structure and interactions. In such cases, density functional theory (DFT)\cite{Sholl2009} or other quantum mechanical modelling methods need to be employed. On the other hand, a wide range of interesting physical phenomena, such as protein folding, polymer collapse, adsorption, and aggregation, are driven by cooperative structure forming processes and as such are not expected to depend sensitively on the precise electronic or even atomic structures. In principle, it is possible to gain insight into these processes by means of simplified models with a reduced number of effective parameters\cite{Bachmann2014,Schmid2011}. In this chapter we shall briefly discuss the concept of \textit{coarse-graining} and introduce the model for the flexible elastic homopolymer together with a set of structural order parameters which are particularly effective at characterizing the conformational geometries of polymers in the solid pseudophase.
 
@@ -1318,7 +1318,7 @@ $30.0$  &  $0.35 \pm 0.01$ &  $0.344  \pm 0.005$ & N/A & $3.399 \pm 0.002$
 %%%%%%%%%%%%%%   CHAPTER 6			   %%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\chapter{Effects of short range repulsion on the structural properties of elastic homopolymers}
+\chapter{Effects of Short Range Repulsion on the Structural Properties of Elastic Homopolymers}
 \label{chap:shortRangeRepuls}
 
 Bonded interactions in coarse-grained models of elastic polymers are commonly represented by the symmetric, finitely extensible, nonlinear, elastic (FENE) potential (Eq.~\ref{eq:FENE}). In Chap.~\ref{chap:HomopolymerModel}, we have introduced an alternative representation of the bonded potential, expressed as a combination of the FENE and Lennard-Jones (LJ) potentials. With the additional LJ term, the bonded potential becomes strongly repulsive at short ranges and the symmetry of the FENE potential is broken. However the maximum extension of the bond, also known as the bond confinement range, is controlled solely by the strongly diverging FENE potential.  The impact of the bond confinement range on the thermodynamic properties of short elastic homopolymer chains is discussed extensively in Chap.~\ref{chap:bondFluct}. In the following, we systematically investigate the effects of short range repulsion between bonded monomers on the structural properties of polymer chains of length $N = 15,55$~\cite{Koci2016}. 
@@ -1774,7 +1774,7 @@ Data fits of the values from Table~\ref{tab:agg_Tab_1} are shown in Fig.~\ref{fi
 %%%%%%% 	SUMMARY	AND OUTLOOK	               %%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\chapter{Summary and Outlook}
+\chapter{Summary}
 
 %
 In this thesis we have systematically investigated the structural and the thermodynamic properties of polymer systems represented by generic coarse-grained models. For this purpose, we have used advanced generalized-ensemble Monte Carlo algorithms together with sophisticated statistical analysis methods such as the microcanonical inflection-point analysis.
@@ -1793,11 +1793,11 @@ In chapter~\ref{chap:shortRangeRepuls}, we have investigated the thermodynamic a
 In chapter~\ref{chap:Aggregation}, we have investigated the properties of the aggregation transition for systems consisting of up to $M = 20$ short flexible elastic homopolymer chains. Utilizing the tools of the microcanonical inflection point analysis, we have found that the aggregation transition is a sequential process consisting of $M-1$ subtransitions between intermediate, partially fragmented structural phases. Each oscillation in the microcanonical inverse temperature curve indicates a transition between two adjacent subphases. We have established the relationship between the microcanonical density of states $g(E)$ and the densities of states $g_{i}(E)$ corresponding to the individual subphases. From this, we have further derived similar expressions for the microcanonical entropy $S(E)$ and its energy derivative, the microcanonical inverse temperature $\beta(E)$. We have used those relationships to motivate the origins of the convex intruder in $S(E)$ and the prominent back-bending region in $\beta(E)$, both of which are indicators of a first-order process. Canonical energy histograms $h_{i}(\beta;E)$, collected at the transition temperature $\beta_{\mathrm{agg}}$ for each individual subphase, confirm that certain subphases contribute only negligibly to the total canonical distribution. The origin of these \textit{missing} subphases can be explained on the basis of the effects of translational entropy on the relative positions of the subphase entropy curves $S_{i}(E)$. The results of this study show that with increasing system size, the number of possible subphases increases rapidly, whereas their relevant subset increases only linearly. Finally, we have discussed the scaling properties of $\beta_{\mathrm{agg}}$ and the latent heat per monomer $\Delta q$. The increasing values of $\Delta q$ with system size provide further evidence that the aggregation transition remains a first-order process even as $M$ tends towards the thermodynamic limit. 
 %
 
-
+\newpage
 
 %~~~~~~~~~~~~~~~~ Reference ~~~~~~~~~~~~~~~~~~%
-\addcontentsline{toc}{chapter}{Bibliography}
 \begin{thebibliography}{99}
+	\addcontentsline{toc}{chapter}{Bibliography}
         \input{References.tex}
 \end{thebibliography}
 
