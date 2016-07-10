@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.3.27)  3 JUL 2016 18:35
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.3.27)  10 JUL 2016 18:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -202,13 +202,13 @@ Package caption Info: End \AtBeginDocument code.
  [1
 
 ] [2]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 75.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 76.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 75.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 76.
  [3] [4] [4
 
 ]
@@ -305,20 +305,20 @@ Chapter 4.
 ]
 File: chapter4Figs/coarseGraining.eps Graphic file (type eps)
  <chapter4Figs/coarseGraining.eps>
-Overfull \hbox (4.69496pt too wide) in paragraph at lines 866--869
+Overfull \hbox (4.69496pt too wide) in paragraph at lines 874--877
  [] 
  []
 
 [43] [44] [45]
 File: chapter4Figs/potentialLarge.eps Graphic file (type eps)
  <chapter4Figs/potentialLarge.eps>
-Overfull \hbox (4.69496pt too wide) in paragraph at lines 934--936
+Overfull \hbox (4.69496pt too wide) in paragraph at lines 942--944
  [] 
  []
 
 File: chapter4Figs/polymerModel.eps Graphic file (type eps)
 <chapter4Figs/polymerModel.eps>
-Overfull \hbox (4.69496pt too wide) in paragraph at lines 955--958
+Overfull \hbox (4.69496pt too wide) in paragraph at lines 963--966
  [] 
  []
 
@@ -327,7 +327,7 @@ File: chapter4Figs/rogFluct.eps Graphic file (type eps)
  <chapter4Figs/rogFluct.eps> [49] [50]
 File: chapter4Figs/q6.eps Graphic file (type eps)
  <chapter4Figs/q6.eps>
-Overfull \hbox (4.69496pt too wide) in paragraph at lines 1086--1089
+Overfull \hbox (4.69496pt too wide) in paragraph at lines 1094--1097
  [] 
  []
 
@@ -351,7 +351,7 @@ File: chapter5Figs/pd1330.eps Graphic file (type eps)
 File: chapter5Figs/microelast.eps Graphic file (type eps)
 
 <chapter5Figs/microelast.eps>
-Overfull \hbox (9.26282pt too wide) in paragraph at lines 1237--1240
+Overfull \hbox (9.26282pt too wide) in paragraph at lines 1245--1248
  | [] 
  []
 
@@ -391,7 +391,7 @@ Chapter 7.
 ] [84]
 File: chapter7Figs/combinedMicro.eps Graphic file (type eps)
  <chapter7Figs/combinedMicro.eps>
-Overfull \hbox (9.3971pt too wide) in paragraph at lines 1552--1554
+Overfull \hbox (9.3971pt too wide) in paragraph at lines 1560--1562
  [] 
  []
 
@@ -423,4 +423,4 @@ Here is how much of TeX's memory you used:
  36 hyphenation exceptions out of 8191
  53i,10n,92p,2599b,380s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on koci_tomas_201607_phd.dvi (125 pages, 267324 bytes).
+Output written on koci_tomas_201607_phd.dvi (125 pages, 270004 bytes).
