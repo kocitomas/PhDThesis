@@ -27,7 +27,8 @@ by\\[18pt]
 (Under the Direction of Michael Bachmann)\\[12pt]
 \textsc{Abstract}
 \end{center}
-Fundamental understanding of structure forming processes in the context of mesoscopic polymer systems is relevant for a number of technological and biomedical applications. In this thesis, we employ advanced generalized-ensemble Monte Carlo methods to perform extensive simulations of coarse-grained, off-lattice polymer models. We systematically examine the effects of short-range repulsion and bond confinement on the structural macrostates and transitions of elastic homopolymer chains. Using the tools of the microcanonical inflection-point analysis, we unravel the properties of polymer aggregation, and show that in finite systems, aggregation is a first-order process consisting of a sequence of substransitions between intermediate structural phases.
+Fundamental understanding of structure forming processes in the context of mesoscopic polymer systems is relevant for a number of technological and biomedical applications. In this thesis, extensive simulations of coarse-grained off-lattice polymer models are performed using advanced generalized-ensemble Monte Carlo methods. Microcanonical inflection-point analysis and structural order parameters are used to systematically examine the effects of bond confinement and short-range repulsion on the structural macrostates and transitions of elastic homopolymer chains. The effectiveness of the inflection-point analysis is also demonstrated in a detailed study of polymer aggregation. It is shown that in finite systems, the aggregation transition is a first-order process consisting of a sequence of substransitions between intermediate structural phases.
+
 
 
 % Display the index words (this is a bit fancy):
@@ -119,7 +120,7 @@ I would like to extend my deepest gratitude to Prof. Michael Bachmann. His mento
 
 I thank Prof. Steven Lewis for the exciting and challenging introduction into the beautiful field of classical electrodynamics. His passion for teaching was one of the main factors that finally lead to my decision to pursue a doctorate in physics. I'm also deeply indebted to Prof. Bernd Sch\"{u}ttler for his time and endless patience, when 5 years ago, I showed up in his class on mathematical physics with no prior education in either math or physics. I thank Prof. David Landau for his dedication to provide excellent educational resources and opportunities to all CSP students. I would like to thank Jeff Deroshia and Mike Caplinger for keeping our computers in great shape and Shan-Ho Tsai for providing access to the GACRC computing resources.
 
-Finally, I would like to extend my deepest gratitude to my wonderful family and friends that have supported me both financially and emotionally over the past years. In particular, I want to express my thanks to the Link family who have graciously accepted me as their son and whose support was instrumental to my success.
+Finally, I would like to extend my deepest gratitude to my wonderful family and friends that have supported me both financially and emotionally over the past years. In particular, I want to express my thanks to the Link family who has graciously accepted me as their son and whose support was instrumental to my success.
 
 
 \setcounter{tocdepth}{1}
@@ -184,7 +185,7 @@ Statistical mechanics aims at explaining the microscopic origins of macroscopic 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{The microcanonical ensemble}
 \label{sec:mic_ensemble}
-Let us consider a mechanically and adiabatically isolated system with a constant number of particles $(N)$, volume $(V)$, and energy $(E)$. At any given moment, the system is to be found in a particular microstate $\mu$, which is represented by a point in a $6N$ dimensional phase-space. At a fixed energy $E$, the accessible microstates are constrained to the surface of constant energy $\mathcal{H}(\mu) = E$, where $\mathcal{H}$ is the Hamiltonian of the system. The total number of microstates corresponding to a macrostate with a fixed energy $E$ is obtained by calculating the density of states\footnote{Please refer to section 2.3 for detailed discussion of alternative definitions of the density of states.}
+Let us consider a mechanically and adiabatically isolated system with a constant number of particles $(N)$, volume $(V)$, and energy $(E)$. At any given moment, the system is to be found in a particular microstate $\mu$, which is represented by a point $(\mathcal{P},\mathcal{Q}) = (\vec{p}_{1},...,\vec{p}_{N},\vec{x}_{1},...,\vec{x}_{N})$ in a $6N$ dimensional phase-space. At a fixed energy $E$, the accessible microstates are constrained to the hypersurface of constant energy $\mathcal{H}(\mu) = E$, where $\mathcal{H}$ is the Hamiltonian of the system. The total number of microstates corresponding to a macrostate with a fixed energy $E$ is obtained by calculating the density of states\footnote{Please refer to section 2.3 for detailed discussion of alternative definitions of the density of states.}
 \begin{equation}
 \label{eq:densityOfStatesTheoretic}
 g(E) = \int \mathcal{DP}\mathcal{DQ} \:\: \delta(E - \mathcal{H}(\mathcal{P},\mathcal{Q})),
@@ -193,10 +194,10 @@ where
 \begin{equation}
 \mathcal{DP}\mathcal{DX} = \prod_{n = 1}^{N} \frac{d^{3}p_{n}d^{3}x_{n}}{(2 \pi \hbar)^{3}}
 \end{equation}
-is the Lebesgue measure over phase space\cite{Rugh2001}. In computational studies, the energy space is by necessity discretized into intervals of width $\Delta E$, and the density of states $g(E_{i})$ is obtained by counting the microstates within a thin shell of width $\Delta E$. Formally, $g(E_{i})$ is a discrete function defined as
+is the Lebesgue measure over phase space\cite{Rugh2001}. In computational studies, the energy space is by necessity discretized into intervals of width $\Delta E$, and the density of states $G(E_{i})$ is obtained by counting the microstates within a thin shell of width $\Delta E$. Formally, $G(E_{i})$ is a discrete function defined as
 \begin{equation}
 \label{eq:densitOfStatesExplicit}
-g(E_{i}) = \int _{E_{i}-\Delta E/2} ^{E_{i}+\Delta E/2} g(E)dE,
+G(E_{i}) = \int _{E_{i}-\Delta E/2} ^{E_{i}+\Delta E/2} g(E)dE,
 \end{equation}
 where $g(E)$ in the integrand is the continuous density of states\cite{Bachmann2014}.
 
@@ -252,7 +253,7 @@ Frequently, it is more convenient to consider instead the inverse microcanonical
 \label{subsec: micro_analysis}
 A macrostate of a system is specified by a set of macroscopic variables and possesses the characteristics of the predominant microstates. Macrostates are said to belong to the same thermodynamic phase, if in a given range of some external control parameters\footnote{Some common examples of external control parameters are the canonical temperature, pressure, or the chemical potential.} all of the system's thermodynamic observables are analytic, i.e. have convergent Taylor expansions. Singularities in the observables signify the presence of phase transitions between distinct phases, typically marked by abrupt changes in macrosopic properties in response to minute variations of external control parameters. Phase transitions can be roughly divided into two categories. \textit{Abrupt} transitions are characterized by the coexistence of two distinct phases and discontinuities in most physical properties. \textit{Continuous} transitions, although less common in nature, have been the object of most intense research. They are marked by diverging correlation lenghts, large fluctuations, and scale invariance\cite{Sethna2006}. 
 
-Divergences and singularities in thermodynamic observables and their derivatives are only found in systems which satisfy the thermodynamic limit. In mesoscopic systems\footnote{Typical length scales in  mesoscopic systems are of the order of $\sim 10 - 10^{3}$ nanometers. In this regime, exact quantum many-body interactions can be replaced by effective classical potentials, and cooperative effects dominate structure formation processes. Mesoscopic systems are distinct from macroscopic systems due to the presence of significant finite-size effects, which disallow the simplifying assumptions of the thermodynamic limit.}, due to finite size effects, divergences are replaced by peaks and discontinuities are smoothed over\cite{Bachmann2014}. For clarity, we designate the term \textit{pseudophase transition} to represent significant conformational changes in finite systems. Likewise, thermodynamic phases in finite systems shall be referred to as \textit{pseudophases}. In the following, we present a powerful formalism for the analysis of pseudophase transitions in the microcanonical ensemble; the microcanonical inflection point analysis.
+Divergences and singularities in thermodynamic observables and their derivatives are found only in infinitely large systems for which the assumption of the thermodynamic limit is valid. In mesoscopic systems\footnote{Typical length scales in  mesoscopic systems are of the order of $\sim 10 - 10^{3}$ nanometers. In this regime, exact quantum many-body interactions can be replaced by effective classical potentials, and cooperative effects dominate structure formation processes. Mesoscopic systems are distinct from macroscopic systems due to the presence of significant finite-size effects, which disallow the simplifying assumptions of the thermodynamic limit.}, due to finite size effects, divergences are replaced by peaks and discontinuities are smoothed over\cite{Bachmann2014}. For clarity, we designate the term \textit{pseudophase transition} to represent significant conformational changes in finite systems. Likewise, thermodynamic phases in finite systems shall be referred to as \textit{pseudophases}. In the following, we present a powerful formalism for the analysis of pseudophase transitions in the microcanonical ensemble: the microcanonical inflection point analysis.
 
 \subsubsection{Microcanonical inflection-point analysis}
 \label{subsubsec:InflectionPointAnalysis}
@@ -268,8 +269,8 @@ Microcanonical inflection-point analysis of the inverse microcanonical temperatu
 \end{figure}
 %
 
-In analogy to the principle of minimal sensitivity~\cite{Stevenson}, structural transitions between pseudophases occur when $\beta(E)$, or one of its energy
-derivatives, responds least sensitively to variations in energy\cite{Schnabel2011}. In particular, first-order transitions are associated with inflection points in $\beta (E)$ that have a positive slope, accompanied by positive-valued peaks in the energy derivative $\gamma(E)=d\beta(E)/dE$. Similarly, a second-order transition occurs when $\beta(E)$ exhibits an inflection point with a negative slope and $\gamma(E)$ attains a negative-valued peak. Examples of microcanonical pseudophase transition signals are shown in Fig.~\ref{fig:Fig_1}. The formalism can be naturally extended to higher-order transitions. Inflection point in the $(2\mathrm{n})$th-derivative of entropy, accompanied by a positive-valued valley in the $(2\mathrm{n}+1)$th-derivative, indicates a $(2\mathrm{n}+1)$th-order transition. Similarly, a $(2\mathrm{n})$th-order transition is marked by an inflection point in the $(2\mathrm{n}-1)$th-derivative of entropy and a negative-valued peak in the $(2\mathrm{n})$th-order derivative.
+In analogy to the principle of minimal sensitivity~\cite{Stevenson}, structural transitions between pseudophases occur when 
+$\beta(E)$, or one of its energy derivatives, responds least sensitively to variations in energy\cite{Schnabel2011}. In particular, first-order transitions are associated with inflection points in $\beta (E)$ that have a positive slope, accompanied by positive-valued peaks in the energy derivative $\gamma(E)=d\beta(E)/dE$. Similarly, a second-order transition occurs when $\beta(E)$ exhibits an inflection point with a negative slope and $\gamma(E)$ attains a negative-valued peak. Examples of microcanonical pseudophase transition signals are shown in Fig.~\ref{fig:Fig_1}. The formalism can be naturally extended to higher-order transitions. For $n > 0$, inflection point in the $(2\mathrm{n})$th-derivative of entropy, accompanied by a positive-valued valley in the $(2\mathrm{n}+1)$th-derivative, indicates a $(2\mathrm{n}+1)$th-order transition. Similarly, a $(2\mathrm{n})$th-order transition is marked by an inflection point in the $(2\mathrm{n}-1)$th-derivative of entropy and a negative-valued peak in the $(2\mathrm{n})$th-order derivative.
 
 %
 \begin{figure}
@@ -279,14 +280,14 @@ derivatives, responds least sensitively to variations in energy\cite{Schnabel201
 The convex region of the microcanonical entropy $S(E)$ and the back-bending of the microcanonical inverse temperature $\beta(E)$ are prominent indicators of \textit{first-order} transitions. The slope of the double-tangent Gibbs hull $\mathcal{H}(E)$ defines the transition temperature $\beta_{\mathrm{tr}}$. The Maxwell construction, defined by equal areas of $s_{\mathrm{o}}$ and $s_{\mathrm{d}}$, is itself positioned at $\beta_{\mathrm{tr}}$. The transition energy $E_{\mathrm{tr}}$ indicates the location of the largest separation between $\mathcal{H}(E)$ and $S(E)$, which signifies maximal entropic suppression of the transition states. The latent heat $\Delta Q$ corresponds to the width of the transition region between $E_{\mathrm{d}}$ and $E_{\mathrm{o}}$.}
 \end{figure}
 %
-Alternatively, in the case of first-order transitions, the transition temperature $\beta_{\mathrm{tr}}$ can be obtained by the means of the Maxwell construction which was originally introduced to repair the unphysical back-bending in the pressure versus volume isotherms for the van der Waals gas. In mesoscopic systems, the finite-size effects lead to the entropic suppression of transition states, which is manifested in the backbending of $\beta(E)$ and the convex intruder in $S(E)$. The position of the Maxwell construction is determined by the equality of the areas $s_{\mathrm{o}}$ and $s_{\mathrm{d}}$ [Fig.\ref{fig:Fig_2}]. Commonly referred to as \textit{surface entropies}, $s_{\mathrm{o}}$ and $s_{\mathrm{d}}$ are defined as the integrals
+Alternatively, in the case of first-order transitions, the transition temperature $\beta_{\mathrm{tr}}$ can be obtained by the means of the Maxwell construction, which was originally introduced to repair the unphysical back-bending in the pressure versus volume isotherms for the van der Waals gas~\cite{Bachmann2014}. In mesoscopic systems, the finite-size effects lead to the entropic suppression of transition states, which is manifested in the backbending of $\beta(E)$ and the convex region in $S(E)$. The position of the Maxwell construction is determined by the equality of the areas $s_{\mathrm{o}}$ and $s_{\mathrm{d}}$ [Fig.\ref{fig:Fig_2}]. Commonly referred to as \textit{surface entropies}, $s_{\mathrm{o}}$ and $s_{\mathrm{d}}$ are defined as the integrals
 \begin{eqnarray}
 \label{eq:surfaceEntr}
 s_{\mathrm{o}} &=& \int_{E_{\mathrm{o}}}^{E_{\mathrm{tr}}} dE \:\: (\beta_{\mathrm{tr}}-\beta(E)), \\
 s_{\mathrm{d}} &=& \int_{E_{\mathrm{tr}}}^{E_{\mathrm{d}}} dE \:\: (\beta(E)-\beta_{\mathrm{tr}}).
 \end{eqnarray}
 The Maxwell line intersects the inverse temperature at the energies $E_{\mathrm{o}}$, $E_{\mathrm{tr}}$, and $E_{\mathrm{d}}$. The latent heat
-$\Delta Q = E_{\mathrm{d}} - E_{\mathrm{o}}$ corresponds to the energetic separation between the ordered and the disordered pseudophases . The transition energy $E_{\mathrm{tr}}$ indicates the location where intermediate states experience the maximal entropic suppression\cite{Bachmann2014}.
+$\Delta Q = E_{\mathrm{d}} - E_{\mathrm{o}}$ corresponds to the energetic separation between the ordered and the disordered pseudophases. The transition energy $E_{\mathrm{tr}}$ indicates the location where intermediate states experience the maximal entropic suppression\cite{Bachmann2014}.
 
 The slope of the double-tangent Gibbs construction, also shown in Figure \ref{fig:Fig_2}, provides yet another definition of $\beta_{\mathrm{tr}}$. As a function of energy, the Gibbs hull is defined as
 \begin{equation}
@@ -336,7 +337,7 @@ U(T) = k_{\mathrm{B}}T^{2}\frac{\partial}{\partial T} \mathrm{ln} Z(T)\bigg|_{N,
 \end{equation}
 \newpage
 \noindent
-The amount of energy needed to increase the temperature of the system by one unit is given by the specific heat 
+The amount of energy needed to increase the temperature of the system by one unit is given by the heat capacity 
 $C_{V}$, defined as a temperature derivative of the internal energy
 \begin{equation}\label{eq:22}
 C_{V}(T) = \frac{\partial}{dT}U(T)\bigg|_{N,V} = -T\frac{\partial^{2}}{\partial T^{2}}F(T)\bigg|_{N,V}.
@@ -347,7 +348,7 @@ C_{V}(T) &=&  \frac{\partial}{dT}\frac{\sum_{E} E \, g(E) e^{-\frac{E}{k_{\mathr
 &=& \frac{1}{k_{\mathrm{B}}T^2} \left[\left(\frac{\sum_{E} E^{2} \, g(E)  e^{-\beta E}}{Z(T)}\right) - \left(\frac{\sum_{E} E \, g(E)  e^{-\beta E}}{Z(T)}\right)^{2}\right] \nonumber \\
 &=& \frac{1}{k_{\mathrm{B}}T^2}\left(\left<E^{2}\right> - \left<E\right>^{2}\right),
 \end{eqnarray}
-where the last expression corresponds to the variance of the Boltzmann distribution. This result is of a profound physical importance, establishing the connection between the macroscopic response quantity $C_{V}$, and microscopic fluctuations.
+where the last expression corresponds to the variance of the Boltzmann distribution. This result is of profound physical importance, establishing the connection between the macroscopic response quantity $C_{V}$, and microscopic fluctuations.
 
 \subsection{Canonical analysis of phase transitions}
 Sudden dramatic changes of macroscopic properties, in response to small variations of an external control parameter, indicate that the system under investigation is undergoing a phase transition. Here we consider temperature-driven transitions and describe a classification scheme similar to Ehrenfest's.
@@ -358,14 +359,14 @@ In the thermodynamic limit, it is generally possible to identify some property o
 \center
 \includegraphics[width = 0.8\textwidth]{chapter2Figs/CanonicalFirstOrder.eps}
 \caption{\label{fig:Fig_3}% 
-(a) The jump discontinuity in the canonical entropy $S$, (b) and the singularity in the specific heat $C_{V}$, are characteristic of first order phase transitions.}
+(a) The jump discontinuity in the canonical entropy $S$, (b) and the singularity in the heat capacity $C_{V}$, are characteristic of first order phase transitions.}
 \end{figure} 
 
 First order transitions are characterized by a jump discontinuity $\Delta S$ in entropy and the coexistence of two distinct phases\footnote{As a familiar example, consider the coexistence of gas bubbles and liquid at the boiling point of water.} at the transition temperature. The energetic separation between the two phases corresponds to the latent heat
 \begin{equation}
-\Delta Q = T_{\mathrm{trans}}\,\Delta S,
+\Delta Q = T_{\mathrm{tr}}\,\Delta S,
 \end{equation}
-where $\Delta S$ is the height of the discontinuity and $T_{\mathrm{trans}}$ is the transition temperature. The specific heat $C_{V}$ exhibits a delta peak at $T_{\mathrm{trans}}$, as shown in Fig. \ref{fig:Fig_3}\,(b).
+where $\Delta S$ is the height of the discontinuity and $T_{\mathrm{tr}}$ is the transition temperature. The heat capacity $C_{V}$ exhibits a singularity at $T_{\mathrm{tr}}$, as shown in Fig. \ref{fig:Fig_3}\,(b).
 
 \newpage
 
@@ -373,25 +374,25 @@ where $\Delta S$ is the height of the discontinuity and $T_{\mathrm{trans}}$ is 
 \center
 \includegraphics[width = 0.75\textwidth]{chapter2Figs/CanonicalSecondOrder.eps}
 \caption{\label{fig:Fig_4}% 
-Second order transitions are characterized by discontinuities in response quantities, such as the specific heat. (a,b) In the case of a \textbf{critical} second order transition, the entropy $S$ attains an infinite slope at $T_{c}$ accompanied by a divergence in the specific heat $C_{V}$. (c,d) So called \textit{lambda} transitions are characterized by a jump discontinuity in $C_{V}$ and a cusp singularity in entropy.}
+Second order transitions are characterized by discontinuities in response quantities, such as the heat capacity. (a,b) In the case of a \textbf{critical} second order transition, the entropy $S$ attains an infinite slope at $T_{c}$ accompanied by a divergence in the heat capacity $C_{V}$. (c,d) So called \textit{lambda} transitions are characterized by a jump discontinuity in $C_{V}$ and a cusp singularity in entropy.}
 \end{figure}
 
-Second order transitions do not posses discontinuities in entropy, and for that reason are often called \textit{continuous} transitions. Instead, discontinuities are found in the second derivatives of the free energy with respect to temperature. It is customary to make use of equation\,\,\ref{eq:22}, and consider the specific heat $C_{V}$ which also contains the same discontinuities.
-In the vicinity of the transition point $T_{c}$, the specific heat exhibits a power law behavior $C_{V}(\tau) \propto \left| \tau \right|^{-\alpha}$, where $\tau = \left(T-T_{c}\right)/T_{c}$ and $\alpha$ is the associated critical exponent. Examples of common types of discontinuities of $C_{V}$ are shown in Fig. \ref{fig:Fig_4}. Other important quantities such as the magnetic susceptibility $\chi$ and the correlation length $\xi$ also exhibit a power law behavior near the transition point, governed by the critical exponents $\gamma$ and $\nu$ respectively. The striking observation, that in the vicinity of the critical temperature $T_{c}$, the behavior of physical systems with diverse microscopic properties can be described in terms of the same critical exponents, is formalized in the theory of Universality\cite{Kardar2009}. 
+Second order transitions do not posses discontinuities in entropy, and for that reason are often called \textit{continuous} transitions. Instead, discontinuities are found in the second derivatives of the free energy with respect to temperature. It is customary to make use of equation\,\,\ref{eq:22}, and consider the heat capacity $C_{V}$ which also contains the same discontinuities.
+In the vicinity of the transition point $T_{c}$, the heat capacity exhibits a power law behavior $C_{V}(\tau) \propto \left| \tau \right|^{-\alpha}$, where $\tau = \left(T-T_{c}\right)/T_{c}$ and $\alpha$ is the associated critical exponent. Examples of common types of discontinuities of $C_{V}$ are shown in Fig. \ref{fig:Fig_4}. Other important quantities such as the magnetic susceptibility $\chi$ and the correlation length $\xi$ also exhibit a power law behavior near the transition point, governed by the critical exponents $\gamma$ and $\nu$ respectively. The striking observation, that in the vicinity of the critical temperature $T_{c}$, the behavior of physical systems with diverse microscopic properties can be described in terms of the same critical exponents, is formalized in the theory of Universality\cite{Kardar2009}. 
 
 \subsubsection{Canonical analysis in mesoscopic systems} 
-The description of phase transitions in the terms of discontinuities and divergences is valid only in the thermodynamic limit. In situations where the thermodynamic behavior of a system is affected by finite size effects, this idealized description no longer applies. Nevertheless, the numerous examples of abrupt changes of macroscopic properties in finite systems necessitate the generalization of the theory. 
+The description of phase transitions in terms of discontinuities and divergences is valid only in the thermodynamic limit. In situations where the thermodynamic behavior of a system is affected by finite size effects, this idealized description no longer applies. Nevertheless, the numerous examples of abrupt changes of macroscopic properties in finite systems necessitate the generalization of the theory. 
 
-In the generalized formalism, peaks in the specific heat and other response quantities indicate regions of increased thermodynamic activity, i.e. pseudophase transitions. The order of the transition is determined from the shape of the canonical energy distribution in the transition region. Bimodal distributions reveal the coexistence of two pseudophases and indicate a first-order transition\cite{Janke1998}. The associated latent heat of the transition is given by the energetic separation between the two peaks in the distribution. Second-order transitions correspond to unimodal energy distributions. The power law behavior of response quantities contains significant finite-size corrections and in some cases is altogether not applicable\cite{Landau2000}. An example of canonical analysis, applied to first- and second-order pseudophase transitions, is illustrated in Fig. \ref{fig:Fig_5}. 
+In the generalized formalism, peaks in the heat capacity and other response quantities indicate regions of increased thermodynamic activity, i.e. pseudophase transitions. The order of the transition is determined from the shape of the canonical energy distribution in the transition region. Bimodal distributions reveal the coexistence of two pseudophases and indicate a first-order transition\cite{Janke1998}. The associated latent heat of the transition is given by the energetic separation between the two peaks in the distribution. Second-order transitions correspond to unimodal energy distributions. The power law behavior of response quantities contains significant finite-size corrections and in some cases is altogether not applicable\cite{Landau2000}. An example of canonical analysis, applied to first- and second-order pseudophase transitions, is illustrated in Fig. \ref{fig:Fig_5}. 
 
 \begin{figure}
 \center
 \includegraphics[width = 0.8\textwidth]{chapter2Figs/CanonicalAnalysisSample.eps}
 \caption{\label{fig:Fig_5}% 
-(a) The peak in the specific heat $C_{V}$ indicates a region of heightened thermodynamic activity. (b) The two peaks in the bimodal canonical energy distribution correspond to the ordered and disordered pseudophases, energetically separated by the latent heat $\Delta Q$. Pseudophase coexistence and latent heat are reliable indicators of a first-order pseudophase transition. (c) Second-order transitions are marked by wide unimodal energy distributions at the transition point.}
+(a) The peak in the heat capacity $C_{V}$ indicates a region of heightened thermodynamic activity. (b) The two peaks in the bimodal canonical energy distribution correspond to the ordered and disordered pseudophases, energetically separated by the latent heat $\Delta Q$. Pseudophase coexistence and latent heat are reliable indicators of a first-order pseudophase transition. (c) Second-order transitions are marked by wide unimodal energy distributions at the transition point.}
 \end{figure}
 
-It should be mentioned that second-order pseudophase transitions do not always produce peaks in the specific heat. In general, it is necessary to investigate the behavior of several response quantities in order to obtain an accurate picture of the transition properties of the system under investigation. However, due to finite size effects, the signals obtained from different quantities will in general not coincide at a single transition temperature. This reality further fortifies the argument that the microcanonical inflection-point analysis\footnote{Introduced in Sec. \ref{subsec: micro_analysis}}, which defines a unique transition temperature in mesoscopic and macroscopic systems alike, is the preferred formalism for the analysis of finite systems.
+It should be mentioned that second-order pseudophase transitions do not always produce peaks in the heat capacity. In general, it is necessary to investigate the behavior of several response quantities in order to obtain an accurate picture of the transition properties of the system under investigation. However, due to finite size effects, the signals obtained from different quantities will in general not coincide at a single transition temperature. This reality further fortifies the argument that the microcanonical inflection-point analysis\footnote{Introduced in Sec. \ref{subsec: micro_analysis}}, which defines a unique transition temperature in mesoscopic and macroscopic systems alike, is the preferred formalism for the analysis of finite systems.
 \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -401,15 +402,15 @@ It should be mentioned that second-order pseudophase transitions do not always p
 \section{Alternative definitions of the density of states}
 In section \ref{sec:mic_ensemble} we have defined the microcanonical density of states $g(E)$ as an integral over the surface of constant energy in the $6N$-dimensional phase space. We have argued that $g(E)$ contains all the essential information about the thermodynamic properties of the system under consideration, and introduced the formalism of the microcanonical inflection-point analysis which uses the logarithm of $g(E)$ as its starting point. In section \ref{sec:canonicalEnsemble} we have shown that the canonical partition function $Z(T)$ can be obtained by performing a Laplace transform of $g(E)$. Clearly, the microcanonical density of states plays a fundamental role in equilibrium statistical mechanics, and as such needs to be carefully defined. 
 
-Two distinct definitions of the density of states arise from certain ambiguity in the exact meaning of the microcanonical ensemble in computational studies. The density of states can be defined in the context of the conformational microcanonical ensemble $(N,V,E_{p})$ as a function of the potential energy only
+Two distinct definitions of the density of states arise from certain ambiguity in the exact meaning of the microcanonical ensemble in computational studies. The density of states can be defined in the context of the conformational microcanonical ensemble $(N,V,E_{c})$ as a function of the conformational (potential) energy only
 \begin{equation}
-g_{c}(E_{p}) = \int \mathcal{DQ} \:\: \delta(E_{p} - \mathcal{H}(\mathcal{Q}))
+g_{c}(E_{c}) = \int \mathcal{DQ} \:\: \delta(E_{c} - \mathcal{H}(\mathcal{Q}))
 \end{equation}
 This definition is commonly used in Monte Carlo simulations of magnetic systems where the kinetic energy contributions have little physical significance and the sampling can be restricted to the conformational space. However, in systems where the transfer between potential and kinetic energy has important physical interpretation, the sampling of the full phase space becomes necessary. The standard definition of the microcanonical ensemble $(N,V,E)$ is applied and the measured density of states becomes a function of the total system energy, which can be written as the sum of the potential and kinetic energies
 \begin{equation}
-E = E_{p} + E_{k}.
+E = E_{c} + E_{k}.
 \end{equation}
-In order to distinguish between the two definitions, we shall use the symbol $\Gamma(E)$ to represent the latter definition of the density of states. The connection between the conformational density of states and $\Gamma(E)$ is expressed as a convolution\cite{Calvo1995}
+In order to distinguish between the two definitions, we shall use the symbol $\Gamma(E)$ to represent the density of states in the full phase space. The connection between the conformational density of states $g_{c}(E)$ and $\Gamma(E)$ is expressed as a convolution\cite{Calvo1995}
 \begin{equation}
 \label{eq:TotalDOS}
 \Gamma(E) = \int dE_{k} \: g_{c}(E - E_{k})g_{k}(E_{k}),
@@ -445,7 +446,7 @@ With the exception of systems with rigid constraints, the average kinetic energy
 \begin{equation}
  \langle E _{k}\rangle = \frac{3Nk_{\mathrm{B}}T}{2},
 \end{equation}
-where $N$ is the number of particles in the system. It follows that the specific heat $C_{\mathrm{V}}$ obtains only a trivial additive constant from the kinetic energy term
+where $N$ is the number of particles in the system. It follows that the heat capacity $C_{\mathrm{V}}$ obtains only a trivial additive constant from the kinetic energy term
 \begin{eqnarray}
 C_{\mathrm{V}}(T) &=& \frac{\partial}{\partial T} U(T)\bigg|_{N,V} \nonumber \\
 				 &=& \frac{\partial}{\partial T} \langle E_{c} \rangle\bigg|_{N,V} + \frac{\partial}{\partial T}\frac{3Nk_{\mathrm{B}}T}{2} \nonumber \\
@@ -457,10 +458,10 @@ C_{\mathrm{V}}(T) &=& \frac{\partial}{\partial T} U(T)\bigg|_{N,V} \nonumber \\
 \includegraphics[width = 0.49\textwidth]{chapter2Figs/N13Energy.eps}
 \includegraphics[width = 0.49\textwidth]{chapter2Figs/N13Spec.eps}
 \caption{\label{fig:Fig_6}% 
-Results of a Monte Carlo simulation of a short flexible homopolymer of length $N=13$. The average kinetic energy $\langle E _{k}\rangle$ and the kinetic contributions $C_{\mathrm{V,kin.}}$ towards the specific heat are plotted as points on top of their respective theoretical curves (blue). The average potential energy $\langle E_{c} \rangle$ and the configurational specific heat $C_{\mathrm{V},\mathrm{conf.}}$ (green) were obtained by sampling of the configurational space. Sampling of the full phase space was performed to obtain the total average energy $U$ and the combined specific heat $C_{\mathrm{V}}$ (red). As expected, the combined specific heat is identical to $C_{\mathrm{V},\mathrm{conf.}}$, except for a trivial additive constant.}
+Results of a Monte Carlo simulation of a short flexible homopolymer of length $N=13$. The average kinetic energy $\langle E _{k}\rangle$ and the kinetic contributions $C_{\mathrm{V,kin.}}$ towards the heat capacity are plotted as points on top of their respective theoretical curves (blue). The average conformational (potential) energy $\langle E_{c} \rangle$ and the conformational heat capacity $C_{\mathrm{V},\mathrm{conf.}}$ (green) were obtained by sampling of the conformational space. Sampling of the full phase space was performed to obtain the total average energy $U$ and the combined heat capacity $C_{\mathrm{V}}$ (red). As expected, the combined heat capacity is identical to $C_{\mathrm{V},\mathrm{conf.}}$, except for a trivial additive constant.}
 \end{figure}
 
-In conclusion, the locations and shapes of signals for pseudophase transitions are not affected by the inclusion of the momentum space into a sampling scheme. To substantiate this assertion, in Fig. \ref{fig:Fig_6} we present the results from a Monte Carlo study of a short flexible homopolymer. The average kinetic energy $\langle E _{k}\rangle$ and the kinetic contributions $C_{\mathrm{V,kin.}}$ towards the specific heat are plotted as points on top of their respective theoretical curves (blue), showing good agreement with the predicted values. The average potential energy $\langle E_{c} \rangle$ and the configurational specific heat $C_{\mathrm{V},\mathrm{conf.}}$ (green) were obtained by the sampling of the configurational space only. Sampling of the full phase space was performed to obtain the total average energy $U$ and the combined specific heat $C_{\mathrm{V}}$ (red). As expected, the combined specific heat is identical to $C_{\mathrm{V},\mathrm{conf.}}$, except for a trivial additive constant. The estimate of the transition temperature is independent of the choice of either definition of the density of states. 
+In conclusion, the locations and shapes of signals for pseudophase transitions are not affected by the inclusion of the momentum space into a sampling scheme. To substantiate this assertion, in Fig.~\ref{fig:Fig_6} we present the results from a Monte Carlo study of a short flexible homopolymer. The average kinetic energy $\langle E _{k}\rangle$ and the kinetic contributions $C_{\mathrm{V,kin.}}$ towards the heat capacity are plotted as points on top of their respective theoretical curves (blue), showing good agreement with the predicted values. The average potential energy $\langle E_{c} \rangle$ and the conformational heat capacity $C_{\mathrm{V},\mathrm{conf.}}$ (green) were obtained by the sampling of the configurational space only. Sampling of the full phase space was performed to obtain the total average energy $U$ and the combined heat capacity $C_{\mathrm{V}}$ (red). As expected, the combined heat capacity is identical to $C_{\mathrm{V},\mathrm{conf.}}$, except for a trivial additive constant. The estimate of the transition temperature is independent of the choice of either definition of the density of states. 
 \newpage 
 
 \subsection{Consequences for microcanonical analysis}
@@ -477,7 +478,7 @@ Next, taking a derivative with respect to the total energy $E$ and dividing both
 \begin{eqnarray}
 \beta(E) &=& \int dE_{k} \:\frac{3N-2}{2E_{k}} \:\left[\frac{g_{c}(E - E_{k})E_{k}^{\frac{3N-2}{2}}}{\Gamma (E)}\right]
 \label{eq:beta1}  \\
-		&=& \int dE_{p} \: \beta_{c}(E_{p})\: \left[ \frac{g_{c}(E_{p})(E- E_{p})^{\frac{3N-2}{2}}}{\Gamma (E)} \right]
+		&=& \int dE_{c} \: \beta_{c}(E_{c})\: \left[ \frac{g_{c}(E_{c})(E- E_{c})^{\frac{3N-2}{2}}}{\Gamma (E)} \right]
 \label{eq:beta2}.  
 \end{eqnarray}
 Recognizing the two terms enclosed in square brackets as the microcanonical probability densities for the kinetic and potential energies,
@@ -491,14 +492,14 @@ we can rewrite equations \ref{eq:beta1} and \ref{eq:beta2} as
 and 
 \begin{equation}
 \label{eq:beta4}
-\beta(E) = \int dE_{p} \: \beta_{c}(E_{p})\: \rho(E_{p})_{E} = \left\langle \beta_{c} \right\rangle.
+\beta(E) = \int dE_{c} \: \beta_{c}(E_{c})\: \rho(E_{c})_{E} = \left\langle \beta_{c} \right\rangle.
 \end{equation}
 The microcanonical inverse temperature, obtained by the differentiation of the total density of states, can therefore be interpreted as an average of the conformational and kinetic anologs weighted by their respective microcanonical probability distributions.
 
-When the number of particles in the system is large, the probability densities $\rho(E_{k})_{E}$ and $\rho(E_{p})_{E}$ are expected to be sharply peaked around the most probable kinetic $\bar{E}_{k}$ and potential $\bar{E}_{p}$ energies respectively . We can therefore apply the saddle point approximation to the integrals in equations [\ref{eq:beta3}, \ref{eq:beta4}] and obtain the following first order approximations for the inverse temperature
+When the number of particles in the system is large, the probability densities $\rho(E_{k})_{E}$ and $\rho(E_{c})_{E}$ are expected to be sharply peaked around the most probable kinetic $\bar{E}_{k}$ and potential $\bar{E}_{c}$ energies respectively . We can therefore apply the saddle point approximation to the integrals in equations [\ref{eq:beta3}, \ref{eq:beta4}] and obtain the following first order approximations for the inverse temperature
 \begin{equation}
 \label{eq:approx1}
-\beta(E) \approx \beta_{c}(\bar{E}_{p,E}),
+\beta(E) \approx \beta_{c}(\bar{E}_{c,E}),
 \end{equation}
 and
 \begin{equation}
@@ -514,7 +515,7 @@ The first expression suggests that it is possible to reconstruct $\beta(E)$ from
 \caption{\label{fig:Fig_7}% 
 Comparison of microcanonical results from a Monte Carlo simulation of a flexible homopolymer of length $N=55$.(a) Graphs of the combined $S$, conformational $S_{c}$, and kinetic $S_{k}$ entropy curves. (b) The kinetic inverse temperature $\beta_{k}$ is a strictly convex function and the application of the inflection-point analysis reveals no transition signals. The conformational inverse temperature $\beta_{c}$ clearly differs from $\beta(E)$, however both indicate a first-order pseudophase transition at virtually the same temperature. }
 \end{figure}
-The kinetic entropy in Fig. \ref{fig:Fig_7} is a strictly concave function and the application of the inflection-point analysis to the corresponding inverse temperature $\beta_{k}$ reveals no transition signals. The conformational inverse temperature clearly differs from $\beta(E)$, however both indicate a first-order pseudophase transition at virtually the same temperature. In Fig. \ref{fig:Fig_8} we show the comparison between the true $\beta(E)$ and the reconstruction obtained from the conformational inverse temperature according to equations \ref{eq:approx1} and \ref{eq:approx2}. It is evident that the approximation is valid, except in the back-bending region of the first-order transition due to the bimodality of the probability densities $\rho(E_{k})_{E}$ and $\rho(E_{p})_{E}$. 
+The kinetic entropy in Fig. \ref{fig:Fig_7} is a strictly concave function and the application of the inflection-point analysis to the corresponding inverse temperature $\beta_{k}$ reveals no transition signals. The conformational inverse temperature clearly differs from $\beta(E)$, however both indicate a first-order pseudophase transition at virtually the same temperature. In Fig. \ref{fig:Fig_8} we show the comparison between the true $\beta(E)$ and the reconstruction obtained from the conformational inverse temperature according to equations \ref{eq:approx1} and \ref{eq:approx2}. It is evident that the approximation is valid, except in the back-bending region of the first-order transition due to the bimodality of the probability densities $\rho(E_{k})_{E}$ and $\rho(E_{c})_{E}$. 
 
 \newpage
 The expression in equation \ref{eq:approx2} can be rewritten as 
@@ -529,7 +530,7 @@ which clearly resembles the well known relationship between the canonical temper
 \center
 \includegraphics[width = 0.7\textwidth]{chapter2Figs/N55BetaComp.eps}
 \caption{\label{fig:Fig_8}% 
-Comparison of the inverse microcanonical temperature $\beta(E)$ (red) and the conformational inverse temperature $\beta_{c}(\bar{E}_{p})$ (blue) evaluated at the most probable potential energy $\bar{E}_{p}$. The approximation introduced in equation \ref{eq:approx1} holds except in the back-bending region of the first-order pseudophase transition. The inverse transition temperature $\beta_{\mathrm{trans}}$ obtained from the two quantities is virtually identical.}
+Comparison of the inverse microcanonical temperature $\beta(E)$ (red) and the conformational inverse temperature $\beta_{c}(\bar{E}_{c})$ (blue) evaluated at the most probable potential energy $\bar{E}_{c}$. The approximation introduced in equation \ref{eq:approx1} holds except in the back-bending region of the first-order pseudophase transition. The inverse transition temperature $\beta_{\mathrm{trans}}$ obtained from the two quantities is virtually identical.}
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1331,9 +1332,7 @@ Structural phase diagrams are constructed using the results of canonical and mic
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Model and simulation parameters}
-In this study, we simulate the coarse-grained model of an elastic homopolymer, in the same general form as introduced in Sec.\,\,\ref{subsec:ElasticChain}. The energy scale of the Lennard-Jones potential is set to $\epsilon=1$ and the van-der-Waals radius to $\sigma=r_0/2^{1/6}$, where $r_0 = 1.0$ is the location of the potential minimum. We set the cut-off radius at $r_c=2.5\,\sigma$, and introduce a shift $U_{\mathrm{LJ}}(r_{c}) \approx -0.0163169$ to avoid discontinuities in the potential.
-
-In order to investigate the properties of the model over a range of strengths of the bonded LJ interactions, the bonded potential is introduced in the modified form:
+In this study, we simulate the coarse-grained model of an elastic homopolymer, in the same general form as introduced in Sec.\,\,\ref{subsec:ElasticChain}. The energy scale of the Lennard-Jones potential is set to $\epsilon=1$ and the van-der-Waals radius to $\sigma=r_0/2^{1/6}$, where $r_0 = 1.0$ is the location of the potential minimum. We set the cut-off radius at $r_c=2.5\,\sigma$, and introduce a shift $U_{\mathrm{LJ}}(r_{c}) \approx -0.0163169$ to avoid discontinuities in the potential. In order to investigate the properties of the model over a range of strengths of the bonded LJ interactions, the bonded potential is introduced in the modified form:
 %
 \begin{equation}
 \label{eq:BondedInteractionModified}
