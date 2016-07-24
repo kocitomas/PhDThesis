@@ -35,16 +35,16 @@ Fundamental understanding of structure forming processes in the context of mesos
 \begin{list}{\sc Index words:\hfill}{\labelwidth 1.2in\leftmargin 1.4in\labelsep 0.2in}
 \item 
 \begin{flushleft}\singlespacing
+Structure Forming Processes,
+Pseudophase Transitions,
+Finite-Size Effects,
+Flexible Elastic Polymer,
 Polymer Aggregation,
 Monte Carlo Simulations,
 Parallel Tempering,
-Multicanonical Sampling,
+Gaussian Modified Ensembles,
 Canonical Analysis, 
-Microcanonical Inflection-Point Analysis,
-Flexible Polymer,
-Structural Transitions,
-Finite Systems,
-Finite-Size Effects
+Microcanonical Inflection-Point Analysis
 \end{flushleft}
 \end{list}
 
@@ -118,9 +118,9 @@ July 2016
 
 I would like to extend my deepest gratitude to Prof. Michael Bachmann. His mentorship was the most integral part of the wonderful learning adventure of the past four years. Our countless conversations about the many marvelous intricacies of physics and life had a profound impact on both my academic and personal development. 
 
-I thank Prof. Steven Lewis for the exciting and challenging introduction into the beautiful field of classical electrodynamics. His passion for teaching was one of the main factors that finally lead to my decision to pursue a doctorate in physics. I'm also deeply indebted to Prof. Bernd Sch\"{u}ttler for his time and endless patience, when 5 years ago, I showed up in his class on mathematical physics with no prior education in either math or physics. I thank Prof. David Landau for his dedication to provide excellent educational resources and opportunities to all CSP students. I would like to thank Jeff Deroshia and Mike Caplinger for keeping our computers in great shape and Shan-Ho Tsai for providing access to the GACRC computing resources.
+I thank Prof. Steven Lewis for the exciting and challenging introduction into the beautiful field of classical electrodynamics. His inspiring approach to teaching was one of the main factors that finally lead to my decision to pursue a doctorate in physics. I'm also deeply indebted to Prof. Bernd Sch\"{u}ttler for his time and endless patience, when 5 years ago, I showed up in his class on mathematical physics with no prior education in either math or physics. I thank Prof. David Landau for his dedication to provide excellent educational resources and opportunities to all CSP students. I would like to thank Jeff Deroshia and Mike Caplinger for keeping our computers in great shape and Shan-Ho Tsai for providing access to the GACRC computing resources.
 
-Finally, I would like to extend my deepest gratitude to my wonderful family and friends that have supported me both financially and emotionally over the past years. In particular, I want to express my thanks to the Link family who has graciously accepted me as their son and whose support was instrumental to my success.
+Finally, I would like to extend my deepest gratitude to my wonderful family and friends that have supported me both financially and emotionally over the past years. In particular, I want to express my thanks to the Link family who graciously accepted me as their son and whose support was instrumental to my success.
 
 
 \setcounter{tocdepth}{1}
@@ -797,7 +797,7 @@ Bezi\'{e}r curve of order $n$ is a parametric curve defined by a set of $(n+1)$ 
 B(t) = \sum_{i=0}^{n}\mathcal{B}_{i}^{(n)}(t)P_{i},
 \end{equation}
 %
-where ${B}_{i}^{(n)}$ are the Bernstein basis polynomials \cite{Lorentz1953} of degree $n$
+where $t \in [0,1]$ is the path parameter and ${B}_{i}^{(n)}$ are the Bernstein basis polynomials \cite{Lorentz1953} of degree $n$
 %
 \begin{equation}
 \label{eq:BernsteinPoly}
@@ -810,7 +810,7 @@ g_{\mathrm{bez}}(E) = \sum_{i=0}^{n} \binom{n}{i} \left(\frac{E_{\mathrm{max}} -
 g(E_{i}).
 \end{equation}
 %
-The numerical error introduced by the approximation scheme is typically much smaller than the random statistical fluctuations in the original noisy data set \cite{Bachmann2014}. However it should be mentioned that Bezi\'{e}r smoothing may introduce systematic errors to the derivatives of $g(E)$ in areas of abrupt changes in curvature.  This is illustrated in Fig. \ref{fig:Bezier} where we compare the noisy derivative of the microcanonical inverse temperature $\gamma(E) = d\beta/dE$ and the Bezi\'{e}r approximation $\gamma_{\mathrm{bez}}(E)$ in the region of a first-order pseudophase transition.
+The numerical error introduced by the approximation scheme is typically much smaller than the random statistical fluctuations in the original noisy data set \cite{Bachmann2014}. However it should be mentioned that Bezi\'{e}r smoothing may introduce systematic errors to the derivatives of $g(E)$ in areas of abrupt changes in curvature.  This is illustrated in Fig. \ref{fig:Bezier} where we compare the noisy derivative of the microcanonical inverse temperature $\gamma(E) = d\beta/dE$ and the Bezi\'{e}r approximation $\gamma_{\mathrm{bez}}(E)$ in the region of a first-order pseudophase transition. 
 %
 \begin{figure}
 \center
@@ -926,7 +926,7 @@ The potential energy of a dipole-dipole interaction between a pair of monomers $
 \begin{equation}
 V_{\mathrm{dip}}(r) = \frac{1}{4\pi \varepsilon _{0} }\frac{1}{r^{3}} \left[\mathbf{p}_{i}\cdot \mathbf{p}_{j} - 3\left(\mathbf{p}_{i}\cdot \hat{\mathbf{r}}\right)\left(\mathbf{p}_{j}\cdot \hat{\mathbf{r}}\right)\right],
 \end{equation}
-where $\mathbf{p}_{i}$ is the dipole moment of the $i$th monomer and $\hat{\mathbf{r}}$ is the unit vector in the direction given by the separation vector between the two monomers \cite{Griffiths1999}. However the strength of the potential decreases with the third power of the distance which is not consistent with the $1/r^{6}$ decay typically observed in experiments. In fact, the problem must be treated quantum mechanically to account for the existing overlap between electron wave functions. The potential $V_{\mathrm{dip}}(r)$ is replaced by a dipole-dipole operator $\hat{H}_{\mathrm{dip}}$, which is then introduced as a perturbation to a system of two non-interacting monomers. The first non-trivial term in the perturbation expansion of the ground state energy yields the desired $1/r^{6}$ dependence \cite{Bachmann2014}. In addition to this generic long range attraction, interacting bodies experience strong short range repulsion due to repelling electronic clouds. Both effects are contained in the famous Lennard-Jones potential \cite{Lennard-Jones1931}
+where $\mathbf{p}_{i}$ is the dipole moment of the $i$th monomer and $\hat{\mathbf{r}}$ is the unit vector in the direction given by the separation vector between the two monomers \cite{Griffiths1999}. However the strength of the potential decreases with the third power of the distance which is not consistent with the $1/r^{6}$ decay typically observed in experiments~\cite{ExpWaals}. In fact, the problem must be treated quantum mechanically to account for the existing overlap between electron wave functions. The potential $V_{\mathrm{dip}}(r)$ is replaced by a dipole-dipole operator $\hat{H}_{\mathrm{dip}}$, which is then introduced as a perturbation to a system of two non-interacting monomers. The first non-trivial term in the perturbation expansion of the ground state energy yields the desired $1/r^{6}$ dependence \cite{Bachmann2014}. In addition to this generic long range attraction, interacting bodies experience strong short range repulsion due to repelling electronic clouds. Both effects are contained in the famous Lennard-Jones potential \cite{Lennard-Jones1931}
 %
 \begin{equation}
 U_{\mathrm{LJ}}(r_{ij})= 4\epsilon \left[ \left(
@@ -1158,7 +1158,7 @@ In this section, we investigate the influence of the confinement parameter $R$ o
 %
 \subsection{Canonical analysis of energetic and structural fluctuations}
 % 
-For the identification of transition points, we first consider the changes in the thermodynamic behavior of energetic and structural canonical fluctuation quantities. The transition behavior is compared for various values of the confinement parameter $R$. This analysis enables us to construct a structural hyperphase diagram. Differences in the overall generic transition behavior are discussed for two system sizes ($N=13,30$). 
+For the identification of transition points, we first consider the changes in the thermodynamic behavior of energetic and structural canonical fluctuation quantities. The transition behavior is compared for various values of the confinement parameter $R$. This analysis enables us to construct a structural pseudophase diagram. Differences in the overall generic transition behavior are discussed for two system sizes ($N=13,30$). 
 
 \newpage
  
@@ -1175,7 +1175,7 @@ where ${\cal D}X$ is the integral measure in the space of all polymer conformati
 Z(T)=\int {\cal D}X\, e^{-E(\mathbf{X})/k_\mathrm{B}T}
 \end{equation}
 %
-is the partition function of the canonical ensemble of these structures at the canonical (heat-bath) temperature $T$. Thus, changes in the monotonous behavior of 
+is the partition function of the canonical ensemble of these structures at the canonical (heat-bath) temperature $T$. Thus, changes in the monotonic behavior of 
 %
 \begin{eqnarray}
 &&\hspace*{-7mm}\frac{d}{dT}\langle
@@ -1758,7 +1758,8 @@ Due to the difference in the number of nearest-neighbor interactions between  su
 %
 \begin{figure}
 \center
-\includegraphics[width = 0.7\textwidth]{chapter7Figs/scalingCombined.eps}
+\includegraphics[width = 0.7\textwidth]{chapter7Figs/scaling_beta.eps}
+\includegraphics[width = 0.7\textwidth]{chapter7Figs/scaling_q.eps}
 \caption{\label{fig:agg_scaling}%
 Scaling behavior of the aggregation transition temperature $T_{\mathrm{agg}}$ and the latent heat per monomer $\Delta q$, with respect to $M^{-1/3}$ where $M$ is the number of polymer chains. The latent heat increases with system size, providing further evidence that the transition remains of first order even for large $M$. }
 \end{figure}
@@ -1789,7 +1790,7 @@ In chapter~\ref{chap:shortRangeRepuls}, we have investigated the thermodynamic a
 
 
 %
-In chapter~\ref{chap:Aggregation}, we have investigated the properties of the aggregation transition for systems consisting of up to $M = 20$ short flexible elastic homopolymer chains. Utilizing the tools of the microcanonical inflection point analysis, we have found that the aggregation transition is a sequential process consisting of $M-1$ subtransitions between intermediate, partially fragmented structural phases. Each oscillation in the microcanonical inverse temperature curve indicates a transition between two adjacent subphases. We have established the relationship between the microcanonical density of states $g(E)$ and the densities of states $g_{i}(E)$ corresponding to the individual subphases. From this, we have further derived similar expressions for the microcanonical entropy $S(E)$ and its energy derivative, the microcanonical inverse temperature $\beta(E)$. We have used those relationships to motivate the origins of the convex intruder in $S(E)$ and the prominent back-bending region in $\beta(E)$, both of which are indicators of a first-order process. Canonical energy histograms $h_{i}(\beta;E)$, collected at the transition temperature $\beta_{\mathrm{agg}}$ for each individual subphase, confirm that certain subphases contribute only negligibly to the total canonical distribution. The origin of these \textit{missing} subphases can be explained on the basis of the effects of translational entropy on the relative positions of the subphase entropy curves $S_{i}(E)$. The results of this study show that with increasing system size, the number of possible subphases increases rapidly, whereas their relevant subset increases only linearly. Finally, we have discussed the scaling properties of $\beta_{\mathrm{agg}}$ and the latent heat per monomer $\Delta q$. The increasing values of $\Delta q$ with system size provide further evidence that the aggregation transition remains a first-order process even as $M$ tends towards the thermodynamic limit. 
+In chapter~\ref{chap:Aggregation}, we have investigated the properties of the aggregation transition for systems consisting of up to $M = 20$ short flexible elastic homopolymer chains. Utilizing the tools of the microcanonical inflection point analysis, we have found that the aggregation transition is a sequential process consisting of $M-1$ subtransitions between intermediate, partially fragmented structural phases. Each oscillation in the microcanonical inverse temperature curve indicates a transition between two adjacent subphases. We have established the relationship between the microcanonical density of states $g(E)$ and the densities of states $g_{i}(E)$ corresponding to the individual subphases. From this, we have further derived similar expressions for the microcanonical entropy $S(E)$ and its energy derivative, the microcanonical inverse temperature $\beta(E)$. We have used those relationships to motivate the origins of the convex intruder in $S(E)$ and the prominent back-bending region in $\beta(E)$, both of which are indicators of a first-order pseudophase transition. Canonical energy histograms $h_{i}(\beta;E)$, collected at the transition temperature $\beta_{\mathrm{agg}}$ for each individual subphase, confirm that certain subphases contribute only negligibly to the total canonical distribution. The origin of these \textit{missing} subphases can be explained on the basis of the effects of translational entropy on the relative positions of the subphase entropy curves $S_{i}(E)$. The results of this study show that with increasing system size, the number of possible subphases increases rapidly, whereas their relevant subset increases only linearly. Finally, we have discussed the scaling properties of $\beta_{\mathrm{agg}}$ and the latent heat per monomer $\Delta q$. The increasing values of $\Delta q$ with system size provide further evidence that the aggregation transition remains a first-order process even as $M$ tends towards the thermodynamic limit. 
 %
 
 \newpage
